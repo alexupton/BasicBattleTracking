@@ -1,0 +1,105 @@
+Air Elemental was afflicted with Phantasmal Web! Duration: 12 turns. Effect: Grappled. Break free standard action DC 24. Spiders make them naseated if they fail their fortitude save of 24.
+Air Elemental was afflicted with Phantasmal Web! Duration: 12 turns. Effect: Grappled. Break free standard action DC 24. Spiders make them naseated if they fail their fortitude save of 24.
+Drew will go next.
+Brett will go next.
+Chris will go next.
+Elias will go next.
+Brian will go next.
+Ben will go next.
+Earth Elemental will go next.
+Earth Elemental was afflicted with Phantasmal Web! Duration: 12 turns. Effect: Grappled. Break free standard action DC 24. Spiders make them naseated if they fail their fortitude save of 24.
+ROLLED INITIATIVE
+Brett rolls 34.
+Chris rolls 26.
+Drew rolls 25.
+Elias rolls 25.
+Air Elemental rolls 20.
+Ben rolls 19.
+Earth Elemental rolls 18.
+Brian rolls 15.
+===============  Start of turn 1  ===============
+Brett will go first
+Brett attacked Air Elemental for 91 damage!
+Air Elemental has died!
+Chris will go next.
+Drew will go next.
+Drew attacked Earth Elemental for 38 damage!
+Drew attacked Earth Elemental for 30 damage!
+Drew attacked Earth Elemental for 40 damage!
+Drew attacked Earth Elemental for 40 damage!
+Earth Elemental has died!
+ROLLED INITIATIVE
+Brett rolls 34.
+Drew rolls 28.
+Brian rolls 22.
+Chris rolls 20.
+Elias rolls 13.
+Ben rolls 9.
+===============  Start of turn 2  ===============
+Brett will go first
+Drew will go next.
+Brian will go next.
+Chris will go next.
+Elias will go next.
+Ben will go next.
+ROLLED INITIATIVE
+Brett rolls 29.
+Ben rolls 26.
+Brian rolls 22.
+Chris rolls 21.
+Elias rolls 20.
+Drew rolls 9.
+===============  Start of turn 3  ===============
+Brett will go first
+Elias was afflicted with Pinned! Duration: 10 turns. Effect: Cannot move. -4 AC. Can free with CMB or escape Artist
+Ben will go next.
+Brian will go next.
+Chris will go next.
+Elias will go next.
+Elias is affected by Pinned! Effects: Cannot move. -4 AC. Can free with CMB or escape Artist
+ROLLED INITIATIVE
+WhoopinMonk rolls 29.
+Drew rolls 26.
+Elias rolls 25.
+Ben rolls 19.
+Brett rolls 18.
+Brian rolls 15.
+Chris rolls 14.
+===============  Start of turn 4  ===============
+WhoopinMonk will go first
+Drew will go next.
+Drew attacked WhoopinMonk for 22 damage!
+Drew attacked WhoopinMonk for 18 damage!
+WhoopinMonk was afflicted with Sickened! Duration: 12 turns. Effect: -2 attack, damage, saves, checks
+Drew attacked WhoopinMonk for 20 damage!
+Elias will go next.
+Elias is affected by Pinned! Effects: Cannot move. -4 AC. Can free with CMB or escape Artist
+Ben will go next.
+Elias will go next.
+Elias attacked WhoopinMonk for 18 damage!
+Elias attacked WhoopinMonk for 22 damage!
+Ben will go next.
+Brett will go next.
+Brian will go next.
+Chris will go next.
+ROLLED INITIATIVE
+Drew rolls 26.
+Elias rolls 26.
+WhoopinMonk rolls 25.
+Ben rolls 25.
+Brian rolls 19.
+Brett rolls 17.
+Chris rolls 17.
+===============  Start of turn 5  ===============
+Drew will go first
+Drew attacked WhoopinMonk for 27 damage!
+Drew attacked WhoopinMonk for 30 damage!
+Elias will go next.
+Elias is affected by Pinned! Effects: Cannot move. -4 AC. Can free with CMB or escape Artist
+WhoopinMonk will go next.
+WhoopinMonk is affected by Sickened! Effects: -2 attack, damage, saves, checks
+Ben will go next.
+Brian will go next.
+Brett will go next.
+Brett attacked WhoopinMonk for 28 damage!
+Chris will go next.

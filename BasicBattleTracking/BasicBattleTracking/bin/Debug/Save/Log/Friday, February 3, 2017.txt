@@ -1,0 +1,150 @@
+ROLLED INITIATIVE
+Guard 2 rolls 28.
+Ben rolls 25.
+Guard 3 rolls 22.
+Drew rolls 21.
+Brett rolls 18.
+Elias rolls 18.
+Chris rolls 18.
+Guard 1 rolls 11.
+Brian rolls 10.
+===============  Start of turn 1  ===============
+Guard 2 will go first
+Guard will go next.
+Guard 2 will go next.
+Guard 2 made an attack using Vorpal Dagger with a roll of 24!
+Guard 2 made an attack using Vorpal Dagger with a roll of 20!
+Guard will go next.
+Guard 2 will go next.
+Guard 1 will go next.
+Brian will go next.
+Guard 1 will go next.
+Chris will go next.
+Elias will go next.
+Brett will go next.
+Drew will go next.
+Guard 3 will go next.
+Ben will go next.
+Guard 2 will go next.
+Guard 3 will go next.
+Guard 2 will go next.
+Guard 1 will go next.
+Guard 1 made a Will Save of 22!
+Brian will go next.
+Guard 1 will go next.
+Chris will go next.
+Guard 1 will go next.
+Brian will go next.
+Guard 1 will go next.
+Guard 2 will go next.
+Guard 3 will go next.
+Guard 2 will go next.
+Ben will go next.
+Guard 3 will go next.
+Guard 3 made a combat maneuver check of 31!
+Drew will go next.
+Drew attacked Guard 3 for 23 damage!
+Drew attacked Guard 3 for 34 damage!
+Drew attacked Guard 3 for 21 damage!
+Drew attacked Guard 2 for 24 damage!
+Brett will go next.
+Elias will go next.
+Chris will go next.
+Guard 1 will go next.
+Chris will go next.
+Elias will go next.
+Elias attacked Guard 1 for 32 damage!
+Elias attacked Guard 3 for 30 damage!
+Elias attacked Guard 1 for 56 damage!
+Elias attacked Guard 1 for 70 damage!
+Guard 1 has died!
+Brett will go next.
+Brett attacked Guard 3 for 30 damage!
+Elias will go next.
+Chris will go next.
+Brian will go next.
+Guard 1 will go next.
+Guard 2 will go next.
+Guard 3 will go next.
+ROLLED INITIATIVE
+Brett rolls 30.
+Guard 3 rolls 28.
+Brian rolls 27.
+Guard 1 rolls 24.
+Chris rolls 23.
+Guard 2 rolls 22.
+Guard 2 rolls 19.
+Drew rolls 17.
+Elias rolls 14.
+Guard 3 rolls 12.
+Ben rolls 11.
+===============  Start of turn 2  ===============
+Brett will go first
+Brett attacked Guard 3 for 22 damage!
+Guard 3 has died!
+Brian will go next.
+Brian attacked Guard 2 for 19 damage!
+Guard 1 will go next.
+Brian will go next.
+Guard 1 will go next.
+Guard 1 made a Will Save of 28!
+Brian will go next.
+Brian attacked Guard 2 for 2 damage!
+Guard 1 will go next.
+Chris will go next.
+Chris attacked Guard 2 for 2 damage!
+Guard 2 will go next.
+Guard 2 will go next.
+Guard 2 will go next.
+Guard 2 made an attack using Vorpal Dagger with a roll of 27!
+Critical Hit!
+Guard 2 made an attack using Vorpal Dagger with a roll of 38!
+Guard 2 will go next.
+Drew will go next.
+Drew attacked Guard 2 for 19 damage!
+Drew attacked Guard 2 for 10 damage!
+Drew attacked Guard 2 for 33 damage!
+Drew attacked Guard 2 for 27 damage!
+Drew attacked Guard 2 for 27 damage!
+Guard 2 has died!
+Chris will go next.
+Brett will go next.
+Guard will go next.
+Ben will go next.
+Elias will go next.
+Drew will go next.
+Chris will go next.
+Brett will go next.
+Guard will go next.
+Guard made a Will Save of 17!
+Guard made a Reflex Save of 30!
+ROLLED INITIATIVE
+Brett rolls 28.
+Elias rolls 25.
+Guard 1 rolls 21.
+Chris rolls 21.
+Drew rolls 18.
+Brian rolls 14.
+Ben rolls 9.
+===============  Start of turn 3  ===============
+Brett will go first
+Brett attacked Guard 1 for 20 damage!
+Brett attacked Guard 1 for 62 damage!
+Elias will go next.
+Elias attacked Guard 1 for 20 damage!
+Elias attacked Guard 1 for 11 damage!
+Elias attacked Guard 1 for 9 damage!
+Guard 1 will go next.
+Guard 1 made a combat maneuver check of 38!
+Guard 1 made an attack using Mace with a roll of 30!
+Chris will go next.
+Drew will go next.
+Chris will go next.
+Guard 1 will go next.
+Elias will go next.
+Guard 1 will go next.
+Guard 1 made a Will Save of 30!
+Chris will go next.
+Drew will go next.
+Drew attacked Guard 1 for 22 damage!
+Guard 1 has died!

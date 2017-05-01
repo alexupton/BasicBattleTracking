@@ -1,0 +1,46 @@
+ROLLED INITIATIVE
+Drew rolls 23.
+Brett rolls 22.
+Bobbin rolls 18.
+Chris rolls 17.
+Ben rolls 16.
+Brian rolls 14.
+Elias rolls 9.
+===============  Start of turn 1  ===============
+Drew will go first
+Brett will go next.
+Brett attacked Bobbin for 56 damage!
+Brett attacked Bobbin for 52 damage!
+Bobbin will go next.
+Brett will go next.
+Brett attacked Bobbin for 31 damage!
+Bobbin will go next.
+Bobbin attacked Bobbin for 7 damage!
+Bobbin attacked Bobbin for 26 damage!
+Bobbin attacked Bobbin for 19 damage!
+Bobbin attacked Bobbin for 20 damage!
+Bobbin attacked Bobbin for 5 damage!
+Chris will go next.
+Ben will go next.
+Brian will go next.
+Elias will go next.
+ROLLED INITIATIVE
+Drew rolls 27.
+Brian rolls 27.
+Bobbin rolls 24.
+Chris rolls 20.
+Brett rolls 19.
+Ben rolls 17.
+Elias rolls 13.
+===============  Start of turn 2  ===============
+Drew will go first
+Brian will go next.
+Drew will go next.
+Brian will go next.
+Bobbin will go next.
+Chris will go next.
+Chris attacked Bobbin for 13 damage!
+Brett will go next.
+Brett attacked Bobbin for 13 damage!
+Brett attacked Bobbin for 22 damage!
+Brett attacked Bobbin for 25 damage!

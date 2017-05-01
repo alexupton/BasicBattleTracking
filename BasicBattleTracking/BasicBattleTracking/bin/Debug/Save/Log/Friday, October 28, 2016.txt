@@ -1,0 +1,60 @@
+Ben will go next.
+Drew will go next.
+113 will go next.
+Chris will go next.
+Chris attacked 113 for 18 damage!
+Chris attacked Slug 3 for 18 damage!
+Chris attacked 113 for 18 damage!
+Chris attacked Slug 3 for 16 damage!
+Chris attacked 113 for 7 damage!
+Slug 1 will go next.
+Slug 1 attacked Slug 1 for 0 damage!
+Slug 3 will go next.
+ROLLED INITIATIVE
+Slug 1 rolls -1.
+113 rolls 5.
+Slug 3 rolls 16.
+Chris rolls 26.
+Drew rolls 17.
+Brett rolls 26.
+Ben rolls 12.
+===============  Start of turn 1  ===============
+Chris will go first
+Chris attacked 113 for 31 damage!
+Brett will go next.
+Drew will go next.
+Drew attacked Slug 1 for 9 damage!
+Drew attacked Slug 1 for 13 damage!
+Slug 3 will go next.
+Ben will go next.
+Ben attacked 113 for 30 damage!
+113 has died!
+Ben attacked Slug 3 for 30 damage!
+Slug 1 will go next.
+ROLLED INITIATIVE
+Slug 1 rolls 1.
+Slug 3 rolls 2.
+Chris rolls 19.
+Drew rolls 21.
+Brett rolls 31.
+Ben rolls 24.
+===============  Start of turn 2  ===============
+Brett will go first
+Ben will go next.
+Ben attacked Slug 3 for 28 damage!
+Slug 3 has died!
+Ben attacked Slug 1 for 6 damage!
+Slug 1 has died!
+ROLLED INITIATIVE
+Purple Worm rolls 18.
+Chris rolls 5.
+Drew rolls 12.
+Brett rolls 28.
+Ben rolls 11.
+===============  Start of turn 3  ===============
+Brett will go first
+Purple Worm will go next.
+Drew will go next.
+Drew holds action!
+Ben will go next.
+Chris will go next.

@@ -1,0 +1,54 @@
+Alex attacked Iron Golem for 115 damage!
+Iron Golem has died!
+Alex attacked Purple Worm for 100 damage!
+Alex attacked Purple Worm for -100 damage!
+Alex attacked Purple Worm for 5 damage!
+ROLLED INITIATIVE
+Purple Worm rolls 15.
+Chris rolls 15.
+Drew rolls 27.
+Brett rolls 27.
+Ben rolls 9.
+===============  Start of turn 1  ===============
+Drew will go first
+ROLLED INITIATIVE
+Purple Worm rolls 1.
+Chris rolls 15.
+Drew rolls 27.
+Brett rolls 27.
+Ben rolls 9.
+Brian rolls 21.
+===============  Start of turn 2  ===============
+Drew will go first
+ROLLED INITIATIVE
+Purple Worm rolls 15.
+Chris rolls 15.
+Drew rolls 27.
+Brett rolls 27.
+Ben rolls 9.
+Brian rolls 21.
+Elias rolls 17.
+===============  Start of turn 3  ===============
+Drew will go first
+Drew attacked Purple Worm for 20 damage!
+Drew attacked Purple Worm for 21 damage!
+Brett will go next.
+Brett attacked Purple Worm for 27 damage!
+Brett attacked Purple Worm for 23 damage!
+Brian will go next.
+Brian attacked Purple Worm for 8 damage!
+Elias will go next.
+Elias attacked Purple Worm for 32 damage!
+Elias attacked Purple Worm for 19 damage!
+Purple Worm will go next.
+Chris will go next.
+Chris attacked Purple Worm for 3 damage!
+Chris attacked Purple Worm for -50 damage!
+Chris attacked Purple Worm for 0 damage!
+Ben will go next.
+Drew will go next.
+Brett will go next.
+Brian will go next.
+Elias will go next.
+Elias attacked Purple Worm for 92 damage!
+Purple Worm has died!

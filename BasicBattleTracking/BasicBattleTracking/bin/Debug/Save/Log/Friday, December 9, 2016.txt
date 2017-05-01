@@ -1,0 +1,74 @@
+ROLLED INITIATIVE
+Ben rolls 26.
+Brett rolls 19.
+Devourer rolls 17.
+Brian rolls 15.
+Drew rolls 13.
+Elias rolls 12.
+Chris rolls 12.
+===============  Start of turn 1  ===============
+Ben will go first
+Ben holds action!
+Brett will go next.
+Brett attacked Devourer for 37 damage!
+Devourer will go next.
+Devourer attacked Devourer for 21 damage!
+Brian will go next.
+Drew will go next.
+Ben springs into action!
+Devourer was afflicted with Feeble Mind! Duration: 1000 turns. Effect: INT and WIS to 1. No more spells
+Drew will go next.
+Devourer was afflicted with Feeble Mind! Duration: 1000 turns. Effect: INT and CHA  to 1. No more spells
+Elias will go next.
+Elias attacked Devourer for 12 damage!
+Elias attacked Devourer for 20 damage!
+Elias attacked Devourer for 16 damage!
+Chris will go next.
+Devourer was afflicted with Dazed! Duration: 1 turns. Effect: Can take no action
+Chris attacked Devourer for 13 damage!
+Devourer has died!
+ROLLED INITIATIVE
+Brett rolls 34.
+M3 rolls 28.
+M2 rolls 27.
+M5 rolls 27.
+Elias rolls 27.
+Drew rolls 26.
+D2 rolls 25.
+Brian rolls 25.
+M6 rolls 24.
+Ben rolls 23.
+M7 rolls 22.
+D1 rolls 22.
+M1 rolls 20.
+M4 rolls 12.
+Chris rolls 12.
+M8 rolls 9.
+===============  Start of turn 2  ===============
+Brett will go first
+Brett attacked M3 for 23 damage!
+Brett attacked M2 for 23 damage!
+Brett attacked M5 for 23 damage!
+Brett attacked D2 for 11 damage!
+Brett attacked M6 for 11 damage!
+Brett attacked M7 for 11 damage!
+M3 will go next.
+M2 will go next.
+M5 will go next.
+Elias was afflicted with Paralyzed! Duration: 10 turns. Effect: Drops weapon and takes no actions
+Elias will go next.
+Elias is affected by Paralyzed! Effects: Drops weapon and takes no actions
+Drew will go next.
+Drew attacked M3 for 7 damage!
+Drew attacked M3 for 6 damage!
+Drew attacked M3 for 8 damage!
+D2 will go next.
+Brian will go next.
+M6 will go next.
+Ben will go next.
+M7 will go next.
+D1 will go next.
+M1 will go next.
+M4 will go next.
+Chris will go next.
+M8 will go next.

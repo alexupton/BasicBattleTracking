@@ -1,0 +1,28 @@
+Mephizor
+11
+1000
+0
+0
+0
+36
+29
+20
+33
+54
+29
+17
+25
+Vorpal Unholy Longsword
+31
+2
+6
+13
+20
+2
+Bonus Damage vs Good
+0
+2
+6
+0
+20
+1

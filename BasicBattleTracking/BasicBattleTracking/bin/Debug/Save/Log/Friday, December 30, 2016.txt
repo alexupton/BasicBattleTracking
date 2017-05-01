@@ -1,0 +1,17 @@
+Alex attacked M1 for 64 damage!
+ROLLED INITIATIVE
+Drew rolls 16.
+M1 rolls 15.
+Brian rolls 15.
+Chris rolls 12.
+===============  Start of turn 1  ===============
+Drew will go first
+Drew attacked M1 for 40 damage!
+M1 has died!
+Brian will go next.
+ROLLED INITIATIVE
+Radek rolls 25.
+Ben rolls 19.
+===============  Start of turn 2  ===============
+Radek will go first
+Ben will go next.

@@ -1,0 +1,311 @@
+Pit Fiend 1 made an attack using 2 Claws with a roll of 43!
+Pit Fiend 1 made an attack using 2 Wings with a roll of 40!
+Pit Fiend 1 made an attack using Bite with a roll of 39!
+Pit Fiend 1 made an attack using Tail Slap with a roll of 46!
+Bobbin 1 made an attack using Don't Use this with a roll of 8!
+Bobbin 1 made an attack using Don't Use this with a roll of 12!
+Bobbin 1 made an attack using Don't Use this with a roll of 8!
+Bobbin 1 made an attack using Don't Use this with a roll of 16!
+Bobbin 1 made an attack using Don't Use this with a roll of 5!
+Bobbin 1 made an attack using Don't Use this with a roll of 9!
+Bobbin 1 made an attack using Don't Use this with a roll of 2!
+Bobbin 1 made an attack using Don't Use this with a roll of 18!
+Bobbin 1 made an attack using Don't Use this with a roll of 4!
+Bobbin 1 made an attack using Don't Use this with a roll of 18!
+Bobbin 1 made an attack using Don't Use this with a roll of 7!
+Bobbin 1 made an attack using Don't Use this with a roll of 2!
+Bobbin 1 made an attack using Don't Use this with a roll of 12!
+Bobbin 1 made an attack using Don't Use this with a roll of 14!
+Bobbin 1 made an attack using Don't Use this with a roll of 7!
+Bobbin 1 made an attack using Don't Use this with a roll of 9!
+Bobbin 1 made an attack using Don't Use this with a roll of 4!
+Bobbin 1 made an attack using Don't Use this with a roll of 6!
+Bobbin 1 made an attack using Don't Use this with a roll of 15!
+Bobbin 1 made an attack using Don't Use this with a roll of 4!
+Bobbin 1 made an attack using Don't Use this with a roll of 18!
+Bobbin 1 made an attack using Don't Use this with a roll of 9!
+Bobbin 1 made an attack using Don't Use this with a roll of 12!
+Bobbin 1 made an attack using Don't Use this with a roll of 3!
+Bobbin 1 made an attack using Don't Use this with a roll of 16!
+Bobbin 1 made an attack using Don't Use this with a roll of 18!
+Bobbin 1 made an attack using Don't Use this with a roll of 7!
+Bobbin 1 made an attack using Don't Use this with a roll of 18!
+Bobbin 1 made an attack using Don't Use this with a roll of 14!
+Bobbin 1 made an attack using Don't Use this with a roll of 11!
+Bobbin 1 made an attack using Don't Use this with a roll of 9!
+Bobbin 1 made an attack using Don't Use this with a roll of 20!
+Critical Hit!
+It was not confirmed!
+Bobbin 1 made a Will Save of 44!
+Bobbin 1 made a Will Save of 50!
+Bobbin 1 made a Will Save of 48!
+ROLLED INITIATIVE
+Brett rolls 40.
+Pit Fiend 3 rolls 33.
+Pit Fiend 2 rolls 28.
+Pit Fiend 1 rolls 27.
+Drew rolls 20.
+Chris rolls 19.
+Ben rolls 19.
+Elias rolls 16.
+Brian rolls 15.
+===============  Start of turn 1  ===============
+Brett will go first
+Brett attacked Pit Fiend 2 for 84 damage!
+Brett attacked Pit Fiend 2 for 17 damage!
+Pit Fiend 2 made a Fortitude Save of 42!
+Pit Fiend 2 was afflicted with Negative Level! Duration: 1000 turns. Effect: -2 on pretty much everything
+Drew was afflicted with Negative Level! Duration: 1000 turns. Effect: -2 on pretty much everything
+Pit Fiend 3 will go next.
+Pit Fiend 3 made a Fortitude Save of 25!
+Pit Fiend 3 was afflicted with Negative Level! Duration: 1000 turns. Effect: -2 on pretty much everything
+Pit Fiend 3 attacked Pit Fiend 3 for 108 damage!
+Pit Fiend 2 will go next.
+Pit Fiend 2 is affected by Negative Level! Effects: -2 on pretty much everything
+Pit Fiend 2 made a Fortitude Save of 33!
+Pit Fiend 2 attacked Pit Fiend 2 for 218 damage!
+Pit Fiend 1 will go next.
+Brett was afflicted with Stunned! Duration: 1 turns. Effect: Stunned. Cannot take physical action.
+Drew will go next.
+Drew is affected by Negative Level! Effects: -2 on pretty much everything
+Drew attacked Pit Fiend 2 for 42 damage!
+Chris will go next.
+Ben will go next.
+Chris will go next.
+Pit Fiend 3 made a Fortitude Save of 33!
+Pit Fiend 3 made a Will Save of 37!
+Ben will go next.
+Elias will go next.
+Elias attacked Pit Fiend 3 for 287 damage!
+Elias attacked Pit Fiend 2 for 21 damage!
+Pit Fiend 3 made a Fortitude Save of 43!
+Brian will go next.
+Pit Fiend 3 was afflicted with Bleed! Duration: 1000 turns. Effect: Bleed for 7 damage every round
+Brian attacked Pit Fiend 3 for 25 damage!
+Pit Fiend 3 made a Fortitude Save of 26!
+Brian attacked Pit Fiend 3 for 23 damage!
+ROLLED INITIATIVE
+Pit Fiend 2 rolls 33.
+Pit Fiend 1 rolls 29.
+Brett rolls 26.
+Brian rolls 24.
+Drew rolls 18.
+Pit Fiend 3 rolls 15.
+Ben rolls 14.
+Chris rolls 10.
+Elias rolls 7.
+===============  Start of turn 2  ===============
+Pit Fiend 2 will go first
+Elias was afflicted with Stunned! Duration: 4 turns. Effect: Stunned. Cannot take physical action.
+Pit Fiend 1 will go next.
+Pit Fiend 2 will go next.
+Pit Fiend 2 made a Reflex Save of 25!
+Pit Fiend 1 will go next.
+Pit Fiend 1 made an attack using 2 Claws with a roll of 51!
+Pit Fiend 1 made an attack using 2 Wings with a roll of 35!
+Pit Fiend 1 made an attack using Bite with a roll of 39!
+Pit Fiend 1 made an attack using Tail Slap with a roll of 33!
+Brett will go next.
+Brett is no longer affected by Stunned!
+Brian will go next.
+Drew will go next.
+Drew is affected by Negative Level! Effects: -2 on pretty much everything
+Drew attacked Pit Fiend 3 for 29 damage!
+Drew attacked Pit Fiend 3 for 34 damage!
+Drew attacked Pit Fiend 3 for 33 damage!
+Pit Fiend 1 was afflicted with Spell Resistance! Duration: 1000 turns. Effect: Spell resitance down 3
+Pit Fiend 3 will go next.
+Pit Fiend 3 is affected by Negative Level! Effects: -2 on pretty much everything
+Pit Fiend 3 is affected by Bleed! Effects: Bleed for 7 damage every round
+Pit Fiend 3 made an attack using Bite with a roll of 45!
+Ben will go next.
+Pit Fiend 2 was afflicted with Extra Dimensional Maze! Duration: 1000 turns. Effect: Locked in an extradimensional maze
+Chris will go next.
+Elias will go next.
+Elias attacked Pit Fiend 1 for 387 damage!
+ROLLED INITIATIVE
+Brett rolls 40.
+Pit Fiend 1 rolls 29.
+Brian rolls 28.
+Drew rolls 27.
+Elias rolls 27.
+Pit Fiend 3 rolls 25.
+Pit Fiend 2 rolls 24.
+Ben rolls 20.
+Chris rolls 18.
+===============  Start of turn 3  ===============
+Brett will go first
+Pit Fiend 1 will go next.
+Pit Fiend 1 is affected by Spell Resistance! Effects: Spell resitance down 3
+Pit Fiend 1 made an attack using 2 Claws with a roll of 44!
+Pit Fiend 1 made an attack using 2 Wings with a roll of 45!
+Pit Fiend 1 made an attack using Bite with a roll of 40!
+Pit Fiend 1 made an attack using Tail Slap with a roll of 41!
+Brian will go next.
+Drew will go next.
+Drew is affected by Negative Level! Effects: -2 on pretty much everything
+Pit Fiend 2 made a Fortitude Save of 37!
+Pit Fiend 2 made a Reflex Save of 25!
+Drew attacked Pit Fiend 1 for 200 damage!
+Drew attacked Pit Fiend 1 for 75 damage!
+Drew attacked Pit Fiend 1 for 39 damage!
+Drew attacked Pit Fiend 1 for 36 damage!
+Elias will go next.
+Elias attacked Pit Fiend 1 for 314 damage!
+Pit Fiend 1 has died!
+Pit Fiend 2 will go next.
+Pit Fiend 2 is affected by Negative Level! Effects: -2 on pretty much everything
+Pit Fiend 2 is affected by Extra Dimensional Maze! Effects: Locked in an extradimensional maze
+Pit Fiend 2 made a Will Save of 27!
+Pit Fiend 2 was afflicted with Fascinated! Duration: 1 turns. Effect: Just hanging out
+Ben will go next.
+Ben holds action!
+Chris will go next.
+ROLLED INITIATIVE
+Brett rolls 39.
+Ben rolls 29.
+Drew rolls 22.
+Elias rolls 22.
+Pit Fiend 2 rolls 20.
+Chris rolls 19.
+Brian rolls 16.
+===============  Start of turn 4  ===============
+Brett will go first
+Brett holds action!
+Ben will go next.
+Ben holds action!
+Drew will go next.
+Drew is affected by Negative Level! Effects: -2 on pretty much everything
+Drew holds action!
+Elias will go next.
+Elias holds action!
+Pit Fiend 2 will go next.
+Pit Fiend 2 is affected by Negative Level! Effects: -2 on pretty much everything
+Pit Fiend 2 is affected by Extra Dimensional Maze! Effects: Locked in an extradimensional maze
+Pit Fiend 2 is no longer affected by Fascinated!
+Pit Fiend 2 made a Will Save of 15!
+Pit Fiend 2 was afflicted with Fascinated! Duration: 1 turns. Effect: Just hanging out
+Chris will go next.
+Brian will go next.
+Brett springs into action!
+Brett holds action!
+Brett will go next.
+Pit Fiend 2 made a Will Save of 27!
+Pit Fiend 2 was afflicted with Fascinated! Duration: 1 turns. Effect: Just hanging out
+Brian will go next.
+Brett will go next.
+Brett attacked Pit Fiend 2 for 216 damage!
+Brett springs into action!
+Pit Fiend 2 made a Fortitude Save of 41!
+Pit Fiend 2 was afflicted with Negative Level! Duration: 997 turns. Effect: -2 on pretty much everything
+Brett will go next.
+Pit Fiend 2 will go next.
+Pit Fiend 2 is affected by Negative Level! Effects: -2 on pretty much everything
+Pit Fiend 2 is affected by Extra Dimensional Maze! Effects: Locked in an extradimensional maze
+Pit Fiend 2 is affected by Fascinated! Effects: Just hanging out
+Pit Fiend 2 is affected by Fascinated! Effects: Just hanging out
+Pit Fiend 2 is affected by Negative Level! Effects: -2 on pretty much everything
+Ben will go next.
+Drew will go next.
+Drew is affected by Negative Level! Effects: -2 on pretty much everything
+Drew attacked Pit Fiend 2 for 70 damage!
+Drew attacked Pit Fiend 2 for 96 damage!
+Drew attacked Pit Fiend 2 for 33 damage!
+Drew attacked Pit Fiend 2 for 60 damage!
+Elias will go next.
+Pit Fiend 2 was afflicted with Spell Resistance! Duration: 999 turns. Effect: Spell resitance down 4
+Elias attacked Pit Fiend 2 for 50 damage!
+Elias attacked Pit Fiend 2 for 20 damage!
+Chris will go next.
+Chris holds action!
+Brian will go next.
+Chris springs into action!
+ROLLED INITIATIVE
+Brett rolls 30.
+Drew rolls 24.
+Elias rolls 24.
+Pit Fiend 2 rolls 23.
+Brian rolls 20.
+Chris rolls 18.
+Ben rolls 17.
+===============  Start of turn 5  ===============
+Brett will go first
+Pit Fiend 2 made a Fortitude Save of 23!
+Pit Fiend 2 was afflicted with Negative Level! Duration: 996 turns. Effect: -2 on pretty much everything, permanently
+Brett attacked Pit Fiend 2 for 86 damage!
+Brett attacked Pit Fiend 2 for 90 damage!
+Pit Fiend 2 has died!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 23!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 20!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 1255!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 57!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 133!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 37!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 11!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 22!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 16!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 1251!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 46!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 138!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 26!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 16!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 24!
+Critical Hit!
+It was not confirmed!
+Dire Rabbit 1 made an attack using sdiofj with a roll of 101217!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 18!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 15!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 9!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 13!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 15!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 6!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 6!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 17!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 21!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 15!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 21!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 6!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 5!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 22!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 8!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 18!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 6!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 14!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 10!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 19!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 18!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 14!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 7!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 6!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 23!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 12!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 21!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 7!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 11!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 8!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 5!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 20!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 14!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 5!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 5!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 18!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 19!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 5!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 19!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 18!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 13!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 6!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 20!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 20!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 8!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 18!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 17!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 22!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 18!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 10!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 22!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 13!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 18!
+Dire Rabbit 1 made an attack using Bite Yo Ass with a roll of 24!
+Critical Hit!
+It was not confirmed!

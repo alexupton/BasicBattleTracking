@@ -1,0 +1,85 @@
+Alex attacked 7 Realms Guard 1 for 11 damage!
+ROLLED INITIATIVE
+Brett rolls 33.
+Chris rolls 30.
+7 Realms Guard 1 rolls 29.
+7 Realms Guard 2 rolls 24.
+Elias rolls 22.
+Brian rolls 22.
+Ben rolls 12.
+Drew rolls 0.
+===============  Start of turn 1  ===============
+Brett will go first
+Brett attacked 7 Realms Guard 1 for 21 damage!
+Brett attacked 7 Realms Guard 1 for 82 damage!
+Brett attacked 7 Realms Guard 1 for 25 damage!
+Brett attacked 7 Realms Guard 2 for 20 damage!
+Chris will go next.
+Chris was afflicted with Whirlwind! Duration: 10 turns. Effect: He's a goddamn whirlwind
+7 Realms Guard 1 made a Reflex Save of 21!
+7 Realms Guard 1 made a Reflex Save of 25!
+7 Realms Guard 1 will go next.
+7 Realms Guard 1 made an attack using Pistol with a roll of 30!
+7 Realms Guard 2 will go next.
+7 Realms Guard 2 made an attack using Pistol with a roll of 26!
+Elias will go next.
+Brian will go next.
+Brian attacked 7 Realms Guard 1 for 11 damage!
+Elias will go next.
+Elias attacked 7 Realms Guard 1 for 22 damage!
+Elias attacked 7 Realms Guard 2 for 21 damage!
+Elias attacked 7 Realms Guard 1 for 24 damage!
+Elias attacked 7 Realms Guard 1 for 10 damage!
+7 Realms Guard 1 has died!
+Brian will go next.
+Ben will go next.
+Drew will go next.
+ROLLED INITIATIVE
+Brett rolls 30.
+Elias rolls 27.
+7 Realms Guard 2 rolls 18.
+Brian rolls 18.
+Ben rolls 15.
+Chris rolls 13.
+Drew rolls 0.
+===============  Start of turn 2  ===============
+Brett will go first
+Brett attacked 7 Realms Guard 2 for 24 damage!
+Brett attacked 7 Realms Guard 2 for 20 damage!
+Elias will go next.
+Elias attacked 7 Realms Guard 2 for 49 damage!
+7 Realms Guard 2 will go next.
+7 Realms Guard 2 made an attack using Pistol with a roll of 32!
+7 Realms Guard 2 made an attack using Pistol with a roll of 28!
+7 Realms Guard 2 made an attack using Pistol with a roll of 26!
+Brian will go next.
+Ben will go next.
+Chris will go next.
+Chris is affected by Whirlwind! Effects: He's a goddamn whirlwind
+7 Realms Guard 2 made a Reflex Save of 32!
+7 Realms Guard 2 made a Reflex Save of 34!
+Drew will go next.
+ROLLED INITIATIVE
+Brett rolls 28.
+Brian rolls 27.
+Chris rolls 25.
+Ben rolls 22.
+7 Realms Guard 2 rolls 15.
+Elias rolls 10.
+Drew rolls 0.
+===============  Start of turn 3  ===============
+Brett will go first
+Brett attacked 7 Realms Guard 2 for 23 damage!
+Brett attacked 7 Realms Guard 2 for 30 damage!
+Brian will go next.
+Chris will go next.
+Chris is affected by Whirlwind! Effects: He's a goddamn whirlwind
+7 Realms Guard 2 made a Reflex Save of 31!
+7 Realms Guard 2 made a Reflex Save of 23!
+Ben will go next.
+7 Realms Guard 2 will go next.
+7 Realms Guard 2 made an attack using Pistol with a roll of 22!
+7 Realms Guard 2 made an attack using Pistol with a roll of 17!
+Elias will go next.
+Elias attacked 7 Realms Guard 2 for 54 damage!
+7 Realms Guard 2 has died!

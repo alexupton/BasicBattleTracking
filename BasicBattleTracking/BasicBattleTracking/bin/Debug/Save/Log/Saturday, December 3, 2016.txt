@@ -1,0 +1,377 @@
+ROLLED INITIATIVE
+Brett rolls 31.
+T9 rolls 24.
+T5 rolls 23.
+T3 rolls 22.
+T8 rolls 22.
+T1 rolls 21.
+Elias rolls 20.
+T7 rolls 16.
+T4 rolls 15.
+Chris rolls 13.
+Drew rolls 11.
+Brian rolls 10.
+T6 rolls 9.
+T10 rolls 9.
+Kraken rolls 8.
+T2 rolls 6.
+Ben rolls 0.
+===============  Start of turn 1  ===============
+Brett will go first
+T9 will go next.
+T5 will go next.
+T3 will go next.
+T8 will go next.
+T1 will go next.
+Elias will go next.
+Elias attacked T8 for 19 damage!
+Elias attacked T8 for 19 damage!
+T7 will go next.
+T4 will go next.
+Chris will go next.
+Chris attacked T7 for 23 damage!
+Chris attacked T8 for 23 damage!
+Drew will go next.
+Drew attacked T8 for 12 damage!
+Drew attacked T8 for 19 damage!
+Drew attacked T8 for 38 damage!
+Drew attacked T8 for 44 damage!
+Drew attacked T8 for 36 damage!
+Drew attacked T8 for 48 damage!
+Brian will go next.
+Brian attacked T4 for 11 damage!
+T6 will go next.
+T10 will go next.
+Kraken will go next.
+T2 will go next.
+T2 attacked T10 for 55 damage!
+T2 attacked T7 for 45 damage!
+T2 attacked T6 for 122 damage!
+T2 attacked T3 for 52 damage!
+T2 attacked T2 for 66 damage!
+Crew will go next.
+T2 will go next.
+Crew will go next.
+ROLLED INITIATIVE
+Brett rolls 34.
+Brian rolls 28.
+T6 rolls 22.
+T10 rolls 16.
+Chris rolls 14.
+T4 rolls 12.
+T3 rolls 10.
+Kraken rolls 10.
+Elias rolls 10.
+Drew rolls 10.
+T5 rolls 8.
+T1 rolls 8.
+T7 rolls 7.
+T9 rolls 6.
+T8 rolls 6.
+T2 rolls 6.
+Crew rolls 6.
+===============  Start of turn 2  ===============
+Brett will go first
+Brian will go next.
+T6 will go next.
+T10 will go next.
+Chris will go next.
+Elias was afflicted with Fly! Duration: 120 turns. Effect: He can fly now
+T4 will go next.
+T3 will go next.
+Kraken will go next.
+Elias will go next.
+Elias is affected by Fly! Effects: He can fly now
+Elias attacked T8 for 18 damage!
+Elias attacked T8 for 40 damage!
+Drew will go next.
+Drew attacked T8 for 23 damage!
+Drew attacked T8 for 16 damage!
+Drew attacked T8 for 48 damage!
+Drew attacked T8 for 44 damage!
+Drew attacked T8 for 22 damage!
+T5 will go next.
+T1 will go next.
+T7 will go next.
+T9 will go next.
+T8 will go next.
+T8 attacked T8 for 48 damage!
+T8 has died!
+T2 will go next.
+Crew will go next.
+Twinkie will go next.
+ROLLED INITIATIVE
+Brett rolls 26.
+T5 rolls 23.
+T10 rolls 22.
+Kraken rolls 21.
+T1 rolls 19.
+T9 rolls 19.
+Twinkie rolls 19.
+Chris rolls 18.
+Crew rolls 16.
+Brian rolls 12.
+T6 rolls 11.
+T4 rolls 11.
+Elias rolls 11.
+Drew rolls 9.
+T3 rolls 8.
+T2 rolls 8.
+T7 rolls 6.
+===============  Start of turn 3  ===============
+Brett will go first
+Brett holds action!
+T5 will go next.
+T5 attacked Twinkie for 31 damage!
+T10 will go next.
+Kraken will go next.
+T1 will go next.
+T9 will go next.
+Twinkie will go next.
+Twinkie attacked T5 for 18 damage!
+Chris will go next.
+Crew will go next.
+Crew attacked T7 for 60 damage!
+Crew attacked T5 for 44 damage!
+Crew attacked T6 for 68 damage!
+Crew attacked T3 for 85 damage!
+Brian will go next.
+T6 will go next.
+Brett springs into action!
+T6 will go next.
+T4 will go next.
+Elias will go next.
+Elias is affected by Fly! Effects: He can fly now
+Elias holds action!
+Drew will go next.
+Drew attacked T7 for 27 damage!
+Drew attacked T7 for 41 damage!
+Drew attacked T7 for 1 damage!
+Drew attacked T7 for 18 damage!
+Drew attacked T7 for 19 damage!
+Drew attacked T7 for 30 damage!
+Elias springs into action!
+Elias attacked T7 for 54 damage!
+Elias attacked T7 for 44 damage!
+Elias attacked T7 for 24 damage!
+Drew will go next.
+T3 will go next.
+T2 will go next.
+T7 will go next.
+T7 attacked T7 for 34 damage!
+Ben will go next.
+ROLLED INITIATIVE
+Brett rolls 35.
+Drew rolls 25.
+T5 rolls 24.
+T10 rolls 24.
+Twinkie rolls 24.
+T4 rolls 23.
+T9 rolls 22.
+T3 rolls 22.
+Brian rolls 21.
+Chris rolls 20.
+T2 rolls 18.
+T6 rolls 15.
+Crew rolls 14.
+T7 rolls 14.
+Kraken rolls 13.
+Elias rolls 13.
+T1 rolls 11.
+Ben rolls 11.
+===============  Start of turn 4  ===============
+Brett will go first
+Drew will go next.
+Drew attacked T6 for 16 damage!
+Drew attacked T7 for 42 damage!
+Drew attacked T7 for 46 damage!
+T7 has died!
+Drew attacked T6 for 28 damage!
+Drew attacked T6 for 18 damage!
+T5 will go next.
+T10 will go next.
+Twinkie will go next.
+T4 will go next.
+T9 will go next.
+T3 will go next.
+Brian will go next.
+Chris will go next.
+T2 will go next.
+T6 will go next.
+Crew will go next.
+Kraken will go next.
+Elias will go next.
+Elias is affected by Fly! Effects: He can fly now
+Elias attacked T6 for 12 damage!
+Elias attacked T6 for 21 damage!
+Elias attacked T6 for 32 damage!
+Kraken will go next.
+Crew will go next.
+T6 will go next.
+T2 will go next.
+Chris will go next.
+Brian will go next.
+T3 will go next.
+T9 will go next.
+T4 will go next.
+Twinkie will go next.
+T10 will go next.
+T5 will go next.
+Drew will go next.
+Brett will go next.
+Drew will go next.
+T5 will go next.
+T5 attacked T5 for 37 damage!
+T5 attacked T5 for -37 damage!
+T5 attacked Twinkie for 37 damage!
+T10 will go next.
+Twinkie will go next.
+Twinkie attacked T5 for 25 damage!
+T4 will go next.
+T9 will go next.
+T3 will go next.
+T9 will go next.
+T3 will go next.
+Brian will go next.
+Chris will go next.
+Chris attacked Kraken for 30 damage!
+Chris attacked Kraken for 17 damage!
+T2 will go next.
+T6 will go next.
+Crew will go next.
+Crew was afflicted with Reload! Duration: 1 turns. Effect: Reloading the cannon
+Kraken will go next.
+Elias will go next.
+Elias is affected by Fly! Effects: He can fly now
+T1 will go next.
+Ben will go next.
+ROLLED INITIATIVE
+Brett rolls 36.
+T10 rolls 24.
+T4 rolls 24.
+T1 rolls 23.
+Brian rolls 23.
+Kraken rolls 21.
+T9 rolls 20.
+Twinkie rolls 18.
+Ben rolls 18.
+Drew rolls 17.
+Elias rolls 17.
+Crew rolls 15.
+T3 rolls 12.
+T2 rolls 10.
+T6 rolls 10.
+Chris rolls 10.
+T5 rolls 9.
+===============  Start of turn 5  ===============
+Brett will go first
+T10 will go next.
+T4 will go next.
+T1 will go next.
+Brian will go next.
+Kraken was afflicted with Bomb! Duration: 2 turns. Effect: He got a bomb in he mouth
+Kraken will go next.
+Kraken is affected by Bomb! Effects: He got a bomb in he mouth
+T9 will go next.
+Kraken will go next.
+T9 will go next.
+Twinkie will go next.
+Twinkie attacked T5 for 15 damage!
+Ben will go next.
+T10 was afflicted with Shrunk! Duration: 1000 turns. Effect: One size category smaller. Hits with d8s.
+T4 was afflicted with Shrunk! Duration: 1000 turns. Effect: One size category smaller. Hits with d8s.
+T1 was afflicted with Shrunk! Duration: 1000 turns. Effect: One size category smaller. Hits with d8s.
+T9 was afflicted with Shrunk! Duration: 1000 turns. Effect: One size category smaller. Hits with d8s.
+T3 was afflicted with Shrunk! Duration: 1000 turns. Effect: One size category smaller. Hits with d8s.
+T3 was afflicted with Shrunk! Duration: 1000 turns. Effect: One size category smaller. Hits with d8s.
+T2 was afflicted with Shrunk! Duration: 1000 turns. Effect: One size category smaller. Hits with d8s.
+T6 was afflicted with Shrunk! Duration: 1000 turns. Effect: One size category smaller. Hits with d8s.
+T5 was afflicted with Shrunk! Duration: 1000 turns. Effect: One size category smaller. Hits with d8s.
+Drew will go next.
+Drew attacked T5 for 22 damage!
+Drew attacked T4 for 22 damage!
+Elias will go next.
+Elias is affected by Fly! Effects: He can fly now
+Drew will go next.
+Drew attacked T6 for 14 damage!
+Drew attacked T6 for 20 damage!
+Drew attacked T6 for 46 damage!
+Elias will go next.
+Elias is affected by Fly! Effects: He can fly now
+Elias attacked T6 for 56 damage!
+Elias attacked T6 for 48 damage!
+T6 has died!
+Elias attacked T5 for 22 damage!
+Elias attacked T5 for 46 damage!
+Crew will go next.
+Crew is no longer affected by Reload!
+Crew attacked T5 for 118 damage!
+Crew attacked T9 for 171 damage!
+Crew attacked T3 for 57 damage!
+T3 will go next.
+T3 is affected by Shrunk! Effects: One size category smaller. Hits with d8s.
+T3 is affected by Shrunk! Effects: One size category smaller. Hits with d8s.
+T2 will go next.
+T2 is affected by Shrunk! Effects: One size category smaller. Hits with d8s.
+Chris will go next.
+T5 will go next.
+T5 is affected by Shrunk! Effects: One size category smaller. Hits with d8s.
+Chris will go next.
+Chris attacked Kraken for 20 damage!
+Chris attacked Kraken for 23 damage!
+T5 will go next.
+T5 is affected by Shrunk! Effects: One size category smaller. Hits with d8s.
+Brett will go next.
+T5 will go next.
+T5 attacked T5 for 24 damage!
+ROLLED INITIATIVE
+Drew rolls 27.
+Elias rolls 27.
+Brett rolls 25.
+T10 rolls 20.
+T2 rolls 19.
+Brian rolls 19.
+T5 rolls 18.
+Twinkie rolls 16.
+Ben rolls 15.
+Kraken rolls 14.
+T3 rolls 14.
+T4 rolls 12.
+T1 rolls 10.
+Chris rolls 10.
+Crew rolls 6.
+T9 rolls 5.
+===============  Start of turn 6  ===============
+Drew will go first
+Drew attacked T5 for 18 damage!
+Drew attacked T4 for 18 damage!
+Drew attacked T1 for 18 damage!
+Drew attacked T5 for 19 damage!
+Drew attacked T5 for 20 damage!
+Drew attacked T5 for 17 damage!
+Drew attacked T5 for 25 damage!
+Elias will go next.
+Elias is affected by Fly! Effects: He can fly now
+Brett will go next.
+Elias will go next.
+Elias attacked T5 for 17 damage!
+Elias attacked T5 for 17 damage!
+Elias attacked T5 for 23 damage!
+Elias attacked T5 for 22 damage!
+T5 has died!
+Brett will go next.
+Brett attacked Twinkie for -90 damage!
+T10 will go next.
+T10 is affected by Shrunk! Effects: One size category smaller. Hits with d8s.
+T2 will go next.
+T2 is affected by Shrunk! Effects: One size category smaller. Hits with d8s.
+Brian will go next.
+Brian attacked Kraken for 8 damage!
+Twinkie will go next.
+Ben will go next.
+Ben attacked Kraken for 80 damage!
+Kraken will go next.
+Kraken is affected by Bomb! Effects: He got a bomb in he mouth
+Kraken attacked T10 for 80 damage!
+Kraken attacked T10 for -80 damage!
+Kraken attacked Kraken for 80 damage!

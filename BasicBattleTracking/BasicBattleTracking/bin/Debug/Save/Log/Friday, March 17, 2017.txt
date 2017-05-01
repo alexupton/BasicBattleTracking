@@ -1,0 +1,299 @@
+Alex attacked 7 Realms Guard 1 for -200 damage!
+Brian will go next.
+Brett will go next.
+Brett attacked 7 Realms Guard 1 for 46 damage!
+Brett attacked 7 Realms Guard 1 for 44 damage!
+Brian will go next.
+Brian attacked 7 Realms Guard 1 for 110 damage!
+7 Realms Guard 1 has died!
+ROLLED INITIATIVE
+7 Realms Guard 5 rolls 30.
+Brett rolls 29.
+7 Realms Guard 6 rolls 28.
+7 Realms Guard 7 rolls 28.
+7 Realms Guard 3 rolls 27.
+7 Realms Guard 1 rolls 25.
+Ben rolls 25.
+7 Realms Guard 8 rolls 22.
+7 Realms Guard 10 rolls 22.
+Brian rolls 17.
+7 Realms Guard 2 rolls 16.
+Chris rolls 16.
+7 Realms Guard 9 rolls 13.
+7 Realms Guard 4 rolls 12.
+Drew rolls 0.
+Flame of Nethys rolls 0.
+===============  Start of turn 1  ===============
+7 Realms Guard 5 will go first
+7 Realms Guard 5 made an attack using Pistol with a roll of 25!
+7 Realms Guard 5 made an attack using Pistol with a roll of 21!
+Brett will go next.
+Brett attacked Flame of Nethys for 24 damage!
+Brett attacked Flame of Nethys for 17 damage!
+Brett attacked Flame of Nethys for 30 damage!
+7 Realms Guard 6 will go next.
+7 Realms Guard 6 made an attack using Pistol with a roll of 33!
+7 Realms Guard 6 made an attack using Pistol with a roll of 34!
+7 Realms Guard 7 will go next.
+7 Realms Guard 7 made an attack using Pistol with a roll of 18!
+7 Realms Guard 7 made an attack using Pistol with a roll of 27!
+7 Realms Guard 3 will go next.
+7 Realms Guard 3 made an attack using Pistol with a roll of 21!
+7 Realms Guard 3 made an attack using Pistol with a roll of 30!
+7 Realms Guard 1 will go next.
+7 Realms Guard 1 was afflicted with Running! Duration: 1 turns. Effect: Running at party
+Ben will go next.
+7 Realms Guard 8 will go next.
+7 Realms Guard 8 made an attack using Pistol with a roll of 21!
+Critical Hit!
+7 Realms Guard 8 made an attack using Pistol with a roll of 35!
+7 Realms Guard 8 made an attack using Pistol with a roll of 30!
+7 Realms Guard 10 will go next.
+Brian will go next.
+7 Realms Guard 2 will go next.
+Chris will go next.
+7 Realms Guard 1 made a Reflex Save of 19!
+Chris attacked 7 Realms Guard 1 for 52 damage!
+7 Realms Guard 1 was afflicted with Trapped! Duration: 100 turns. Effect: Trapped under a huge pipe organ!
+7 Realms Guard 9 will go next.
+7 Realms Guard 4 was afflicted with Sandwiched! Duration: 100 turns. Effect: Between 2 walls of force
+7 Realms Guard 4 will go next.
+7 Realms Guard 4 is affected by Sandwiched! Effects: Between 2 walls of force
+7 Realms Guard 9 was afflicted with In the Zone! Duration: 100 turns. Effect: Beyond the walls of force
+Flame of Nethys will go next.
+ROLLED INITIATIVE
+7 Realms Guard 1 rolls 30.
+7 Realms Guard 4 rolls 29.
+Chris rolls 29.
+7 Realms Guard 6 rolls 28.
+7 Realms Guard 7 rolls 27.
+7 Realms Guard 10 rolls 27.
+7 Realms Guard 9 rolls 27.
+Brian rolls 24.
+7 Realms Guard 2 rolls 22.
+7 Realms Guard 5 rolls 19.
+Brett rolls 17.
+Ben rolls 17.
+7 Realms Guard 3 rolls 14.
+7 Realms Guard 8 rolls 11.
+Flame of Nethys rolls 0.
+===============  Start of turn 2  ===============
+7 Realms Guard 1 will go first
+7 Realms Guard 1 was afflicted with Sandwiched! Duration: 100 turns. Effect: Between 2 walls of force
+7 Realms Guard 4 will go next.
+7 Realms Guard 4 is affected by Sandwiched! Effects: Between 2 walls of force
+7 Realms Guard 4 was afflicted with In the Zone! Duration: 100 turns. Effect: Beyond the walls of force
+Chris will go next.
+7 Realms Guard 4 was afflicted with Grappled! Duration: 100 turns. Effect: Grappled by black tentacles.
+7 Realms Guard 6 will go next.
+Chris will go next.
+7 Realms Guard 6 will go next.
+7 Realms Guard 6 was afflicted with In the Zone! Duration: 99 turns. Effect: Beyond the walls of force
+7 Realms Guard 7 will go next.
+7 Realms Guard 7 was afflicted with In the Zone! Duration: 99 turns. Effect: Beyond the walls of force
+7 Realms Guard 7 was afflicted with Sandwiched! Duration: 99 turns. Effect: Between 2 walls of force
+7 Realms Guard 10 will go next.
+7 Realms Guard 10 was afflicted with In the Zone! Duration: 99 turns. Effect: Beyond the walls of force
+7 Realms Guard 9 will go next.
+7 Realms Guard 9 was afflicted with Sandwiched! Duration: 99 turns. Effect: Between 2 walls of force
+Brian will go next.
+7 Realms Guard 6 made a Will Save of 30!
+Brian attacked 7 Realms Guard 6 for 14 damage!
+7 Realms Guard 6 made a Will Save of 26!
+Brian attacked 7 Realms Guard 6 for 12 damage!
+7 Realms Guard 6 made a Will Save of 32!
+Brian attacked 7 Realms Guard 6 for 13 damage!
+7 Realms Guard 2 will go next.
+7 Realms Guard 2 was afflicted with In the Zone! Duration: 99 turns. Effect: Beyond the walls of force
+7 Realms Guard 9 was afflicted with In the Zone! Duration: 99 turns. Effect: Beyond the walls of force
+7 Realms Guard 5 will go next.
+Brett will go next.
+Ben will go next.
+7 Realms Guard 1 made a Reflex Save of 18!
+Ben attacked 7 Realms Guard 1 for 23 damage!
+7 Realms Guard 1 was afflicted with Fire! Duration: 100 turns. Effect: THIS! GUARD IS ON FIIIIIRE!
+Brett will go next.
+Brett attacked Flame of Nethys for 23 damage!
+Brett attacked 7 Realms Guard 4 for 32 damage!
+Brett attacked Flame of Nethys for 30 damage!
+Brett attacked 7 Realms Guard 4 for 31 damage!
+Brett attacked Flame of Nethys for 33 damage!
+Brett attacked Flame of Nethys for 31 damage!
+Ben will go next.
+7 Realms Guard 3 will go next.
+7 Realms Guard 8 will go next.
+Flame of Nethys will go next.
+ROLLED INITIATIVE
+Brett rolls 36.
+7 Realms Guard 3 rolls 29.
+7 Realms Guard 5 rolls 28.
+Chris rolls 28.
+7 Realms Guard 4 rolls 27.
+7 Realms Guard 9 rolls 26.
+7 Realms Guard 6 rolls 25.
+7 Realms Guard 7 rolls 23.
+7 Realms Guard 8 rolls 19.
+Brian rolls 19.
+7 Realms Guard 10 rolls 14.
+7 Realms Guard 1 rolls 13.
+Ben rolls 12.
+7 Realms Guard 2 rolls 11.
+Flame of Nethys rolls 0.
+===============  Start of turn 3  ===============
+Brett will go first
+Brett attacked 7 Realms Guard 4 for 23 damage!
+Brett attacked 7 Realms Guard 4 for -23 damage!
+Brett attacked 7 Realms Guard 6 for 50 damage!
+7 Realms Guard 3 will go next.
+7 Realms Guard 5 will go next.
+Chris will go next.
+Chris attacked 7 Realms Guard 4 for 35 damage!
+Chris attacked 7 Realms Guard 4 for 24 damage!
+7 Realms Guard 9 was afflicted with Grappled! Duration: 99 turns. Effect: Grappled by black tentacles.
+Chris attacked 7 Realms Guard 9 for 25 damage!
+7 Realms Guard 6 was afflicted with Grappled! Duration: 99 turns. Effect: Grappled by black tentacles.
+Chris attacked 7 Realms Guard 6 for 27 damage!
+Chris attacked 7 Realms Guard 7 for 24 damage!
+7 Realms Guard 7 was afflicted with Grappled! Duration: 99 turns. Effect: Grappled by black tentacles.
+7 Realms Guard 10 was afflicted with Grappled! Duration: 99 turns. Effect: Grappled by black tentacles.
+Chris attacked 7 Realms Guard 10 for 21 damage!
+7 Realms Guard 4 will go next.
+7 Realms Guard 4 is affected by In the Zone! Effects: Beyond the walls of force
+7 Realms Guard 4 is affected by Grappled! Effects: Grappled by black tentacles.
+7 Realms Guard 4 made a combat maneuver check of 27!
+7 Realms Guard 9 will go next.
+7 Realms Guard 9 is affected by In the Zone! Effects: Beyond the walls of force
+7 Realms Guard 9 is affected by Grappled! Effects: Grappled by black tentacles.
+7 Realms Guard 9 made a combat maneuver check of 28!
+7 Realms Guard 6 will go next.
+7 Realms Guard 6 is affected by In the Zone! Effects: Beyond the walls of force
+7 Realms Guard 6 is affected by Grappled! Effects: Grappled by black tentacles.
+7 Realms Guard 6 made a combat maneuver check of 22!
+7 Realms Guard 7 will go next.
+7 Realms Guard 7 is affected by In the Zone! Effects: Beyond the walls of force
+7 Realms Guard 7 is affected by Grappled! Effects: Grappled by black tentacles.
+7 Realms Guard 7 made a combat maneuver check of 34!
+7 Realms Guard 8 will go next.
+7 Realms Guard 8 attacked 7 Realms Guard 8 for 1 damage!
+Brian will go next.
+7 Realms Guard 3 was afflicted with On the Ceiling! Duration: 100 turns. Effect: Gravity flipped on this motherfucker
+Brian attacked 7 Realms Guard 6 for 17 damage!
+7 Realms Guard 10 will go next.
+7 Realms Guard 10 is affected by In the Zone! Effects: Beyond the walls of force
+7 Realms Guard 10 is affected by Grappled! Effects: Grappled by black tentacles.
+7 Realms Guard 10 made a combat maneuver check of 31!
+7 Realms Guard 1 will go next.
+7 Realms Guard 1 is affected by Trapped! Effects: Trapped under a huge pipe organ!
+7 Realms Guard 1 is affected by Fire! Effects: THIS! GUARD IS ON FIIIIIRE!
+7 Realms Guard 1 attacked 7 Realms Guard 1 for 22 damage!
+Ben will go next.
+7 Realms Guard 5 made a Reflex Save of 30!
+Ben attacked 7 Realms Guard 5 for 7 damage!
+7 Realms Guard 5 made a Fortitude Save of 24!
+Ben attacked 7 Realms Guard 5 for 193 damage!
+7 Realms Guard 5 has died!
+7 Realms Guard 2 will go next.
+7 Realms Guard 2 is affected by In the Zone! Effects: Beyond the walls of force
+7 Realms Guard 2 attacked 7 Realms Guard 2 for 5 damage!
+Flame of Nethys will go next.
+ROLLED INITIATIVE
+7 Realms Guard 2 rolls 27.
+7 Realms Guard 9 rolls 25.
+Ben rolls 25.
+7 Realms Guard 6 rolls 24.
+Brett rolls 24.
+7 Realms Guard 1 rolls 23.
+7 Realms Guard 4 rolls 20.
+7 Realms Guard 10 rolls 18.
+Brian rolls 17.
+Chris rolls 16.
+7 Realms Guard 3 rolls 14.
+7 Realms Guard 7 rolls 13.
+7 Realms Guard 8 rolls 13.
+Flame of Nethys rolls 0.
+===============  Start of turn 4  ===============
+7 Realms Guard 2 will go first
+7 Realms Guard 2 was afflicted with On the Ceiling! Duration: 99 turns. Effect: Gravity flipped on this motherfucker
+7 Realms Guard 2 made an attack using Pistol with a roll of 16!
+7 Realms Guard 9 will go next.
+7 Realms Guard 9 is affected by In the Zone! Effects: Beyond the walls of force
+7 Realms Guard 9 is affected by Grappled! Effects: Grappled by black tentacles.
+7 Realms Guard 9 made a combat maneuver check of 31!
+Ben will go next.
+Ben was afflicted with Mummy! Duration: 100 turns. Effect: Ben creates a mummy from the dead guard.
+7 Realms Guard 6 will go next.
+7 Realms Guard 6 is affected by In the Zone! Effects: Beyond the walls of force
+7 Realms Guard 6 is affected by Grappled! Effects: Grappled by black tentacles.
+7 Realms Guard 6 made a Reflex Save of 25!
+7 Realms Guard 6 attacked 7 Realms Guard 1 for 11 damage!
+Brett will go next.
+Brett attacked 7 Realms Guard 2 for 31 damage!
+7 Realms Guard 2 made a Will Save of 31!
+Brett attacked 7 Realms Guard 2 for 35 damage!
+Brett attacked 7 Realms Guard 9 for 60 damage!
+Brett attacked 7 Realms Guard 2 for 31 damage!
+Brett attacked 7 Realms Guard 9 for 25 damage!
+7 Realms Guard 1 will go next.
+7 Realms Guard 1 is affected by Trapped! Effects: Trapped under a huge pipe organ!
+7 Realms Guard 2 made a Will Save of 34!
+7 Realms Guard 1 was afflicted with Grappled! Duration: 98 turns. Effect: Grappled by black tentacles.
+7 Realms Guard 1 made a combat maneuver check of 39!
+7 Realms Guard 1 attacked 7 Realms Guard 1 for 5 damage!
+7 Realms Guard 1 was afflicted with On the Ceiling! Duration: 99 turns. Effect: Gravity flipped on this motherfucker
+7 Realms Guard 1 made a Will Save of 36!
+7 Realms Guard 4 will go next.
+7 Realms Guard 4 is affected by In the Zone! Effects: Beyond the walls of force
+7 Realms Guard 4 is affected by Grappled! Effects: Grappled by black tentacles.
+7 Realms Guard 4 made a combat maneuver check of 37!
+7 Realms Guard 10 will go next.
+7 Realms Guard 10 is affected by In the Zone! Effects: Beyond the walls of force
+7 Realms Guard 10 is affected by Grappled! Effects: Grappled by black tentacles.
+7 Realms Guard 10 made a combat maneuver check of 39!
+7 Realms Guard 10 made an attack using Pistol with a roll of 29!
+7 Realms Guard 10 attacked 7 Realms Guard 10 for 4 damage!
+7 Realms Guard 10 was afflicted with On the Ceiling! Duration: 99 turns. Effect: Gravity flipped on this motherfucker
+7 Realms Guard 10 made a Will Save of 37!
+Brian will go next.
+Brian was afflicted with Paralyzed! Duration: 4 turns. Effect: Brian cannot move.
+Chris will go next.
+Chris attacked 7 Realms Guard 2 for 47 damage!
+Chris attacked 7 Realms Guard 6 for 41 damage!
+Chris attacked 7 Realms Guard 9 for 26 damage!
+Chris attacked 7 Realms Guard 1 for 28 damage!
+7 Realms Guard 2 made a Reflex Save of 24!
+7 Realms Guard 2 made a Reflex Save of 29!
+7 Realms Guard 2 made a Reflex Save of 25!
+7 Realms Guard 2 made a Reflex Save of 34!
+7 Realms Guard 2 made a Reflex Save of 18!
+7 Realms Guard 2 made a Reflex Save of 27!
+7 Realms Guard 2 made a Reflex Save of 29!
+7 Realms Guard 2 made a Reflex Save of 35!
+7 Realms Guard 2 made a Reflex Save of 17!
+7 Realms Guard 2 made a Reflex Save of 27!
+Chris attacked 7 Realms Guard 2 for 140 damage!
+7 Realms Guard 2 has died!
+Chris attacked 7 Realms Guard 9 for 70 damage!
+7 Realms Guard 9 has died!
+Chris attacked 7 Realms Guard 6 for 70 damage!
+7 Realms Guard 6 has died!
+Chris attacked 7 Realms Guard 1 for 70 damage!
+7 Realms Guard 1 has died!
+Chris attacked 7 Realms Guard 4 for 70 damage!
+Chris attacked 7 Realms Guard 10 for 140 damage!
+Chris attacked 7 Realms Guard 10 for 40 damage!
+7 Realms Guard 10 has died!
+Chris attacked 7 Realms Guard 3 for 140 damage!
+7 Realms Guard 3 will go next.
+7 Realms Guard 3 is affected by On the Ceiling! Effects: Gravity flipped on this motherfucker
+Flame of Nethys will go next.
+ROLLED INITIATIVE
+Brett rolls 35.
+Chris rolls 28.
+7 Realms Guard 4 rolls 24.
+Brian rolls 21.
+Ben rolls 18.
+Flame of Nethys rolls 0.
+===============  Start of turn 5  ===============
+Brett will go first
+Brett attacked 7 Realms Guard 4 for 22 damage!
+7 Realms Guard 4 has died!

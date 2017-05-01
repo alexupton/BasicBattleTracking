@@ -1,0 +1,38 @@
+Brian was afflicted with Stealthy! Duration: 2 turns. Effect: Brian is hidden with 54
+Brett was afflicted with Vorpal Hit! Duration: 1000 turns. Effect: Brett got fucking decapitated by Brian
+ROLLED INITIATIVE
+Brian rolls 27.
+Ben rolls 21.
+Elias rolls 20.
+Drew rolls 18.
+Mephizor 1 rolls 17.
+Chris rolls 15.
+Brett rolls 0.
+===============  Start of turn 1  ===============
+Brian will go first
+Brian was afflicted with Evil! Duration: 9 turns. Effect: Brian is turnt evil
+Elias was afflicted with Blinded! Duration: 2000 turns. Effect: Permanently blinded and deafened
+Elias was afflicted with Deafened! Duration: 2000 turns. Effect: Permantly defeaned
+Ben will go next.
+Elias will go next.
+Elias is affected by Blinded! Effects: Permanently blinded and deafened
+Drew will go next.
+Mephizor 1 will go next.
+Chris will go next.
+ROLLED INITIATIVE
+Ben rolls 28.
+Drew rolls 22.
+Elias rolls 20.
+Chris rolls 20.
+Brian rolls 19.
+Mephizor 1 rolls 16.
+===============  Start of turn 2  ===============
+Ben will go first
+Drew will go next.
+Elias will go next.
+Chris will go next.
+Elias will go next.
+Drew will go next.
+Ben will go next.
+Drew will go next.
+Elias will go next.

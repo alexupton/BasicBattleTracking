@@ -1,0 +1,78 @@
+c:\users\alex\documents\visual studio 2012\Projects\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe.config
+c:\users\alex\documents\visual studio 2012\Projects\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe
+c:\users\alex\documents\visual studio 2012\Projects\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.pdb
+c:\users\alex\documents\visual studio 2012\Projects\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.csprojResolveAssemblyReference.cache
+c:\users\alex\documents\visual studio 2012\Projects\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AddFighterWindow.resources
+c:\users\alex\documents\visual studio 2012\Projects\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.MainWindow.resources
+c:\users\alex\documents\visual studio 2012\Projects\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.Properties.Resources.resources
+c:\users\alex\documents\visual studio 2012\Projects\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.csproj.GenerateResource.Cache
+c:\users\alex\documents\visual studio 2012\Projects\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.exe
+c:\users\alex\documents\visual studio 2012\Projects\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.pdb
+c:\users\alex\documents\visual studio 2012\Projects\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.PC_Initiative.resources
+c:\users\alex\documents\visual studio 2012\Projects\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AttackForm.resources
+C:\Users\Alex\documents\visual studio 2012\Projects\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.StatusWindow.resources
+\\STILESBITCHLEY\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe.config
+\\STILESBITCHLEY\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.exe
+\\STILESBITCHLEY\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.pdb
+\\STILESBITCHLEY\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe
+\\STILESBITCHLEY\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.pdb
+\\STILESBITCHLEY\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.csprojResolveAssemblyReference.cache
+\\STILESBITCHLEY\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AddFighterWindow.resources
+\\STILESBITCHLEY\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AttackForm.resources
+\\STILESBITCHLEY\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.MainWindow.resources
+\\STILESBITCHLEY\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.PC_Initiative.resources
+\\STILESBITCHLEY\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.Properties.Resources.resources
+\\STILESBITCHLEY\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.StatusWindow.resources
+\\STILESBITCHLEY\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.csproj.GenerateResource.Cache
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe.config
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.exe
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.pdb
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.pdb
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AddFighterWindow.resources
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AttackForm.resources
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.MainWindow.resources
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.PC_Initiative.resources
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.Properties.Resources.resources
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.StatusWindow.resources
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.csproj.GenerateResource.Cache
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.StatBlockDesigner.resources
+D:\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe.config
+D:\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.exe
+D:\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.pdb
+D:\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe
+D:\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.pdb
+D:\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.csprojResolveAssemblyReference.cache
+D:\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AddFighterWindow.resources
+D:\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AttackForm.resources
+D:\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.MainWindow.resources
+D:\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.PC_Initiative.resources
+D:\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.Properties.Resources.resources
+D:\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.StatBlockDesigner.resources
+D:\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.StatusWindow.resources
+D:\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.csproj.GenerateResource.Cache
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AttackDesigner.resources
+D:\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AttackDesigner.resources
+D:\Users\TheBoss\Documents\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AttackTab.resources
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AttackTab.resources
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe.config
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.exe
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.pdb
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.pdb
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.csprojResolveAssemblyReference.cache
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AddFighterWindow.resources
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AttackDesigner.resources
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AttackForm.resources
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.MainWindow.resources
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.PC_Initiative.resources
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.Properties.Resources.resources
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.StatBlockDesigner.resources
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.StatusWindow.resources
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AttackTab.resources
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.csproj.GenerateResource.Cache
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe.manifest
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.application
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.exe.manifest
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.application

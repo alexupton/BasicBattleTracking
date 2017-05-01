@@ -1,0 +1,73 @@
+ROLLED INITIATIVE
+Drew rolls 26.
+Chris rolls 25.
+Brett rolls 25.
+Ben rolls 23.
+Horned Devil rolls 14.
+Brian rolls 12.
+===============  Start of turn 1  ===============
+Drew will go first
+Horned Devil was afflicted with Grappled! Duration: 10 turns. Effect: -2 AC and can't move without breaking grapple.
+Chris will go next.
+Brett was afflicted with Bull's Strength! Duration: 120 turns. Effect: +4 Strength
+Brett will go next.
+Brett is affected by Bull's Strength! Effects: +4 Strength
+Brett attacked Horned Devil for 70 damage!
+Ben will go next.
+Horned Devil will go next.
+Horned Devil is affected by Grappled! Effects: -2 AC and can't move without breaking grapple.
+Drew was afflicted with Infernal Wound! Duration: 1000 turns. Effect: Takes 2d6 damage per turn. Cannot be healed unless a check made for 26 DC vs Heal
+Brian will go next.
+ROLLED INITIATIVE
+Brian rolls 25.
+Brett rolls 24.
+Horned Devil rolls 22.
+Chris rolls 21.
+Ben rolls 21.
+Drew rolls 16.
+===============  Start of turn 2  ===============
+Brian will go first
+Brett will go next.
+Brett is affected by Bull's Strength! Effects: +4 Strength
+Horned Devil was afflicted with Fire of Judgement! Duration: 12 turns. Effect: Takes 1d10 divine damage unless he attacks Brett
+Horned Devil will go next.
+Horned Devil is affected by Grappled! Effects: -2 AC and can't move without breaking grapple.
+Horned Devil is affected by Fire of Judgement! Effects: Takes 1d10 divine damage unless he attacks Brett
+Chris will go next.
+Ben will go next.
+Horned Devil was afflicted with Putrification! Duration: 12 turns. Effect: 2 Wisdom Damage. DC 26 Fort save each round or faint
+Drew will go next.
+Drew is affected by Infernal Wound! Effects: Takes 2d6 damage per turn. Cannot be healed unless a check made for 26 DC vs Heal
+Drew attacked Horned Devil for 12 damage!
+Drew attacked Horned Devil for 13 damage!
+Drew attacked Horned Devil for -10 damage!
+Brian will go next.
+Drew will go next.
+Ben will go next.
+Chris will go next.
+Brett was afflicted with Infernal Wound! Duration: 1000 turns. Effect: Takes 2d6 damage per turn. Cannot be healed unless a check made for 26 DC vs Heal
+Horned Devil was afflicted with Staggered! Duration: 1 turns. Effect: Can Move or Attack, but not both
+Ben will go next.
+Drew will go next.
+Drew is affected by Infernal Wound! Effects: Takes 2d6 damage per turn. Cannot be healed unless a check made for 26 DC vs Heal
+ROLLED INITIATIVE
+Drew rolls 26.
+Brian rolls 25.
+Horned Devil rolls 22.
+Brett rolls 22.
+Chris rolls 22.
+Ben rolls 10.
+===============  Start of turn 3  ===============
+Drew will go first
+Drew attacked Horned Devil for 16 damage!
+Drew attacked Horned Devil for 28 damage!
+Drew attacked Horned Devil for 20 damage!
+Drew attacked Horned Devil for 34 damage!
+Brian will go next.
+Horned Devil will go next.
+Horned Devil is affected by Grappled! Effects: -2 AC and can't move without breaking grapple.
+Horned Devil is affected by Fire of Judgement! Effects: Takes 1d10 divine damage unless he attacks Brett
+Horned Devil is affected by Putrification! Effects: 2 Wisdom Damage. DC 26 Fort save each round or faint
+Horned Devil is no longer affected by Staggered!
+Horned Devil attacked Horned Devil for 116 damage!
+Horned Devil has died!
