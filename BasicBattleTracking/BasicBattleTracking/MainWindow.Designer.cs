@@ -178,6 +178,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.ControlsBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -195,6 +201,10 @@
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // InitOrderView
@@ -206,7 +216,7 @@
             this.HP,
             this.Held});
             this.InitOrderView.FullRowSelect = true;
-            this.InitOrderView.Location = new System.Drawing.Point(11, 39);
+            this.InitOrderView.Location = new System.Drawing.Point(5, 5);
             this.InitOrderView.Margin = new System.Windows.Forms.Padding(2);
             this.InitOrderView.MultiSelect = false;
             this.InitOrderView.Name = "InitOrderView";
@@ -256,7 +266,7 @@
             this.ControlsBox.Controls.Add(this.button5);
             this.ControlsBox.Controls.Add(this.removeFighterButton);
             this.ControlsBox.Controls.Add(this.addFighterButton);
-            this.ControlsBox.Location = new System.Drawing.Point(301, 39);
+            this.ControlsBox.Location = new System.Drawing.Point(295, 5);
             this.ControlsBox.Margin = new System.Windows.Forms.Padding(2);
             this.ControlsBox.Name = "ControlsBox";
             this.ControlsBox.Padding = new System.Windows.Forms.Padding(2);
@@ -305,7 +315,7 @@
             this.groupBox1.Controls.Add(this.initButton);
             this.groupBox1.Controls.Add(this.prevButton);
             this.groupBox1.Controls.Add(this.nextButton);
-            this.groupBox1.Location = new System.Drawing.Point(301, 136);
+            this.groupBox1.Location = new System.Drawing.Point(295, 102);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -389,7 +399,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.LogBox);
-            this.groupBox2.Location = new System.Drawing.Point(11, 729);
+            this.groupBox2.Location = new System.Drawing.Point(5, 695);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -414,7 +424,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(600, 55);
+            this.label1.Location = new System.Drawing.Point(594, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
@@ -425,7 +435,7 @@
             // 
             this.turnLabel.AutoSize = true;
             this.turnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.turnLabel.Location = new System.Drawing.Point(632, 50);
+            this.turnLabel.Location = new System.Drawing.Point(626, 16);
             this.turnLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.turnLabel.Name = "turnLabel";
             this.turnLabel.Size = new System.Drawing.Size(18, 20);
@@ -435,7 +445,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(562, 82);
+            this.label3.Location = new System.Drawing.Point(556, 48);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 13);
@@ -447,7 +457,7 @@
             // 
             this.activeLabel.AutoSize = true;
             this.activeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activeLabel.Location = new System.Drawing.Point(632, 78);
+            this.activeLabel.Location = new System.Drawing.Point(626, 44);
             this.activeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.activeLabel.Name = "activeLabel";
             this.activeLabel.Size = new System.Drawing.Size(39, 20);
@@ -462,7 +472,7 @@
             this.columnHeader3,
             this.columnHeader4});
             this.statusView.FullRowSelect = true;
-            this.statusView.Location = new System.Drawing.Point(1063, 39);
+            this.statusView.Location = new System.Drawing.Point(1057, 5);
             this.statusView.Margin = new System.Windows.Forms.Padding(2);
             this.statusView.Name = "statusView";
             this.statusView.Size = new System.Drawing.Size(326, 271);
@@ -497,7 +507,7 @@
             this.groupBox3.Controls.Add(this.AttackButton);
             this.groupBox3.Controls.Add(this.statusButton);
             this.groupBox3.Controls.Add(this.holdButton);
-            this.groupBox3.Location = new System.Drawing.Point(474, 136);
+            this.groupBox3.Location = new System.Drawing.Point(468, 102);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(200, 171);
             this.groupBox3.TabIndex = 10;
@@ -604,7 +614,7 @@
             this.groupBox4.Controls.Add(this.RefButton);
             this.groupBox4.Controls.Add(this.CMBButton);
             this.groupBox4.Controls.Add(this.FortButton);
-            this.groupBox4.Location = new System.Drawing.Point(15, 318);
+            this.groupBox4.Location = new System.Drawing.Point(9, 284);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(1374, 389);
             this.groupBox4.TabIndex = 11;
@@ -1491,7 +1501,7 @@
             this.fighterInfoBox.Controls.Add(this.groupBox7);
             this.fighterInfoBox.Controls.Add(this.groupBox6);
             this.fighterInfoBox.Controls.Add(this.label7);
-            this.fighterInfoBox.Location = new System.Drawing.Point(782, 44);
+            this.fighterInfoBox.Location = new System.Drawing.Point(776, 10);
             this.fighterInfoBox.Margin = new System.Windows.Forms.Padding(2);
             this.fighterInfoBox.Name = "fighterInfoBox";
             this.fighterInfoBox.Padding = new System.Windows.Forms.Padding(2);
@@ -1735,7 +1745,7 @@
             this.optionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1398, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1445, 24);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1750,28 +1760,93 @@
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.settingsToolStripMenuItem.Text = "Settings...";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(12, 27);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1424, 921);
+            this.tabControl1.TabIndex = 14;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.AutoScroll = true;
+            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.InitOrderView);
+            this.tabPage1.Controls.Add(this.fighterInfoBox);
+            this.tabPage1.Controls.Add(this.ControlsBox);
+            this.tabPage1.Controls.Add(this.groupBox4);
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.groupBox3);
+            this.tabPage1.Controls.Add(this.groupBox2);
+            this.tabPage1.Controls.Add(this.statusView);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.activeLabel);
+            this.tabPage1.Controls.Add(this.turnLabel);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1416, 895);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Battle Tracking";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1416, 895);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Reference";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(441, 236);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(131, 24);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Coming Soon!";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(this.richTextBox1);
+            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1416, 895);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Notes";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(3, 6);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(1070, 794);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1415, 924);
-            this.Controls.Add(this.fighterInfoBox);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.statusView);
-            this.Controls.Add(this.activeLabel);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.turnLabel);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.ControlsBox);
-            this.Controls.Add(this.InitOrderView);
+            this.ClientSize = new System.Drawing.Size(1445, 949);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -1803,6 +1878,12 @@
             this.groupBox6.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1959,6 +2040,12 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
