@@ -115,6 +115,7 @@ namespace BasicBattleTracking
                         errorFlag = true;
                         errorMessage += "\nHP cannot be less than 0";
                     }
+                    newFighter.HP = HP;
                 }
                 catch
                 {

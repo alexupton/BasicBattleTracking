@@ -96,3 +96,4 @@ D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTrac
 D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.exe.manifest
 D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.application
 D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.OptionScreen.resources
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.csprojResolveAssemblyReference.cache
