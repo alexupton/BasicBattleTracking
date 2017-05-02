@@ -19,6 +19,7 @@ namespace BasicBattleTracking
         private AttackDesigner ad;
         private List<Attack> attacks;
         private string mostRecentPath = "";
+        private Random randy;
         public StatBlockDesigner()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace BasicBattleTracking
             dBox.SelectedIndex = 0;
             attacks = new List<Attack>();
             ad = new AttackDesigner(this);
+            randy = new Random();
         }
 
         private void A1NameBox_TextChanged(object sender, EventArgs e)
@@ -411,20 +413,22 @@ namespace BasicBattleTracking
                     default: HPDieType = 12; break;
 
                 }
-
+           
                 int hitDieHP = 0;
-                Random randy = new Random();
-                lock (randy)
-                {
+                
+                
                     for (int i = 0; i < HPMult; i++)
                     {
                         int temp = 0;
-                        temp = randy.Next(HPDieType);
-                        hitDieHP += temp;
+                        lock (randy)
+                        {
+                            temp = randy.Next(HPDieType);
+                            hitDieHP += temp;
+                        }
                     }
-                }
+                
                 HP = hitDieHP + HPAdd;
-                System.Threading.Thread.Sleep(1);
+                
             
             return HP;
         }
