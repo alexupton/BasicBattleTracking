@@ -23,11 +23,14 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://alexupton.x10host.com/</InstallUrl>
+    <ProductName>Basic Battle Tracking</ProductName>
+    <PublisherName>Alex Upton</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -61,6 +64,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>d20.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -97,6 +103,12 @@
     <Compile Include="BattleIO.cs" />
     <Compile Include="DiceRoller.cs" />
     <Compile Include="DPercentTable.cs" />
+    <Compile Include="OptionScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionScreen.Designer.cs">
+      <DependentUpon>OptionScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Spell.cs" />
     <Compile Include="Fighter.cs" />
     <Compile Include="MainWindow.cs">
@@ -143,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionScreen.resx">
+      <DependentUpon>OptionScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PC Initiative.resx">
       <DependentUpon>PC Initiative.cs</DependentUpon>
@@ -223,6 +238,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="d20.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

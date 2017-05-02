@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AttackDesigner));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.OKButton = new System.Windows.Forms.Button();
@@ -75,17 +76,6 @@
             this.CancButton.UseVisualStyleBackColor = true;
             this.CancButton.Click += new System.EventHandler(this.CancButton_Click);
             // 
-            // attackTab1
-            // 
-            //this.attackTab1.attackNumber = 0;
-            //this.attackTab1.AutoSize = true;
-            //this.attackTab1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            //this.attackTab1.Location = new System.Drawing.Point(1, 3);
-            //this.attackTab1.Name = "attackTab1";
-            //this.attackTab1.sendingForm = null;
-            //this.attackTab1.Size = new System.Drawing.Size(307, 387);
-            //this.attackTab1.TabIndex = 0;
-            // 
             // AttackDesigner
             // 
             this.AcceptButton = this.OKButton;
@@ -96,6 +86,7 @@
             this.Controls.Add(this.CancButton);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AttackDesigner";
             this.Text = "AttackDesigner";

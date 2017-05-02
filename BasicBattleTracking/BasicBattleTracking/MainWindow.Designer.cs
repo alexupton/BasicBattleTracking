@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.InitOrderView = new System.Windows.Forms.ListView();
             this.OrderColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -40,9 +41,9 @@
             this.removeFighterButton = new System.Windows.Forms.Button();
             this.initButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.unholdButton = new System.Windows.Forms.Button();
             this.prevButton = new System.Windows.Forms.Button();
             this.nextButton = new System.Windows.Forms.Button();
+            this.unholdButton = new System.Windows.Forms.Button();
             this.holdButton = new System.Windows.Forms.Button();
             this.statusButton = new System.Windows.Forms.Button();
             this.AttackButton = new System.Windows.Forms.Button();
@@ -174,6 +175,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ControlsBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -190,6 +194,7 @@
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // InitOrderView
@@ -201,8 +206,8 @@
             this.HP,
             this.Held});
             this.InitOrderView.FullRowSelect = true;
-            this.InitOrderView.Location = new System.Drawing.Point(8, 8);
-            this.InitOrderView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.InitOrderView.Location = new System.Drawing.Point(11, 39);
+            this.InitOrderView.Margin = new System.Windows.Forms.Padding(2);
             this.InitOrderView.MultiSelect = false;
             this.InitOrderView.Name = "InitOrderView";
             this.InitOrderView.Size = new System.Drawing.Size(279, 274);
@@ -238,7 +243,7 @@
             // addFighterButton
             // 
             this.addFighterButton.Location = new System.Drawing.Point(4, 16);
-            this.addFighterButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addFighterButton.Margin = new System.Windows.Forms.Padding(2);
             this.addFighterButton.Name = "addFighterButton";
             this.addFighterButton.Size = new System.Drawing.Size(93, 21);
             this.addFighterButton.TabIndex = 1;
@@ -251,10 +256,10 @@
             this.ControlsBox.Controls.Add(this.button5);
             this.ControlsBox.Controls.Add(this.removeFighterButton);
             this.ControlsBox.Controls.Add(this.addFighterButton);
-            this.ControlsBox.Location = new System.Drawing.Point(298, 8);
-            this.ControlsBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ControlsBox.Location = new System.Drawing.Point(301, 39);
+            this.ControlsBox.Margin = new System.Windows.Forms.Padding(2);
             this.ControlsBox.Name = "ControlsBox";
-            this.ControlsBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ControlsBox.Padding = new System.Windows.Forms.Padding(2);
             this.ControlsBox.Size = new System.Drawing.Size(257, 93);
             this.ControlsBox.TabIndex = 2;
             this.ControlsBox.TabStop = false;
@@ -263,7 +268,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(110, 17);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(93, 21);
             this.button5.TabIndex = 6;
@@ -275,7 +280,7 @@
             // 
             this.removeFighterButton.Enabled = false;
             this.removeFighterButton.Location = new System.Drawing.Point(4, 48);
-            this.removeFighterButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.removeFighterButton.Margin = new System.Windows.Forms.Padding(2);
             this.removeFighterButton.Name = "removeFighterButton";
             this.removeFighterButton.Size = new System.Drawing.Size(93, 22);
             this.removeFighterButton.TabIndex = 2;
@@ -287,7 +292,7 @@
             // 
             this.initButton.Enabled = false;
             this.initButton.Location = new System.Drawing.Point(4, 17);
-            this.initButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.initButton.Margin = new System.Windows.Forms.Padding(2);
             this.initButton.Name = "initButton";
             this.initButton.Size = new System.Drawing.Size(160, 37);
             this.initButton.TabIndex = 3;
@@ -300,32 +305,20 @@
             this.groupBox1.Controls.Add(this.initButton);
             this.groupBox1.Controls.Add(this.prevButton);
             this.groupBox1.Controls.Add(this.nextButton);
-            this.groupBox1.Location = new System.Drawing.Point(298, 105);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(301, 136);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(168, 113);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Turn Controls";
             // 
-            // unholdButton
-            // 
-            this.unholdButton.Enabled = false;
-            this.unholdButton.Location = new System.Drawing.Point(115, 116);
-            this.unholdButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.unholdButton.Name = "unholdButton";
-            this.unholdButton.Size = new System.Drawing.Size(80, 40);
-            this.unholdButton.TabIndex = 5;
-            this.unholdButton.Text = "Unhold Selected";
-            this.unholdButton.UseVisualStyleBackColor = true;
-            this.unholdButton.Click += new System.EventHandler(this.unholdButton_Click);
-            // 
             // prevButton
             // 
             this.prevButton.Enabled = false;
             this.prevButton.Location = new System.Drawing.Point(4, 65);
-            this.prevButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.prevButton.Margin = new System.Windows.Forms.Padding(2);
             this.prevButton.Name = "prevButton";
             this.prevButton.Size = new System.Drawing.Size(65, 39);
             this.prevButton.TabIndex = 3;
@@ -337,7 +330,7 @@
             // 
             this.nextButton.Enabled = false;
             this.nextButton.Location = new System.Drawing.Point(103, 66);
-            this.nextButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nextButton.Margin = new System.Windows.Forms.Padding(2);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(61, 39);
             this.nextButton.TabIndex = 2;
@@ -345,11 +338,23 @@
             this.nextButton.UseVisualStyleBackColor = true;
             this.nextButton.Click += new System.EventHandler(this.button4_Click);
             // 
+            // unholdButton
+            // 
+            this.unholdButton.Enabled = false;
+            this.unholdButton.Location = new System.Drawing.Point(115, 116);
+            this.unholdButton.Margin = new System.Windows.Forms.Padding(2);
+            this.unholdButton.Name = "unholdButton";
+            this.unholdButton.Size = new System.Drawing.Size(80, 40);
+            this.unholdButton.TabIndex = 5;
+            this.unholdButton.Text = "Unhold Selected";
+            this.unholdButton.UseVisualStyleBackColor = true;
+            this.unholdButton.Click += new System.EventHandler(this.unholdButton_Click);
+            // 
             // holdButton
             // 
             this.holdButton.Enabled = false;
             this.holdButton.Location = new System.Drawing.Point(5, 116);
-            this.holdButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.holdButton.Margin = new System.Windows.Forms.Padding(2);
             this.holdButton.Name = "holdButton";
             this.holdButton.Size = new System.Drawing.Size(79, 39);
             this.holdButton.TabIndex = 1;
@@ -361,7 +366,7 @@
             // 
             this.statusButton.Enabled = false;
             this.statusButton.Location = new System.Drawing.Point(115, 17);
-            this.statusButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.statusButton.Margin = new System.Windows.Forms.Padding(2);
             this.statusButton.Name = "statusButton";
             this.statusButton.Size = new System.Drawing.Size(80, 36);
             this.statusButton.TabIndex = 4;
@@ -373,7 +378,7 @@
             // 
             this.AttackButton.Enabled = false;
             this.AttackButton.Location = new System.Drawing.Point(5, 18);
-            this.AttackButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AttackButton.Margin = new System.Windows.Forms.Padding(2);
             this.AttackButton.Name = "AttackButton";
             this.AttackButton.Size = new System.Drawing.Size(79, 36);
             this.AttackButton.TabIndex = 0;
@@ -384,11 +389,11 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.LogBox);
-            this.groupBox2.Location = new System.Drawing.Point(8, 698);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(11, 729);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(1384, 256);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(1384, 196);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Log";
@@ -397,7 +402,7 @@
             // LogBox
             // 
             this.LogBox.Location = new System.Drawing.Point(4, 16);
-            this.LogBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LogBox.Margin = new System.Windows.Forms.Padding(2);
             this.LogBox.Multiline = true;
             this.LogBox.Name = "LogBox";
             this.LogBox.ReadOnly = true;
@@ -409,7 +414,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(597, 24);
+            this.label1.Location = new System.Drawing.Point(600, 55);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
@@ -420,7 +425,7 @@
             // 
             this.turnLabel.AutoSize = true;
             this.turnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.turnLabel.Location = new System.Drawing.Point(629, 19);
+            this.turnLabel.Location = new System.Drawing.Point(632, 50);
             this.turnLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.turnLabel.Name = "turnLabel";
             this.turnLabel.Size = new System.Drawing.Size(18, 20);
@@ -430,7 +435,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(559, 51);
+            this.label3.Location = new System.Drawing.Point(562, 82);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 13);
@@ -442,7 +447,7 @@
             // 
             this.activeLabel.AutoSize = true;
             this.activeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activeLabel.Location = new System.Drawing.Point(629, 47);
+            this.activeLabel.Location = new System.Drawing.Point(632, 78);
             this.activeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.activeLabel.Name = "activeLabel";
             this.activeLabel.Size = new System.Drawing.Size(39, 20);
@@ -457,8 +462,8 @@
             this.columnHeader3,
             this.columnHeader4});
             this.statusView.FullRowSelect = true;
-            this.statusView.Location = new System.Drawing.Point(1060, 8);
-            this.statusView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.statusView.Location = new System.Drawing.Point(1063, 39);
+            this.statusView.Margin = new System.Windows.Forms.Padding(2);
             this.statusView.Name = "statusView";
             this.statusView.Size = new System.Drawing.Size(326, 271);
             this.statusView.TabIndex = 9;
@@ -492,7 +497,7 @@
             this.groupBox3.Controls.Add(this.AttackButton);
             this.groupBox3.Controls.Add(this.statusButton);
             this.groupBox3.Controls.Add(this.holdButton);
-            this.groupBox3.Location = new System.Drawing.Point(471, 105);
+            this.groupBox3.Location = new System.Drawing.Point(474, 136);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(200, 171);
             this.groupBox3.TabIndex = 10;
@@ -503,7 +508,7 @@
             // 
             this.RemoveStatusButton.Enabled = false;
             this.RemoveStatusButton.Location = new System.Drawing.Point(53, 66);
-            this.RemoveStatusButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RemoveStatusButton.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveStatusButton.Name = "RemoveStatusButton";
             this.RemoveStatusButton.Size = new System.Drawing.Size(104, 36);
             this.RemoveStatusButton.TabIndex = 5;
@@ -599,7 +604,7 @@
             this.groupBox4.Controls.Add(this.RefButton);
             this.groupBox4.Controls.Add(this.CMBButton);
             this.groupBox4.Controls.Add(this.FortButton);
-            this.groupBox4.Location = new System.Drawing.Point(12, 287);
+            this.groupBox4.Location = new System.Drawing.Point(15, 318);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(1374, 389);
             this.groupBox4.TabIndex = 11;
@@ -1287,7 +1292,7 @@
             // 
             this.npcAttackButton.Enabled = false;
             this.npcAttackButton.Location = new System.Drawing.Point(475, 126);
-            this.npcAttackButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.npcAttackButton.Margin = new System.Windows.Forms.Padding(2);
             this.npcAttackButton.Name = "npcAttackButton";
             this.npcAttackButton.Size = new System.Drawing.Size(104, 36);
             this.npcAttackButton.TabIndex = 23;
@@ -1305,7 +1310,7 @@
             this.Count});
             this.attackView.FullRowSelect = true;
             this.attackView.Location = new System.Drawing.Point(29, 79);
-            this.attackView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.attackView.Margin = new System.Windows.Forms.Padding(2);
             this.attackView.MultiSelect = false;
             this.attackView.Name = "attackView";
             this.attackView.Size = new System.Drawing.Size(374, 131);
@@ -1337,7 +1342,7 @@
             // rollBox
             // 
             this.rollBox.Location = new System.Drawing.Point(424, 216);
-            this.rollBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rollBox.Margin = new System.Windows.Forms.Padding(2);
             this.rollBox.Multiline = true;
             this.rollBox.Name = "rollBox";
             this.rollBox.ReadOnly = true;
@@ -1433,7 +1438,7 @@
             // 
             this.WillButton.Enabled = false;
             this.WillButton.Location = new System.Drawing.Point(329, 17);
-            this.WillButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WillButton.Margin = new System.Windows.Forms.Padding(2);
             this.WillButton.Name = "WillButton";
             this.WillButton.Size = new System.Drawing.Size(104, 36);
             this.WillButton.TabIndex = 6;
@@ -1445,7 +1450,7 @@
             // 
             this.RefButton.Enabled = false;
             this.RefButton.Location = new System.Drawing.Point(221, 17);
-            this.RefButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RefButton.Margin = new System.Windows.Forms.Padding(2);
             this.RefButton.Name = "RefButton";
             this.RefButton.Size = new System.Drawing.Size(104, 36);
             this.RefButton.TabIndex = 5;
@@ -1457,7 +1462,7 @@
             // 
             this.CMBButton.Enabled = false;
             this.CMBButton.Location = new System.Drawing.Point(5, 17);
-            this.CMBButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CMBButton.Margin = new System.Windows.Forms.Padding(2);
             this.CMBButton.Name = "CMBButton";
             this.CMBButton.Size = new System.Drawing.Size(104, 36);
             this.CMBButton.TabIndex = 0;
@@ -1469,7 +1474,7 @@
             // 
             this.FortButton.Enabled = false;
             this.FortButton.Location = new System.Drawing.Point(113, 17);
-            this.FortButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FortButton.Margin = new System.Windows.Forms.Padding(2);
             this.FortButton.Name = "FortButton";
             this.FortButton.Size = new System.Drawing.Size(104, 36);
             this.FortButton.TabIndex = 4;
@@ -1486,10 +1491,10 @@
             this.fighterInfoBox.Controls.Add(this.groupBox7);
             this.fighterInfoBox.Controls.Add(this.groupBox6);
             this.fighterInfoBox.Controls.Add(this.label7);
-            this.fighterInfoBox.Location = new System.Drawing.Point(779, 13);
-            this.fighterInfoBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fighterInfoBox.Location = new System.Drawing.Point(782, 44);
+            this.fighterInfoBox.Margin = new System.Windows.Forms.Padding(2);
             this.fighterInfoBox.Name = "fighterInfoBox";
-            this.fighterInfoBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fighterInfoBox.Padding = new System.Windows.Forms.Padding(2);
             this.fighterInfoBox.Size = new System.Drawing.Size(271, 263);
             this.fighterInfoBox.TabIndex = 12;
             this.fighterInfoBox.TabStop = false;
@@ -1522,9 +1527,9 @@
             this.groupBox8.Controls.Add(this.label5);
             this.groupBox8.Controls.Add(this.label6);
             this.groupBox8.Location = new System.Drawing.Point(133, 72);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox8.Size = new System.Drawing.Size(120, 96);
             this.groupBox8.TabIndex = 9;
             this.groupBox8.TabStop = false;
@@ -1599,9 +1604,9 @@
             this.groupBox7.Controls.Add(this.label19);
             this.groupBox7.Controls.Add(this.label20);
             this.groupBox7.Location = new System.Drawing.Point(8, 126);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox7.Size = new System.Drawing.Size(113, 79);
             this.groupBox7.TabIndex = 6;
             this.groupBox7.TabStop = false;
@@ -1652,9 +1657,9 @@
             this.groupBox6.Controls.Add(this.label10);
             this.groupBox6.Controls.Add(this.label9);
             this.groupBox6.Location = new System.Drawing.Point(4, 43);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(113, 79);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
@@ -1724,11 +1729,37 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "HP";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.optionsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1398, 24);
+            this.menuStrip1.TabIndex = 13;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingsToolStripMenuItem});
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.optionsToolStripMenuItem.Text = "Options";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.settingsToolStripMenuItem.Text = "Settings...";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1403, 679);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1415, 924);
             this.Controls.Add(this.fighterInfoBox);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -1741,9 +1772,12 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ControlsBox);
             this.Controls.Add(this.InitOrderView);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainWindow";
             this.Text = "Basic Battle Tracker";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ControlsBox.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -1767,6 +1801,8 @@
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1920,6 +1956,9 @@
         private System.Windows.Forms.Label dmgBonusLabel;
         private System.Windows.Forms.Label atkModBox;
         private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
     }
 }
 

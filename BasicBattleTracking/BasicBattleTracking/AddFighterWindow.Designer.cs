@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddFighterWindow));
             this.nameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,51 +42,57 @@
             // 
             // nameBox
             // 
-            this.nameBox.Location = new System.Drawing.Point(135, 9);
+            this.nameBox.Location = new System.Drawing.Point(90, 6);
+            this.nameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(188, 26);
+            this.nameBox.Size = new System.Drawing.Size(127, 20);
             this.nameBox.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(78, 12);
+            this.label1.Location = new System.Drawing.Point(52, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 48);
+            this.label2.Location = new System.Drawing.Point(8, 31);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 20);
+            this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Initiative Bonus";
             // 
             // InitBox
             // 
-            this.InitBox.Location = new System.Drawing.Point(135, 45);
+            this.InitBox.Location = new System.Drawing.Point(90, 29);
+            this.InitBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.InitBox.Name = "InitBox";
-            this.InitBox.Size = new System.Drawing.Size(52, 26);
+            this.InitBox.Size = new System.Drawing.Size(36, 20);
             this.InitBox.TabIndex = 3;
             this.InitBox.Text = "0";
             // 
             // HPBox
             // 
-            this.HPBox.Location = new System.Drawing.Point(135, 77);
+            this.HPBox.Location = new System.Drawing.Point(90, 50);
+            this.HPBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HPBox.Name = "HPBox";
-            this.HPBox.Size = new System.Drawing.Size(52, 26);
+            this.HPBox.Size = new System.Drawing.Size(36, 20);
             this.HPBox.TabIndex = 4;
             this.HPBox.Text = "0";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(98, 83);
+            this.label3.Location = new System.Drawing.Point(65, 54);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 20);
+            this.label3.Size = new System.Drawing.Size(22, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "HP";
             // 
@@ -95,18 +102,20 @@
             this.PCCheckBox.Checked = true;
             this.PCCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.PCCheckBox.Enabled = false;
-            this.PCCheckBox.Location = new System.Drawing.Point(135, 140);
+            this.PCCheckBox.Location = new System.Drawing.Point(90, 91);
+            this.PCCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PCCheckBox.Name = "PCCheckBox";
-            this.PCCheckBox.Size = new System.Drawing.Size(125, 24);
+            this.PCCheckBox.Size = new System.Drawing.Size(85, 17);
             this.PCCheckBox.TabIndex = 6;
             this.PCCheckBox.Text = "Fighter is PC";
             this.PCCheckBox.UseVisualStyleBackColor = true;
             // 
             // OKButton
             // 
-            this.OKButton.Location = new System.Drawing.Point(82, 205);
+            this.OKButton.Location = new System.Drawing.Point(55, 133);
+            this.OKButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(108, 35);
+            this.OKButton.Size = new System.Drawing.Size(72, 23);
             this.OKButton.TabIndex = 7;
             this.OKButton.Text = "Create";
             this.OKButton.UseVisualStyleBackColor = true;
@@ -115,9 +124,10 @@
             // cButton
             // 
             this.cButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cButton.Location = new System.Drawing.Point(254, 205);
+            this.cButton.Location = new System.Drawing.Point(169, 133);
+            this.cButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cButton.Name = "cButton";
-            this.cButton.Size = new System.Drawing.Size(100, 35);
+            this.cButton.Size = new System.Drawing.Size(67, 23);
             this.cButton.TabIndex = 8;
             this.cButton.Text = "Cancel";
             this.cButton.UseVisualStyleBackColor = true;
@@ -125,9 +135,9 @@
             // AddFighterWindow
             // 
             this.AcceptButton = this.OKButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(468, 262);
+            this.ClientSize = new System.Drawing.Size(312, 170);
             this.Controls.Add(this.cButton);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.PCCheckBox);
@@ -137,6 +147,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nameBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddFighterWindow";
             this.Text = "AddFighterWindow";
             this.ResumeLayout(false);

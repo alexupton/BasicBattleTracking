@@ -18,6 +18,7 @@ namespace BasicBattleTracking
         public MainWindow parent { get; set; }
         private AttackDesigner ad;
         private List<Attack> attacks;
+        private string mostRecentPath = "";
         public StatBlockDesigner()
         {
             InitializeComponent();
@@ -186,7 +187,20 @@ namespace BasicBattleTracking
         {
             SaveFileDialog save = new SaveFileDialog();
             save.DefaultExt = ".txt";
-            string initialPath = Environment.CurrentDirectory + @"\Stat Blocks";
+            string initialPath = Program.defaultPath + @"\Stat Blocks";
+
+            if (mostRecentPath != "")
+            {
+                initialPath = mostRecentPath;
+            }
+            else
+            {
+                if (Program.UserStatBlockDirectory != "")
+                {
+                    initialPath = Program.UserStatBlockDirectory;
+                }
+            }
+
             if (!Directory.Exists(initialPath))
             {
                 Directory.CreateDirectory(initialPath);
@@ -205,6 +219,7 @@ namespace BasicBattleTracking
                         BattleIO saver = new BattleIO();
                         saver.SaveStatBlock(savePath, newFighter);
                         saved = true;
+                        mostRecentPath = Path.GetDirectoryName(save.FileName);
                     }
                 }
                 else
@@ -235,7 +250,20 @@ namespace BasicBattleTracking
         private void LoadButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog load = new OpenFileDialog();
-            string initialPath = Environment.CurrentDirectory + @"\Stat Blocks";
+            string initialPath = Program.defaultPath + @"\Stat Blocks";
+
+            if (mostRecentPath != "")
+            {
+                initialPath = mostRecentPath;
+            }
+            else
+            {
+                if (Program.UserStatBlockDirectory != "")
+                {
+                    initialPath = Program.UserStatBlockDirectory;
+                }
+            }
+
             if (!Directory.Exists(initialPath))
             {
                 Directory.CreateDirectory(initialPath);
@@ -248,6 +276,8 @@ namespace BasicBattleTracking
                 Fighter newFighter = loader.LoadStatBlock(load.FileName);
 
                 savePath = load.FileName;
+
+                mostRecentPath = Path.GetDirectoryName(load.FileName);
                 if (newFighter != null)
                 {
                     nameBox.Text = newFighter.Name;

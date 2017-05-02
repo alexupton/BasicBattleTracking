@@ -33,6 +33,8 @@ namespace BasicBattleTracking
         public List<Status> recentlyUsedStatuses { get; set; }
         public MainWindow()
         {
+            BattleIO settingsLoader = new BattleIO();
+            settingsLoader.LoadSettings();
             InitializeComponent();
         }
 
@@ -61,7 +63,7 @@ namespace BasicBattleTracking
             AutoLoad();
             this.FormClosed += new FormClosedEventHandler(this.MainWindow_Close);
             //TestDPercentTable();
-            WriteToLog("This is a test of the update system. If you can read this, the update worked.");
+            WriteToLog("Check out the options menu for new stuff.");
         }
 
 
@@ -1216,6 +1218,12 @@ namespace BasicBattleTracking
             {
                 RollGeneric(type, amt, mod, dxResultBox);
             }
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OptionScreen options = new OptionScreen();
+            options.Show();
         }
         //
         //End Die Roll Buttons

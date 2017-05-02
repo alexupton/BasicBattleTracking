@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AttackForm));
             this.targetBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.DamageBox = new System.Windows.Forms.TextBox();
@@ -40,7 +41,7 @@
             // 
             this.targetBox.FormattingEnabled = true;
             this.targetBox.Location = new System.Drawing.Point(8, 44);
-            this.targetBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.targetBox.Margin = new System.Windows.Forms.Padding(2);
             this.targetBox.Name = "targetBox";
             this.targetBox.Size = new System.Drawing.Size(82, 21);
             this.targetBox.TabIndex = 0;
@@ -59,7 +60,7 @@
             // DamageBox
             // 
             this.DamageBox.Location = new System.Drawing.Point(107, 45);
-            this.DamageBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DamageBox.Margin = new System.Windows.Forms.Padding(2);
             this.DamageBox.Name = "DamageBox";
             this.DamageBox.Size = new System.Drawing.Size(68, 20);
             this.DamageBox.TabIndex = 2;
@@ -77,7 +78,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(29, 130);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 22);
             this.button1.TabIndex = 4;
@@ -88,7 +89,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(203, 130);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 22);
             this.button2.TabIndex = 5;
@@ -107,7 +108,8 @@
             this.Controls.Add(this.DamageBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.targetBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AttackForm";
             this.Text = "AttackForm";
             this.Load += new System.EventHandler(this.AttackForm_Load);

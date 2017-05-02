@@ -10,11 +10,26 @@ namespace BasicBattleTracking
 {
     public class BattleIO
     {
+
+        private string defaultPath = Program.defaultPath;
         public void AutoSave(List<Fighter> combatants)
         {
             StringBuilder rawText = new StringBuilder();
             int npcIndex = 0;
-            foreach(string file in Directory.GetFiles(Environment.CurrentDirectory + @"\Save\NPCs\"))
+            string npcPath = defaultPath + @"\Save\NPCs\";
+            string autoPath = defaultPath + @"\Save\auto.txt";
+            if(Program.UserAutoSaveDirectory != "")
+            {
+                autoPath = Program.UserAutoSaveDirectory;
+                npcPath = autoPath + @"\NPCs\";
+                autoPath += @"\auto.txt";
+            }
+
+            if(!Directory.Exists(npcPath))
+            {
+                Directory.CreateDirectory(npcPath);
+            }
+            foreach(string file in Directory.GetFiles(npcPath))
                     {
                         File.Delete(file);
                     }
@@ -27,20 +42,27 @@ namespace BasicBattleTracking
                 }
                 else
                 {
-                    string npcPath = Environment.CurrentDirectory + @"\Save\NPCs\" + f.Name + npcIndex.ToString()  + ".txt";
+                    string newNpcPath = npcPath + f.Name + npcIndex.ToString()  + ".txt";
                     
-                    SaveStatBlock(npcPath, f);
+                    SaveStatBlock(newNpcPath, f);
                     npcIndex++;
 
                 }
             }
 
-            string path = Environment.CurrentDirectory + @"\Save\auto.txt";
-            if(File.Exists(path))
+            
+            if(File.Exists(autoPath))
             {
-                File.Delete(path);
+                File.Delete(autoPath);
             }
-            File.WriteAllText(path, rawText.ToString());
+            try
+            {
+                File.WriteAllText(autoPath, rawText.ToString());
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message + " Please change the autosave directory in the options menu and try again.", "Auto Save Failed");
+            }
             
 
         }
@@ -48,7 +70,11 @@ namespace BasicBattleTracking
         public List<Fighter> AutoLoad()
         {
             List<Fighter> fighters = new List<Fighter>();
-            string path = Environment.CurrentDirectory + @"\Save\auto.txt";
+            string path = defaultPath + @"\Save\auto.txt";
+            if(Program.UserAutoSaveDirectory != "")
+            {
+                path = Program.UserAutoSaveDirectory + @"\auto.txt";
+            }
             if(File.Exists(path))
             {
                 string[] lines = File.ReadAllLines(path);
@@ -72,7 +98,11 @@ namespace BasicBattleTracking
                 }
             }
 
-            path = Environment.CurrentDirectory + @"\Save\NPCs";
+            path = defaultPath + @"\Save\NPCS";
+            if (Program.UserAutoSaveDirectory != "")
+            {
+                path = Program.UserAutoSaveDirectory + @"\NPCS";
+            }
             if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);
@@ -91,11 +121,17 @@ namespace BasicBattleTracking
 
         public void ExportLog(string log)
         {
-            if (!Directory.Exists(Environment.CurrentDirectory + @"\Save\Log\"))
+            string logPath = defaultPath + @"\Save\Log\";
+            if(Program.UserLogDirectory != "")
             {
-                Directory.CreateDirectory(Environment.CurrentDirectory + @"\Save\Log\");
+                logPath = Program.UserLogDirectory;
             }
-            string path = Environment.CurrentDirectory + @"\Save\Log\" + DateTime.Now.ToLongDateString() +  ".txt";
+
+            if (!Directory.Exists(logPath))
+            {
+                Directory.CreateDirectory(logPath);
+            }
+            string path = logPath + "\\" + DateTime.Now.ToLongDateString() + ".txt";
 
             if (File.Exists(path))
                 File.Delete(path);
@@ -259,6 +295,102 @@ namespace BasicBattleTracking
                 }
             }
             return output;
+        }
+
+        public bool SaveSettings(OptionScreen sender)
+        {
+            bool success = true;
+
+            StringBuilder sb = new StringBuilder();
+
+            string path = Program.defaultPath + @"\Settings.txt";
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+
+            if (!Directory.Exists(sender.StatBlockPath) || !Directory.Exists(sender.AutoSavePath) || !Directory.Exists(sender.LogPath))
+            {
+                MessageBox.Show("Invalid file path for one or more default directories", "Error");
+                success = false;
+            }
+            else
+            {
+                sb.AppendLine("StatBlockPath|<" + sender.StatBlockPath + ">");
+                sb.AppendLine("AutoSavePath|<" + sender.AutoSavePath + ">");
+                sb.AppendLine("LogPath|<" + sender.LogPath + ">");
+
+                File.WriteAllText(path, sb.ToString());
+            }
+            return success;
+        }
+
+        public void LoadSettings()
+        {
+            string path = Program.defaultPath + @"\Settings.txt";
+            if (File.Exists(path))
+            {
+                string[] lines = File.ReadAllLines(path);
+
+                for(int i = 0; i < lines.Length; i++)
+                {
+                    string[] line = lines[i].Split('|');
+
+                    switch(line[0])
+                    {
+                        case "StatBlockPath":
+                            {
+                                Program.UserStatBlockDirectory = GetSettingPath(line[1]); break;
+                            }
+                        case "AutoSavePath":
+                            {
+                                Program.UserAutoSaveDirectory = GetSettingPath(line[1]); break;
+                            }
+                        case "LogPath":
+                            {
+                                Program.UserLogDirectory = GetSettingPath(line[1]); break;
+                            }
+                        default: break;
+                    }
+
+                }
+            }
+        }
+
+        private string GetSettingPath(string candidateLine)
+        {
+            StringBuilder sb = new StringBuilder();
+            int startIndex = -1;
+            int testIndex = 0;
+            char[] lineChars = candidateLine.ToCharArray();
+            while (startIndex < 0 && testIndex < lineChars.Length)
+            {
+                if (lineChars[testIndex] == '<')
+                {
+                    startIndex = testIndex + 1;
+                }
+                else
+                {
+                    testIndex++;
+                }
+            }
+            if (startIndex >= 0)
+            {
+                for (int i = startIndex; i < lineChars.Length; i++ )
+                {
+                    if (lineChars[i] == '>')
+                        i = lineChars.Length;
+                    else
+                    {
+                        sb.Append(lineChars[i]);
+                    }
+                }
+                return sb.ToString();
+            }
+            else
+            {
+                return "";
+            }
         }
     }
 
