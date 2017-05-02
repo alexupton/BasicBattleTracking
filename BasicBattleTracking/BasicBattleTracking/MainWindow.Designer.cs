@@ -29,36 +29,37 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.fighterInfoBox = new System.Windows.Forms.GroupBox();
-            this.InitLabel = new System.Windows.Forms.Label();
-            this.initBox = new System.Windows.Forms.TextBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.willBox = new System.Windows.Forms.TextBox();
-            this.refBox = new System.Windows.Forms.TextBox();
-            this.fortBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.hpLabel = new System.Windows.Forms.TextBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.cmdLabel = new System.Windows.Forms.TextBox();
-            this.cmbLabel = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.touchLabel = new System.Windows.Forms.TextBox();
-            this.flatFootedLabel = new System.Windows.Forms.TextBox();
-            this.acLabel = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.InitOrderView = new System.Windows.Forms.ListView();
+            this.OrderColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.InitValueColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.HP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Held = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.addFighterButton = new System.Windows.Forms.Button();
+            this.ControlsBox = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.removeFighterButton = new System.Windows.Forms.Button();
+            this.initButton = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.prevButton = new System.Windows.Forms.Button();
+            this.nextButton = new System.Windows.Forms.Button();
+            this.unholdButton = new System.Windows.Forms.Button();
+            this.holdButton = new System.Windows.Forms.Button();
+            this.statusButton = new System.Windows.Forms.Button();
+            this.AttackButton = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.LogBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.turnLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.activeLabel = new System.Windows.Forms.Label();
+            this.statusView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.RemoveStatusButton = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label45 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
@@ -150,51 +151,37 @@
             this.RefButton = new System.Windows.Forms.Button();
             this.CMBButton = new System.Windows.Forms.Button();
             this.FortButton = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.RemoveStatusButton = new System.Windows.Forms.Button();
-            this.unholdButton = new System.Windows.Forms.Button();
-            this.AttackButton = new System.Windows.Forms.Button();
-            this.statusButton = new System.Windows.Forms.Button();
-            this.holdButton = new System.Windows.Forms.Button();
-            this.statusView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.activeLabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.turnLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.LogBox = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.initButton = new System.Windows.Forms.Button();
-            this.prevButton = new System.Windows.Forms.Button();
-            this.nextButton = new System.Windows.Forms.Button();
-            this.ControlsBox = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.removeFighterButton = new System.Windows.Forms.Button();
-            this.addFighterButton = new System.Windows.Forms.Button();
-            this.InitOrderView = new System.Windows.Forms.ListView();
-            this.OrderColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.NameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.InitValueColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.HP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Held = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label8 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.fighterInfoBox.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.fighterInfoBox = new System.Windows.Forms.GroupBox();
+            this.InitLabel = new System.Windows.Forms.Label();
+            this.initBox = new System.Windows.Forms.TextBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.willBox = new System.Windows.Forms.TextBox();
+            this.refBox = new System.Windows.Forms.TextBox();
+            this.fortBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.hpLabel = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.cmdLabel = new System.Windows.Forms.TextBox();
+            this.cmbLabel = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.touchLabel = new System.Windows.Forms.TextBox();
+            this.flatFootedLabel = new System.Windows.Forms.TextBox();
+            this.acLabel = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ControlsBox.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -203,318 +190,331 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.ControlsBox.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.fighterInfoBox.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // InitOrderView
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.optionsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1442, 24);
-            this.menuStrip1.TabIndex = 13;
-            this.menuStrip1.Text = "menuStrip1";
+            this.InitOrderView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.OrderColumn,
+            this.NameColumn,
+            this.InitValueColumn,
+            this.HP,
+            this.Held});
+            this.InitOrderView.FullRowSelect = true;
+            this.InitOrderView.Location = new System.Drawing.Point(11, 39);
+            this.InitOrderView.Margin = new System.Windows.Forms.Padding(2);
+            this.InitOrderView.MultiSelect = false;
+            this.InitOrderView.Name = "InitOrderView";
+            this.InitOrderView.Size = new System.Drawing.Size(279, 274);
+            this.InitOrderView.TabIndex = 0;
+            this.InitOrderView.UseCompatibleStateImageBehavior = false;
+            this.InitOrderView.View = System.Windows.Forms.View.Details;
+            this.InitOrderView.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // optionsToolStripMenuItem
+            // OrderColumn
             // 
-            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.settingsToolStripMenuItem});
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.optionsToolStripMenuItem.Text = "Options";
+            this.OrderColumn.Text = "Order";
+            this.OrderColumn.Width = 55;
             // 
-            // settingsToolStripMenuItem
+            // NameColumn
             // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.settingsToolStripMenuItem.Text = "Settings...";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            this.NameColumn.Text = "Name";
+            this.NameColumn.Width = 63;
             // 
-            // tabControl1
+            // InitValueColumn
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 27);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1407, 922);
-            this.tabControl1.TabIndex = 14;
+            this.InitValueColumn.Text = "Initiative";
+            this.InitValueColumn.Width = 51;
             // 
-            // tabPage1
+            // HP
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage1.Controls.Add(this.fighterInfoBox);
-            this.tabPage1.Controls.Add(this.groupBox4);
-            this.tabPage1.Controls.Add(this.groupBox3);
-            this.tabPage1.Controls.Add(this.statusView);
-            this.tabPage1.Controls.Add(this.activeLabel);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.turnLabel);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.ControlsBox);
-            this.tabPage1.Controls.Add(this.InitOrderView);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1399, 896);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Battle Tracker";
+            this.HP.Text = "HP";
+            this.HP.Width = 46;
             // 
-            // tabPage2
+            // Held
             // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1399, 896);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "GM Reference";
+            this.Held.Text = "Held";
             // 
-            // fighterInfoBox
+            // addFighterButton
             // 
-            this.fighterInfoBox.Controls.Add(this.InitLabel);
-            this.fighterInfoBox.Controls.Add(this.initBox);
-            this.fighterInfoBox.Controls.Add(this.groupBox8);
-            this.fighterInfoBox.Controls.Add(this.hpLabel);
-            this.fighterInfoBox.Controls.Add(this.groupBox7);
-            this.fighterInfoBox.Controls.Add(this.groupBox6);
-            this.fighterInfoBox.Controls.Add(this.label7);
-            this.fighterInfoBox.Location = new System.Drawing.Point(776, 10);
-            this.fighterInfoBox.Margin = new System.Windows.Forms.Padding(2);
-            this.fighterInfoBox.Name = "fighterInfoBox";
-            this.fighterInfoBox.Padding = new System.Windows.Forms.Padding(2);
-            this.fighterInfoBox.Size = new System.Drawing.Size(271, 263);
-            this.fighterInfoBox.TabIndex = 24;
-            this.fighterInfoBox.TabStop = false;
-            this.fighterInfoBox.Text = "Selected Player Stats";
+            this.addFighterButton.Location = new System.Drawing.Point(4, 16);
+            this.addFighterButton.Margin = new System.Windows.Forms.Padding(2);
+            this.addFighterButton.Name = "addFighterButton";
+            this.addFighterButton.Size = new System.Drawing.Size(93, 21);
+            this.addFighterButton.TabIndex = 1;
+            this.addFighterButton.Text = "Add PC";
+            this.addFighterButton.UseVisualStyleBackColor = true;
+            this.addFighterButton.Click += new System.EventHandler(this.addFighterButton_Click);
             // 
-            // InitLabel
+            // ControlsBox
             // 
-            this.InitLabel.AutoSize = true;
-            this.InitLabel.Location = new System.Drawing.Point(146, 16);
-            this.InitLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.InitLabel.Name = "InitLabel";
-            this.InitLabel.Size = new System.Drawing.Size(57, 13);
-            this.InitLabel.TabIndex = 11;
-            this.InitLabel.Text = "Init. Bonus";
+            this.ControlsBox.Controls.Add(this.button5);
+            this.ControlsBox.Controls.Add(this.removeFighterButton);
+            this.ControlsBox.Controls.Add(this.addFighterButton);
+            this.ControlsBox.Location = new System.Drawing.Point(301, 39);
+            this.ControlsBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ControlsBox.Name = "ControlsBox";
+            this.ControlsBox.Padding = new System.Windows.Forms.Padding(2);
+            this.ControlsBox.Size = new System.Drawing.Size(257, 93);
+            this.ControlsBox.TabIndex = 2;
+            this.ControlsBox.TabStop = false;
+            this.ControlsBox.Text = "Global Controls";
             // 
-            // initBox
+            // button5
             // 
-            this.initBox.Location = new System.Drawing.Point(211, 12);
-            this.initBox.Name = "initBox";
-            this.initBox.Size = new System.Drawing.Size(42, 20);
-            this.initBox.TabIndex = 10;
+            this.button5.Location = new System.Drawing.Point(110, 17);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(93, 21);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Add NPC";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
-            // groupBox8
+            // removeFighterButton
             // 
-            this.groupBox8.Controls.Add(this.willBox);
-            this.groupBox8.Controls.Add(this.refBox);
-            this.groupBox8.Controls.Add(this.fortBox);
-            this.groupBox8.Controls.Add(this.label4);
-            this.groupBox8.Controls.Add(this.label5);
-            this.groupBox8.Controls.Add(this.label6);
-            this.groupBox8.Location = new System.Drawing.Point(133, 72);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox8.Size = new System.Drawing.Size(120, 96);
-            this.groupBox8.TabIndex = 9;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Saves";
+            this.removeFighterButton.Enabled = false;
+            this.removeFighterButton.Location = new System.Drawing.Point(4, 48);
+            this.removeFighterButton.Margin = new System.Windows.Forms.Padding(2);
+            this.removeFighterButton.Name = "removeFighterButton";
+            this.removeFighterButton.Size = new System.Drawing.Size(93, 22);
+            this.removeFighterButton.TabIndex = 2;
+            this.removeFighterButton.Text = "Remove Fighter";
+            this.removeFighterButton.UseVisualStyleBackColor = true;
+            this.removeFighterButton.Click += new System.EventHandler(this.removeFighterButton_Click);
             // 
-            // willBox
+            // initButton
             // 
-            this.willBox.Location = new System.Drawing.Point(75, 67);
-            this.willBox.Name = "willBox";
-            this.willBox.Size = new System.Drawing.Size(28, 20);
-            this.willBox.TabIndex = 9;
+            this.initButton.Enabled = false;
+            this.initButton.Location = new System.Drawing.Point(4, 17);
+            this.initButton.Margin = new System.Windows.Forms.Padding(2);
+            this.initButton.Name = "initButton";
+            this.initButton.Size = new System.Drawing.Size(160, 37);
+            this.initButton.TabIndex = 3;
+            this.initButton.Text = "Roll Initiative";
+            this.initButton.UseVisualStyleBackColor = true;
+            this.initButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // refBox
+            // groupBox1
             // 
-            this.refBox.Location = new System.Drawing.Point(75, 41);
-            this.refBox.Name = "refBox";
-            this.refBox.Size = new System.Drawing.Size(28, 20);
-            this.refBox.TabIndex = 8;
+            this.groupBox1.Controls.Add(this.initButton);
+            this.groupBox1.Controls.Add(this.prevButton);
+            this.groupBox1.Controls.Add(this.nextButton);
+            this.groupBox1.Location = new System.Drawing.Point(301, 136);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(168, 113);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Turn Controls";
             // 
-            // fortBox
+            // prevButton
             // 
-            this.fortBox.Location = new System.Drawing.Point(75, 15);
-            this.fortBox.Name = "fortBox";
-            this.fortBox.Size = new System.Drawing.Size(28, 20);
-            this.fortBox.TabIndex = 7;
+            this.prevButton.Enabled = false;
+            this.prevButton.Location = new System.Drawing.Point(4, 65);
+            this.prevButton.Margin = new System.Windows.Forms.Padding(2);
+            this.prevButton.Name = "prevButton";
+            this.prevButton.Size = new System.Drawing.Size(65, 39);
+            this.prevButton.TabIndex = 3;
+            this.prevButton.Text = "Previous";
+            this.prevButton.UseVisualStyleBackColor = true;
+            this.prevButton.Click += new System.EventHandler(this.button5_Click);
             // 
-            // label4
+            // nextButton
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 70);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Will";
+            this.nextButton.Enabled = false;
+            this.nextButton.Location = new System.Drawing.Point(103, 66);
+            this.nextButton.Margin = new System.Windows.Forms.Padding(2);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(61, 39);
+            this.nextButton.TabIndex = 2;
+            this.nextButton.Text = "Next";
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.button4_Click);
             // 
-            // label5
+            // unholdButton
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 44);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Reflex";
+            this.unholdButton.Enabled = false;
+            this.unholdButton.Location = new System.Drawing.Point(115, 116);
+            this.unholdButton.Margin = new System.Windows.Forms.Padding(2);
+            this.unholdButton.Name = "unholdButton";
+            this.unholdButton.Size = new System.Drawing.Size(80, 40);
+            this.unholdButton.TabIndex = 5;
+            this.unholdButton.Text = "Unhold Selected";
+            this.unholdButton.UseVisualStyleBackColor = true;
+            this.unholdButton.Click += new System.EventHandler(this.unholdButton_Click);
             // 
-            // label6
+            // holdButton
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 18);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Fortitude";
+            this.holdButton.Enabled = false;
+            this.holdButton.Location = new System.Drawing.Point(5, 116);
+            this.holdButton.Margin = new System.Windows.Forms.Padding(2);
+            this.holdButton.Name = "holdButton";
+            this.holdButton.Size = new System.Drawing.Size(79, 39);
+            this.holdButton.TabIndex = 1;
+            this.holdButton.Text = "Hold Action";
+            this.holdButton.UseVisualStyleBackColor = true;
+            this.holdButton.Click += new System.EventHandler(this.holdButton_Click);
             // 
-            // hpLabel
+            // statusButton
             // 
-            this.hpLabel.Location = new System.Drawing.Point(42, 16);
-            this.hpLabel.Name = "hpLabel";
-            this.hpLabel.Size = new System.Drawing.Size(50, 20);
-            this.hpLabel.TabIndex = 8;
+            this.statusButton.Enabled = false;
+            this.statusButton.Location = new System.Drawing.Point(115, 17);
+            this.statusButton.Margin = new System.Windows.Forms.Padding(2);
+            this.statusButton.Name = "statusButton";
+            this.statusButton.Size = new System.Drawing.Size(80, 36);
+            this.statusButton.TabIndex = 4;
+            this.statusButton.Text = "Status";
+            this.statusButton.UseVisualStyleBackColor = true;
+            this.statusButton.Click += new System.EventHandler(this.statusButton_Click);
             // 
-            // groupBox7
+            // AttackButton
             // 
-            this.groupBox7.Controls.Add(this.cmdLabel);
-            this.groupBox7.Controls.Add(this.cmbLabel);
-            this.groupBox7.Controls.Add(this.label19);
-            this.groupBox7.Controls.Add(this.label20);
-            this.groupBox7.Location = new System.Drawing.Point(8, 126);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox7.Size = new System.Drawing.Size(113, 79);
-            this.groupBox7.TabIndex = 6;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Combat Maneuver";
+            this.AttackButton.Enabled = false;
+            this.AttackButton.Location = new System.Drawing.Point(5, 18);
+            this.AttackButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AttackButton.Name = "AttackButton";
+            this.AttackButton.Size = new System.Drawing.Size(79, 36);
+            this.AttackButton.TabIndex = 0;
+            this.AttackButton.Text = "Attack";
+            this.AttackButton.UseVisualStyleBackColor = true;
+            this.AttackButton.Click += new System.EventHandler(this.AttackButton_Click);
             // 
-            // cmdLabel
+            // groupBox2
             // 
-            this.cmdLabel.Location = new System.Drawing.Point(71, 52);
-            this.cmdLabel.Name = "cmdLabel";
-            this.cmdLabel.Size = new System.Drawing.Size(25, 20);
-            this.cmdLabel.TabIndex = 11;
+            this.groupBox2.Controls.Add(this.LogBox);
+            this.groupBox2.Location = new System.Drawing.Point(11, 729);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(1384, 196);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Log";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // cmbLabel
+            // LogBox
             // 
-            this.cmbLabel.Location = new System.Drawing.Point(71, 28);
-            this.cmbLabel.Name = "cmbLabel";
-            this.cmbLabel.Size = new System.Drawing.Size(25, 20);
-            this.cmbLabel.TabIndex = 10;
+            this.LogBox.Location = new System.Drawing.Point(4, 16);
+            this.LogBox.Margin = new System.Windows.Forms.Padding(2);
+            this.LogBox.Multiline = true;
+            this.LogBox.Name = "LogBox";
+            this.LogBox.ReadOnly = true;
+            this.LogBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.LogBox.Size = new System.Drawing.Size(1374, 172);
+            this.LogBox.TabIndex = 0;
+            this.LogBox.TextChanged += new System.EventHandler(this.LogBox_TextChanged);
             // 
-            // label19
+            // label1
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(28, 55);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(31, 13);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "CMD";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(600, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Turn";
             // 
-            // label20
+            // turnLabel
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(29, 31);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(30, 13);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "CMB";
+            this.turnLabel.AutoSize = true;
+            this.turnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.turnLabel.Location = new System.Drawing.Point(632, 50);
+            this.turnLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.turnLabel.Name = "turnLabel";
+            this.turnLabel.Size = new System.Drawing.Size(18, 20);
+            this.turnLabel.TabIndex = 6;
+            this.turnLabel.Text = "1";
             // 
-            // groupBox6
+            // label3
             // 
-            this.groupBox6.Controls.Add(this.touchLabel);
-            this.groupBox6.Controls.Add(this.flatFootedLabel);
-            this.groupBox6.Controls.Add(this.acLabel);
-            this.groupBox6.Controls.Add(this.label11);
-            this.groupBox6.Controls.Add(this.label10);
-            this.groupBox6.Controls.Add(this.label9);
-            this.groupBox6.Location = new System.Drawing.Point(4, 43);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox6.Size = new System.Drawing.Size(113, 79);
-            this.groupBox6.TabIndex = 2;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "AC";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(562, 82);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Active Player";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // touchLabel
+            // activeLabel
             // 
-            this.touchLabel.Location = new System.Drawing.Point(75, 52);
-            this.touchLabel.Name = "touchLabel";
-            this.touchLabel.Size = new System.Drawing.Size(25, 20);
-            this.touchLabel.TabIndex = 9;
+            this.activeLabel.AutoSize = true;
+            this.activeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activeLabel.Location = new System.Drawing.Point(632, 78);
+            this.activeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.activeLabel.Name = "activeLabel";
+            this.activeLabel.Size = new System.Drawing.Size(39, 20);
+            this.activeLabel.TabIndex = 8;
+            this.activeLabel.Text = "Alex";
             // 
-            // flatFootedLabel
+            // statusView
             // 
-            this.flatFootedLabel.Location = new System.Drawing.Point(75, 29);
-            this.flatFootedLabel.Name = "flatFootedLabel";
-            this.flatFootedLabel.Size = new System.Drawing.Size(25, 20);
-            this.flatFootedLabel.TabIndex = 8;
+            this.statusView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.statusView.FullRowSelect = true;
+            this.statusView.Location = new System.Drawing.Point(1063, 39);
+            this.statusView.Margin = new System.Windows.Forms.Padding(2);
+            this.statusView.Name = "statusView";
+            this.statusView.Size = new System.Drawing.Size(326, 271);
+            this.statusView.TabIndex = 9;
+            this.statusView.UseCompatibleStateImageBehavior = false;
+            this.statusView.View = System.Windows.Forms.View.Details;
+            this.statusView.SelectedIndexChanged += new System.EventHandler(this.statusView_SelectedIndexChanged);
             // 
-            // acLabel
+            // columnHeader1
             // 
-            this.acLabel.Location = new System.Drawing.Point(75, 6);
-            this.acLabel.Name = "acLabel";
-            this.acLabel.Size = new System.Drawing.Size(25, 20);
-            this.acLabel.TabIndex = 7;
+            this.columnHeader1.Text = "Status";
+            this.columnHeader1.Width = 55;
             // 
-            // label11
+            // columnHeader2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(27, 55);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(38, 13);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Touch";
+            this.columnHeader2.Text = "Target";
+            this.columnHeader2.Width = 63;
             // 
-            // label10
+            // columnHeader3
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1, 32);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 13);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Flat Footed";
+            this.columnHeader3.Text = "Turns";
+            this.columnHeader3.Width = 51;
             // 
-            // label9
+            // columnHeader4
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(41, 9);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(21, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "AC";
+            this.columnHeader4.Text = "Effect";
             // 
-            // label7
+            // groupBox3
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 19);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(22, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "HP";
+            this.groupBox3.Controls.Add(this.RemoveStatusButton);
+            this.groupBox3.Controls.Add(this.unholdButton);
+            this.groupBox3.Controls.Add(this.AttackButton);
+            this.groupBox3.Controls.Add(this.statusButton);
+            this.groupBox3.Controls.Add(this.holdButton);
+            this.groupBox3.Location = new System.Drawing.Point(474, 136);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 171);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Action Controls";
+            // 
+            // RemoveStatusButton
+            // 
+            this.RemoveStatusButton.Enabled = false;
+            this.RemoveStatusButton.Location = new System.Drawing.Point(53, 66);
+            this.RemoveStatusButton.Margin = new System.Windows.Forms.Padding(2);
+            this.RemoveStatusButton.Name = "RemoveStatusButton";
+            this.RemoveStatusButton.Size = new System.Drawing.Size(104, 36);
+            this.RemoveStatusButton.TabIndex = 5;
+            this.RemoveStatusButton.Text = "Rmove Status";
+            this.RemoveStatusButton.UseVisualStyleBackColor = true;
+            this.RemoveStatusButton.Click += new System.EventHandler(this.RemoveStatusButton_Click);
             // 
             // groupBox4
             // 
@@ -604,12 +604,13 @@
             this.groupBox4.Controls.Add(this.RefButton);
             this.groupBox4.Controls.Add(this.CMBButton);
             this.groupBox4.Controls.Add(this.FortButton);
-            this.groupBox4.Location = new System.Drawing.Point(9, 284);
+            this.groupBox4.Location = new System.Drawing.Point(15, 318);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(1374, 389);
-            this.groupBox4.TabIndex = 23;
+            this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Roll Console";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // label45
             // 
@@ -752,6 +753,7 @@
             this.d6ResultBox.Size = new System.Drawing.Size(39, 20);
             this.d6ResultBox.TabIndex = 82;
             this.d6ResultBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.d6ResultBox.TextChanged += new System.EventHandler(this.d6ResultBox_TextChanged);
             // 
             // d4ResultBox
             // 
@@ -826,6 +828,7 @@
             this.dxRollButton.TabIndex = 62;
             this.dxRollButton.Text = "Roll";
             this.dxRollButton.UseVisualStyleBackColor = true;
+            this.dxRollButton.Click += new System.EventHandler(this.dxRollButton_Click);
             // 
             // d100RollButton
             // 
@@ -835,6 +838,7 @@
             this.d100RollButton.TabIndex = 58;
             this.d100RollButton.Text = "Roll";
             this.d100RollButton.UseVisualStyleBackColor = true;
+            this.d100RollButton.Click += new System.EventHandler(this.d100RollButton_Click);
             // 
             // d12RollButton
             // 
@@ -844,6 +848,7 @@
             this.d12RollButton.TabIndex = 55;
             this.d12RollButton.Text = "Roll";
             this.d12RollButton.UseVisualStyleBackColor = true;
+            this.d12RollButton.Click += new System.EventHandler(this.d12RollButton_Click);
             // 
             // d10RollButton
             // 
@@ -853,6 +858,7 @@
             this.d10RollButton.TabIndex = 52;
             this.d10RollButton.Text = "Roll";
             this.d10RollButton.UseVisualStyleBackColor = true;
+            this.d10RollButton.Click += new System.EventHandler(this.d10RollButton_Click);
             // 
             // d8RollButton
             // 
@@ -862,6 +868,7 @@
             this.d8RollButton.TabIndex = 49;
             this.d8RollButton.Text = "Roll";
             this.d8RollButton.UseVisualStyleBackColor = true;
+            this.d8RollButton.Click += new System.EventHandler(this.d8RollButton_Click);
             // 
             // d6RollButton
             // 
@@ -871,6 +878,7 @@
             this.d6RollButton.TabIndex = 46;
             this.d6RollButton.Text = "Roll";
             this.d6RollButton.UseVisualStyleBackColor = true;
+            this.d6RollButton.Click += new System.EventHandler(this.d6RollButton_Click);
             // 
             // d4RollButton
             // 
@@ -880,6 +888,7 @@
             this.d4RollButton.TabIndex = 43;
             this.d4RollButton.Text = "Roll";
             this.d4RollButton.UseVisualStyleBackColor = true;
+            this.d4RollButton.Click += new System.EventHandler(this.d4RollButton_Click);
             // 
             // dxModBox
             // 
@@ -1107,6 +1116,7 @@
             this.d20RollButton.Size = new System.Drawing.Size(103, 103);
             this.d20RollButton.TabIndex = 43;
             this.d20RollButton.UseVisualStyleBackColor = true;
+            this.d20RollButton.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // d4CountBox
             // 
@@ -1239,6 +1249,7 @@
             this.label17.Size = new System.Drawing.Size(37, 13);
             this.label17.TabIndex = 28;
             this.label17.Text = "Result";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label16
             // 
@@ -1287,6 +1298,7 @@
             this.npcAttackButton.TabIndex = 23;
             this.npcAttackButton.Text = "Roll Attack";
             this.npcAttackButton.UseVisualStyleBackColor = true;
+            this.npcAttackButton.Click += new System.EventHandler(this.npcAttackButton_Click);
             // 
             // attackView
             // 
@@ -1305,6 +1317,7 @@
             this.attackView.TabIndex = 22;
             this.attackView.UseCompatibleStateImageBehavior = false;
             this.attackView.View = System.Windows.Forms.View.Details;
+            this.attackView.SelectedIndexChanged += new System.EventHandler(this.attackView_SelectedIndexChanged);
             // 
             // Attack
             // 
@@ -1431,6 +1444,7 @@
             this.WillButton.TabIndex = 6;
             this.WillButton.Text = "Will Save";
             this.WillButton.UseVisualStyleBackColor = true;
+            this.WillButton.Click += new System.EventHandler(this.WillButton_Click);
             // 
             // RefButton
             // 
@@ -1442,6 +1456,7 @@
             this.RefButton.TabIndex = 5;
             this.RefButton.Text = "Reflex Save";
             this.RefButton.UseVisualStyleBackColor = true;
+            this.RefButton.Click += new System.EventHandler(this.RefButton_Click);
             // 
             // CMBButton
             // 
@@ -1453,6 +1468,7 @@
             this.CMBButton.TabIndex = 0;
             this.CMBButton.Text = "Combat Maneuver";
             this.CMBButton.UseVisualStyleBackColor = true;
+            this.CMBButton.Click += new System.EventHandler(this.CMBButton_Click);
             // 
             // FortButton
             // 
@@ -1464,382 +1480,298 @@
             this.FortButton.TabIndex = 4;
             this.FortButton.Text = "Fortitude Save";
             this.FortButton.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.RemoveStatusButton);
-            this.groupBox3.Controls.Add(this.unholdButton);
-            this.groupBox3.Controls.Add(this.AttackButton);
-            this.groupBox3.Controls.Add(this.statusButton);
-            this.groupBox3.Controls.Add(this.holdButton);
-            this.groupBox3.Location = new System.Drawing.Point(468, 102);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 171);
-            this.groupBox3.TabIndex = 22;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Action Controls";
-            // 
-            // RemoveStatusButton
-            // 
-            this.RemoveStatusButton.Enabled = false;
-            this.RemoveStatusButton.Location = new System.Drawing.Point(53, 66);
-            this.RemoveStatusButton.Margin = new System.Windows.Forms.Padding(2);
-            this.RemoveStatusButton.Name = "RemoveStatusButton";
-            this.RemoveStatusButton.Size = new System.Drawing.Size(104, 36);
-            this.RemoveStatusButton.TabIndex = 5;
-            this.RemoveStatusButton.Text = "Rmove Status";
-            this.RemoveStatusButton.UseVisualStyleBackColor = true;
-            // 
-            // unholdButton
-            // 
-            this.unholdButton.Enabled = false;
-            this.unholdButton.Location = new System.Drawing.Point(115, 116);
-            this.unholdButton.Margin = new System.Windows.Forms.Padding(2);
-            this.unholdButton.Name = "unholdButton";
-            this.unholdButton.Size = new System.Drawing.Size(80, 40);
-            this.unholdButton.TabIndex = 5;
-            this.unholdButton.Text = "Unhold Selected";
-            this.unholdButton.UseVisualStyleBackColor = true;
-            // 
-            // AttackButton
-            // 
-            this.AttackButton.Enabled = false;
-            this.AttackButton.Location = new System.Drawing.Point(5, 18);
-            this.AttackButton.Margin = new System.Windows.Forms.Padding(2);
-            this.AttackButton.Name = "AttackButton";
-            this.AttackButton.Size = new System.Drawing.Size(79, 36);
-            this.AttackButton.TabIndex = 0;
-            this.AttackButton.Text = "Attack";
-            this.AttackButton.UseVisualStyleBackColor = true;
-            // 
-            // statusButton
-            // 
-            this.statusButton.Enabled = false;
-            this.statusButton.Location = new System.Drawing.Point(115, 17);
-            this.statusButton.Margin = new System.Windows.Forms.Padding(2);
-            this.statusButton.Name = "statusButton";
-            this.statusButton.Size = new System.Drawing.Size(80, 36);
-            this.statusButton.TabIndex = 4;
-            this.statusButton.Text = "Status";
-            this.statusButton.UseVisualStyleBackColor = true;
-            // 
-            // holdButton
-            // 
-            this.holdButton.Enabled = false;
-            this.holdButton.Location = new System.Drawing.Point(5, 116);
-            this.holdButton.Margin = new System.Windows.Forms.Padding(2);
-            this.holdButton.Name = "holdButton";
-            this.holdButton.Size = new System.Drawing.Size(79, 39);
-            this.holdButton.TabIndex = 1;
-            this.holdButton.Text = "Hold Action";
-            this.holdButton.UseVisualStyleBackColor = true;
-            // 
-            // statusView
-            // 
-            this.statusView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.statusView.FullRowSelect = true;
-            this.statusView.Location = new System.Drawing.Point(1057, 5);
-            this.statusView.Margin = new System.Windows.Forms.Padding(2);
-            this.statusView.Name = "statusView";
-            this.statusView.Size = new System.Drawing.Size(326, 271);
-            this.statusView.TabIndex = 21;
-            this.statusView.UseCompatibleStateImageBehavior = false;
-            this.statusView.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Status";
-            this.columnHeader1.Width = 55;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Target";
-            this.columnHeader2.Width = 63;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Turns";
-            this.columnHeader3.Width = 51;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Effect";
-            // 
-            // activeLabel
-            // 
-            this.activeLabel.AutoSize = true;
-            this.activeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activeLabel.Location = new System.Drawing.Point(626, 44);
-            this.activeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.activeLabel.Name = "activeLabel";
-            this.activeLabel.Size = new System.Drawing.Size(39, 20);
-            this.activeLabel.TabIndex = 20;
-            this.activeLabel.Text = "Alex";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(556, 48);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 13);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Active Player";
-            // 
-            // turnLabel
-            // 
-            this.turnLabel.AutoSize = true;
-            this.turnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.turnLabel.Location = new System.Drawing.Point(626, 16);
-            this.turnLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.turnLabel.Name = "turnLabel";
-            this.turnLabel.Size = new System.Drawing.Size(18, 20);
-            this.turnLabel.TabIndex = 18;
-            this.turnLabel.Text = "1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(594, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Turn";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.LogBox);
-            this.groupBox2.Location = new System.Drawing.Point(5, 695);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(1384, 196);
-            this.groupBox2.TabIndex = 16;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Log";
-            // 
-            // LogBox
-            // 
-            this.LogBox.Location = new System.Drawing.Point(4, 16);
-            this.LogBox.Margin = new System.Windows.Forms.Padding(2);
-            this.LogBox.Multiline = true;
-            this.LogBox.Name = "LogBox";
-            this.LogBox.ReadOnly = true;
-            this.LogBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogBox.Size = new System.Drawing.Size(1374, 172);
-            this.LogBox.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.initButton);
-            this.groupBox1.Controls.Add(this.prevButton);
-            this.groupBox1.Controls.Add(this.nextButton);
-            this.groupBox1.Location = new System.Drawing.Point(295, 102);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(168, 113);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Turn Controls";
-            // 
-            // initButton
-            // 
-            this.initButton.Enabled = false;
-            this.initButton.Location = new System.Drawing.Point(4, 17);
-            this.initButton.Margin = new System.Windows.Forms.Padding(2);
-            this.initButton.Name = "initButton";
-            this.initButton.Size = new System.Drawing.Size(160, 37);
-            this.initButton.TabIndex = 3;
-            this.initButton.Text = "Roll Initiative";
-            this.initButton.UseVisualStyleBackColor = true;
-            // 
-            // prevButton
-            // 
-            this.prevButton.Enabled = false;
-            this.prevButton.Location = new System.Drawing.Point(4, 65);
-            this.prevButton.Margin = new System.Windows.Forms.Padding(2);
-            this.prevButton.Name = "prevButton";
-            this.prevButton.Size = new System.Drawing.Size(65, 39);
-            this.prevButton.TabIndex = 3;
-            this.prevButton.Text = "Previous";
-            this.prevButton.UseVisualStyleBackColor = true;
-            // 
-            // nextButton
-            // 
-            this.nextButton.Enabled = false;
-            this.nextButton.Location = new System.Drawing.Point(103, 66);
-            this.nextButton.Margin = new System.Windows.Forms.Padding(2);
-            this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(61, 39);
-            this.nextButton.TabIndex = 2;
-            this.nextButton.Text = "Next";
-            this.nextButton.UseVisualStyleBackColor = true;
-            // 
-            // ControlsBox
-            // 
-            this.ControlsBox.Controls.Add(this.button5);
-            this.ControlsBox.Controls.Add(this.removeFighterButton);
-            this.ControlsBox.Controls.Add(this.addFighterButton);
-            this.ControlsBox.Location = new System.Drawing.Point(295, 5);
-            this.ControlsBox.Margin = new System.Windows.Forms.Padding(2);
-            this.ControlsBox.Name = "ControlsBox";
-            this.ControlsBox.Padding = new System.Windows.Forms.Padding(2);
-            this.ControlsBox.Size = new System.Drawing.Size(257, 93);
-            this.ControlsBox.TabIndex = 14;
-            this.ControlsBox.TabStop = false;
-            this.ControlsBox.Text = "Global Controls";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(110, 17);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(93, 21);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Add NPC";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // removeFighterButton
-            // 
-            this.removeFighterButton.Enabled = false;
-            this.removeFighterButton.Location = new System.Drawing.Point(4, 48);
-            this.removeFighterButton.Margin = new System.Windows.Forms.Padding(2);
-            this.removeFighterButton.Name = "removeFighterButton";
-            this.removeFighterButton.Size = new System.Drawing.Size(93, 22);
-            this.removeFighterButton.TabIndex = 2;
-            this.removeFighterButton.Text = "Remove Fighter";
-            this.removeFighterButton.UseVisualStyleBackColor = true;
-            // 
-            // addFighterButton
-            // 
-            this.addFighterButton.Location = new System.Drawing.Point(4, 16);
-            this.addFighterButton.Margin = new System.Windows.Forms.Padding(2);
-            this.addFighterButton.Name = "addFighterButton";
-            this.addFighterButton.Size = new System.Drawing.Size(93, 21);
-            this.addFighterButton.TabIndex = 1;
-            this.addFighterButton.Text = "Add PC";
-            this.addFighterButton.UseVisualStyleBackColor = true;
-            // 
-            // InitOrderView
-            // 
-            this.InitOrderView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.OrderColumn,
-            this.NameColumn,
-            this.InitValueColumn,
-            this.HP,
-            this.Held});
-            this.InitOrderView.FullRowSelect = true;
-            this.InitOrderView.Location = new System.Drawing.Point(5, 5);
-            this.InitOrderView.Margin = new System.Windows.Forms.Padding(2);
-            this.InitOrderView.MultiSelect = false;
-            this.InitOrderView.Name = "InitOrderView";
-            this.InitOrderView.Size = new System.Drawing.Size(279, 274);
-            this.InitOrderView.TabIndex = 13;
-            this.InitOrderView.UseCompatibleStateImageBehavior = false;
-            this.InitOrderView.View = System.Windows.Forms.View.Details;
-            // 
-            // OrderColumn
-            // 
-            this.OrderColumn.Text = "Order";
-            this.OrderColumn.Width = 55;
-            // 
-            // NameColumn
-            // 
-            this.NameColumn.Text = "Name";
-            this.NameColumn.Width = 63;
-            // 
-            // InitValueColumn
-            // 
-            this.InitValueColumn.Text = "Initiative";
-            this.InitValueColumn.Width = 51;
-            // 
-            // HP
-            // 
-            this.HP.Text = "HP";
-            this.HP.Width = 46;
-            // 
-            // Held
-            // 
-            this.Held.Text = "Held";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(535, 259);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(214, 160);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "This tab is blank, for now.\r\n\r\nComing Soon:\r\nNPC Name Generator\r\nSkill Check tabl" +
-    "es\r\nRandom Treasure Generator\r\nD% Table Editor\r\nAnd Much, Much More\r\n";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Controls.Add(this.button1);
-            this.tabPage3.Controls.Add(this.saveButton);
-            this.tabPage3.Controls.Add(this.richTextBox1);
-            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1399, 896);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "GM Notes";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(6, 27);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1374, 785);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            // 
-            // saveButton
-            // 
-            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(24, 843);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(122, 23);
-            this.saveButton.TabIndex = 1;
-            this.saveButton.Text = "Save Notes";
-            this.saveButton.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(152, 843);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Save Notes As...";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(367, 843);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Load Notes";
-            this.button2.UseVisualStyleBackColor = true;
+            this.FortButton.Click += new System.EventHandler(this.FortButton_Click);
+            // 
+            // fighterInfoBox
+            // 
+            this.fighterInfoBox.Controls.Add(this.InitLabel);
+            this.fighterInfoBox.Controls.Add(this.initBox);
+            this.fighterInfoBox.Controls.Add(this.groupBox8);
+            this.fighterInfoBox.Controls.Add(this.hpLabel);
+            this.fighterInfoBox.Controls.Add(this.groupBox7);
+            this.fighterInfoBox.Controls.Add(this.groupBox6);
+            this.fighterInfoBox.Controls.Add(this.label7);
+            this.fighterInfoBox.Location = new System.Drawing.Point(782, 44);
+            this.fighterInfoBox.Margin = new System.Windows.Forms.Padding(2);
+            this.fighterInfoBox.Name = "fighterInfoBox";
+            this.fighterInfoBox.Padding = new System.Windows.Forms.Padding(2);
+            this.fighterInfoBox.Size = new System.Drawing.Size(271, 263);
+            this.fighterInfoBox.TabIndex = 12;
+            this.fighterInfoBox.TabStop = false;
+            this.fighterInfoBox.Text = "Selected Player Stats";
+            // 
+            // InitLabel
+            // 
+            this.InitLabel.AutoSize = true;
+            this.InitLabel.Location = new System.Drawing.Point(146, 16);
+            this.InitLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.InitLabel.Name = "InitLabel";
+            this.InitLabel.Size = new System.Drawing.Size(57, 13);
+            this.InitLabel.TabIndex = 11;
+            this.InitLabel.Text = "Init. Bonus";
+            // 
+            // initBox
+            // 
+            this.initBox.Location = new System.Drawing.Point(211, 12);
+            this.initBox.Name = "initBox";
+            this.initBox.Size = new System.Drawing.Size(42, 20);
+            this.initBox.TabIndex = 10;
+            this.initBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.willBox);
+            this.groupBox8.Controls.Add(this.refBox);
+            this.groupBox8.Controls.Add(this.fortBox);
+            this.groupBox8.Controls.Add(this.label4);
+            this.groupBox8.Controls.Add(this.label5);
+            this.groupBox8.Controls.Add(this.label6);
+            this.groupBox8.Location = new System.Drawing.Point(133, 72);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox8.Size = new System.Drawing.Size(120, 96);
+            this.groupBox8.TabIndex = 9;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Saves";
+            // 
+            // willBox
+            // 
+            this.willBox.Location = new System.Drawing.Point(75, 67);
+            this.willBox.Name = "willBox";
+            this.willBox.Size = new System.Drawing.Size(28, 20);
+            this.willBox.TabIndex = 9;
+            this.willBox.TextChanged += new System.EventHandler(this.willBox_TextChanged);
+            // 
+            // refBox
+            // 
+            this.refBox.Location = new System.Drawing.Point(75, 41);
+            this.refBox.Name = "refBox";
+            this.refBox.Size = new System.Drawing.Size(28, 20);
+            this.refBox.TabIndex = 8;
+            this.refBox.TextChanged += new System.EventHandler(this.refBox_TextChanged);
+            // 
+            // fortBox
+            // 
+            this.fortBox.Location = new System.Drawing.Point(75, 15);
+            this.fortBox.Name = "fortBox";
+            this.fortBox.Size = new System.Drawing.Size(28, 20);
+            this.fortBox.TabIndex = 7;
+            this.fortBox.TextChanged += new System.EventHandler(this.fortBox_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(36, 70);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(24, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Will";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(23, 44);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Reflex";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 18);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Fortitude";
+            // 
+            // hpLabel
+            // 
+            this.hpLabel.Location = new System.Drawing.Point(42, 16);
+            this.hpLabel.Name = "hpLabel";
+            this.hpLabel.Size = new System.Drawing.Size(50, 20);
+            this.hpLabel.TabIndex = 8;
+            this.hpLabel.TextChanged += new System.EventHandler(this.hpLabel_TextChanged);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.cmdLabel);
+            this.groupBox7.Controls.Add(this.cmbLabel);
+            this.groupBox7.Controls.Add(this.label19);
+            this.groupBox7.Controls.Add(this.label20);
+            this.groupBox7.Location = new System.Drawing.Point(8, 126);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox7.Size = new System.Drawing.Size(113, 79);
+            this.groupBox7.TabIndex = 6;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Combat Maneuver";
+            // 
+            // cmdLabel
+            // 
+            this.cmdLabel.Location = new System.Drawing.Point(71, 52);
+            this.cmdLabel.Name = "cmdLabel";
+            this.cmdLabel.Size = new System.Drawing.Size(25, 20);
+            this.cmdLabel.TabIndex = 11;
+            this.cmdLabel.TextChanged += new System.EventHandler(this.cmdLabel_TextChanged);
+            // 
+            // cmbLabel
+            // 
+            this.cmbLabel.Location = new System.Drawing.Point(71, 28);
+            this.cmbLabel.Name = "cmbLabel";
+            this.cmbLabel.Size = new System.Drawing.Size(25, 20);
+            this.cmbLabel.TabIndex = 10;
+            this.cmbLabel.TextChanged += new System.EventHandler(this.cmbLabel_TextChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(28, 55);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(31, 13);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "CMD";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(29, 31);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(30, 13);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "CMB";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.touchLabel);
+            this.groupBox6.Controls.Add(this.flatFootedLabel);
+            this.groupBox6.Controls.Add(this.acLabel);
+            this.groupBox6.Controls.Add(this.label11);
+            this.groupBox6.Controls.Add(this.label10);
+            this.groupBox6.Controls.Add(this.label9);
+            this.groupBox6.Location = new System.Drawing.Point(4, 43);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox6.Size = new System.Drawing.Size(113, 79);
+            this.groupBox6.TabIndex = 2;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "AC";
+            // 
+            // touchLabel
+            // 
+            this.touchLabel.Location = new System.Drawing.Point(75, 52);
+            this.touchLabel.Name = "touchLabel";
+            this.touchLabel.Size = new System.Drawing.Size(25, 20);
+            this.touchLabel.TabIndex = 9;
+            this.touchLabel.TextChanged += new System.EventHandler(this.touchLabel_TextChanged);
+            // 
+            // flatFootedLabel
+            // 
+            this.flatFootedLabel.Location = new System.Drawing.Point(75, 29);
+            this.flatFootedLabel.Name = "flatFootedLabel";
+            this.flatFootedLabel.Size = new System.Drawing.Size(25, 20);
+            this.flatFootedLabel.TabIndex = 8;
+            this.flatFootedLabel.TextChanged += new System.EventHandler(this.flatFootedLabel_TextChanged);
+            // 
+            // acLabel
+            // 
+            this.acLabel.Location = new System.Drawing.Point(75, 6);
+            this.acLabel.Name = "acLabel";
+            this.acLabel.Size = new System.Drawing.Size(25, 20);
+            this.acLabel.TabIndex = 7;
+            this.acLabel.TextChanged += new System.EventHandler(this.acLabel_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(27, 55);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(38, 13);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Touch";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(1, 32);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 13);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Flat Footed";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(41, 9);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(21, 13);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "AC";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 19);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(22, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "HP";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.optionsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1398, 24);
+            this.menuStrip1.TabIndex = 13;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingsToolStripMenuItem});
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.optionsToolStripMenuItem.Text = "Options";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.settingsToolStripMenuItem.Text = "Settings...";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1442, 953);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(1415, 924);
+            this.Controls.Add(this.fighterInfoBox);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.statusView);
+            this.Controls.Add(this.activeLabel);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.turnLabel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.ControlsBox);
+            this.Controls.Add(this.InitOrderView);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -1847,21 +1779,11 @@
             this.Text = "Basic Battle Tracker";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.fighterInfoBox.ResumeLayout(false);
-            this.fighterInfoBox.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.ControlsBox.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -1871,12 +1793,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.ControlsBox.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
+            this.fighterInfoBox.ResumeLayout(false);
+            this.fighterInfoBox.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1884,12 +1810,73 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.ListView InitOrderView;
+        private System.Windows.Forms.ColumnHeader OrderColumn;
+        private System.Windows.Forms.ColumnHeader NameColumn;
+        private System.Windows.Forms.ColumnHeader InitValueColumn;
+        private System.Windows.Forms.ColumnHeader HP;
+        private System.Windows.Forms.Button addFighterButton;
+        private System.Windows.Forms.GroupBox ControlsBox;
+        private System.Windows.Forms.Button initButton;
+        private System.Windows.Forms.Button removeFighterButton;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button prevButton;
+        private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.Button holdButton;
+        private System.Windows.Forms.Button AttackButton;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox LogBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label turnLabel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label activeLabel;
+        private System.Windows.Forms.ListView statusView;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button statusButton;
+        private System.Windows.Forms.Button unholdButton;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button RemoveStatusButton;
+        private System.Windows.Forms.ColumnHeader Held;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button RefButton;
+        private System.Windows.Forms.Button CMBButton;
+        private System.Windows.Forms.Button FortButton;
+        private System.Windows.Forms.Button WillButton;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label rollResultLabel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label DamageLabel;
+        private System.Windows.Forms.Label damageResult;
         private System.Windows.Forms.GroupBox fighterInfoBox;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label d20Label;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox rollBox;
+        private System.Windows.Forms.Label rawDamageBox;
+        private System.Windows.Forms.Label rawDamageLabel;
+        private System.Windows.Forms.ListView attackView;
+        private System.Windows.Forms.ColumnHeader Attack;
+        private System.Windows.Forms.ColumnHeader Modifier;
+        private System.Windows.Forms.ColumnHeader Damage;
+        private System.Windows.Forms.ColumnHeader Count;
+        private System.Windows.Forms.Label AtkNameLabel;
+        private System.Windows.Forms.Button npcAttackButton;
+        private System.Windows.Forms.TextBox cmbLabel;
+        private System.Windows.Forms.TextBox touchLabel;
+        private System.Windows.Forms.TextBox flatFootedLabel;
+        private System.Windows.Forms.TextBox acLabel;
+        private System.Windows.Forms.TextBox hpLabel;
+        private System.Windows.Forms.TextBox cmdLabel;
         private System.Windows.Forms.Label InitLabel;
         private System.Windows.Forms.TextBox initBox;
         private System.Windows.Forms.GroupBox groupBox8;
@@ -1899,59 +1886,24 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox hpLabel;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.TextBox cmdLabel;
-        private System.Windows.Forms.TextBox cmbLabel;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox touchLabel;
-        private System.Windows.Forms.TextBox flatFootedLabel;
-        private System.Windows.Forms.TextBox acLabel;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label dmgBonusBox;
-        private System.Windows.Forms.Label dmgBonusLabel;
-        private System.Windows.Forms.Label atkModBox;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox dxResultBox;
-        private System.Windows.Forms.TextBox d100ResultBox;
-        private System.Windows.Forms.TextBox d12ResultBox;
-        private System.Windows.Forms.TextBox d10ResultBox;
-        private System.Windows.Forms.TextBox d8ResultBox;
-        private System.Windows.Forms.TextBox d6ResultBox;
-        private System.Windows.Forms.TextBox d4ResultBox;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox d20ResultBox;
-        private System.Windows.Forms.TextBox d20ModBox;
-        private System.Windows.Forms.TextBox d20CountBox;
-        private System.Windows.Forms.Button dxRollButton;
-        private System.Windows.Forms.Button d100RollButton;
-        private System.Windows.Forms.Button d12RollButton;
-        private System.Windows.Forms.Button d10RollButton;
-        private System.Windows.Forms.Button d8RollButton;
-        private System.Windows.Forms.Button d6RollButton;
-        private System.Windows.Forms.Button d4RollButton;
-        private System.Windows.Forms.TextBox dxModBox;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox dxTypeBox;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.TextBox dxCountBox;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox d100ModBox;
-        private System.Windows.Forms.TextBox d12ModBox;
-        private System.Windows.Forms.TextBox d10ModBox;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.TextBox d4CountBox;
+        private System.Windows.Forms.Button d20RollButton;
         private System.Windows.Forms.TextBox d8ModBox;
         private System.Windows.Forms.TextBox d6ModBox;
         private System.Windows.Forms.TextBox d4ModBox;
@@ -1966,82 +1918,47 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button d20RollButton;
-        private System.Windows.Forms.TextBox d4CountBox;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label AtkNameLabel;
-        private System.Windows.Forms.Button npcAttackButton;
-        private System.Windows.Forms.ListView attackView;
-        private System.Windows.Forms.ColumnHeader Attack;
-        private System.Windows.Forms.ColumnHeader Modifier;
-        private System.Windows.Forms.ColumnHeader Damage;
-        private System.Windows.Forms.ColumnHeader Count;
-        private System.Windows.Forms.TextBox rollBox;
-        private System.Windows.Forms.Label rawDamageBox;
-        private System.Windows.Forms.Label rawDamageLabel;
-        private System.Windows.Forms.Label d20Label;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label DamageLabel;
-        private System.Windows.Forms.Label damageResult;
-        private System.Windows.Forms.Label rollResultLabel;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button WillButton;
-        private System.Windows.Forms.Button RefButton;
-        private System.Windows.Forms.Button CMBButton;
-        private System.Windows.Forms.Button FortButton;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button RemoveStatusButton;
-        private System.Windows.Forms.Button unholdButton;
-        private System.Windows.Forms.Button AttackButton;
-        private System.Windows.Forms.Button statusButton;
-        private System.Windows.Forms.Button holdButton;
-        private System.Windows.Forms.ListView statusView;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.Label activeLabel;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label turnLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox LogBox;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button initButton;
-        private System.Windows.Forms.Button prevButton;
-        private System.Windows.Forms.Button nextButton;
-        private System.Windows.Forms.GroupBox ControlsBox;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button removeFighterButton;
-        private System.Windows.Forms.Button addFighterButton;
-        private System.Windows.Forms.ListView InitOrderView;
-        private System.Windows.Forms.ColumnHeader OrderColumn;
-        private System.Windows.Forms.ColumnHeader NameColumn;
-        private System.Windows.Forms.ColumnHeader InitValueColumn;
-        private System.Windows.Forms.ColumnHeader HP;
-        private System.Windows.Forms.ColumnHeader Held;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.TextBox d100ModBox;
+        private System.Windows.Forms.TextBox d12ModBox;
+        private System.Windows.Forms.TextBox d10ModBox;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.TextBox dxCountBox;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Button d8RollButton;
+        private System.Windows.Forms.Button d6RollButton;
+        private System.Windows.Forms.Button d4RollButton;
+        private System.Windows.Forms.TextBox dxModBox;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox dxTypeBox;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Button dxRollButton;
+        private System.Windows.Forms.Button d100RollButton;
+        private System.Windows.Forms.Button d12RollButton;
+        private System.Windows.Forms.Button d10RollButton;
+        private System.Windows.Forms.TextBox dxResultBox;
+        private System.Windows.Forms.TextBox d100ResultBox;
+        private System.Windows.Forms.TextBox d12ResultBox;
+        private System.Windows.Forms.TextBox d10ResultBox;
+        private System.Windows.Forms.TextBox d8ResultBox;
+        private System.Windows.Forms.TextBox d6ResultBox;
+        private System.Windows.Forms.TextBox d4ResultBox;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox d20ResultBox;
+        private System.Windows.Forms.TextBox d20ModBox;
+        private System.Windows.Forms.TextBox d20CountBox;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label dmgBonusBox;
+        private System.Windows.Forms.Label dmgBonusLabel;
+        private System.Windows.Forms.Label atkModBox;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
     }
 }
 
