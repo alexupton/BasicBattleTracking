@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BasicBattleTracking.exe" size="989696">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BasicBattleTracking.exe" size="990208">
       <assemblyIdentity name="BasicBattleTracking" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>loymspJiT2kaSutpx2732cKWFBkfvEKGmL4StvwYP4o=</dsig:DigestValue>
+        <dsig:DigestValue>wGFzHszyXJNcYtHn4r0pwFvHp6tNnkWaA8dKbwZxAwU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

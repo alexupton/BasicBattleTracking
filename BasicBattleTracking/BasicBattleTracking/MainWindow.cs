@@ -63,7 +63,7 @@ namespace BasicBattleTracking
             AutoLoad();
             this.FormClosed += new FormClosedEventHandler(this.MainWindow_Close);
             //TestDPercentTable();
-            WriteToLog("Check out the options menu for new stuff.");
+            WriteToLog("Now with sweet tabs.");
         }
 
 
@@ -80,32 +80,35 @@ namespace BasicBattleTracking
 
         private void removeFighterButton_Click(object sender, EventArgs e)
         {
-            DialogResult confirm = MessageBox.Show("Are you sure?", "Remove " + combatants.ElementAt(selectedFighter).Name, MessageBoxButtons.OKCancel);
-            if (confirm == DialogResult.OK)
+            if (combatants.Count > 0)
             {
-                combatants.ElementAt(selectedFighter).StatusEffects.Clear();
-                removeFighter(combatants.ElementAt(selectedFighter));
-                if (selectedFighter > 0)
+                DialogResult confirm = MessageBox.Show("Are you sure?", "Remove " + combatants.ElementAt(selectedFighter).Name, MessageBoxButtons.OKCancel);
+                if (confirm == DialogResult.OK)
                 {
-                    selectedFighter--;
-                }
-                else
-                {
-                    selectedFighter = 0;
-                }
+                    combatants.ElementAt(selectedFighter).StatusEffects.Clear();
+                    removeFighter(combatants.ElementAt(selectedFighter));
+                    if (selectedFighter > 0)
+                    {
+                        selectedFighter--;
+                    }
+                    else
+                    {
+                        selectedFighter = 0;
+                    }
 
-                if (combatants.Count <= 0)
-                {
-                    disableTurnButtons();
-                    initButton.Enabled = false;
-                    SetRollButtons(false);
+                    if (combatants.Count <= 0)
+                    {
+                        disableTurnButtons();
+                        initButton.Enabled = false;
+                        SetRollButtons(false);
+                    }
+                    else
+                    {
+                        updateFighterInfo(selectedFighter);
+                    }
                 }
-                else
-                {
-                    updateFighterInfo(selectedFighter);
-                }
+                AutoSave();
             }
-            AutoSave();
             
 
 
