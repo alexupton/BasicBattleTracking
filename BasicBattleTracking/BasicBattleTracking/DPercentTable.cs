@@ -33,9 +33,16 @@ namespace BasicBattleTracking
             return result;
         }
 
-        public void InsertResult(string result, int startValue)
+        public void AddResult(string result, int startValue)
         {
+            startValues.Add(startValue);
+            results.Add(result);
+        }
 
+        public void ClearTable()
+        {
+            startValues.Clear();
+            results.Clear();
         }
 
     }

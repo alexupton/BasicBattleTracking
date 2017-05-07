@@ -309,7 +309,7 @@ namespace BasicBattleTracking
                 File.Delete(path);
             }
 
-            if (!Directory.Exists(sender.StatBlockPath) || !Directory.Exists(sender.AutoSavePath) || !Directory.Exists(sender.LogPath))
+            if (!Directory.Exists(sender.StatBlockPath) || !Directory.Exists(sender.AutoSavePath) || !Directory.Exists(sender.LogPath) || !Directory.Exists(sender.NotesPath))
             {
                 MessageBox.Show("Invalid file path for one or more default directories", "Error");
                 success = false;
@@ -319,6 +319,7 @@ namespace BasicBattleTracking
                 sb.AppendLine("StatBlockPath|<" + sender.StatBlockPath + ">");
                 sb.AppendLine("AutoSavePath|<" + sender.AutoSavePath + ">");
                 sb.AppendLine("LogPath|<" + sender.LogPath + ">");
+                sb.AppendLine("NotesPath|<" + sender.NotesPath + ">");
 
                 File.WriteAllText(path, sb.ToString());
             }
@@ -349,6 +350,10 @@ namespace BasicBattleTracking
                         case "LogPath":
                             {
                                 Program.UserLogDirectory = GetSettingPath(line[1]); break;
+                            }
+                        case "NotesPath":
+                            {
+                                Program.UserNotesDirectory = GetSettingPath(line[1]); break;
                             }
                         default: break;
                     }
@@ -391,6 +396,35 @@ namespace BasicBattleTracking
             {
                 return "";
             }
+        }
+
+        public string SaveNoteAs(string text)
+        {
+            string outputPath = "";
+            SaveFileDialog save = new SaveFileDialog();
+
+            DialogResult result = save.ShowDialog();
+            if(result == DialogResult.OK)
+            {
+                if(File.Exists(save.FileName))
+                {
+                    File.Delete(save.FileName);
+                }
+                File.WriteAllText(save.FileName, text);
+                outputPath = save.FileName;
+            }
+
+            return outputPath;
+        }
+
+        public void SaveNote(string text, string path)
+        {
+            if(File.Exists(path))
+            {
+                File.Delete(path);
+            }
+
+            File.WriteAllText(path, text);
         }
     }
 

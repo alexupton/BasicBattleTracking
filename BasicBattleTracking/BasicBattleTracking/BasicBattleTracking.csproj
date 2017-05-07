@@ -103,6 +103,12 @@
     <Compile Include="BattleIO.cs" />
     <Compile Include="DiceRoller.cs" />
     <Compile Include="DPercentTable.cs" />
+    <Compile Include="NotesTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NotesTab.Designer.cs">
+      <DependentUpon>NotesTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="OptionScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotesTab.resx">
+      <DependentUpon>NotesTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionScreen.resx">
       <DependentUpon>OptionScreen.cs</DependentUpon>

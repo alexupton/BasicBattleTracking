@@ -31,17 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionScreen));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.okButton = new System.Windows.Forms.Button();
-            this.cancButton = new System.Windows.Forms.Button();
-            this.statPathBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.autoPathBox = new System.Windows.Forms.TextBox();
+            this.browseButton4 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.notesPathBox = new System.Windows.Forms.TextBox();
+            this.browseButton3 = new System.Windows.Forms.Button();
+            this.browseButton2 = new System.Windows.Forms.Button();
+            this.BrowseButton1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.logPathBox = new System.Windows.Forms.TextBox();
-            this.BrowseButton1 = new System.Windows.Forms.Button();
-            this.browseButton2 = new System.Windows.Forms.Button();
-            this.browseButton3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.autoPathBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.statPathBox = new System.Windows.Forms.TextBox();
+            this.okButton = new System.Windows.Forms.Button();
+            this.cancButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +61,9 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.browseButton4);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.notesPathBox);
             this.tabPage1.Controls.Add(this.browseButton3);
             this.tabPage1.Controls.Add(this.browseButton2);
             this.tabPage1.Controls.Add(this.BrowseButton1);
@@ -73,6 +79,111 @@
             this.tabPage1.Size = new System.Drawing.Size(357, 311);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Directories";
+            // 
+            // browseButton4
+            // 
+            this.browseButton4.Location = new System.Drawing.Point(280, 180);
+            this.browseButton4.Name = "browseButton4";
+            this.browseButton4.Size = new System.Drawing.Size(59, 23);
+            this.browseButton4.TabIndex = 11;
+            this.browseButton4.Text = "Browse...";
+            this.browseButton4.UseVisualStyleBackColor = true;
+            this.browseButton4.Click += new System.EventHandler(this.browseButton4_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(40, 185);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Notes";
+            // 
+            // notesPathBox
+            // 
+            this.notesPathBox.Location = new System.Drawing.Point(89, 182);
+            this.notesPathBox.Name = "notesPathBox";
+            this.notesPathBox.Size = new System.Drawing.Size(185, 20);
+            this.notesPathBox.TabIndex = 9;
+            // 
+            // browseButton3
+            // 
+            this.browseButton3.Location = new System.Drawing.Point(280, 136);
+            this.browseButton3.Name = "browseButton3";
+            this.browseButton3.Size = new System.Drawing.Size(59, 23);
+            this.browseButton3.TabIndex = 8;
+            this.browseButton3.Text = "Browse...";
+            this.browseButton3.UseVisualStyleBackColor = true;
+            this.browseButton3.Click += new System.EventHandler(this.browseButton3_Click);
+            // 
+            // browseButton2
+            // 
+            this.browseButton2.Location = new System.Drawing.Point(280, 85);
+            this.browseButton2.Name = "browseButton2";
+            this.browseButton2.Size = new System.Drawing.Size(59, 23);
+            this.browseButton2.TabIndex = 7;
+            this.browseButton2.Text = "Browse...";
+            this.browseButton2.UseVisualStyleBackColor = true;
+            this.browseButton2.Click += new System.EventHandler(this.browseButton2_Click);
+            // 
+            // BrowseButton1
+            // 
+            this.BrowseButton1.Location = new System.Drawing.Point(280, 38);
+            this.BrowseButton1.Name = "BrowseButton1";
+            this.BrowseButton1.Size = new System.Drawing.Size(59, 23);
+            this.BrowseButton1.TabIndex = 6;
+            this.BrowseButton1.Text = "Browse...";
+            this.BrowseButton1.UseVisualStyleBackColor = true;
+            this.BrowseButton1.Click += new System.EventHandler(this.BrowseButton1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(50, 141);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(25, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Log";
+            // 
+            // logPathBox
+            // 
+            this.logPathBox.Location = new System.Drawing.Point(89, 138);
+            this.logPathBox.Name = "logPathBox";
+            this.logPathBox.Size = new System.Drawing.Size(185, 20);
+            this.logPathBox.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Auto Save";
+            // 
+            // autoPathBox
+            // 
+            this.autoPathBox.Location = new System.Drawing.Point(89, 87);
+            this.autoPathBox.Name = "autoPathBox";
+            this.autoPathBox.Size = new System.Drawing.Size(185, 20);
+            this.autoPathBox.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Stat Blocks";
+            // 
+            // statPathBox
+            // 
+            this.statPathBox.Location = new System.Drawing.Point(89, 41);
+            this.statPathBox.Name = "statPathBox";
+            this.statPathBox.Size = new System.Drawing.Size(185, 20);
+            this.statPathBox.TabIndex = 0;
+            this.statPathBox.TextChanged += new System.EventHandler(this.statPathBox_TextChanged);
             // 
             // okButton
             // 
@@ -94,84 +205,6 @@
             this.cancButton.Text = "Cancel";
             this.cancButton.UseVisualStyleBackColor = true;
             this.cancButton.Click += new System.EventHandler(this.cancButton_Click);
-            // 
-            // statPathBox
-            // 
-            this.statPathBox.Location = new System.Drawing.Point(89, 41);
-            this.statPathBox.Name = "statPathBox";
-            this.statPathBox.Size = new System.Drawing.Size(185, 20);
-            this.statPathBox.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Stat Blocks";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 102);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Auto Save";
-            // 
-            // autoPathBox
-            // 
-            this.autoPathBox.Location = new System.Drawing.Point(89, 99);
-            this.autoPathBox.Name = "autoPathBox";
-            this.autoPathBox.Size = new System.Drawing.Size(185, 20);
-            this.autoPathBox.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 153);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Log";
-            // 
-            // logPathBox
-            // 
-            this.logPathBox.Location = new System.Drawing.Point(89, 150);
-            this.logPathBox.Name = "logPathBox";
-            this.logPathBox.Size = new System.Drawing.Size(185, 20);
-            this.logPathBox.TabIndex = 4;
-            // 
-            // BrowseButton1
-            // 
-            this.BrowseButton1.Location = new System.Drawing.Point(280, 38);
-            this.BrowseButton1.Name = "BrowseButton1";
-            this.BrowseButton1.Size = new System.Drawing.Size(59, 23);
-            this.BrowseButton1.TabIndex = 6;
-            this.BrowseButton1.Text = "Browse...";
-            this.BrowseButton1.UseVisualStyleBackColor = true;
-            this.BrowseButton1.Click += new System.EventHandler(this.BrowseButton1_Click);
-            // 
-            // browseButton2
-            // 
-            this.browseButton2.Location = new System.Drawing.Point(280, 97);
-            this.browseButton2.Name = "browseButton2";
-            this.browseButton2.Size = new System.Drawing.Size(59, 23);
-            this.browseButton2.TabIndex = 7;
-            this.browseButton2.Text = "Browse...";
-            this.browseButton2.UseVisualStyleBackColor = true;
-            this.browseButton2.Click += new System.EventHandler(this.browseButton2_Click);
-            // 
-            // browseButton3
-            // 
-            this.browseButton3.Location = new System.Drawing.Point(280, 148);
-            this.browseButton3.Name = "browseButton3";
-            this.browseButton3.Size = new System.Drawing.Size(59, 23);
-            this.browseButton3.TabIndex = 8;
-            this.browseButton3.Text = "Browse...";
-            this.browseButton3.UseVisualStyleBackColor = true;
-            this.browseButton3.Click += new System.EventHandler(this.browseButton3_Click);
             // 
             // OptionScreen
             // 
@@ -209,5 +242,8 @@
         private System.Windows.Forms.Button BrowseButton1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox logPathBox;
+        private System.Windows.Forms.Button browseButton4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox notesPathBox;
     }
 }

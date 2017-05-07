@@ -15,6 +15,7 @@ namespace BasicBattleTracking
         public string StatBlockPath { get; private set; }
         public string AutoSavePath { get; private set; }
         public string LogPath { get; private set; }
+        public string NotesPath { get; private set; }
         public OptionScreen()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace BasicBattleTracking
             StatBlockPath = statPathBox.Text;
             AutoSavePath = autoPathBox.Text;
             LogPath = logPathBox.Text;
+            NotesPath = notesPathBox.Text;
 
             BattleIO saver = new BattleIO();
             if(saver.SaveSettings(this))
@@ -32,6 +34,7 @@ namespace BasicBattleTracking
                 Program.UserStatBlockDirectory = StatBlockPath;
                 Program.UserAutoSaveDirectory = AutoSavePath;
                 Program.UserLogDirectory = LogPath;
+                Program.UserNotesDirectory = NotesPath;
                 this.Close();
             }
         }
@@ -65,6 +68,15 @@ namespace BasicBattleTracking
                 statPathBox.Text = Program.defaultPath + @"\Stat Blocks";
             }
 
+            if(Program.UserNotesDirectory != "")
+            {
+                notesPathBox.Text = Program.UserNotesDirectory;
+            }
+            else
+            {
+                notesPathBox.Text = Program.defaultPath + @"\Notes";
+            }
+
             
         }
 
@@ -77,6 +89,7 @@ namespace BasicBattleTracking
             {
                 case 1: startDirectory = autoPathBox.Text; break;
                 case 2: startDirectory = logPathBox.Text; break;
+                case 3: startDirectory = notesPathBox.Text; break;
                 default: startDirectory = statPathBox.Text; break;
             }
             try
@@ -94,6 +107,7 @@ namespace BasicBattleTracking
                 target.Text = selector.SelectedPath;
             }
         }
+
 
         private void BrowseButton1_Click(object sender, EventArgs e)
         {
@@ -113,6 +127,16 @@ namespace BasicBattleTracking
         private void cancButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void browseButton4_Click(object sender, EventArgs e)
+        {
+            UpdatePathBox(notesPathBox, 3);
+        }
+
+        private void statPathBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

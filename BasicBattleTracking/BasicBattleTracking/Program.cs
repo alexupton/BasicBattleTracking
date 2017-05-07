@@ -11,6 +11,7 @@ namespace BasicBattleTracking
         public static string UserStatBlockDirectory;
         public static string UserLogDirectory;
         public static string UserAutoSaveDirectory;
+        public static string UserNotesDirectory;
         public static string defaultPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\BasicBattleTracking";
         /// <summary>
         /// The main entry point for the application.
@@ -23,6 +24,7 @@ namespace BasicBattleTracking
             UserAutoSaveDirectory = "";
             UserStatBlockDirectory = "";
             UserLogDirectory = "";
+            UserNotesDirectory = "";
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
