@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using GemBox.Document;
 namespace BasicBattleTracking
 {
     public partial class NotesTab : UserControl
@@ -19,7 +18,6 @@ namespace BasicBattleTracking
         private List<string> notes;
         bool isDirty = false;
 
-        private string currentNote;
         public NotesTab()
         {
             InitializeComponent();
@@ -386,6 +384,11 @@ namespace BasicBattleTracking
                 string output = load.LoadNote(path);
                 return output;
             }
+        }
+
+        private void saveAsButton_Click(object sender, EventArgs e)
+        {
+            Save(true);
         }
 
 

@@ -180,6 +180,7 @@
             this.saveAsButton.TabIndex = 5;
             this.saveAsButton.Text = "Save Note As...";
             this.saveAsButton.UseVisualStyleBackColor = true;
+            this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);
             // 
             // openNoteDialog
             // 

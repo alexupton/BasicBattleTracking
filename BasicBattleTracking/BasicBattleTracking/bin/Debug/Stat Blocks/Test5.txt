@@ -18,5 +18,4 @@ Hit
 4
 10
 
-
-Sneaky Bitch Zone
+http://stackoverflow.com/questions/435607/how-can-i-make-a-hyperlink-work-in-a-richtextbox
