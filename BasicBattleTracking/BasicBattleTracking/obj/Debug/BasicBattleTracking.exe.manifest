@@ -43,14 +43,19 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BasicBattleTracking.exe" size="998912">
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="GemBox.Document" version="27.3.30.1016" publicKeyToken="B1B72C69714D4847" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BasicBattleTracking.exe" size="1000448">
       <assemblyIdentity name="BasicBattleTracking" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yfxOOtkd1n5ATp6MmYxEIuSKGhnIYX3Ov9w6bxv/RJA=</dsig:DigestValue>
+        <dsig:DigestValue>jUyyBmGhGHMW5CchBx9OSgNMDb6QcZwJqJ0zLNMYknI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
