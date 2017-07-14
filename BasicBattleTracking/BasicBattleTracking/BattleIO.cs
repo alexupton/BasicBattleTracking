@@ -430,6 +430,7 @@ namespace BasicBattleTracking
         {
             string outputPath = "";
             SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Text File (*.txt)|*.txt";
 
             DialogResult result = save.ShowDialog();
             if(result == DialogResult.OK)
@@ -453,6 +454,21 @@ namespace BasicBattleTracking
             }
 
             File.WriteAllText(path, text);
+        }
+
+        public string LoadNote(string path)
+        {
+            string output = "";
+            try
+            {
+                output = File.ReadAllText(path);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Unable to load note.\n\nDetails: " + e.Message, "Error!");
+            }
+
+            return output;
         }
     }
 

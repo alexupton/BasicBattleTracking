@@ -17,3 +17,5 @@ Hit
 6
 4
 10
+
+http://stackoverflow.com/questions/435607/how-can-i-make-a-hyperlink-work-in-a-richtextbox

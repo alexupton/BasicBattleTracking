@@ -63,7 +63,7 @@ namespace BasicBattleTracking
             AutoLoad();
             this.FormClosed += new FormClosedEventHandler(this.MainWindow_Close);
             //TestDPercentTable();
-            WriteToLog("Now with sweet tabs.");
+            WriteToLog("Check out the notes tab. User experience ahoy!");
         }
 
 

@@ -45,6 +45,8 @@
             this.newNoteButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.saveAsButton = new System.Windows.Forms.Button();
+            this.openNoteDialog = new System.Windows.Forms.OpenFileDialog();
+            this.laodNoteButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +85,9 @@
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 20);
+            this.label2.Location = new System.Drawing.Point(250, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Recent Folders";
             // 
@@ -94,6 +99,10 @@
             this.recentPathsBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.recentPathsBox.Name = "recentPathsBox";
             this.recentPathsBox.Size = new System.Drawing.Size(164, 28);
+            this.recentPathsBox.Location = new System.Drawing.Point(335, 88);
+            this.recentPathsBox.Name = "recentPathsBox";
+            this.recentPathsBox.Size = new System.Drawing.Size(111, 21);
+
             this.recentPathsBox.TabIndex = 4;
             this.recentPathsBox.SelectedIndexChanged += new System.EventHandler(this.recentPathsBox_SelectedIndexChanged);
             // 
@@ -125,6 +134,10 @@
             this.fileBrowseButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.fileBrowseButton.Name = "fileBrowseButton";
             this.fileBrowseButton.Size = new System.Drawing.Size(98, 35);
+
+            this.fileBrowseButton.Location = new System.Drawing.Point(381, 17);
+            this.fileBrowseButton.Name = "fileBrowseButton";
+            this.fileBrowseButton.Size = new System.Drawing.Size(65, 23);
             this.fileBrowseButton.TabIndex = 2;
             this.fileBrowseButton.Text = "Browse...";
             this.fileBrowseButton.UseVisualStyleBackColor = true;
@@ -137,6 +150,9 @@
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(129, 20);
+            this.label1.Location = new System.Drawing.Point(6, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Current Directory";
             // 
@@ -146,6 +162,11 @@
             this.filePathBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.filePathBox.Name = "filePathBox";
             this.filePathBox.Size = new System.Drawing.Size(418, 26);
+
+            this.filePathBox.Location = new System.Drawing.Point(98, 19);
+            this.filePathBox.Name = "filePathBox";
+            this.filePathBox.Size = new System.Drawing.Size(280, 20);
+
             this.filePathBox.TabIndex = 0;
             this.filePathBox.TextChanged += new System.EventHandler(this.filePathBox_TextChanged);
             // 
@@ -185,11 +206,29 @@
             this.saveAsButton.TabIndex = 5;
             this.saveAsButton.Text = "Save Note As...";
             this.saveAsButton.UseVisualStyleBackColor = true;
+            this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);
+            // 
+            // openNoteDialog
+            // 
+            this.openNoteDialog.FileName = "openFileDialog1";
+            this.openNoteDialog.Filter = "Text Files (*.txt) | *.txt";
+            // 
+            // laodNoteButton
+            // 
+            this.laodNoteButton.Location = new System.Drawing.Point(278, 848);
+            this.laodNoteButton.Margin = new System.Windows.Forms.Padding(2);
+            this.laodNoteButton.Name = "laodNoteButton";
+            this.laodNoteButton.Size = new System.Drawing.Size(99, 36);
+            this.laodNoteButton.TabIndex = 6;
+            this.laodNoteButton.Text = "Load Note";
+            this.laodNoteButton.UseVisualStyleBackColor = true;
+            this.laodNoteButton.Click += new System.EventHandler(this.laodNoteButton_Click);
             // 
             // NotesTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.laodNoteButton);
             this.Controls.Add(this.saveAsButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.newNoteButton);
@@ -222,5 +261,7 @@
         private System.Windows.Forms.Button newNoteButton;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button saveAsButton;
+        private System.Windows.Forms.OpenFileDialog openNoteDialog;
+        private System.Windows.Forms.Button laodNoteButton;
     }
 }
