@@ -16,6 +16,8 @@ namespace BasicBattleTracking
         public string AutoSavePath { get; private set; }
         public string LogPath { get; private set; }
         public string NotesPath { get; private set; }
+
+        public bool initOption { get; private set; }
         public OptionScreen()
         {
             InitializeComponent();
@@ -27,6 +29,7 @@ namespace BasicBattleTracking
             AutoSavePath = autoPathBox.Text;
             LogPath = logPathBox.Text;
             NotesPath = notesPathBox.Text;
+            Program.initEachRound = initOption;
 
             BattleIO saver = new BattleIO();
             if(saver.SaveSettings(this))
@@ -35,6 +38,7 @@ namespace BasicBattleTracking
                 Program.UserAutoSaveDirectory = AutoSavePath;
                 Program.UserLogDirectory = LogPath;
                 Program.UserNotesDirectory = NotesPath;
+                
                 this.Close();
             }
         }
@@ -75,6 +79,15 @@ namespace BasicBattleTracking
             else
             {
                 notesPathBox.Text = Program.defaultPath + @"\Notes";
+            }
+
+            if (Program.initEachRound)
+            {
+                initOptionBox.Checked = true;
+            }
+            else
+            {
+                initOptionBox.Checked = false;
             }
 
             
@@ -137,6 +150,18 @@ namespace BasicBattleTracking
         private void statPathBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (initOptionBox.Checked)
+            {
+                initOption = true;
+            }
+            else
+            {
+                initOption = false;
+            }
         }
     }
 }

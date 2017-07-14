@@ -183,6 +183,13 @@ namespace BasicBattleTracking
                     sb.AppendLine(i.ToString());
                 }
             }
+            sb.AppendLine("|AbilityStart|");
+            sb.AppendLine(f.Str.ToString());
+            sb.AppendLine(f.Dex.ToString());
+            sb.AppendLine(f.Con.ToString());
+            sb.AppendLine(f.Int.ToString());
+            sb.AppendLine(f.Wis.ToString());
+            sb.AppendLine(f.Cha.ToString());
 
             File.WriteAllText(path, sb.ToString());
 
@@ -197,12 +204,19 @@ namespace BasicBattleTracking
                 Fighter newFighter = new Fighter(lines[0], Int32.Parse(lines[1]), false);
                 int attackStart = 14;
                 int attackEnd = lines.Length;
+                int abilityStart = attackEnd + 1;
+                int abilityEnd = lines.Length;
 
                 for (int i = 0; i < lines.Length; i++)
                 {
                     if (lines[i] == "|AttackStart|")
                     {
                         attackStart = i + 1;
+                    }
+                    if (lines[i] == "|AbilityStart|")
+                    {
+                        attackEnd = i;
+                        abilityStart = i + 1;
                     }
                 }
 
@@ -272,7 +286,16 @@ namespace BasicBattleTracking
                     }
                 }
                 newFighter.attacks = newAttacks;
-                return newFighter;
+                if(abilityStart < lines.Length)
+                {
+                        newFighter.Str = Int32.Parse(lines[abilityStart]);
+                        newFighter.Dex = Int32.Parse(lines[abilityStart + 1]);
+                        newFighter.Con = Int32.Parse(lines[abilityStart + 2]);
+                        newFighter.Int = Int32.Parse(lines[abilityStart + 3]);
+                        newFighter.Wis = Int32.Parse(lines[abilityStart + 4]);
+                        newFighter.Cha = Int32.Parse(lines[abilityStart + 5]);
+                }
+                    return newFighter;
             }
             catch(Exception ex) 
             {
@@ -320,6 +343,7 @@ namespace BasicBattleTracking
                 sb.AppendLine("AutoSavePath|<" + sender.AutoSavePath + ">");
                 sb.AppendLine("LogPath|<" + sender.LogPath + ">");
                 sb.AppendLine("NotesPath|<" + sender.NotesPath + ">");
+                sb.AppendLine("InitEachRound|" + Program.initEachRound.ToString());
 
                 File.WriteAllText(path, sb.ToString());
             }
@@ -354,6 +378,10 @@ namespace BasicBattleTracking
                         case "NotesPath":
                             {
                                 Program.UserNotesDirectory = GetSettingPath(line[1]); break;
+                            }
+                        case "InitEachRound":
+                            {
+                                Program.initEachRound = Boolean.Parse(line[1]); break;
                             }
                         default: break;
                     }

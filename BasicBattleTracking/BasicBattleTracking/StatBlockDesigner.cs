@@ -102,6 +102,28 @@ namespace BasicBattleTracking
 
                 }
 
+                int str = 0;
+                int dex = 0;
+                int con = 0;
+                int intel = 0;
+                int wis = 0;
+                int cha = 0;
+
+                try
+                {
+                    str = Int32.Parse(strBox.Text);
+                    dex = Int32.Parse(dexBox.Text);
+                    con = Int32.Parse(conBox.Text);
+                    intel = Int32.Parse(intBox.Text);
+                    wis = Int32.Parse(wisBox.Text);
+                    cha = Int32.Parse(chaBox.Text);
+                }
+                catch
+                {
+                    errorFlag = true;
+                    errorMessage += "\nOne or more ability scores is not valid";
+                }
+
                 newFighter.HPAdd = HPAdd;
                 newFighter.HPDieType = HPDieType;
                 newFighter.HPMult = HPMult;

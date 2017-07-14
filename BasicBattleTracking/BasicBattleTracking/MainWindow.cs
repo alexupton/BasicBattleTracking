@@ -297,11 +297,22 @@ namespace BasicBattleTracking
             if (activeIndex >= fighterOrder.Count)
             {
                 activeIndex = 0;
-                DialogResult confirmnInit = MessageBox.Show("End of initiative order. Roll next round?", "End of Round", MessageBoxButtons.YesNo);
-                if (confirmnInit == DialogResult.Yes)
+                if (Program.initEachRound)
                 {
-                    RollInit();
-                    showNext = false;
+                    DialogResult confirmnInit = MessageBox.Show("End of initiative order. Roll next round?", "End of Round", MessageBoxButtons.YesNo);
+                    if (confirmnInit == DialogResult.Yes)
+                    {
+                        RollInit();
+                        showNext = false;
+                    }
+                }
+                else
+                {
+                    combatRound++;
+                    activeIndex = 0;
+
+                    turnLabel.Text = combatRound.ToString();
+                    WriteToLog("===============  Start of turn " + combatRound.ToString() + "  ===============");
                 }
             }
             activeLabel.Text = fighterOrder.ElementAt(activeIndex);
@@ -1227,6 +1238,11 @@ namespace BasicBattleTracking
         {
             OptionScreen options = new OptionScreen();
             options.Show();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
         //
         //End Die Roll Buttons
