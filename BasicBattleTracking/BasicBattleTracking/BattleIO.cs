@@ -12,7 +12,7 @@ namespace BasicBattleTracking
     {
 
         private string defaultPath = Program.defaultPath;
-        public void AutoSave(List<Fighter> combatants)
+        public void AutoSave(List<Fighter> combatants, bool[] checkBoxes)
         {
             StringBuilder rawText = new StringBuilder();
             int npcIndex = 0;
@@ -33,6 +33,14 @@ namespace BasicBattleTracking
                     {
                         File.Delete(file);
                     }
+
+            int fighterCount = 0;
+            foreach(Fighter f in combatants)
+            {
+                if (f.isPC)
+                    fighterCount++;
+            }
+            rawText.AppendLine(fighterCount.ToString());
             foreach (Fighter f in combatants)
             {
                 if (f.isPC)
@@ -50,6 +58,12 @@ namespace BasicBattleTracking
                 }
             }
 
+            //checkBoxSettings
+            rawText.AppendLine(checkBoxes[0].ToString()); //AtkStr
+            rawText.AppendLine(checkBoxes[1].ToString()); //AtkDex
+            rawText.AppendLine(checkBoxes[2].ToString()); //DmgStr
+            rawText.AppendLine(checkBoxes[3].ToString()); //DmgDex
+            
             
             if(File.Exists(autoPath))
             {
@@ -67,7 +81,7 @@ namespace BasicBattleTracking
 
         }
 
-        public List<Fighter> AutoLoad()
+        public List<Fighter> AutoLoad(MainWindow sender)
         {
             List<Fighter> fighters = new List<Fighter>();
             string path = defaultPath + @"\Save\auto.txt";
@@ -78,7 +92,18 @@ namespace BasicBattleTracking
             if(File.Exists(path))
             {
                 string[] lines = File.ReadAllLines(path);
-                for (int i = 0; i < lines.Length; i++)
+                int fighterCount = lines.Length - 1;
+                int fighterStart = 1;
+                try
+                {
+                    fighterCount = Int32.Parse(lines[0]);
+                }
+                catch 
+                {
+                    fighterStart = 0;
+                }
+                
+                for (int i = fighterStart; i < fighterCount + 1; i++)
                 {
                     string[] fStats = lines[i].Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
                     try{
@@ -95,6 +120,21 @@ namespace BasicBattleTracking
                     
                     
                     
+                }
+
+                if(fighterCount + 1 < lines.Length)
+                {
+                    int checkIndex = fighterCount + 1;
+                    try
+                    {
+                        bool[] checkBoxes = new bool[] { Boolean.Parse(lines[checkIndex]), Boolean.Parse(lines[checkIndex + 1]), Boolean.Parse(lines[checkIndex + 2]), Boolean.Parse(lines[checkIndex + 3]) };
+                        sender.SetCheckBoxes(checkBoxes);
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Bonus checkbox load failed");
+                    }
+
                 }
             }
 

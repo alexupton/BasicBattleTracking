@@ -102,32 +102,7 @@ namespace BasicBattleTracking
 
                 }
 
-                int str = 0;
-                int dex = 0;
-                int con = 0;
-                int intel = 0;
-                int wis = 0;
-                int cha = 0;
-
-                try
-                {
-                    str = Int32.Parse(strBox.Text);
-                    dex = Int32.Parse(dexBox.Text);
-                    con = Int32.Parse(conBox.Text);
-                    intel = Int32.Parse(intBox.Text);
-                    wis = Int32.Parse(wisBox.Text);
-                    cha = Int32.Parse(chaBox.Text);
-                }
-                catch
-                {
-                    errorFlag = true;
-                    errorMessage += "\nOne or more ability scores is not valid";
-                }
-
-                newFighter.HPAdd = HPAdd;
-                newFighter.HPDieType = HPDieType;
-                newFighter.HPMult = HPMult;
-                newFighter.HP = HP;
+                
             }
             else
             {
@@ -158,6 +133,36 @@ namespace BasicBattleTracking
                 newFighter.fort = Int32.Parse(fortBox.Text);
                 newFighter.reflex = Int32.Parse(refBox.Text);
                 newFighter.will = Int32.Parse(willBox.Text);
+
+
+                int str = 0;
+                int dex = 0;
+                int con = 0;
+                int intel = 0;
+                int wis = 0;
+                int cha = 0;
+
+                try
+                {
+                    str = Int32.Parse(strBox.Text);
+                    dex = Int32.Parse(dexBox.Text);
+                    con = Int32.Parse(conBox.Text);
+                    intel = Int32.Parse(intBox.Text);
+                    wis = Int32.Parse(wisBox.Text);
+                    cha = Int32.Parse(chaBox.Text);
+                }
+                catch
+                {
+                    errorFlag = true;
+                    errorMessage += "\nOne or more ability scores is not valid";
+                }
+
+                newFighter.Str = str;
+                newFighter.Dex = dex;
+                newFighter.Con = con;
+                newFighter.Int = intel;
+                newFighter.Wis = wis;
+                newFighter.Cha = cha;
 
             }
             catch
@@ -466,6 +471,90 @@ namespace BasicBattleTracking
         private void addBox_TextChanged(object sender, EventArgs e)
         {
             HPValBox.Text = rollHP().ToString();
+        }
+
+        private void strBox_TextChanged(object sender, EventArgs e)
+        {
+            displayMod(strBox, strModBox);
+        }
+
+
+        private void displayMod(TextBox inputBox, TextBox outputBox)
+        {
+            int score = 0;
+            try
+            {
+                score = Int32.Parse(inputBox.Text);
+            }
+            catch 
+            {
+                return;
+            }
+
+            int mod = Program.getAbilityMod(score);
+
+            if (mod >= 0)
+            {
+                outputBox.Text = "+" + mod.ToString();
+                outputBox.ForeColor = SystemColors.WindowText;
+            }
+            else
+            {
+                outputBox.Text = "-" + mod.ToString();
+                outputBox.ForeColor = Color.Red;
+            }
+            
+
+        }
+
+        private void dexModBox_TextChanged(object sender, EventArgs e)
+        {
+            //displayMod(dexBox, dexModBox);
+        }
+
+        private void conModBox_TextChanged(object sender, EventArgs e)
+        {
+            //displayMod(conBox, conModBox);
+        }
+
+        private void intModBox_TextChanged(object sender, EventArgs e)
+        {
+            //displayMod(intBox, intModBox);
+        }
+
+        private void wisModBox_TextChanged(object sender, EventArgs e)
+        {
+            //displayMod(wisBox, wisModBox);
+        }
+
+        private void chaModBox_TextChanged(object sender, EventArgs e)
+        {
+            //displayMod(chaBox, chaModBox);
+        }
+
+        private void wisBox_TextChanged(object sender, EventArgs e)
+        {
+            displayMod(wisBox, wisModBox);
+        }
+
+        private void dexBox_TextChanged(object sender, EventArgs e)
+        {
+            displayMod(dexBox, dexModBox);
+        }
+
+        private void conBox_TextChanged(object sender, EventArgs e)
+        {
+            displayMod(conBox, conModBox);
+        }
+
+        private void intBox_TextChanged(object sender, EventArgs e)
+        {
+            displayMod(intBox, intModBox);
+        }
+
+        private void chaBox_TextChanged(object sender, EventArgs e)
+        {
+            displayMod(chaBox, chaModBox);
         }
     }
 }

@@ -34,5 +34,12 @@ namespace BasicBattleTracking
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainWindow());
         }
+
+        public static int getAbilityMod(int abilityScore)
+        {
+            int mod = 0;
+            mod = (abilityScore - 10) / 2;
+            return mod;
+        }
     }
 }
