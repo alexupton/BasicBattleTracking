@@ -326,6 +326,12 @@ namespace BasicBattleTracking
                     willBox.Text = newFighter.will.ToString();
                     attacks = newFighter.attacks;
                     attackCountLabel.Text = newFighter.attacks.Count + " attacks.";
+                    strBox.Text = newFighter.Str.ToString();
+                    dexBox.Text = newFighter.Dex.ToString();
+                    conBox.Text = newFighter.Con.ToString();
+                    intBox.Text = newFighter.Int.ToString();
+                    wisBox.Text = newFighter.Wis.ToString();
+                    chaBox.Text = newFighter.Cha.ToString();
                     saved = true;
                     
                 }
