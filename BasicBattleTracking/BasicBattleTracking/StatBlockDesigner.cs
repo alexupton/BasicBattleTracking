@@ -20,6 +20,7 @@ namespace BasicBattleTracking
         private List<Attack> attacks;
         private string mostRecentPath = "";
         private Random randy;
+        private bool userPopulated = true;
         public StatBlockDesigner()
         {
             InitializeComponent();
@@ -108,6 +109,24 @@ namespace BasicBattleTracking
             {
                 try
                 {
+                    int HPMult = 0;
+                    int HPDieType = 0;
+                    int HPAdd = 0;
+                    try
+                    {
+                        HPMult = Int32.Parse(multBox.Text);
+                        HPAdd = Int32.Parse(addBox.Text);
+                        switch (dBox.SelectedIndex)
+                        {
+                            case 0: HPDieType = 4; break;
+                            case 1: HPDieType = 6; break;
+                            case 2: HPDieType = 8; break;
+                            case 3: HPDieType = 10; break;
+                            default: HPDieType = 12; break;
+
+                        }
+                    }
+                    catch { Console.WriteLine("No valid HP formula found."); }
                     HP = Int32.Parse(HPValBox.Text);
                     if (HP < 0)
                     {
@@ -310,6 +329,7 @@ namespace BasicBattleTracking
                 mostRecentPath = Path.GetDirectoryName(load.FileName);
                 if (newFighter != null)
                 {
+                    userPopulated = false;
                     nameBox.Text = newFighter.Name;
                     HPValBox.Text = newFighter.HP.ToString();
                     multBox.Text = newFighter.HPMult.ToString();
@@ -332,6 +352,7 @@ namespace BasicBattleTracking
                     intBox.Text = newFighter.Int.ToString();
                     wisBox.Text = newFighter.Wis.ToString();
                     chaBox.Text = newFighter.Cha.ToString();
+                    userPopulated = true;
                     saved = true;
                     
                 }
@@ -466,17 +487,26 @@ namespace BasicBattleTracking
         }
         private void multBox_TextChanged(object sender, EventArgs e)
         {
-            HPValBox.Text = rollHP().ToString();
+            if (userPopulated)
+            {
+                HPValBox.Text = rollHP().ToString();
+            }
         }
 
         private void dBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            HPValBox.Text = rollHP().ToString();
+            if (userPopulated)
+            {
+                HPValBox.Text = rollHP().ToString();
+            }
         }
 
         private void addBox_TextChanged(object sender, EventArgs e)
         {
-            HPValBox.Text = rollHP().ToString();
+            if (userPopulated)
+            {
+                HPValBox.Text = rollHP().ToString();
+            }
         }
 
         private void strBox_TextChanged(object sender, EventArgs e)
