@@ -155,8 +155,78 @@ namespace BasicBattleTracking
                     fighters.Add(LoadStatBlock(Directory.GetFiles(path)[i]));
                 }
             }
-            
-            return fighters;
+
+            path = defaultPath + @"\Save\DefaultSkillLoadout.txt";
+            if (Program.UserAutoSaveDirectory != "")
+            {
+                path = Program.UserAutoSaveDirectory + @"\DefaultSkillLoadout.txt";
+            }
+
+            if(!File.Exists(path))
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine("Acrobatics,1");
+                sb.AppendLine("Appraise,3");
+                sb.AppendLine("Bluff,5");
+                sb.AppendLine("Climb,0");
+                sb.AppendLine("Craft,3");
+                sb.AppendLine("Craft,3");
+                sb.AppendLine("Craft,3");
+                sb.AppendLine("Diplomacy,5");
+                sb.AppendLine("Disable Device,1");
+                sb.AppendLine("Disguise,5");
+                sb.AppendLine("Escape Artist,1");
+                sb.AppendLine("Fly,1");
+                sb.AppendLine("Handle Animal,5");
+                sb.AppendLine("Heal,4");
+                sb.AppendLine("Intimidate,5");
+                sb.AppendLine("Knowledge (Arcana),3");
+                sb.AppendLine("Knowledge (Dungeoneering),3");
+                sb.AppendLine("Knowledge (Engineering),3");
+                sb.AppendLine("Knowledge (Geography),3");
+                sb.AppendLine("Knowledge (History),3");
+                sb.AppendLine("Knowledge (Local),3");
+                sb.AppendLine("Knowledge (Nature),3");
+                sb.AppendLine("Knowledge (Nobility),3");
+                sb.AppendLine("Knowledge (Planes),3");
+                sb.AppendLine("Knowledge (Religion),3");
+                sb.AppendLine("Linguistics,3");
+                sb.AppendLine("Perception,4");
+                sb.AppendLine("Perform,5");
+                sb.AppendLine("Perform,5");
+                sb.AppendLine("Profession,4");
+                sb.AppendLine("Profession,4");
+                sb.AppendLine("Ride,1");
+                sb.AppendLine("Sense Motive,4");
+                sb.AppendLine("Sleight of Hand,1");
+                sb.AppendLine("Spellcraft,3");
+                sb.AppendLine("Stealth,1");
+                sb.AppendLine("Survival,4");
+                sb.AppendLine("Swim,0");
+                sb.AppendLine("Use Magic Device,5");
+                File.WriteAllText(path, sb.ToString());
+            }
+
+            string[] skillLines = File.ReadAllLines(path);
+            List<Skill> defaultSkills = new List<Skill>();
+            for (int i = 0; i < skillLines.Length; i++ )
+            {
+                Skill loadSkill = LoadSkills(skillLines[i].Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                if (loadSkill != null)
+                {
+                    defaultSkills.Add(loadSkill);
+                }
+            }
+            if(defaultSkills.Count > 0)
+            {
+                Program.defaultSkillLoadout = defaultSkills;
+            }
+            else
+            {
+                MessageBox.Show("Unable to load default skillset.", "Error!");
+            }
+
+                return fighters;
         }
 
         public void ExportLog(string log)
@@ -231,6 +301,13 @@ namespace BasicBattleTracking
             sb.AppendLine(f.Wis.ToString());
             sb.AppendLine(f.Cha.ToString());
 
+            sb.AppendLine("|SkillStart|");
+            sb.AppendLine("SkillCount:" + f.skills.Count);
+            foreach(Skill s in f.skills)
+            {
+                sb.AppendLine(s.name + "," + s.abilityMod.ToString() + "," + s.abilitySource + "," + s.ranks.ToString() + "," + s.miscMod.ToString() + "," + s.isClassSkill.ToString());
+            }
+
             File.WriteAllText(path, sb.ToString());
 
         }
@@ -246,6 +323,8 @@ namespace BasicBattleTracking
                 int attackEnd = lines.Length;
                 int abilityStart = attackEnd + 1;
                 int abilityEnd = lines.Length;
+                int skillStart = abilityEnd + 1;
+                int skillEnd = lines.Length;
 
                 for (int i = 0; i < lines.Length; i++)
                 {
@@ -257,6 +336,11 @@ namespace BasicBattleTracking
                     {
                         attackEnd = i;
                         abilityStart = i + 1;
+                    }
+                    if(lines[i] == "|SkillStart|")
+                    {
+                        abilityEnd = i;
+                        skillStart = i + 1;
                     }
                 }
 
@@ -334,6 +418,51 @@ namespace BasicBattleTracking
                         newFighter.Int = Int32.Parse(lines[abilityStart + 3]);
                         newFighter.Wis = Int32.Parse(lines[abilityStart + 4]);
                         newFighter.Cha = Int32.Parse(lines[abilityStart + 5]);
+                }
+
+                if(skillStart < lines.Length)
+                {
+                    int skillLength = 0;
+                    try
+                    {
+                        skillLength = Int32.Parse(lines[skillStart].Split(':')[1]);
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Unable to determine amount of skills");
+                    }
+
+                    if(skillLength > 0)
+                    {
+                        List<Skill> newSkills = new List<Skill>();
+                        for(int i = skillStart + 1; i < skillEnd; i++)
+                        {
+                            string[] skillStrings = lines[i].Split(',');
+                            try
+                            {
+                                string name = skillStrings[0];
+                                int abilityMod = Int32.Parse(skillStrings[1]);
+                                string abilitySource = skillStrings[2];
+                                int ranks = Int32.Parse(skillStrings[3]);
+                                int miscMod = Int32.Parse(skillStrings[4]);
+                                bool isClassSkill = Boolean.Parse(skillStrings[5]);
+
+                                Skill newSkill = new Skill(name);
+                                newSkill.abilityMod = abilityMod;
+                                newSkill.abilitySource = abilitySource;
+                                newSkill.ranks = ranks;
+                                newSkill.miscMod = miscMod;
+                                newSkill.isClassSkill = isClassSkill;
+
+                                newSkills.Add(newSkill);
+                            }
+                            catch(Exception ex)
+                            {
+                                Console.WriteLine("Skill load failed at line " + i);
+                            }
+                        }
+                        newFighter.skills = newSkills;
+                    }
                 }
                     return newFighter;
             }
@@ -509,6 +638,33 @@ namespace BasicBattleTracking
             }
 
             return output;
+        }
+
+        private Skill LoadSkills(string[] skillLine)
+        {
+            List<Skill> defaultSkills = new List<Skill>();
+            try
+            {
+                string name = skillLine[0];
+                int ability = Int32.Parse(skillLine[1]);
+
+                Skill newSkill = new Skill(name);
+                switch(ability)
+                {
+                    case 0: newSkill.abilitySource = "Str"; break;
+                    case 1: newSkill.abilitySource = "Dex"; break;
+                    case 2: newSkill.abilitySource = "Con"; break;
+                    case 3: newSkill.abilitySource = "Int"; break;
+                    case 4: newSkill.abilitySource = "Wis"; break;
+                    default: newSkill.abilitySource = "Cha"; break;
+                }
+                return newSkill;
+            }
+            catch
+            {
+                Console.WriteLine("Unable to load default skillset.");
+                return null;
+            }
         }
     }
 

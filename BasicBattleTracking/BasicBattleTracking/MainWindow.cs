@@ -36,6 +36,7 @@ namespace BasicBattleTracking
             BattleIO settingsLoader = new BattleIO();
             settingsLoader.LoadSettings();
             InitializeComponent();
+            skillsTab1.ParentWindow = this;
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,7 +64,7 @@ namespace BasicBattleTracking
             AutoLoad();
             this.FormClosed += new FormClosedEventHandler(this.MainWindow_Close);
             //TestDPercentTable();
-            WriteToLog("Now with even more numbers!");
+            WriteToLog("Now featuring the ability to kill it AND skill it!");
         }
 
 
@@ -830,6 +831,7 @@ namespace BasicBattleTracking
                 selectedFighterObject = update;
                 fighterInfoBox.Text = selectedFighterObject.Name + " Stats";
                 attackView.Items.Clear();
+                UpdateSkills();
                 if (!update.isPC)
                 {
                     SetRollButtons(true);
@@ -890,6 +892,12 @@ namespace BasicBattleTracking
                 displayMod(wisBox, wisModBox);
                 displayMod(chaBox, chaModBox);
             }
+        }
+
+        private void UpdateSkills()
+        {
+            skillsTab1.SetActiveFighter(selectedFighterObject);
+            skillsTab1.UpdateSkillsList();
         }
 
         private void WriteToRollConsole(string text)
@@ -1130,6 +1138,8 @@ namespace BasicBattleTracking
                     {
                         newVal = Int32.Parse(strBox.Text);
                         combatants.ElementAt(selectedFighter).Str = newVal;
+
+                        WriteAbilityChangeToSkills(newVal, "Str");
                         if(AtkStrBonusBox.Checked)
                         {
                             foreach(Attack atk in selectedFighterObject.attacks)
@@ -1161,6 +1171,7 @@ namespace BasicBattleTracking
                     {
                         newVal = Int32.Parse(dexBox.Text);
                         combatants.ElementAt(selectedFighter).Dex = newVal;
+                        WriteAbilityChangeToSkills(newVal, "Dex");
 
                         if (AtkDexBonusBox.Checked)
                         {
@@ -1193,6 +1204,7 @@ namespace BasicBattleTracking
                     {
                         newVal = Int32.Parse(conBox.Text);
                         combatants.ElementAt(selectedFighter).Con = newVal;
+                        WriteAbilityChangeToSkills(newVal, "Con");
                     }
                     catch { }
 
@@ -1211,6 +1223,7 @@ namespace BasicBattleTracking
                     {
                         newVal = Int32.Parse(intBox.Text);
                         combatants.ElementAt(selectedFighter).Int = newVal;
+                        WriteAbilityChangeToSkills(newVal, "Int");
                     }
                     catch { }
 
@@ -1229,6 +1242,7 @@ namespace BasicBattleTracking
                     {
                         newVal = Int32.Parse(wisBox.Text);
                         combatants.ElementAt(selectedFighter).Wis = newVal;
+                        WriteAbilityChangeToSkills(newVal, "Wis");
                     }
                     catch { }
 
@@ -1247,12 +1261,26 @@ namespace BasicBattleTracking
                     {
                         newVal = Int32.Parse(chaBox.Text);
                         combatants.ElementAt(selectedFighter).Cha = newVal;
+                        WriteAbilityChangeToSkills(newVal, "Cha");
                     }
                     catch { }
 
             }
             displayMod(chaBox, chaModBox);
             UpdateAtkValues(selectedFighter);
+        }
+
+        private void WriteAbilityChangeToSkills(int newAbilityScore, string abilityName)
+        {
+            foreach(Skill s in selectedFighterObject.skills)
+            {
+                if(s.abilitySource == abilityName)
+                {
+                    s.abilityMod = Program.getAbilityMod(newAbilityScore);
+                }
+            }
+            UpdateSkills();
+            skillsTab1.UpdateSelectedSkill();
         }
 
         //
@@ -1641,6 +1669,11 @@ namespace BasicBattleTracking
             {
                 AtkNameLabel.Text = combatants.ElementAt(selectedFighter).attacks.ElementAt(selectedAttack).name;
             }
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
         }
 
         //

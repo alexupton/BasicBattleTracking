@@ -16,6 +16,7 @@ namespace BasicBattleTracking
 
         public List<Attack> attacks { get; set; }
         public List<Status> StatusEffects { get; set; }
+        public List<Skill> skills { get; set; }
 
         public int will { get; set; }
         public int reflex { get; set; }
@@ -55,6 +56,7 @@ namespace BasicBattleTracking
             HoldAction = false;
             StatusEffects = new List<Status>();
             attacks = new List<Attack>();
+            skills = new List<Skill>();
         }
 
     }

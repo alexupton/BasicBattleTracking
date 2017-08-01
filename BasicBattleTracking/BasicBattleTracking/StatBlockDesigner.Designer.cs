@@ -88,6 +88,8 @@
             this.chaModBox = new System.Windows.Forms.TextBox();
             this.wisModBox = new System.Windows.Forms.TextBox();
             this.intModBox = new System.Windows.Forms.TextBox();
+            this.skillCountLabel = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.AC.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -107,7 +109,7 @@
             // nameBox
             // 
             this.nameBox.Location = new System.Drawing.Point(46, 4);
-            this.nameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nameBox.Margin = new System.Windows.Forms.Padding(2);
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(153, 20);
             this.nameBox.TabIndex = 1;
@@ -115,7 +117,7 @@
             // InitBox
             // 
             this.InitBox.Location = new System.Drawing.Point(311, 83);
-            this.InitBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.InitBox.Margin = new System.Windows.Forms.Padding(2);
             this.InitBox.Name = "InitBox";
             this.InitBox.Size = new System.Drawing.Size(51, 20);
             this.InitBox.TabIndex = 3;
@@ -133,7 +135,7 @@
             // CMBBox
             // 
             this.CMBBox.Location = new System.Drawing.Point(311, 110);
-            this.CMBBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CMBBox.Margin = new System.Windows.Forms.Padding(2);
             this.CMBBox.Name = "CMBBox";
             this.CMBBox.Size = new System.Drawing.Size(51, 20);
             this.CMBBox.TabIndex = 4;
@@ -151,7 +153,7 @@
             // CMDBox
             // 
             this.CMDBox.Location = new System.Drawing.Point(311, 136);
-            this.CMDBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CMDBox.Margin = new System.Windows.Forms.Padding(2);
             this.CMDBox.Name = "CMDBox";
             this.CMDBox.Size = new System.Drawing.Size(51, 20);
             this.CMDBox.TabIndex = 6;
@@ -179,7 +181,7 @@
             // willBox
             // 
             this.willBox.Location = new System.Drawing.Point(404, 136);
-            this.willBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.willBox.Margin = new System.Windows.Forms.Padding(2);
             this.willBox.Name = "willBox";
             this.willBox.Size = new System.Drawing.Size(51, 20);
             this.willBox.TabIndex = 12;
@@ -197,7 +199,7 @@
             // refBox
             // 
             this.refBox.Location = new System.Drawing.Point(404, 110);
-            this.refBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.refBox.Margin = new System.Windows.Forms.Padding(2);
             this.refBox.Name = "refBox";
             this.refBox.Size = new System.Drawing.Size(51, 20);
             this.refBox.TabIndex = 10;
@@ -205,7 +207,7 @@
             // fortBox
             // 
             this.fortBox.Location = new System.Drawing.Point(404, 83);
-            this.fortBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fortBox.Margin = new System.Windows.Forms.Padding(2);
             this.fortBox.Name = "fortBox";
             this.fortBox.Size = new System.Drawing.Size(51, 20);
             this.fortBox.TabIndex = 9;
@@ -223,7 +225,7 @@
             // HPValBox
             // 
             this.HPValBox.Location = new System.Drawing.Point(73, 24);
-            this.HPValBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HPValBox.Margin = new System.Windows.Forms.Padding(2);
             this.HPValBox.Name = "HPValBox";
             this.HPValBox.Size = new System.Drawing.Size(41, 20);
             this.HPValBox.TabIndex = 14;
@@ -239,9 +241,9 @@
             this.groupBox1.Controls.Add(this.multBox);
             this.groupBox1.Controls.Add(this.HPValBox);
             this.groupBox1.Location = new System.Drawing.Point(11, 31);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(237, 86);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
@@ -251,7 +253,7 @@
             // 
             this.formulaButton.AutoSize = true;
             this.formulaButton.Location = new System.Drawing.Point(4, 51);
-            this.formulaButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.formulaButton.Margin = new System.Windows.Forms.Padding(2);
             this.formulaButton.Name = "formulaButton";
             this.formulaButton.Size = new System.Drawing.Size(62, 17);
             this.formulaButton.TabIndex = 25;
@@ -264,7 +266,7 @@
             this.valueButton.AutoSize = true;
             this.valueButton.Checked = true;
             this.valueButton.Location = new System.Drawing.Point(4, 25);
-            this.valueButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.valueButton.Margin = new System.Windows.Forms.Padding(2);
             this.valueButton.Name = "valueButton";
             this.valueButton.Size = new System.Drawing.Size(52, 17);
             this.valueButton.TabIndex = 24;
@@ -277,7 +279,7 @@
             // 
             this.addBox.Enabled = false;
             this.addBox.Location = new System.Drawing.Point(185, 49);
-            this.addBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addBox.Margin = new System.Windows.Forms.Padding(2);
             this.addBox.Name = "addBox";
             this.addBox.Size = new System.Drawing.Size(40, 20);
             this.addBox.TabIndex = 23;
@@ -305,7 +307,7 @@
             "10",
             "12"});
             this.dBox.Location = new System.Drawing.Point(131, 50);
-            this.dBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dBox.Margin = new System.Windows.Forms.Padding(2);
             this.dBox.Name = "dBox";
             this.dBox.Size = new System.Drawing.Size(35, 21);
             this.dBox.TabIndex = 22;
@@ -325,7 +327,7 @@
             // 
             this.multBox.Enabled = false;
             this.multBox.Location = new System.Drawing.Point(73, 50);
-            this.multBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.multBox.Margin = new System.Windows.Forms.Padding(2);
             this.multBox.Name = "multBox";
             this.multBox.Size = new System.Drawing.Size(30, 20);
             this.multBox.TabIndex = 19;
@@ -340,9 +342,9 @@
             this.AC.Controls.Add(this.label9);
             this.AC.Controls.Add(this.ACValBox);
             this.AC.Location = new System.Drawing.Point(11, 122);
-            this.AC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AC.Margin = new System.Windows.Forms.Padding(2);
             this.AC.Name = "AC";
-            this.AC.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AC.Padding = new System.Windows.Forms.Padding(2);
             this.AC.Size = new System.Drawing.Size(237, 65);
             this.AC.TabIndex = 19;
             this.AC.TabStop = false;
@@ -361,7 +363,7 @@
             // FFBox
             // 
             this.FFBox.Location = new System.Drawing.Point(148, 41);
-            this.FFBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FFBox.Margin = new System.Windows.Forms.Padding(2);
             this.FFBox.Name = "FFBox";
             this.FFBox.Size = new System.Drawing.Size(41, 20);
             this.FFBox.TabIndex = 24;
@@ -379,7 +381,7 @@
             // touchBox
             // 
             this.touchBox.Location = new System.Drawing.Point(148, 16);
-            this.touchBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.touchBox.Margin = new System.Windows.Forms.Padding(2);
             this.touchBox.Name = "touchBox";
             this.touchBox.Size = new System.Drawing.Size(41, 20);
             this.touchBox.TabIndex = 22;
@@ -397,7 +399,7 @@
             // ACValBox
             // 
             this.ACValBox.Location = new System.Drawing.Point(43, 16);
-            this.ACValBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ACValBox.Margin = new System.Windows.Forms.Padding(2);
             this.ACValBox.Name = "ACValBox";
             this.ACValBox.Size = new System.Drawing.Size(41, 20);
             this.ACValBox.TabIndex = 20;
@@ -412,9 +414,9 @@
             this.groupBox2.Controls.Add(this.SaveInsertButton);
             this.groupBox2.Controls.Add(this.SaveButton);
             this.groupBox2.Location = new System.Drawing.Point(261, 192);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(217, 245);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
@@ -433,7 +435,7 @@
             // iCountBox
             // 
             this.iCountBox.Location = new System.Drawing.Point(146, 161);
-            this.iCountBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iCountBox.Margin = new System.Windows.Forms.Padding(2);
             this.iCountBox.Name = "iCountBox";
             this.iCountBox.Size = new System.Drawing.Size(49, 20);
             this.iCountBox.TabIndex = 23;
@@ -444,7 +446,7 @@
             // LoadButton
             // 
             this.LoadButton.Location = new System.Drawing.Point(50, 59);
-            this.LoadButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoadButton.Margin = new System.Windows.Forms.Padding(2);
             this.LoadButton.Name = "LoadButton";
             this.LoadButton.Size = new System.Drawing.Size(124, 26);
             this.LoadButton.TabIndex = 22;
@@ -456,7 +458,7 @@
             // 
             this.CancButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CancButton.Location = new System.Drawing.Point(50, 213);
-            this.CancButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CancButton.Margin = new System.Windows.Forms.Padding(2);
             this.CancButton.Name = "CancButton";
             this.CancButton.Size = new System.Drawing.Size(124, 26);
             this.CancButton.TabIndex = 3;
@@ -467,7 +469,7 @@
             // InsertButton
             // 
             this.InsertButton.Location = new System.Drawing.Point(5, 173);
-            this.InsertButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.InsertButton.Margin = new System.Windows.Forms.Padding(2);
             this.InsertButton.Name = "InsertButton";
             this.InsertButton.Size = new System.Drawing.Size(124, 26);
             this.InsertButton.TabIndex = 2;
@@ -478,7 +480,7 @@
             // SaveInsertButton
             // 
             this.SaveInsertButton.Location = new System.Drawing.Point(5, 143);
-            this.SaveInsertButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SaveInsertButton.Margin = new System.Windows.Forms.Padding(2);
             this.SaveInsertButton.Name = "SaveInsertButton";
             this.SaveInsertButton.Size = new System.Drawing.Size(124, 26);
             this.SaveInsertButton.TabIndex = 1;
@@ -489,7 +491,7 @@
             // SaveButton
             // 
             this.SaveButton.Location = new System.Drawing.Point(50, 23);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(2);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(124, 26);
             this.SaveButton.TabIndex = 0;
@@ -499,6 +501,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.skillCountLabel);
+            this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.attackCountLabel);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Location = new System.Drawing.Point(12, 192);
@@ -506,12 +510,12 @@
             this.groupBox3.Size = new System.Drawing.Size(235, 133);
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Attacks";
+            this.groupBox3.Text = "Attacks / Skills";
             // 
             // attackCountLabel
             // 
             this.attackCountLabel.AutoSize = true;
-            this.attackCountLabel.Location = new System.Drawing.Point(49, 37);
+            this.attackCountLabel.Location = new System.Drawing.Point(22, 18);
             this.attackCountLabel.Name = "attackCountLabel";
             this.attackCountLabel.Size = new System.Drawing.Size(52, 13);
             this.attackCountLabel.TabIndex = 1;
@@ -519,7 +523,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(34, 69);
+            this.button1.Location = new System.Drawing.Point(7, 50);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 23);
             this.button1.TabIndex = 0;
@@ -530,7 +534,7 @@
             // strBox
             // 
             this.strBox.Location = new System.Drawing.Point(311, 4);
-            this.strBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.strBox.Margin = new System.Windows.Forms.Padding(2);
             this.strBox.Name = "strBox";
             this.strBox.Size = new System.Drawing.Size(51, 20);
             this.strBox.TabIndex = 24;
@@ -549,7 +553,7 @@
             // dexBox
             // 
             this.dexBox.Location = new System.Drawing.Point(311, 25);
-            this.dexBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dexBox.Margin = new System.Windows.Forms.Padding(2);
             this.dexBox.Name = "dexBox";
             this.dexBox.Size = new System.Drawing.Size(51, 20);
             this.dexBox.TabIndex = 26;
@@ -568,7 +572,7 @@
             // conBox
             // 
             this.conBox.Location = new System.Drawing.Point(311, 49);
-            this.conBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.conBox.Margin = new System.Windows.Forms.Padding(2);
             this.conBox.Name = "conBox";
             this.conBox.Size = new System.Drawing.Size(51, 20);
             this.conBox.TabIndex = 28;
@@ -587,7 +591,7 @@
             // chaBox
             // 
             this.chaBox.Location = new System.Drawing.Point(446, 48);
-            this.chaBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chaBox.Margin = new System.Windows.Forms.Padding(2);
             this.chaBox.Name = "chaBox";
             this.chaBox.Size = new System.Drawing.Size(51, 20);
             this.chaBox.TabIndex = 34;
@@ -606,7 +610,7 @@
             // wisBox
             // 
             this.wisBox.Location = new System.Drawing.Point(446, 24);
-            this.wisBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.wisBox.Margin = new System.Windows.Forms.Padding(2);
             this.wisBox.Name = "wisBox";
             this.wisBox.Size = new System.Drawing.Size(51, 20);
             this.wisBox.TabIndex = 32;
@@ -625,7 +629,7 @@
             // intBox
             // 
             this.intBox.Location = new System.Drawing.Point(446, 3);
-            this.intBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.intBox.Margin = new System.Windows.Forms.Padding(2);
             this.intBox.Name = "intBox";
             this.intBox.Size = new System.Drawing.Size(51, 20);
             this.intBox.TabIndex = 30;
@@ -712,6 +716,25 @@
             this.intModBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.intModBox.TextChanged += new System.EventHandler(this.intModBox_TextChanged);
             // 
+            // skillCountLabel
+            // 
+            this.skillCountLabel.AutoSize = true;
+            this.skillCountLabel.Location = new System.Drawing.Point(148, 18);
+            this.skillCountLabel.Name = "skillCountLabel";
+            this.skillCountLabel.Size = new System.Drawing.Size(40, 13);
+            this.skillCountLabel.TabIndex = 3;
+            this.skillCountLabel.Text = "0 Skills";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(129, 50);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Skills Editor";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // StatBlockDesigner
             // 
             this.AcceptButton = this.SaveInsertButton;
@@ -756,7 +779,7 @@
             this.Controls.Add(this.nameBox);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StatBlockDesigner";
             this.Text = "StatBlockDesigner";
             this.Load += new System.EventHandler(this.StatBlockDesigner_Load);
@@ -834,5 +857,7 @@
         private System.Windows.Forms.TextBox chaModBox;
         private System.Windows.Forms.TextBox wisModBox;
         private System.Windows.Forms.TextBox intModBox;
+        private System.Windows.Forms.Label skillCountLabel;
+        private System.Windows.Forms.Button button2;
     }
 }

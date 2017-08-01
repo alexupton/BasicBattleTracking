@@ -21,8 +21,11 @@ namespace BasicBattleTracking
         private string mostRecentPath = "";
         private Random randy;
         private bool userPopulated = true;
+
+        public List<Skill> skillList { get; set; }
         public StatBlockDesigner()
         {
+            skillList = new List<Skill>();
             InitializeComponent();
         }
 
@@ -190,7 +193,7 @@ namespace BasicBattleTracking
                 errorFlag = true;
             }
             newFighter.attacks = this.attacks;
-           
+            newFighter.skills = this.skillList;
 
             if (errorFlag)
             {
@@ -346,6 +349,8 @@ namespace BasicBattleTracking
                     willBox.Text = newFighter.will.ToString();
                     attacks = newFighter.attacks;
                     attackCountLabel.Text = newFighter.attacks.Count + " attacks.";
+                    skillCountLabel.Text = newFighter.skills.Count + " skills.";
+                    skillList = newFighter.skills;
                     strBox.Text = newFighter.Str.ToString();
                     dexBox.Text = newFighter.Dex.ToString();
                     conBox.Text = newFighter.Con.ToString();
@@ -591,6 +596,44 @@ namespace BasicBattleTracking
         private void chaBox_TextChanged(object sender, EventArgs e)
         {
             displayMod(chaBox, chaModBox);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SkillDesigner skillMaker = new SkillDesigner();
+            skillMaker.ParentWindow = this;
+            List<int> abilityMods = new List<int>();
+            try
+            {
+                abilityMods.Add(Program.getAbilityMod(Int32.Parse(strBox.Text)));
+                abilityMods.Add(Program.getAbilityMod(Int32.Parse(dexBox.Text)));
+                abilityMods.Add(Program.getAbilityMod(Int32.Parse(conBox.Text)));
+                abilityMods.Add(Program.getAbilityMod(Int32.Parse(intBox.Text)));
+                abilityMods.Add(Program.getAbilityMod(Int32.Parse(wisBox.Text)));
+                abilityMods.Add(Program.getAbilityMod(Int32.Parse(chaBox.Text)));
+            }
+            catch
+            {
+                Console.WriteLine("Missing ability scores to add to skills");
+            }
+
+
+            skillMaker.SetAbilityMods(abilityMods);
+            if(skillList.Count > 0)
+            {
+                skillMaker.PopulateSkillLines(skillList);
+            }
+            else
+            {
+                skillMaker.PopulateSkillLines(Program.defaultSkillLoadout);
+            }
+            skillMaker.Show();
+        }
+
+        public void SetSkillList(List<Skill> inputList)
+        {
+            skillList = inputList;
+            skillCountLabel.Text = skillList.Count.ToString() +" Skills";
         }
     }
 }

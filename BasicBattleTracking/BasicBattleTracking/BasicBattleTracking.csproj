@@ -115,6 +115,25 @@
     <Compile Include="OptionScreen.Designer.cs">
       <DependentUpon>OptionScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Skill.cs" />
+    <Compile Include="SkillDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkillDesigner.Designer.cs">
+      <DependentUpon>SkillDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkillLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkillLine.Designer.cs">
+      <DependentUpon>SkillLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkillsTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkillsTab.Designer.cs">
+      <DependentUpon>SkillsTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Spell.cs" />
     <Compile Include="Fighter.cs" />
     <Compile Include="MainWindow.cs">
@@ -181,6 +200,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SkillDesigner.resx">
+      <DependentUpon>SkillDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkillLine.resx">
+      <DependentUpon>SkillLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkillsTab.resx">
+      <DependentUpon>SkillsTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StatBlockDesigner.resx">
       <DependentUpon>StatBlockDesigner.cs</DependentUpon>
     </EmbeddedResource>
