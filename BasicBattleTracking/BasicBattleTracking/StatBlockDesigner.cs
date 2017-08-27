@@ -253,7 +253,7 @@ namespace BasicBattleTracking
         private void Save(Fighter newFighter)
         {
             SaveFileDialog save = new SaveFileDialog();
-            save.DefaultExt = ".txt";
+            save.DefaultExt = ".bin";
             string initialPath = Program.defaultPath + @"\Stat Blocks";
 
             if (mostRecentPath != "")
@@ -702,6 +702,7 @@ namespace BasicBattleTracking
             {
                 saved = true;
                 mostRecentPath = Path.GetDirectoryName(newFighter.savePath);
+                savePath = newFighter.savePath;
             }
 
             SaveInsertButton.Text = "Save and Update";

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BasicBattleTracking
 {
+    [Serializable()]
     public class Fighter
     {
         public string Name { get; set; }

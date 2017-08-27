@@ -143,7 +143,7 @@ namespace BasicBattleTracking
 
                 if (f.StatusEffects.Count > 0)
                 {
-                    foreach(Status s in f.StatusEffects)
+                    foreach (Status s in f.StatusEffects)
                     {
 
                         statusView.Items.Add(new ListViewItem(new string[] { s.Name, f.Name, s.Turns.ToString(), s.Description }));
@@ -151,12 +151,13 @@ namespace BasicBattleTracking
                     }
                 }
             }
-            if(statusView.Items.Count <= 0)
+            if (statusView.Items.Count <= 0)
             {
                 setRemoveStatusButton(false);
                 RemoveStatusButton.Text = "Remove Status";
             }
             combatants = orderedFighterList;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -322,6 +323,7 @@ namespace BasicBattleTracking
                         s.Turns--;
                     }
                 }
+                AutoSave();
             }
             activeLabel.Text = fighterOrder.ElementAt(activeIndex);
             if(showNext)
@@ -410,6 +412,7 @@ namespace BasicBattleTracking
 
         private void AutoSave()
         {
+            this.Text = "Basic Battle Tracker - Autosaving..."; 
             BattleIO auto = new BattleIO();
 
 
@@ -441,7 +444,7 @@ namespace BasicBattleTracking
 
             //ACTUAL AUTOSAVE PART
             auto.AutoSave(combatants, checkboxSettings);
-
+            auto.SaveRecentlyUsedStatuses(recentlyUsedStatuses);
             //Reset ability bonuses
             foreach (Fighter f in combatants)
             {
@@ -465,6 +468,7 @@ namespace BasicBattleTracking
                     }
                 }
             }
+            this.Text = "Basic Battle Tracker"; 
         }
 
         private void AutoLoad()
@@ -631,6 +635,7 @@ namespace BasicBattleTracking
                 }
                 RemoveStatusButton.Enabled = false;
             }
+            AutoSave();
         }
 
         public void AddStatus(Status status)
@@ -647,7 +652,10 @@ namespace BasicBattleTracking
             if(unique)
             {
                 recentlyUsedStatuses.Add(status);
+                if (recentlyUsedStatuses.Count > 100)
+                    recentlyUsedStatuses.RemoveAt(0);
             }
+            AutoSave();
         }
 
         private void groupBox4_Enter(object sender, EventArgs e)

@@ -226,6 +226,14 @@ namespace BasicBattleTracking
                 MessageBox.Show("Unable to load default skillset.", "Error!");
             }
 
+            path = defaultPath + @"\Save\Status.bin";
+            if(Program.UserAutoSaveDirectory != "")
+            {
+                path = Program.UserAutoSaveDirectory + @"\Status.bin";
+            }
+
+            List<Status> recent = LoadRecentlyUsedStatuses(path, sender);
+            sender.recentlyUsedStatuses = recent;
                 return fighters;
         }
 
@@ -255,223 +263,249 @@ namespace BasicBattleTracking
             {
                 File.Delete(path);
             }
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine(RemoveForbiddenCharacters(f.Name));//0
-            sb.AppendLine(f.InitBonus.ToString()); //1
+            if (path != null)
+            {
+                bool append = false;
+                using (Stream stream = File.Open(path, append ? FileMode.Append : FileMode.Create))
+                {
+                    var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                    binaryFormatter.Serialize(stream, f);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Save path was null", "Error!");
+            }
+            //StringBuilder sb = new StringBuilder();
+            //sb.AppendLine(RemoveForbiddenCharacters(f.Name));//0
+            //sb.AppendLine(f.InitBonus.ToString()); //1
 
-            sb.AppendLine(f.HP.ToString()); //2
-            sb.AppendLine(f.HPMult.ToString()); //3
-            sb.AppendLine(f.HPDieType.ToString());//4
-            sb.AppendLine(f.HPAdd.ToString());//5
+            //sb.AppendLine(f.HP.ToString()); //2
+            //sb.AppendLine(f.HPMult.ToString()); //3
+            //sb.AppendLine(f.HPDieType.ToString());//4
+            //sb.AppendLine(f.HPAdd.ToString());//5
 
-            sb.AppendLine(f.AC.ToString());//6
-            sb.AppendLine(f.FlatFootedAC.ToString());//7
-            sb.AppendLine(f.TouchAC.ToString());//8
+            //sb.AppendLine(f.AC.ToString());//6
+            //sb.AppendLine(f.FlatFootedAC.ToString());//7
+            //sb.AppendLine(f.TouchAC.ToString());//8
 
             
 
-            sb.AppendLine(f.CMB.ToString());//9
-            sb.AppendLine(f.CMD.ToString());//10
+            //sb.AppendLine(f.CMB.ToString());//9
+            //sb.AppendLine(f.CMD.ToString());//10
 
-            sb.AppendLine(f.fort.ToString());//11
-            sb.AppendLine(f.reflex.ToString());//12
-            sb.AppendLine(f.will.ToString());//13
+            //sb.AppendLine(f.fort.ToString());//11
+            //sb.AppendLine(f.reflex.ToString());//12
+            //sb.AppendLine(f.will.ToString());//13
 
-            sb.AppendLine("|AttackStart|");
-            foreach (Attack atk in f.attacks)
-            {
-                sb.AppendLine(atk.name); //i
-                sb.AppendLine(atk.atkBonus.ToString());//i + 1
-                sb.AppendLine(atk.dieAmt.ToString());//i + 2
-                sb.AppendLine(atk.dieType.ToString());//i +3
-                sb.AppendLine(atk.dmgBonus.ToString());//i + 4
-                sb.AppendLine(atk.CritMin.ToString()); //i + 5
-                sb.AppendLine(atk.CritMult.ToString()); //i + 6
-                sb.AppendLine("Attack Bonus Count :" + atk.atkBonuses.Count);
-                foreach (int i in atk.atkBonuses)
-                {
-                    sb.AppendLine(i.ToString());
-                }
-            }
-            sb.AppendLine("|AbilityStart|");
-            sb.AppendLine(f.Str.ToString());
-            sb.AppendLine(f.Dex.ToString());
-            sb.AppendLine(f.Con.ToString());
-            sb.AppendLine(f.Int.ToString());
-            sb.AppendLine(f.Wis.ToString());
-            sb.AppendLine(f.Cha.ToString());
+            //sb.AppendLine("|AttackStart|");
+            //foreach (Attack atk in f.attacks)
+            //{
+            //    sb.AppendLine(atk.name); //i
+            //    sb.AppendLine(atk.atkBonus.ToString());//i + 1
+            //    sb.AppendLine(atk.dieAmt.ToString());//i + 2
+            //    sb.AppendLine(atk.dieType.ToString());//i +3
+            //    sb.AppendLine(atk.dmgBonus.ToString());//i + 4
+            //    sb.AppendLine(atk.CritMin.ToString()); //i + 5
+            //    sb.AppendLine(atk.CritMult.ToString()); //i + 6
+            //    sb.AppendLine("Attack Bonus Count :" + atk.atkBonuses.Count);
+            //    foreach (int i in atk.atkBonuses)
+            //    {
+            //        sb.AppendLine(i.ToString());
+            //    }
+            //}
+            //sb.AppendLine("|AbilityStart|");
+            //sb.AppendLine(f.Str.ToString());
+            //sb.AppendLine(f.Dex.ToString());
+            //sb.AppendLine(f.Con.ToString());
+            //sb.AppendLine(f.Int.ToString());
+            //sb.AppendLine(f.Wis.ToString());
+            //sb.AppendLine(f.Cha.ToString());
 
-            sb.AppendLine("|SkillStart|");
-            sb.AppendLine("SkillCount:" + f.skills.Count);
-            foreach(Skill s in f.skills)
-            {
-                sb.AppendLine(s.name + "," + s.abilityMod.ToString() + "," + s.abilitySource + "," + s.ranks.ToString() + "," + s.miscMod.ToString() + "," + s.isClassSkill.ToString());
-            }
+            //sb.AppendLine("|SkillStart|");
+            //sb.AppendLine("SkillCount:" + f.skills.Count);
+            //foreach(Skill s in f.skills)
+            //{
+            //    sb.AppendLine(s.name + "," + s.abilityMod.ToString() + "," + s.abilitySource + "," + s.ranks.ToString() + "," + s.miscMod.ToString() + "," + s.isClassSkill.ToString());
+            //}
 
-            File.WriteAllText(path, sb.ToString());
+            //File.WriteAllText(path, sb.ToString());
 
         }
 
         public Fighter LoadStatBlock(string path)
         {
-            
             try
             {
-                string[] lines = File.ReadAllLines(path);
-                Fighter newFighter = new Fighter(lines[0], Int32.Parse(lines[1]), false);
-                newFighter.savePath = path;
-                int attackStart = 14;
-                int attackEnd = lines.Length;
-                int abilityStart = attackEnd + 1;
-                int abilityEnd = lines.Length;
-                int skillStart = abilityEnd + 1;
-                int skillEnd = lines.Length;
-
-                for (int i = 0; i < lines.Length; i++)
+                using (Stream stream = File.Open(path, FileMode.Open))
                 {
-                    if (lines[i] == "|AttackStart|")
-                    {
-                        attackStart = i + 1;
-                    }
-                    if (lines[i] == "|AbilityStart|")
-                    {
-                        attackEnd = i;
-                        abilityStart = i + 1;
-                    }
-                    if(lines[i] == "|SkillStart|")
-                    {
-                        abilityEnd = i;
-                        skillStart = i + 1;
-                    }
+                    var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                    Fighter newFighter = (Fighter)binaryFormatter.Deserialize(stream);
+                    return newFighter;
                 }
-
-                int dieType = Int32.Parse(lines[4]);
-                int HP = 0;
-                if (dieType > 0) //check for HP formula
+            }
+            catch
+            {
+                //legacy loader 
+                try
                 {
-                    Random randy = new Random();
-                    int mult = Int32.Parse(lines[3]);
-                    int add = Int32.Parse(lines[5]);
-                    for (int i = 0; i < mult; i++)
+                    string[] lines = File.ReadAllLines(path);
+                    Fighter newFighter = new Fighter(lines[0], Int32.Parse(lines[1]), false);
+                    newFighter.savePath = path;
+                    int attackStart = 14;
+                    int attackEnd = lines.Length;
+                    int abilityStart = attackEnd + 1;
+                    int abilityEnd = lines.Length;
+                    int skillStart = abilityEnd + 1;
+                    int skillEnd = lines.Length;
+
+                    for (int i = 0; i < lines.Length; i++)
                     {
-                        HP += randy.Next(dieType) + 1;
-                    }
-                    HP += add;
-                    newFighter.HP = HP;
-
-                    newFighter.HPDieType = dieType;
-                    newFighter.HPMult = mult;
-                    newFighter.HPAdd = add;
-
-                }
-                else
-                {
-                    newFighter.HP = Int32.Parse(lines[2]);
-                }
-
-                newFighter.AC = Int32.Parse(lines[6]);
-                newFighter.FlatFootedAC = Int32.Parse(lines[7]);
-                newFighter.TouchAC = Int32.Parse(lines[8]);
-                newFighter.CMB = Int32.Parse(lines[9]);
-                newFighter.CMD = Int32.Parse(lines[10]);
-                newFighter.fort = Int32.Parse(lines[11]);
-                newFighter.reflex = Int32.Parse(lines[12]);
-                newFighter.will = Int32.Parse(lines[13]);
-                
-                List<Attack> newAttacks = new List<Attack>();
-                for (int i = attackStart; i < attackEnd; i += 8)
-                {
-                    Attack temp = new Attack(lines[i]);
-                    temp.atkBonus = Int32.Parse(lines[i + 1]);
-                    temp.atkBonuses.Add(temp.atkBonus);
-                    temp.dieAmt = Int32.Parse(lines[i + 2]);
-                    temp.dieType = Int32.Parse(lines[i + 3]);
-                    temp.dmgBonus = Int32.Parse(lines[i + 4]);
-                    temp.CritMin = Int32.Parse(lines[i + 5]);
-                    temp.CritMult = Int32.Parse(lines[i + 6]);
-                    try
-                    {
-                        string[] countLine = lines[i + 7].Split(':');
-                        int bonusCount = 0;
-                        if (countLine.Length > 0)
+                        if (lines[i] == "|AttackStart|")
                         {
-                            bonusCount = Int32.Parse(countLine[1]);
-                            List<int> atkBonuses = new List<int>();
-                            for (int j = i + 8; j < bonusCount + i + 8; j++)
-                            {
-                                atkBonuses.Add(Int32.Parse(lines[j]));
-                            }
-                            temp.atkBonuses = atkBonuses;
-                            i += bonusCount;
+                            attackStart = i + 1;
+                        }
+                        if (lines[i] == "|AbilityStart|")
+                        {
+                            attackEnd = i;
+                            abilityStart = i + 1;
+                        }
+                        if (lines[i] == "|SkillStart|")
+                        {
+                            abilityEnd = i;
+                            skillStart = i + 1;
                         }
                     }
-                    finally
+
+                    int dieType = Int32.Parse(lines[4]);
+                    int HP = 0;
+                    if (dieType > 0) //check for HP formula
                     {
-                        newAttacks.Add(temp);
+                        Random randy = new Random();
+                        int mult = Int32.Parse(lines[3]);
+                        int add = Int32.Parse(lines[5]);
+                        for (int i = 0; i < mult; i++)
+                        {
+                            HP += randy.Next(dieType) + 1;
+                        }
+                        HP += add;
+                        newFighter.HP = HP;
+
+                        newFighter.HPDieType = dieType;
+                        newFighter.HPMult = mult;
+                        newFighter.HPAdd = add;
+
                     }
-                }
-                newFighter.attacks = newAttacks;
-                if(abilityStart < lines.Length)
-                {
+                    else
+                    {
+                        newFighter.HP = Int32.Parse(lines[2]);
+                    }
+
+                    newFighter.AC = Int32.Parse(lines[6]);
+                    newFighter.FlatFootedAC = Int32.Parse(lines[7]);
+                    newFighter.TouchAC = Int32.Parse(lines[8]);
+                    newFighter.CMB = Int32.Parse(lines[9]);
+                    newFighter.CMD = Int32.Parse(lines[10]);
+                    newFighter.fort = Int32.Parse(lines[11]);
+                    newFighter.reflex = Int32.Parse(lines[12]);
+                    newFighter.will = Int32.Parse(lines[13]);
+
+                    List<Attack> newAttacks = new List<Attack>();
+                    for (int i = attackStart; i < attackEnd; i += 8)
+                    {
+                        Attack temp = new Attack(lines[i]);
+                        temp.atkBonus = Int32.Parse(lines[i + 1]);
+                        temp.atkBonuses.Add(temp.atkBonus);
+                        temp.dieAmt = Int32.Parse(lines[i + 2]);
+                        temp.dieType = Int32.Parse(lines[i + 3]);
+                        temp.dmgBonus = Int32.Parse(lines[i + 4]);
+                        temp.CritMin = Int32.Parse(lines[i + 5]);
+                        temp.CritMult = Int32.Parse(lines[i + 6]);
+                        try
+                        {
+                            string[] countLine = lines[i + 7].Split(':');
+                            int bonusCount = 0;
+                            if (countLine.Length > 0)
+                            {
+                                bonusCount = Int32.Parse(countLine[1]);
+                                List<int> atkBonuses = new List<int>();
+                                for (int j = i + 8; j < bonusCount + i + 8; j++)
+                                {
+                                    atkBonuses.Add(Int32.Parse(lines[j]));
+                                }
+                                temp.atkBonuses = atkBonuses;
+                                i += bonusCount;
+                            }
+                        }
+                        finally
+                        {
+                            newAttacks.Add(temp);
+                        }
+                    }
+                    newFighter.attacks = newAttacks;
+                    if (abilityStart < lines.Length)
+                    {
                         newFighter.Str = Int32.Parse(lines[abilityStart]);
                         newFighter.Dex = Int32.Parse(lines[abilityStart + 1]);
                         newFighter.Con = Int32.Parse(lines[abilityStart + 2]);
                         newFighter.Int = Int32.Parse(lines[abilityStart + 3]);
                         newFighter.Wis = Int32.Parse(lines[abilityStart + 4]);
                         newFighter.Cha = Int32.Parse(lines[abilityStart + 5]);
-                }
-
-                if(skillStart < lines.Length)
-                {
-                    int skillLength = 0;
-                    try
-                    {
-                        skillLength = Int32.Parse(lines[skillStart].Split(':')[1]);
-                    }
-                    catch
-                    {
-                        Console.WriteLine("Unable to determine amount of skills");
                     }
 
-                    if(skillLength > 0)
+                    if (skillStart < lines.Length)
                     {
-                        List<Skill> newSkills = new List<Skill>();
-                        for(int i = skillStart + 1; i < skillEnd; i++)
+                        int skillLength = 0;
+                        try
                         {
-                            string[] skillStrings = lines[i].Split(',');
-                            try
-                            {
-                                string name = skillStrings[0];
-                                int abilityMod = Int32.Parse(skillStrings[1]);
-                                string abilitySource = skillStrings[2];
-                                int ranks = Int32.Parse(skillStrings[3]);
-                                int miscMod = Int32.Parse(skillStrings[4]);
-                                bool isClassSkill = Boolean.Parse(skillStrings[5]);
-
-                                Skill newSkill = new Skill(name);
-                                newSkill.abilityMod = abilityMod;
-                                newSkill.abilitySource = abilitySource;
-                                newSkill.ranks = ranks;
-                                newSkill.miscMod = miscMod;
-                                newSkill.isClassSkill = isClassSkill;
-
-                                newSkills.Add(newSkill);
-                            }
-                            catch(Exception ex)
-                            {
-                                Console.WriteLine("Skill load failed at line " + i);
-                            }
+                            skillLength = Int32.Parse(lines[skillStart].Split(':')[1]);
                         }
-                        newFighter.skills = newSkills;
+                        catch
+                        {
+                            Console.WriteLine("Unable to determine amount of skills");
+                        }
+
+                        if (skillLength > 0)
+                        {
+                            List<Skill> newSkills = new List<Skill>();
+                            for (int i = skillStart + 1; i < skillEnd; i++)
+                            {
+                                string[] skillStrings = lines[i].Split(',');
+                                try
+                                {
+                                    string name = skillStrings[0];
+                                    int abilityMod = Int32.Parse(skillStrings[1]);
+                                    string abilitySource = skillStrings[2];
+                                    int ranks = Int32.Parse(skillStrings[3]);
+                                    int miscMod = Int32.Parse(skillStrings[4]);
+                                    bool isClassSkill = Boolean.Parse(skillStrings[5]);
+
+                                    Skill newSkill = new Skill(name);
+                                    newSkill.abilityMod = abilityMod;
+                                    newSkill.abilitySource = abilitySource;
+                                    newSkill.ranks = ranks;
+                                    newSkill.miscMod = miscMod;
+                                    newSkill.isClassSkill = isClassSkill;
+
+                                    newSkills.Add(newSkill);
+                                }
+                                catch (Exception ex)
+                                {
+                                    Console.WriteLine("Skill load failed at line " + i);
+                                }
+                            }
+                            newFighter.skills = newSkills;
+                        }
                     }
-                }
                     return newFighter;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Stat Block Load Failed");
+                    return null;
+                }
             }
-            catch(Exception ex) 
-            {
-                MessageBox.Show(ex.Message, "Stat Block Load Failed");
-                return null;
-            }
+           
 
             
         }
@@ -665,6 +699,45 @@ namespace BasicBattleTracking
             {
                 Console.WriteLine("Unable to load default skillset.");
                 return null;
+            }
+        }
+
+        public void SaveRecentlyUsedStatuses(List<Status> statuses)
+        {
+            string statusPath = defaultPath + @"\Save\Status.bin";
+            if(Program.UserAutoSaveDirectory != "")
+            {
+                statusPath = Program.UserAutoSaveDirectory  + @"\Status.bin";
+            }
+            if (File.Exists(statusPath))
+            {
+                File.Delete(statusPath);
+            }
+
+                bool append = false;
+                using (Stream stream = File.Open(statusPath, append ? FileMode.Append : FileMode.Create))
+                {
+                    var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                    binaryFormatter.Serialize(stream, statuses);
+                }
+
+        }
+
+        private List<Status> LoadRecentlyUsedStatuses(string path, MainWindow output)
+        {
+            try
+            {
+                using (Stream stream = File.Open(path, FileMode.Open))
+                {
+                    var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                    List<Status> statuses = (List<Status>)binaryFormatter.Deserialize(stream);
+                    return statuses;
+                }
+            }
+            catch
+            {
+                output.WriteToLog("There was an error loading the autosave. Not a big deal. Should be fixed next time you launch the program.");
+                return new List<Status>();
             }
         }
     }
