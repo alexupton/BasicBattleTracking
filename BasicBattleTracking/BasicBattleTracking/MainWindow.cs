@@ -24,7 +24,7 @@ namespace BasicBattleTracking
         private List<int> statuses;
         private bool multiStatus = false;
         private Fighter selectedFighterObject;
-
+        private Fighter editFighter;
         private int selectedAttack = 0;
         
 
@@ -315,6 +315,13 @@ namespace BasicBattleTracking
                     turnLabel.Text = combatRound.ToString();
                     WriteToLog("===============  Start of turn " + combatRound.ToString() + "  ===============");
                 }
+                foreach (Fighter f in combatants)
+                {
+                    foreach (Status s in f.StatusEffects)
+                    {
+                        s.Turns--;
+                    }
+                }
             }
             activeLabel.Text = fighterOrder.ElementAt(activeIndex);
             if(showNext)
@@ -326,7 +333,7 @@ namespace BasicBattleTracking
                     Status effect = combatants.ElementAt(activeIndex).StatusEffects.ElementAt(i);
                     if (combatants.ElementAt(activeIndex).StatusEffects.ElementAt(i).Turns <= 0)
                     {
-                        
+
                         combatants.ElementAt(activeIndex).StatusEffects.RemoveAt(i);
                         WriteToLog(combatants.ElementAt(activeIndex).Name + " is no longer affected by " + effect.Name + "!");
                     }
@@ -1676,10 +1683,46 @@ namespace BasicBattleTracking
 
         }
 
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            StatBlockDesigner editWindow = new StatBlockDesigner();
+            editWindow.parent = this;
+            if (selectedFighterObject != null)
+            {
+                editFighter = selectedFighterObject;
+                editWindow.InitiateFighter(selectedFighterObject);
+                editWindow.Show();
+            }
+            else
+            {
+                MessageBox.Show("No fighter selected", "Error");
+            }
+            
+        }
+
         //
         //End Die Roll Buttons
         //
-
+        public void UpdateFighter(Fighter update)
+        {
+                int index = combatants.IndexOf(editFighter);
+                if (index > 0)
+                {
+                    combatants.RemoveAt(index);
+                    combatants.Insert(index, update);
+                }
+                else
+                {
+                    combatants.Add(update);
+                    index = combatants.Count - 1;
+                }
+                    updateFighterInfo(index);
+                
+                selectedFighterObject = update;
+                selectedFighter = combatants.IndexOf(update);
+                UpdateFighterList();
+            
+        }
         //private void TestDPercentTable()
         //{
         //    DPercentTable test = new DPercentTable();

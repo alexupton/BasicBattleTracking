@@ -103,6 +103,13 @@
     <Compile Include="BattleIO.cs" />
     <Compile Include="DiceRoller.cs" />
     <Compile Include="DPercentTable.cs" />
+    <Compile Include="Feat.cs" />
+    <Compile Include="FeatsTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FeatsTab.Designer.cs">
+      <DependentUpon>FeatsTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="NotesTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AttackForm.resx">
       <DependentUpon>AttackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeatsTab.resx">
+      <DependentUpon>FeatsTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>

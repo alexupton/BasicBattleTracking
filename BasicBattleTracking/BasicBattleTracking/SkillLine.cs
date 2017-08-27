@@ -85,6 +85,7 @@ namespace BasicBattleTracking
             newSkill.abilitySource = abilitySource;
             newSkill.ranks = ranks;
             newSkill.miscMod = miscMod;
+            newSkill.isClassSkill = classSkillCheckBox.Checked;
             return newSkill;
         }
 

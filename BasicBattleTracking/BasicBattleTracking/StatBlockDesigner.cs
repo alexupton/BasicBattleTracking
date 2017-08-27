@@ -21,8 +21,11 @@ namespace BasicBattleTracking
         private string mostRecentPath = "";
         private Random randy;
         private bool userPopulated = true;
+        private Fighter editFighter;
 
         public List<Skill> skillList { get; set; }
+        private bool editMode { get; set; }
+        
         public StatBlockDesigner()
         {
             skillList = new List<Skill>();
@@ -53,6 +56,7 @@ namespace BasicBattleTracking
 
         private Fighter BuildFighter()
         {
+            Fighter newFighter;
             string errorMessage = "";
             bool errorFlag = false;
 
@@ -74,8 +78,16 @@ namespace BasicBattleTracking
                 errorMessage += "\nInitiative bonus must be a number.";
                 errorFlag = true;
             }
-
-            Fighter newFighter = new Fighter(name, initBonus, false);
+            if (editMode)
+            {
+                newFighter = editFighter;
+                newFighter.Name = name;
+                newFighter.InitBonus = initBonus;
+            }
+            else
+            {
+                newFighter = new Fighter(name, initBonus, false);
+            }
 
             int HP = 0;
             if (formulaButton.Checked)
@@ -106,6 +118,8 @@ namespace BasicBattleTracking
 
                 }
 
+                newFighter.HPDieType = HPDieType;
+
                 
             }
             else
@@ -128,6 +142,7 @@ namespace BasicBattleTracking
                             default: HPDieType = 12; break;
 
                         }
+                        newFighter.HPDieType = HPDieType;
                     }
                     catch { Console.WriteLine("No valid HP formula found."); }
                     HP = Int32.Parse(HPValBox.Text);
@@ -286,7 +301,14 @@ namespace BasicBattleTracking
 
         private void Insert(Fighter newFighter)
         {
-            parent.AddFighter(newFighter);
+            if (!editMode)
+            {
+                parent.AddFighter(newFighter);
+            }
+            else
+            {
+                parent.UpdateFighter(newFighter);
+            }
         }
 
         private void A1Dtype_SelectedIndexChanged(object sender, EventArgs e)
@@ -330,37 +352,8 @@ namespace BasicBattleTracking
                 savePath = load.FileName;
 
                 mostRecentPath = Path.GetDirectoryName(load.FileName);
-                if (newFighter != null)
-                {
-                    userPopulated = false;
-                    nameBox.Text = newFighter.Name;
-                    HPValBox.Text = newFighter.HP.ToString();
-                    multBox.Text = newFighter.HPMult.ToString();
-                    addBox.Text = newFighter.HPAdd.ToString();
-                    dBox.Text = newFighter.HPDieType.ToString();
-                    ACValBox.Text = newFighter.AC.ToString();
-                    FFBox.Text = newFighter.FlatFootedAC.ToString();
-                    touchBox.Text = newFighter.TouchAC.ToString();
-                    InitBox.Text = newFighter.InitBonus.ToString();
-                    CMBBox.Text = newFighter.CMB.ToString();
-                    CMDBox.Text = newFighter.CMD.ToString();
-                    fortBox.Text = newFighter.fort.ToString();
-                    refBox.Text = newFighter.reflex.ToString();
-                    willBox.Text = newFighter.will.ToString();
-                    attacks = newFighter.attacks;
-                    attackCountLabel.Text = newFighter.attacks.Count + " attacks.";
-                    skillCountLabel.Text = newFighter.skills.Count + " skills.";
-                    skillList = newFighter.skills;
-                    strBox.Text = newFighter.Str.ToString();
-                    dexBox.Text = newFighter.Dex.ToString();
-                    conBox.Text = newFighter.Con.ToString();
-                    intBox.Text = newFighter.Int.ToString();
-                    wisBox.Text = newFighter.Wis.ToString();
-                    chaBox.Text = newFighter.Cha.ToString();
-                    userPopulated = true;
-                    saved = true;
-                    
-                }
+                LoadFighter(load.FileName);
+                
             }
 
         }
@@ -380,13 +373,16 @@ namespace BasicBattleTracking
             for (int i = 0; i < insertCount; i++)
             {
                 Fighter newFighter = BuildFighter();
-                
+
                 if (newFighter != null)
                 {
                     Insert(newFighter);
-                    newFighter.Name += " " + (i + 1).ToString();
+                    if (insertCount > 1)
+                    {
+                        newFighter.Name += " " + (i + 1).ToString();
+                    }
                 }
-                
+
             }
             this.Close();
         }
@@ -634,6 +630,84 @@ namespace BasicBattleTracking
         {
             skillList = inputList;
             skillCountLabel.Text = skillList.Count.ToString() +" Skills";
+        }
+
+        private void LoadFighter(string path)
+        {
+            BattleIO loader = new BattleIO();
+            Fighter newFighter = loader.LoadStatBlock(path);
+
+            savePath = path;
+
+            mostRecentPath = Path.GetDirectoryName(path);
+                userPopulated = false;
+                nameBox.Text = newFighter.Name;
+                HPValBox.Text = newFighter.HP.ToString();
+                multBox.Text = newFighter.HPMult.ToString();
+                addBox.Text = newFighter.HPAdd.ToString();
+                dBox.Text = newFighter.HPDieType.ToString();
+                ACValBox.Text = newFighter.AC.ToString();
+                FFBox.Text = newFighter.FlatFootedAC.ToString();
+                touchBox.Text = newFighter.TouchAC.ToString();
+                InitBox.Text = newFighter.InitBonus.ToString();
+                CMBBox.Text = newFighter.CMB.ToString();
+                CMDBox.Text = newFighter.CMD.ToString();
+                fortBox.Text = newFighter.fort.ToString();
+                refBox.Text = newFighter.reflex.ToString();
+                willBox.Text = newFighter.will.ToString();
+                attacks = newFighter.attacks;
+                attackCountLabel.Text = newFighter.attacks.Count + " attacks.";
+                skillCountLabel.Text = newFighter.skills.Count + " skills.";
+                skillList = newFighter.skills;
+                strBox.Text = newFighter.Str.ToString();
+                dexBox.Text = newFighter.Dex.ToString();
+                conBox.Text = newFighter.Con.ToString();
+                intBox.Text = newFighter.Int.ToString();
+                wisBox.Text = newFighter.Wis.ToString();
+                chaBox.Text = newFighter.Cha.ToString();
+                userPopulated = true;
+                saved = true;
+        }
+        public void InitiateFighter(Fighter newFighter)
+        {
+            
+            userPopulated = false;
+            nameBox.Text = newFighter.Name;
+            HPValBox.Text = newFighter.HP.ToString();
+            multBox.Text = newFighter.HPMult.ToString();
+            addBox.Text = newFighter.HPAdd.ToString();
+            dBox.Text = newFighter.HPDieType.ToString();
+            ACValBox.Text = newFighter.AC.ToString();
+            FFBox.Text = newFighter.FlatFootedAC.ToString();
+            touchBox.Text = newFighter.TouchAC.ToString();
+            InitBox.Text = newFighter.InitBonus.ToString();
+            CMBBox.Text = newFighter.CMB.ToString();
+            CMDBox.Text = newFighter.CMD.ToString();
+            fortBox.Text = newFighter.fort.ToString();
+            refBox.Text = newFighter.reflex.ToString();
+            willBox.Text = newFighter.will.ToString();
+            attacks = newFighter.attacks;
+            attackCountLabel.Text = newFighter.attacks.Count + " attacks.";
+            skillCountLabel.Text = newFighter.skills.Count + " skills.";
+            skillList = newFighter.skills;
+            strBox.Text = newFighter.Str.ToString();
+            dexBox.Text = newFighter.Dex.ToString();
+            conBox.Text = newFighter.Con.ToString();
+            intBox.Text = newFighter.Int.ToString();
+            wisBox.Text = newFighter.Wis.ToString();
+            chaBox.Text = newFighter.Cha.ToString();
+            userPopulated = true;
+            editFighter = newFighter;
+            if(File.Exists(newFighter.savePath))
+            {
+                saved = true;
+                mostRecentPath = Path.GetDirectoryName(newFighter.savePath);
+            }
+
+            SaveInsertButton.Text = "Save and Update";
+            InsertButton.Text = "Update";
+            editMode = true;
+            
         }
     }
 }

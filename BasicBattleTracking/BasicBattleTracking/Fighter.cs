@@ -17,6 +17,7 @@ namespace BasicBattleTracking
         public List<Attack> attacks { get; set; }
         public List<Status> StatusEffects { get; set; }
         public List<Skill> skills { get; set; }
+        public List<Feat> Feats { get; set; }
 
         public int will { get; set; }
         public int reflex { get; set; }
@@ -45,6 +46,8 @@ namespace BasicBattleTracking
         public int Wis { get; set; }
         public int Cha { get; set; }
 
+        public string savePath { get; set; }
+
 
         public Fighter(string name, int initBonus, bool PC)
         {
@@ -57,6 +60,7 @@ namespace BasicBattleTracking
             StatusEffects = new List<Status>();
             attacks = new List<Attack>();
             skills = new List<Skill>();
+            Feats = new List<Feat>();
         }
 
     }

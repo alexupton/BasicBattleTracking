@@ -319,6 +319,7 @@ namespace BasicBattleTracking
             {
                 string[] lines = File.ReadAllLines(path);
                 Fighter newFighter = new Fighter(lines[0], Int32.Parse(lines[1]), false);
+                newFighter.savePath = path;
                 int attackStart = 14;
                 int attackEnd = lines.Length;
                 int abilityStart = attackEnd + 1;
