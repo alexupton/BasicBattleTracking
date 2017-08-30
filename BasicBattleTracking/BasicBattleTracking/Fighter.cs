@@ -11,6 +11,7 @@ namespace BasicBattleTracking
     {
         public string Name { get; set; }
         public int Initiative { get; set; }
+        public int Level { get; set; }
         public int InitBonus { get; set; }
         public bool isPC { get; set; }
         public bool HoldAction { get; set; }
@@ -47,6 +48,9 @@ namespace BasicBattleTracking
         public int Wis { get; set; }
         public int Cha { get; set; }
 
+        public int NegativeLevels { get; private set; }
+        private int LastNegLvlValue { get; set; }
+
         public string savePath { get; set; }
 
 
@@ -62,6 +66,54 @@ namespace BasicBattleTracking
             attacks = new List<Attack>();
             skills = new List<Skill>();
             Feats = new List<Feat>();
+        }
+
+        public void ApplyNegativeLevels(int count)
+        {
+            int difference = count - NegativeLevels;
+                if (difference > 0)
+                {
+                    for (int i = 0; i < difference; i++)
+                    {
+                        HP -= 5;
+                        CMD -= 1;
+                        CMB -= 1;
+                        fort -= 1;
+                        will -= 1;
+                        reflex -= 1;
+
+                        foreach (Attack atk in attacks)
+                        {
+                            atk.atkBonus -= 1;
+                            for (int j = 0; j < atk.atkBonuses.Count; j++)
+                            {
+                                atk.atkBonuses[j] -= 1;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < Math.Abs(difference); i++)
+                    {
+                        HP += 5;
+                        CMD += 1;
+                        CMB += 1;
+                        fort += 1;
+                        will += 1;
+                        reflex += 1;
+
+                        foreach (Attack atk in attacks)
+                        {
+                            atk.atkBonus += 1;
+                            for (int j = 0; j < atk.atkBonuses.Count; j++)
+                            {
+                                atk.atkBonuses[j] += 1;
+                            }
+                        }
+                    }
+                }
+                NegativeLevels = count;
         }
 
     }

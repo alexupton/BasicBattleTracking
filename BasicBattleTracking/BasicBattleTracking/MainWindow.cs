@@ -48,6 +48,7 @@ namespace BasicBattleTracking
                 {
                     unholdButton.Text = "Unhold " + fighterOrder.ElementAt(selectedFighter);
                     updateFighterInfo(selectedFighter);
+                    UpdateFighterList();
                 }
             }
         }
@@ -125,7 +126,7 @@ namespace BasicBattleTracking
         private void UpdateFighterList()
         {
             InitOrderView.Items.Clear();
-            List<Fighter> orderedFighterList = combatants.OrderByDescending(c => c.Initiative).ToList();
+            List<Fighter> orderedFighterList = combatants.OrderByDescending(c => c.Initiative).ThenByDescending(c => c.Dex).ToList();
             int index = 1;
             fighterOrder.Clear();
             statusView.Items.Clear();
@@ -892,6 +893,10 @@ namespace BasicBattleTracking
                 fortBox.Text = update.fort.ToString();
                 refBox.Text = update.reflex.ToString();
                 willBox.Text = update.will.ToString();
+                npcNameBox.Text = update.Name;
+                npcSPBox.Text = update.SpellPoints.ToString();
+                npcSRBox.Text = update.SpellResist.ToString();
+                npcNegLevelsBox.Text = update.NegativeLevels.ToString();
 
                 strBox.Text = update.Str.ToString();
                 dexBox.Text = update.Dex.ToString();
@@ -1143,146 +1148,177 @@ namespace BasicBattleTracking
             }
         }
 
-        private void strBox_TextChanged(object sender, EventArgs e)
+        private void strBox_TextChanged_1(object sender, EventArgs e)
         {
             if (combatants.Count > 0)
             {
-                
-                    int newVal = 0;
-                    try
-                    {
-                        newVal = Int32.Parse(strBox.Text);
-                        combatants.ElementAt(selectedFighter).Str = newVal;
 
-                        WriteAbilityChangeToSkills(newVal, "Str");
-                        if(AtkStrBonusBox.Checked)
+                int newVal = 0;
+                try
+                {
+                    newVal = Int32.Parse(strBox.Text);
+                    combatants.ElementAt(selectedFighter).Str = newVal;
+
+                    WriteAbilityChangeToSkills(newVal, "Str");
+                    if (AtkStrBonusBox.Checked)
+                    {
+                        foreach (Attack atk in selectedFighterObject.attacks)
                         {
-                            foreach(Attack atk in selectedFighterObject.attacks)
-                            {
-                                atk.UpdateStrBonusToAttack(Program.getAbilityMod(newVal));
-                            }
-                        }
-                        if(DmgStrBonusBox.Checked)
-                        {
-                            foreach (Attack atk in selectedFighterObject.attacks)
-                            {
-                                atk.UpdateStrBonusToDamage(Program.getAbilityMod(newVal));
-                            }
+                            atk.UpdateStrBonusToAttack(Program.getAbilityMod(newVal));
                         }
                     }
-                    catch { }
+                    if (DmgStrBonusBox.Checked)
+                    {
+                        foreach (Attack atk in selectedFighterObject.attacks)
+                        {
+                            atk.UpdateStrBonusToDamage(Program.getAbilityMod(newVal));
+                        }
+                    }
+                }
+                catch { }
             }
             displayMod(strBox, strModBox);
             UpdateAtkValues(selectedFighter);
         }
 
-        private void dexBox_TextChanged(object sender, EventArgs e)
+        private void dexBox_TextChanged_1(object sender, EventArgs e)
         {
             if (combatants.Count > 0)
             {
 
-                    int newVal = 0;
-                    try
-                    {
-                        newVal = Int32.Parse(dexBox.Text);
-                        combatants.ElementAt(selectedFighter).Dex = newVal;
-                        WriteAbilityChangeToSkills(newVal, "Dex");
+                int newVal = 0;
+                try
+                {
+                    newVal = Int32.Parse(dexBox.Text);
+                    combatants.ElementAt(selectedFighter).Dex = newVal;
+                    WriteAbilityChangeToSkills(newVal, "Dex");
 
-                        if (AtkDexBonusBox.Checked)
+                    if (AtkDexBonusBox.Checked)
+                    {
+                        foreach (Attack atk in selectedFighterObject.attacks)
                         {
-                            foreach (Attack atk in selectedFighterObject.attacks)
-                            {
-                                atk.UpdateDexBonusToAttack(Program.getAbilityMod(newVal));
-                            }
-                        }
-                        if (DmgDexBonusBox.Checked)
-                        {
-                            foreach (Attack atk in selectedFighterObject.attacks)
-                            {
-                                atk.UpdateDexBonusToDamage(Program.getAbilityMod(newVal));
-                            }
+                            atk.UpdateDexBonusToAttack(Program.getAbilityMod(newVal));
                         }
                     }
-                    catch { }
+                    if (DmgDexBonusBox.Checked)
+                    {
+                        foreach (Attack atk in selectedFighterObject.attacks)
+                        {
+                            atk.UpdateDexBonusToDamage(Program.getAbilityMod(newVal));
+                        }
+                    }
+                }
+                catch { }
 
             }
             displayMod(dexBox, dexModBox);
             UpdateAtkValues(selectedFighter);
         }
 
-        private void conBox_TextChanged(object sender, EventArgs e)
+        private void conBox_TextChanged_1(object sender, EventArgs e)
         {
             if (combatants.Count > 0)
             {
-                    int newVal = 0;
-                    try
-                    {
-                        newVal = Int32.Parse(conBox.Text);
-                        combatants.ElementAt(selectedFighter).Con = newVal;
-                        WriteAbilityChangeToSkills(newVal, "Con");
-                    }
-                    catch { }
+                int newVal = 0;
+                try
+                {
+                    newVal = Int32.Parse(conBox.Text);
+                    combatants.ElementAt(selectedFighter).Con = newVal;
+                    WriteAbilityChangeToSkills(newVal, "Con");
+                }
+                catch { }
 
             }
             displayMod(conBox, conModBox);
             UpdateAtkValues(selectedFighter);
         }
 
-        private void intBox_TextChanged(object sender, EventArgs e)
+        private void intBox_TextChanged_1(object sender, EventArgs e)
         {
             if (combatants.Count > 0)
             {
 
-                    int newVal = 0;
-                    try
-                    {
-                        newVal = Int32.Parse(intBox.Text);
-                        combatants.ElementAt(selectedFighter).Int = newVal;
-                        WriteAbilityChangeToSkills(newVal, "Int");
-                    }
-                    catch { }
+                int newVal = 0;
+                try
+                {
+                    newVal = Int32.Parse(intBox.Text);
+                    combatants.ElementAt(selectedFighter).Int = newVal;
+                    WriteAbilityChangeToSkills(newVal, "Int");
+                }
+                catch { }
 
             }
             displayMod(intBox, intModBox);
             UpdateAtkValues(selectedFighter);
         }
 
-        private void wisBox_TextChanged(object sender, EventArgs e)
+        private void wisBox_TextChanged_1(object sender, EventArgs e)
         {
             if (combatants.Count > 0)
             {
 
-                    int newVal = 0;
-                    try
-                    {
-                        newVal = Int32.Parse(wisBox.Text);
-                        combatants.ElementAt(selectedFighter).Wis = newVal;
-                        WriteAbilityChangeToSkills(newVal, "Wis");
-                    }
-                    catch { }
+                int newVal = 0;
+                try
+                {
+                    newVal = Int32.Parse(wisBox.Text);
+                    combatants.ElementAt(selectedFighter).Wis = newVal;
+                    WriteAbilityChangeToSkills(newVal, "Wis");
+                }
+                catch { }
 
             }
             displayMod(wisBox, wisModBox);
             UpdateAtkValues(selectedFighter);
         }
 
-        private void chaBox_TextChanged(object sender, EventArgs e)
+        private void chaBox_TextChanged_1(object sender, EventArgs e)
         {
-
-                if (!combatants.ElementAt(selectedFighter).isPC)
+            if (!combatants.ElementAt(selectedFighter).isPC)
+            {
+                int newVal = 0;
+                try
                 {
-                    int newVal = 0;
-                    try
-                    {
-                        newVal = Int32.Parse(chaBox.Text);
-                        combatants.ElementAt(selectedFighter).Cha = newVal;
-                        WriteAbilityChangeToSkills(newVal, "Cha");
-                    }
-                    catch { }
+                    newVal = Int32.Parse(chaBox.Text);
+                    combatants.ElementAt(selectedFighter).Cha = newVal;
+                    WriteAbilityChangeToSkills(newVal, "Cha");
+                }
+                catch { }
 
             }
             displayMod(chaBox, chaModBox);
             UpdateAtkValues(selectedFighter);
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            selectedFighterObject.Name = npcNameBox.Text;
+            editFighter = selectedFighterObject;
+            UpdateFighter(selectedFighterObject);
+        }
+
+        private void npcSPBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int newVal = Int32.Parse(npcSPBox.Text);
+                selectedFighterObject.SpellPoints = newVal;
+            }
+            catch { }
+            updateFighterInfo(selectedFighter);
+        }
+
+        private void npcNegLevelsBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int negativeLvls = Int32.Parse(npcNegLevelsBox.Text);
+                selectedFighterObject.ApplyNegativeLevels(negativeLvls);
+            }
+            catch
+            {
+
+            }
+            updateFighterInfo(selectedFighter);
         }
 
         private void WriteAbilityChangeToSkills(int newAbilityScore, string abilityName)
@@ -1714,7 +1750,7 @@ namespace BasicBattleTracking
         public void UpdateFighter(Fighter update)
         {
                 int index = combatants.IndexOf(editFighter);
-                if (index > 0)
+                if (index >= 0)
                 {
                     combatants.RemoveAt(index);
                     combatants.Insert(index, update);
@@ -1731,6 +1767,17 @@ namespace BasicBattleTracking
                 UpdateFighterList();
             
         }
+
+        private void fighterInfoBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        
+
+        
         //private void TestDPercentTable()
         //{
         //    DPercentTable test = new DPercentTable();

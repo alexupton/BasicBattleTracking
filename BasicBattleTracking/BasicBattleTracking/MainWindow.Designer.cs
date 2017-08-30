@@ -98,7 +98,8 @@
             this.rollResultLabel = new System.Windows.Forms.Label();
             this.damageResult = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.skillsTab1 = new BasicBattleTracking.SkillsTab();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.label43 = new System.Windows.Forms.Label();
             this.dxResultBox = new System.Windows.Forms.TextBox();
             this.d100ResultBox = new System.Windows.Forms.TextBox();
@@ -163,6 +164,36 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.fighterInfoBox = new System.Windows.Forms.GroupBox();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.npcSPBox = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.npcNameBox = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.hpLabel = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.cmdLabel = new System.Windows.Forms.TextBox();
+            this.cmbLabel = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.touchLabel = new System.Windows.Forms.TextBox();
+            this.flatFootedLabel = new System.Windows.Forms.TextBox();
+            this.acLabel = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.InitLabel = new System.Windows.Forms.Label();
+            this.initBox = new System.Windows.Forms.TextBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.willBox = new System.Windows.Forms.TextBox();
+            this.refBox = new System.Windows.Forms.TextBox();
+            this.fortBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.conModBox = new System.Windows.Forms.TextBox();
             this.strBox = new System.Windows.Forms.TextBox();
@@ -182,29 +213,6 @@
             this.intModBox = new System.Windows.Forms.TextBox();
             this.chaModBox = new System.Windows.Forms.TextBox();
             this.wisModBox = new System.Windows.Forms.TextBox();
-            this.InitLabel = new System.Windows.Forms.Label();
-            this.initBox = new System.Windows.Forms.TextBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.willBox = new System.Windows.Forms.TextBox();
-            this.refBox = new System.Windows.Forms.TextBox();
-            this.fortBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.hpLabel = new System.Windows.Forms.TextBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.cmdLabel = new System.Windows.Forms.TextBox();
-            this.cmbLabel = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.touchLabel = new System.Windows.Forms.TextBox();
-            this.flatFootedLabel = new System.Windows.Forms.TextBox();
-            this.acLabel = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -219,9 +227,14 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.npcSRBox = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.npcNegLevelsBox = new System.Windows.Forms.TextBox();
+            this.skillsTab1 = new BasicBattleTracking.SkillsTab();
             this.notesTab1 = new BasicBattleTracking.NotesTab();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
             this.ControlsBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -230,6 +243,8 @@
             this.tabControl2.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -238,10 +253,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.fighterInfoBox.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            this.groupBox8.SuspendLayout();
+            this.tabControl3.SuspendLayout();
+            this.tabPage8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.tabPage9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1045,14 +1063,27 @@
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Skills";
             // 
-            // skillsTab1
+            // tabPage6
             // 
-            this.skillsTab1.Location = new System.Drawing.Point(0, 0);
-            this.skillsTab1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.skillsTab1.Name = "skillsTab1";
-            this.skillsTab1.ParentWindow = null;
-            this.skillsTab1.Size = new System.Drawing.Size(1046, 523);
-            this.skillsTab1.TabIndex = 0;
+            this.tabPage6.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage6.Controls.Add(this.label55);
+            this.tabPage6.Location = new System.Drawing.Point(4, 29);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1050, 530);
+            this.tabPage6.TabIndex = 2;
+            this.tabPage6.Text = "Feats";
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage7.Controls.Add(this.label56);
+            this.tabPage7.Location = new System.Drawing.Point(4, 29);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(1050, 530);
+            this.tabPage7.TabIndex = 3;
+            this.tabPage7.Text = "Spells";
             // 
             // label43
             // 
@@ -1713,20 +1744,309 @@
             // 
             // fighterInfoBox
             // 
-            this.fighterInfoBox.Controls.Add(this.groupBox9);
-            this.fighterInfoBox.Controls.Add(this.InitLabel);
-            this.fighterInfoBox.Controls.Add(this.initBox);
-            this.fighterInfoBox.Controls.Add(this.groupBox8);
-            this.fighterInfoBox.Controls.Add(this.hpLabel);
-            this.fighterInfoBox.Controls.Add(this.groupBox7);
-            this.fighterInfoBox.Controls.Add(this.groupBox6);
-            this.fighterInfoBox.Controls.Add(this.label7);
+            this.fighterInfoBox.Controls.Add(this.tabControl3);
             this.fighterInfoBox.Location = new System.Drawing.Point(1164, 15);
             this.fighterInfoBox.Name = "fighterInfoBox";
             this.fighterInfoBox.Size = new System.Drawing.Size(406, 405);
             this.fighterInfoBox.TabIndex = 12;
             this.fighterInfoBox.TabStop = false;
             this.fighterInfoBox.Text = "Selected Player Stats";
+            this.fighterInfoBox.Enter += new System.EventHandler(this.fighterInfoBox_Enter);
+            // 
+            // tabControl3
+            // 
+            this.tabControl3.Controls.Add(this.tabPage8);
+            this.tabControl3.Controls.Add(this.tabPage9);
+            this.tabControl3.Location = new System.Drawing.Point(6, 25);
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(394, 374);
+            this.tabControl3.TabIndex = 0;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.npcSRBox);
+            this.tabPage8.Controls.Add(this.label53);
+            this.tabPage8.Controls.Add(this.npcSPBox);
+            this.tabPage8.Controls.Add(this.label52);
+            this.tabPage8.Controls.Add(this.npcNameBox);
+            this.tabPage8.Controls.Add(this.label51);
+            this.tabPage8.Controls.Add(this.hpLabel);
+            this.tabPage8.Controls.Add(this.groupBox7);
+            this.tabPage8.Controls.Add(this.groupBox6);
+            this.tabPage8.Controls.Add(this.label7);
+            this.tabPage8.Location = new System.Drawing.Point(4, 29);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(386, 341);
+            this.tabPage8.TabIndex = 0;
+            this.tabPage8.Text = "Basic Stats";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // npcSPBox
+            // 
+            this.npcSPBox.Location = new System.Drawing.Point(292, 99);
+            this.npcSPBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.npcSPBox.Name = "npcSPBox";
+            this.npcSPBox.Size = new System.Drawing.Size(65, 26);
+            this.npcSPBox.TabIndex = 20;
+            this.npcSPBox.TextChanged += new System.EventHandler(this.npcSPBox_TextChanged);
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(193, 102);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(92, 20);
+            this.label52.TabIndex = 19;
+            this.label52.Text = "Spell Points";
+            // 
+            // npcNameBox
+            // 
+            this.npcNameBox.Location = new System.Drawing.Point(70, 13);
+            this.npcNameBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.npcNameBox.Name = "npcNameBox";
+            this.npcNameBox.Size = new System.Drawing.Size(296, 26);
+            this.npcNameBox.TabIndex = 18;
+            this.npcNameBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(12, 17);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(51, 20);
+            this.label51.TabIndex = 17;
+            this.label51.Text = "Name";
+            // 
+            // hpLabel
+            // 
+            this.hpLabel.Location = new System.Drawing.Point(292, 65);
+            this.hpLabel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.hpLabel.Name = "hpLabel";
+            this.hpLabel.Size = new System.Drawing.Size(65, 26);
+            this.hpLabel.TabIndex = 16;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.cmdLabel);
+            this.groupBox7.Controls.Add(this.cmbLabel);
+            this.groupBox7.Controls.Add(this.label19);
+            this.groupBox7.Controls.Add(this.label20);
+            this.groupBox7.Location = new System.Drawing.Point(6, 182);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(210, 78);
+            this.groupBox7.TabIndex = 15;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Combat Maneuver";
+            // 
+            // cmdLabel
+            // 
+            this.cmdLabel.Location = new System.Drawing.Point(158, 28);
+            this.cmdLabel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdLabel.Name = "cmdLabel";
+            this.cmdLabel.Size = new System.Drawing.Size(36, 26);
+            this.cmdLabel.TabIndex = 11;
+            // 
+            // cmbLabel
+            // 
+            this.cmbLabel.Location = new System.Drawing.Point(55, 28);
+            this.cmbLabel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbLabel.Name = "cmbLabel";
+            this.cmbLabel.Size = new System.Drawing.Size(36, 26);
+            this.cmbLabel.TabIndex = 10;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(106, 31);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(45, 20);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "CMD";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(4, 31);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(44, 20);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "CMB";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.touchLabel);
+            this.groupBox6.Controls.Add(this.flatFootedLabel);
+            this.groupBox6.Controls.Add(this.acLabel);
+            this.groupBox6.Controls.Add(this.label11);
+            this.groupBox6.Controls.Add(this.label10);
+            this.groupBox6.Controls.Add(this.label9);
+            this.groupBox6.Location = new System.Drawing.Point(6, 54);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(162, 122);
+            this.groupBox6.TabIndex = 14;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "AC";
+            // 
+            // touchLabel
+            // 
+            this.touchLabel.Location = new System.Drawing.Point(112, 80);
+            this.touchLabel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.touchLabel.Name = "touchLabel";
+            this.touchLabel.Size = new System.Drawing.Size(36, 26);
+            this.touchLabel.TabIndex = 9;
+            // 
+            // flatFootedLabel
+            // 
+            this.flatFootedLabel.Location = new System.Drawing.Point(112, 45);
+            this.flatFootedLabel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.flatFootedLabel.Name = "flatFootedLabel";
+            this.flatFootedLabel.Size = new System.Drawing.Size(36, 26);
+            this.flatFootedLabel.TabIndex = 8;
+            // 
+            // acLabel
+            // 
+            this.acLabel.Location = new System.Drawing.Point(112, 9);
+            this.acLabel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.acLabel.Name = "acLabel";
+            this.acLabel.Size = new System.Drawing.Size(36, 26);
+            this.acLabel.TabIndex = 7;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(40, 85);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 20);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Touch";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(2, 49);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 20);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Flat Footed";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(62, 14);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 20);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "AC";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(241, 69);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 20);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "HP";
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.label54);
+            this.tabPage9.Controls.Add(this.npcNegLevelsBox);
+            this.tabPage9.Controls.Add(this.InitLabel);
+            this.tabPage9.Controls.Add(this.initBox);
+            this.tabPage9.Controls.Add(this.groupBox8);
+            this.tabPage9.Controls.Add(this.groupBox9);
+            this.tabPage9.Location = new System.Drawing.Point(4, 29);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(386, 341);
+            this.tabPage9.TabIndex = 1;
+            this.tabPage9.Text = "Abilities and Mods";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // InitLabel
+            // 
+            this.InitLabel.AutoSize = true;
+            this.InitLabel.Location = new System.Drawing.Point(18, 151);
+            this.InitLabel.Name = "InitLabel";
+            this.InitLabel.Size = new System.Drawing.Size(85, 20);
+            this.InitLabel.TabIndex = 24;
+            this.InitLabel.Text = "Init. Bonus";
+            // 
+            // initBox
+            // 
+            this.initBox.Location = new System.Drawing.Point(115, 144);
+            this.initBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.initBox.Name = "initBox";
+            this.initBox.Size = new System.Drawing.Size(53, 26);
+            this.initBox.TabIndex = 23;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.willBox);
+            this.groupBox8.Controls.Add(this.refBox);
+            this.groupBox8.Controls.Add(this.fortBox);
+            this.groupBox8.Controls.Add(this.label4);
+            this.groupBox8.Controls.Add(this.label5);
+            this.groupBox8.Controls.Add(this.label6);
+            this.groupBox8.Location = new System.Drawing.Point(13, 178);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(172, 145);
+            this.groupBox8.TabIndex = 22;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Saves";
+            // 
+            // willBox
+            // 
+            this.willBox.Location = new System.Drawing.Point(112, 103);
+            this.willBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.willBox.Name = "willBox";
+            this.willBox.Size = new System.Drawing.Size(40, 26);
+            this.willBox.TabIndex = 9;
+            // 
+            // refBox
+            // 
+            this.refBox.Location = new System.Drawing.Point(112, 63);
+            this.refBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.refBox.Name = "refBox";
+            this.refBox.Size = new System.Drawing.Size(40, 26);
+            this.refBox.TabIndex = 8;
+            // 
+            // fortBox
+            // 
+            this.fortBox.Location = new System.Drawing.Point(112, 23);
+            this.fortBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.fortBox.Name = "fortBox";
+            this.fortBox.Size = new System.Drawing.Size(40, 26);
+            this.fortBox.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(54, 108);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Will";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(34, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 20);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Reflex";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(20, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Fortitude";
             // 
             // groupBox9
             // 
@@ -1748,12 +2068,12 @@
             this.groupBox9.Controls.Add(this.intModBox);
             this.groupBox9.Controls.Add(this.chaModBox);
             this.groupBox9.Controls.Add(this.wisModBox);
-            this.groupBox9.Location = new System.Drawing.Point(8, 265);
+            this.groupBox9.Location = new System.Drawing.Point(7, 8);
             this.groupBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox9.Size = new System.Drawing.Size(392, 132);
-            this.groupBox9.TabIndex = 12;
+            this.groupBox9.Size = new System.Drawing.Size(372, 132);
+            this.groupBox9.TabIndex = 21;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Abilities";
             // 
@@ -1773,7 +2093,7 @@
             this.strBox.Name = "strBox";
             this.strBox.Size = new System.Drawing.Size(50, 26);
             this.strBox.TabIndex = 77;
-            this.strBox.TextChanged += new System.EventHandler(this.strBox_TextChanged);
+            this.strBox.TextChanged += new System.EventHandler(this.strBox_TextChanged_1);
             // 
             // label47
             // 
@@ -1800,7 +2120,7 @@
             this.intBox.Name = "intBox";
             this.intBox.Size = new System.Drawing.Size(50, 26);
             this.intBox.TabIndex = 66;
-            this.intBox.TextChanged += new System.EventHandler(this.intBox_TextChanged);
+            this.intBox.TextChanged += new System.EventHandler(this.intBox_TextChanged_1);
             // 
             // label46
             // 
@@ -1836,7 +2156,7 @@
             this.wisBox.Name = "wisBox";
             this.wisBox.Size = new System.Drawing.Size(50, 26);
             this.wisBox.TabIndex = 68;
-            this.wisBox.TextChanged += new System.EventHandler(this.wisBox_TextChanged);
+            this.wisBox.TextChanged += new System.EventHandler(this.wisBox_TextChanged_1);
             // 
             // conBox
             // 
@@ -1844,7 +2164,7 @@
             this.conBox.Name = "conBox";
             this.conBox.Size = new System.Drawing.Size(50, 26);
             this.conBox.TabIndex = 79;
-            this.conBox.TextChanged += new System.EventHandler(this.conBox_TextChanged);
+            this.conBox.TextChanged += new System.EventHandler(this.conBox_TextChanged_1);
             // 
             // label41
             // 
@@ -1870,7 +2190,7 @@
             this.dexBox.Name = "dexBox";
             this.dexBox.Size = new System.Drawing.Size(50, 26);
             this.dexBox.TabIndex = 78;
-            this.dexBox.TextChanged += new System.EventHandler(this.dexBox_TextChanged);
+            this.dexBox.TextChanged += new System.EventHandler(this.dexBox_TextChanged_1);
             // 
             // chaBox
             // 
@@ -1878,7 +2198,7 @@
             this.chaBox.Name = "chaBox";
             this.chaBox.Size = new System.Drawing.Size(50, 26);
             this.chaBox.TabIndex = 70;
-            this.chaBox.TextChanged += new System.EventHandler(this.chaBox_TextChanged);
+            this.chaBox.TextChanged += new System.EventHandler(this.chaBox_TextChanged_1);
             // 
             // label50
             // 
@@ -1919,229 +2239,6 @@
             this.wisModBox.TabIndex = 75;
             this.wisModBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // InitLabel
-            // 
-            this.InitLabel.AutoSize = true;
-            this.InitLabel.Location = new System.Drawing.Point(219, 25);
-            this.InitLabel.Name = "InitLabel";
-            this.InitLabel.Size = new System.Drawing.Size(85, 20);
-            this.InitLabel.TabIndex = 11;
-            this.InitLabel.Text = "Init. Bonus";
-            // 
-            // initBox
-            // 
-            this.initBox.Location = new System.Drawing.Point(316, 18);
-            this.initBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.initBox.Name = "initBox";
-            this.initBox.Size = new System.Drawing.Size(61, 26);
-            this.initBox.TabIndex = 10;
-            this.initBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.willBox);
-            this.groupBox8.Controls.Add(this.refBox);
-            this.groupBox8.Controls.Add(this.fortBox);
-            this.groupBox8.Controls.Add(this.label4);
-            this.groupBox8.Controls.Add(this.label5);
-            this.groupBox8.Controls.Add(this.label6);
-            this.groupBox8.Location = new System.Drawing.Point(214, 52);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(180, 145);
-            this.groupBox8.TabIndex = 9;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Saves";
-            // 
-            // willBox
-            // 
-            this.willBox.Location = new System.Drawing.Point(112, 103);
-            this.willBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.willBox.Name = "willBox";
-            this.willBox.Size = new System.Drawing.Size(40, 26);
-            this.willBox.TabIndex = 9;
-            this.willBox.TextChanged += new System.EventHandler(this.willBox_TextChanged);
-            // 
-            // refBox
-            // 
-            this.refBox.Location = new System.Drawing.Point(112, 63);
-            this.refBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.refBox.Name = "refBox";
-            this.refBox.Size = new System.Drawing.Size(40, 26);
-            this.refBox.TabIndex = 8;
-            this.refBox.TextChanged += new System.EventHandler(this.refBox_TextChanged);
-            // 
-            // fortBox
-            // 
-            this.fortBox.Location = new System.Drawing.Point(112, 23);
-            this.fortBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.fortBox.Name = "fortBox";
-            this.fortBox.Size = new System.Drawing.Size(40, 26);
-            this.fortBox.TabIndex = 7;
-            this.fortBox.TextChanged += new System.EventHandler(this.fortBox_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Will";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 68);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 20);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Reflex";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 20);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Fortitude";
-            // 
-            // hpLabel
-            // 
-            this.hpLabel.Location = new System.Drawing.Point(63, 25);
-            this.hpLabel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.hpLabel.Name = "hpLabel";
-            this.hpLabel.Size = new System.Drawing.Size(73, 26);
-            this.hpLabel.TabIndex = 8;
-            this.hpLabel.TextChanged += new System.EventHandler(this.hpLabel_TextChanged);
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.cmdLabel);
-            this.groupBox7.Controls.Add(this.cmbLabel);
-            this.groupBox7.Controls.Add(this.label19);
-            this.groupBox7.Controls.Add(this.label20);
-            this.groupBox7.Location = new System.Drawing.Point(12, 194);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(252, 78);
-            this.groupBox7.TabIndex = 6;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Combat Maneuver";
-            // 
-            // cmdLabel
-            // 
-            this.cmdLabel.Location = new System.Drawing.Point(206, 28);
-            this.cmdLabel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmdLabel.Name = "cmdLabel";
-            this.cmdLabel.Size = new System.Drawing.Size(36, 26);
-            this.cmdLabel.TabIndex = 11;
-            this.cmdLabel.TextChanged += new System.EventHandler(this.cmdLabel_TextChanged);
-            // 
-            // cmbLabel
-            // 
-            this.cmbLabel.Location = new System.Drawing.Point(92, 28);
-            this.cmbLabel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmbLabel.Name = "cmbLabel";
-            this.cmbLabel.Size = new System.Drawing.Size(36, 26);
-            this.cmbLabel.TabIndex = 10;
-            this.cmbLabel.TextChanged += new System.EventHandler(this.cmbLabel_TextChanged);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(141, 32);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(45, 20);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "CMD";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(28, 32);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(44, 20);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "CMB";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.touchLabel);
-            this.groupBox6.Controls.Add(this.flatFootedLabel);
-            this.groupBox6.Controls.Add(this.acLabel);
-            this.groupBox6.Controls.Add(this.label11);
-            this.groupBox6.Controls.Add(this.label10);
-            this.groupBox6.Controls.Add(this.label9);
-            this.groupBox6.Location = new System.Drawing.Point(12, 63);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(170, 122);
-            this.groupBox6.TabIndex = 2;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "AC";
-            // 
-            // touchLabel
-            // 
-            this.touchLabel.Location = new System.Drawing.Point(112, 80);
-            this.touchLabel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.touchLabel.Name = "touchLabel";
-            this.touchLabel.Size = new System.Drawing.Size(36, 26);
-            this.touchLabel.TabIndex = 9;
-            this.touchLabel.TextChanged += new System.EventHandler(this.touchLabel_TextChanged);
-            // 
-            // flatFootedLabel
-            // 
-            this.flatFootedLabel.Location = new System.Drawing.Point(112, 45);
-            this.flatFootedLabel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.flatFootedLabel.Name = "flatFootedLabel";
-            this.flatFootedLabel.Size = new System.Drawing.Size(36, 26);
-            this.flatFootedLabel.TabIndex = 8;
-            this.flatFootedLabel.TextChanged += new System.EventHandler(this.flatFootedLabel_TextChanged);
-            // 
-            // acLabel
-            // 
-            this.acLabel.Location = new System.Drawing.Point(112, 9);
-            this.acLabel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.acLabel.Name = "acLabel";
-            this.acLabel.Size = new System.Drawing.Size(36, 26);
-            this.acLabel.TabIndex = 7;
-            this.acLabel.TextChanged += new System.EventHandler(this.acLabel_TextChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(40, 85);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 20);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Touch";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(2, 49);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 20);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Flat Footed";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(62, 14);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 20);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "AC";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 20);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "HP";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -2149,7 +2246,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(2152, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(2154, 35);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -2299,6 +2396,50 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Notes";
             // 
+            // npcSRBox
+            // 
+            this.npcSRBox.Location = new System.Drawing.Point(292, 134);
+            this.npcSRBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.npcSRBox.Name = "npcSRBox";
+            this.npcSRBox.Size = new System.Drawing.Size(65, 26);
+            this.npcSRBox.TabIndex = 22;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(192, 138);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(93, 20);
+            this.label53.TabIndex = 21;
+            this.label53.Text = "Spell Resist";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(198, 151);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(91, 20);
+            this.label54.TabIndex = 26;
+            this.label54.Text = "Neg. Levels";
+            // 
+            // npcNegLevelsBox
+            // 
+            this.npcNegLevelsBox.Location = new System.Drawing.Point(295, 144);
+            this.npcNegLevelsBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.npcNegLevelsBox.Name = "npcNegLevelsBox";
+            this.npcNegLevelsBox.Size = new System.Drawing.Size(53, 26);
+            this.npcNegLevelsBox.TabIndex = 25;
+            this.npcNegLevelsBox.TextChanged += new System.EventHandler(this.npcNegLevelsBox_TextChanged);
+            // 
+            // skillsTab1
+            // 
+            this.skillsTab1.Location = new System.Drawing.Point(0, 0);
+            this.skillsTab1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.skillsTab1.Name = "skillsTab1";
+            this.skillsTab1.ParentWindow = null;
+            this.skillsTab1.Size = new System.Drawing.Size(1046, 523);
+            this.skillsTab1.TabIndex = 0;
+            // 
             // notesTab1
             // 
             this.notesTab1.Location = new System.Drawing.Point(6, 6);
@@ -2307,25 +2448,27 @@
             this.notesTab1.Size = new System.Drawing.Size(2109, 1362);
             this.notesTab1.TabIndex = 0;
             // 
-            // tabPage6
+            // label55
             // 
-            this.tabPage6.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage6.Location = new System.Drawing.Point(4, 29);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1050, 530);
-            this.tabPage6.TabIndex = 2;
-            this.tabPage6.Text = "Feats";
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(426, 249);
+            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(199, 33);
+            this.label55.TabIndex = 1;
+            this.label55.Text = "Coming Soon!";
             // 
-            // tabPage7
+            // label56
             // 
-            this.tabPage7.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage7.Location = new System.Drawing.Point(4, 29);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1050, 530);
-            this.tabPage7.TabIndex = 3;
-            this.tabPage7.Text = "Spells";
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Location = new System.Drawing.Point(426, 249);
+            this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(199, 33);
+            this.label56.TabIndex = 1;
+            this.label56.Text = "Coming Soon!";
             // 
             // MainWindow
             // 
@@ -2353,6 +2496,10 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -2361,15 +2508,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.fighterInfoBox.ResumeLayout(false);
-            this.fighterInfoBox.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
+            this.tabControl3.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -2428,14 +2579,6 @@
         private System.Windows.Forms.Label DamageLabel;
         private System.Windows.Forms.Label damageResult;
         private System.Windows.Forms.GroupBox fighterInfoBox;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label d20Label;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox rollBox;
@@ -2448,21 +2591,6 @@
         private System.Windows.Forms.ColumnHeader Count;
         private System.Windows.Forms.Label AtkNameLabel;
         private System.Windows.Forms.Button npcAttackButton;
-        private System.Windows.Forms.TextBox cmbLabel;
-        private System.Windows.Forms.TextBox touchLabel;
-        private System.Windows.Forms.TextBox flatFootedLabel;
-        private System.Windows.Forms.TextBox acLabel;
-        private System.Windows.Forms.TextBox hpLabel;
-        private System.Windows.Forms.TextBox cmdLabel;
-        private System.Windows.Forms.Label InitLabel;
-        private System.Windows.Forms.TextBox initBox;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.TextBox willBox;
-        private System.Windows.Forms.TextBox refBox;
-        private System.Windows.Forms.TextBox fortBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -2554,6 +2682,39 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.CheckBox AtkDexBonusBox;
         private System.Windows.Forms.CheckBox AtkStrBonusBox;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private SkillsTab skillsTab1;
+        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabControl tabControl3;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TextBox hpLabel;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox cmdLabel;
+        private System.Windows.Forms.TextBox cmbLabel;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox touchLabel;
+        private System.Windows.Forms.TextBox flatFootedLabel;
+        private System.Windows.Forms.TextBox acLabel;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.Label InitLabel;
+        private System.Windows.Forms.TextBox initBox;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.TextBox willBox;
+        private System.Windows.Forms.TextBox refBox;
+        private System.Windows.Forms.TextBox fortBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.TextBox conModBox;
         private System.Windows.Forms.TextBox strBox;
@@ -2573,13 +2734,16 @@
         private System.Windows.Forms.TextBox intModBox;
         private System.Windows.Forms.TextBox chaModBox;
         private System.Windows.Forms.TextBox wisModBox;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
-        private SkillsTab skillsTab1;
-        private System.Windows.Forms.Button editButton;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TextBox npcSPBox;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.TextBox npcNameBox;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.TextBox npcSRBox;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TextBox npcNegLevelsBox;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
     }
 }
 
