@@ -951,42 +951,38 @@ namespace BasicBattleTracking
         //
         //Stat Update Functions
         //
-        private void hpLabel_TextChanged(object sender, EventArgs e)
+        private void hpLabel_TextChanged_1(object sender, EventArgs e)
         {
             if (combatants.Count > 0)
             {
-                if (!combatants.ElementAt(selectedFighter).isPC)
+                int newHP = 0;
+                try
                 {
-                    int newHP = 0;
-                    try
-                    {
-                        newHP = Int32.Parse(hpLabel.Text);
-                        combatants.ElementAt(selectedFighter).HP = newHP;
-                    }
-                    catch { }
+                    newHP = Int32.Parse(hpLabel.Text);
+                    combatants.ElementAt(selectedFighter).HP = newHP;
                 }
+                catch { }
+
                 UpdateFighterList();
             }
         }
 
-        private void acLabel_TextChanged(object sender, EventArgs e)
+        private void acLabel_TextChanged_1(object sender, EventArgs e)
         {
             if (combatants.Count > 0)
             {
-                if (!combatants.ElementAt(selectedFighter).isPC)
+                int newVal = 0;
+                try
                 {
-                    int newVal = 0;
-                    try
-                    {
-                        newVal = Int32.Parse(acLabel.Text);
-                        combatants.ElementAt(selectedFighter).AC = newVal;
-                    }
-                    catch { }
+                    newVal = Int32.Parse(acLabel.Text);
+                    combatants.ElementAt(selectedFighter).AC = newVal;
                 }
+                catch { }
+
             }
         }
 
-        private void flatFootedLabel_TextChanged(object sender, EventArgs e)
+        private void flatFootedLabel_TextChanged_1(object sender, EventArgs e)
         {
             if (combatants.Count > 0)
             {
@@ -1003,123 +999,157 @@ namespace BasicBattleTracking
             }
         }
 
-        private void touchLabel_TextChanged(object sender, EventArgs e)
+        private void touchLabel_TextChanged_1(object sender, EventArgs e)
         {
             if (combatants.Count > 0)
             {
-                if (!combatants.ElementAt(selectedFighter).isPC)
+                int newVal = 0;
+                try
                 {
-                    int newVal = 0;
-                    try
-                    {
-                        newVal = Int32.Parse(touchLabel.Text);
-                        combatants.ElementAt(selectedFighter).TouchAC = newVal;
-                    }
-                    catch { }
+                    newVal = Int32.Parse(touchLabel.Text);
+                    combatants.ElementAt(selectedFighter).TouchAC = newVal;
                 }
+                catch { }
+
             }
+        }
+
+        private void cmbLabel_TextChanged_1(object sender, EventArgs e)
+        {
+            if (!combatants.ElementAt(selectedFighter).isPC)
+            {
+                int newVal = 0;
+                try
+                {
+                    newVal = Int32.Parse(cmbLabel.Text);
+                    combatants.ElementAt(selectedFighter).CMB = newVal;
+                }
+                catch { }
+            }
+        }
+
+        private void cmdLabel_TextChanged_1(object sender, EventArgs e)
+        {
+            if (combatants.Count > 0)
+            {
+                int newVal = 0;
+                try
+                {
+                    newVal = Int32.Parse(cmdLabel.Text);
+                    combatants.ElementAt(selectedFighter).CMD = newVal;
+                }
+                catch { }
+
+            }
+        }
+
+        private void initBox_TextChanged(object sender, EventArgs e)
+        {
+            if (combatants.Count > 0)
+            {
+                int newVal = 0;
+                try
+                {
+                    newVal = Int32.Parse(initBox.Text);
+                    combatants.ElementAt(selectedFighter).InitBonus = newVal;
+                }
+                catch { }
+
+            }
+        }
+
+        private void fortBox_TextChanged_1(object sender, EventArgs e)
+        {
+            if (combatants.Count > 0)
+            {
+                int newVal = 0;
+                try
+                {
+                    newVal = Int32.Parse(fortBox.Text);
+                    combatants.ElementAt(selectedFighter).fort = newVal;
+                }
+                catch { }
+
+            }
+        }
+
+        private void refBox_TextChanged_1(object sender, EventArgs e)
+        {
+            if (combatants.Count > 0)
+            {
+                int newVal = 0;
+                try
+                {
+                    newVal = Int32.Parse(refBox.Text);
+                    combatants.ElementAt(selectedFighter).reflex = newVal;
+                }
+                catch { }
+
+            }
+        }
+
+        private void willBox_TextChanged_1(object sender, EventArgs e)
+        {
+            if (combatants.Count > 0)
+            {
+                int newVal = 0;
+                try
+                {
+                    newVal = Int32.Parse(willBox.Text);
+                    combatants.ElementAt(selectedFighter).will = newVal;
+                }
+                catch { }
+
+            }
+        }
+        private void hpLabel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void acLabel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flatFootedLabel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void touchLabel_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void cmbLabel_TextChanged(object sender, EventArgs e)
         {
-            if (combatants.Count > 0)
-            {
-                if (!combatants.ElementAt(selectedFighter).isPC)
-                {
-                    int newVal = 0;
-                    try
-                    {
-                        newVal = Int32.Parse(cmbLabel.Text);
-                        combatants.ElementAt(selectedFighter).CMB = newVal;
-                    }
-                    catch { }
-                }
-            }
+
         }
 
         private void cmdLabel_TextChanged(object sender, EventArgs e)
         {
-            if (combatants.Count > 0)
-            {
-                if (!combatants.ElementAt(selectedFighter).isPC)
-                {
-                    int newVal = 0;
-                    try
-                    {
-                        newVal = Int32.Parse(cmdLabel.Text);
-                        combatants.ElementAt(selectedFighter).CMD = newVal;
-                    }
-                    catch { }
-                }
-            }
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (combatants.Count > 0)
-            {
-                if (!combatants.ElementAt(selectedFighter).isPC)
-                {
-                    int newVal = 0;
-                    try
-                    {
-                        newVal = Int32.Parse(initBox.Text);
-                        combatants.ElementAt(selectedFighter).InitBonus = newVal;
-                    }
-                    catch { }
-                }
-            }
+
         }
 
         private void fortBox_TextChanged(object sender, EventArgs e)
         {
-            if (combatants.Count > 0)
-            {
-                if (!combatants.ElementAt(selectedFighter).isPC)
-                {
-                    int newVal = 0;
-                    try
-                    {
-                        newVal = Int32.Parse(fortBox.Text);
-                        combatants.ElementAt(selectedFighter).fort = newVal;
-                    }
-                    catch { }
-                }
-            }
+            
         }
 
         private void refBox_TextChanged(object sender, EventArgs e)
         {
-            if (combatants.Count > 0)
-            {
-                if (!combatants.ElementAt(selectedFighter).isPC)
-                {
-                    int newVal = 0;
-                    try
-                    {
-                        newVal = Int32.Parse(refBox.Text);
-                        combatants.ElementAt(selectedFighter).reflex = newVal;
-                    }
-                    catch { }
-                }
-            }
+
         }
 
         private void willBox_TextChanged(object sender, EventArgs e)
         {
-            if (combatants.Count > 0)
-            {
-                if (!combatants.ElementAt(selectedFighter).isPC)
-                {
-                    int newVal = 0;
-                    try
-                    {
-                        newVal = Int32.Parse(willBox.Text);
-                        combatants.ElementAt(selectedFighter).will = newVal;
-                    }
-                    catch { }
-                }
-            }
+
         }
 
         private void displayMod(TextBox inputBox, TextBox outputBox)
@@ -1772,6 +1802,8 @@ namespace BasicBattleTracking
         {
 
         }
+
+
 
 
 

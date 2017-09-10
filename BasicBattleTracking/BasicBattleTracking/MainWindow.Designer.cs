@@ -98,8 +98,11 @@
             this.rollResultLabel = new System.Windows.Forms.Label();
             this.damageResult = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.skillsTab1 = new BasicBattleTracking.SkillsTab();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label55 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.label56 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.dxResultBox = new System.Windows.Forms.TextBox();
             this.d100ResultBox = new System.Windows.Forms.TextBox();
@@ -166,6 +169,8 @@
             this.fighterInfoBox = new System.Windows.Forms.GroupBox();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.npcSRBox = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
             this.npcSPBox = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.npcNameBox = new System.Windows.Forms.TextBox();
@@ -185,6 +190,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.label54 = new System.Windows.Forms.Label();
+            this.npcNegLevelsBox = new System.Windows.Forms.TextBox();
             this.InitLabel = new System.Windows.Forms.Label();
             this.initBox = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -227,14 +234,7 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.npcSRBox = new System.Windows.Forms.TextBox();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.npcNegLevelsBox = new System.Windows.Forms.TextBox();
-            this.skillsTab1 = new BasicBattleTracking.SkillsTab();
             this.notesTab1 = new BasicBattleTracking.NotesTab();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
             this.ControlsBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -1063,6 +1063,15 @@
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Skills";
             // 
+            // skillsTab1
+            // 
+            this.skillsTab1.Location = new System.Drawing.Point(0, 0);
+            this.skillsTab1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.skillsTab1.Name = "skillsTab1";
+            this.skillsTab1.ParentWindow = null;
+            this.skillsTab1.Size = new System.Drawing.Size(1046, 523);
+            this.skillsTab1.TabIndex = 0;
+            // 
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.SystemColors.Control;
@@ -1074,6 +1083,17 @@
             this.tabPage6.TabIndex = 2;
             this.tabPage6.Text = "Feats";
             // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(426, 249);
+            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(199, 33);
+            this.label55.TabIndex = 1;
+            this.label55.Text = "Coming Soon!";
+            // 
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.SystemColors.Control;
@@ -1084,6 +1104,17 @@
             this.tabPage7.Size = new System.Drawing.Size(1050, 530);
             this.tabPage7.TabIndex = 3;
             this.tabPage7.Text = "Spells";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Location = new System.Drawing.Point(426, 249);
+            this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(199, 33);
+            this.label56.TabIndex = 1;
+            this.label56.Text = "Coming Soon!";
             // 
             // label43
             // 
@@ -1783,6 +1814,23 @@
             this.tabPage8.Text = "Basic Stats";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
+            // npcSRBox
+            // 
+            this.npcSRBox.Location = new System.Drawing.Point(292, 134);
+            this.npcSRBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.npcSRBox.Name = "npcSRBox";
+            this.npcSRBox.Size = new System.Drawing.Size(65, 26);
+            this.npcSRBox.TabIndex = 22;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(192, 138);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(93, 20);
+            this.label53.TabIndex = 21;
+            this.label53.Text = "Spell Resist";
+            // 
             // npcSPBox
             // 
             this.npcSPBox.Location = new System.Drawing.Point(292, 99);
@@ -1826,6 +1874,7 @@
             this.hpLabel.Name = "hpLabel";
             this.hpLabel.Size = new System.Drawing.Size(65, 26);
             this.hpLabel.TabIndex = 16;
+            this.hpLabel.TextChanged += new System.EventHandler(this.hpLabel_TextChanged_1);
             // 
             // groupBox7
             // 
@@ -1847,6 +1896,7 @@
             this.cmdLabel.Name = "cmdLabel";
             this.cmdLabel.Size = new System.Drawing.Size(36, 26);
             this.cmdLabel.TabIndex = 11;
+            this.cmdLabel.TextChanged += new System.EventHandler(this.cmdLabel_TextChanged_1);
             // 
             // cmbLabel
             // 
@@ -1855,6 +1905,7 @@
             this.cmbLabel.Name = "cmbLabel";
             this.cmbLabel.Size = new System.Drawing.Size(36, 26);
             this.cmbLabel.TabIndex = 10;
+            this.cmbLabel.TextChanged += new System.EventHandler(this.cmbLabel_TextChanged_1);
             // 
             // label19
             // 
@@ -1896,6 +1947,7 @@
             this.touchLabel.Name = "touchLabel";
             this.touchLabel.Size = new System.Drawing.Size(36, 26);
             this.touchLabel.TabIndex = 9;
+            this.touchLabel.TextChanged += new System.EventHandler(this.touchLabel_TextChanged_1);
             // 
             // flatFootedLabel
             // 
@@ -1904,6 +1956,7 @@
             this.flatFootedLabel.Name = "flatFootedLabel";
             this.flatFootedLabel.Size = new System.Drawing.Size(36, 26);
             this.flatFootedLabel.TabIndex = 8;
+            this.flatFootedLabel.TextChanged += new System.EventHandler(this.flatFootedLabel_TextChanged_1);
             // 
             // acLabel
             // 
@@ -1912,6 +1965,7 @@
             this.acLabel.Name = "acLabel";
             this.acLabel.Size = new System.Drawing.Size(36, 26);
             this.acLabel.TabIndex = 7;
+            this.acLabel.TextChanged += new System.EventHandler(this.acLabel_TextChanged_1);
             // 
             // label11
             // 
@@ -1965,6 +2019,24 @@
             this.tabPage9.Text = "Abilities and Mods";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(198, 151);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(91, 20);
+            this.label54.TabIndex = 26;
+            this.label54.Text = "Neg. Levels";
+            // 
+            // npcNegLevelsBox
+            // 
+            this.npcNegLevelsBox.Location = new System.Drawing.Point(295, 144);
+            this.npcNegLevelsBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.npcNegLevelsBox.Name = "npcNegLevelsBox";
+            this.npcNegLevelsBox.Size = new System.Drawing.Size(53, 26);
+            this.npcNegLevelsBox.TabIndex = 25;
+            this.npcNegLevelsBox.TextChanged += new System.EventHandler(this.npcNegLevelsBox_TextChanged);
+            // 
             // InitLabel
             // 
             this.InitLabel.AutoSize = true;
@@ -1981,6 +2053,7 @@
             this.initBox.Name = "initBox";
             this.initBox.Size = new System.Drawing.Size(53, 26);
             this.initBox.TabIndex = 23;
+            this.initBox.TextChanged += new System.EventHandler(this.initBox_TextChanged);
             // 
             // groupBox8
             // 
@@ -2004,6 +2077,7 @@
             this.willBox.Name = "willBox";
             this.willBox.Size = new System.Drawing.Size(40, 26);
             this.willBox.TabIndex = 9;
+            this.willBox.TextChanged += new System.EventHandler(this.willBox_TextChanged_1);
             // 
             // refBox
             // 
@@ -2012,6 +2086,7 @@
             this.refBox.Name = "refBox";
             this.refBox.Size = new System.Drawing.Size(40, 26);
             this.refBox.TabIndex = 8;
+            this.refBox.TextChanged += new System.EventHandler(this.refBox_TextChanged_1);
             // 
             // fortBox
             // 
@@ -2020,6 +2095,7 @@
             this.fortBox.Name = "fortBox";
             this.fortBox.Size = new System.Drawing.Size(40, 26);
             this.fortBox.TabIndex = 7;
+            this.fortBox.TextChanged += new System.EventHandler(this.fortBox_TextChanged_1);
             // 
             // label4
             // 
@@ -2396,50 +2472,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Notes";
             // 
-            // npcSRBox
-            // 
-            this.npcSRBox.Location = new System.Drawing.Point(292, 134);
-            this.npcSRBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.npcSRBox.Name = "npcSRBox";
-            this.npcSRBox.Size = new System.Drawing.Size(65, 26);
-            this.npcSRBox.TabIndex = 22;
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(192, 138);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(93, 20);
-            this.label53.TabIndex = 21;
-            this.label53.Text = "Spell Resist";
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(198, 151);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(91, 20);
-            this.label54.TabIndex = 26;
-            this.label54.Text = "Neg. Levels";
-            // 
-            // npcNegLevelsBox
-            // 
-            this.npcNegLevelsBox.Location = new System.Drawing.Point(295, 144);
-            this.npcNegLevelsBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.npcNegLevelsBox.Name = "npcNegLevelsBox";
-            this.npcNegLevelsBox.Size = new System.Drawing.Size(53, 26);
-            this.npcNegLevelsBox.TabIndex = 25;
-            this.npcNegLevelsBox.TextChanged += new System.EventHandler(this.npcNegLevelsBox_TextChanged);
-            // 
-            // skillsTab1
-            // 
-            this.skillsTab1.Location = new System.Drawing.Point(0, 0);
-            this.skillsTab1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.skillsTab1.Name = "skillsTab1";
-            this.skillsTab1.ParentWindow = null;
-            this.skillsTab1.Size = new System.Drawing.Size(1046, 523);
-            this.skillsTab1.TabIndex = 0;
-            // 
             // notesTab1
             // 
             this.notesTab1.Location = new System.Drawing.Point(6, 6);
@@ -2447,28 +2479,6 @@
             this.notesTab1.Name = "notesTab1";
             this.notesTab1.Size = new System.Drawing.Size(2109, 1362);
             this.notesTab1.TabIndex = 0;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(426, 249);
-            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(199, 33);
-            this.label55.TabIndex = 1;
-            this.label55.Text = "Coming Soon!";
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.Location = new System.Drawing.Point(426, 249);
-            this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(199, 33);
-            this.label56.TabIndex = 1;
-            this.label56.Text = "Coming Soon!";
             // 
             // MainWindow
             // 
