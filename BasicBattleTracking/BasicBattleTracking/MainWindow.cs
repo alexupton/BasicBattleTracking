@@ -65,7 +65,7 @@ namespace BasicBattleTracking
             AutoLoad();
             this.FormClosed += new FormClosedEventHandler(this.MainWindow_Close);
             //TestDPercentTable();
-            WriteToLog("Now featuring the ability to kill it AND skill it!");
+            WriteToLog("Making your mildest dreams come true.");
         }
 
 
@@ -87,6 +87,7 @@ namespace BasicBattleTracking
                 DialogResult confirm = MessageBox.Show("Are you sure?", "Remove " + combatants.ElementAt(selectedFighter).Name, MessageBoxButtons.OKCancel);
                 if (confirm == DialogResult.OK)
                 {
+                    WriteToLog("Removed " + selectedFighterObject.Name + ".");
                     combatants.ElementAt(selectedFighter).StatusEffects.Clear();
                     removeFighter(combatants.ElementAt(selectedFighter));
                     if (selectedFighter > 0)
@@ -414,6 +415,7 @@ namespace BasicBattleTracking
         private void AutoSave()
         {
             this.Text = "Basic Battle Tracker - Autosaving..."; 
+            
             BattleIO auto = new BattleIO();
 
 
@@ -469,7 +471,8 @@ namespace BasicBattleTracking
                     }
                 }
             }
-            this.Text = "Basic Battle Tracker"; 
+            this.Text = "Basic Battle Tracker";
+            //WriteToLog("Autosaved.");
         }
 
         private void AutoLoad()
@@ -897,6 +900,7 @@ namespace BasicBattleTracking
                 npcSPBox.Text = update.SpellPoints.ToString();
                 npcSRBox.Text = update.SpellResist.ToString();
                 npcNegLevelsBox.Text = update.NegativeLevels.ToString();
+                drBox.Text = update.DamageReduce.ToString();
 
                 strBox.Text = update.Str.ToString();
                 dexBox.Text = update.Dex.ToString();
@@ -911,6 +915,8 @@ namespace BasicBattleTracking
                 displayMod(intBox, intModBox);
                 displayMod(wisBox, wisModBox);
                 displayMod(chaBox, chaModBox);
+
+                bioBox.Text = update.Notes;
             }
         }
 
@@ -1349,6 +1355,10 @@ namespace BasicBattleTracking
 
             }
             updateFighterInfo(selectedFighter);
+        }
+        private void bioBox_TextChanged(object sender, EventArgs e)
+        {
+            selectedFighterObject.Notes = bioBox.Text;
         }
 
         private void WriteAbilityChangeToSkills(int newAbilityScore, string abilityName)
@@ -1802,6 +1812,13 @@ namespace BasicBattleTracking
         {
 
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
 
 
 

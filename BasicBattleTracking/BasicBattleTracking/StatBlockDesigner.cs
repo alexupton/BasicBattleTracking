@@ -29,6 +29,7 @@ namespace BasicBattleTracking
         public StatBlockDesigner()
         {
             skillList = new List<Skill>();
+            randy = new Random();
             InitializeComponent();
         }
 
@@ -37,7 +38,7 @@ namespace BasicBattleTracking
             dBox.SelectedIndex = 0;
             attacks = new List<Attack>();
             ad = new AttackDesigner(this);
-            randy = new Random();
+            
         }
 
         private void A1NameBox_TextChanged(object sender, EventArgs e)
@@ -88,7 +89,7 @@ namespace BasicBattleTracking
             {
                 newFighter = new Fighter(name, initBonus, false);
             }
-
+            newFighter.Notes = bioBox.Text;
             int HP = 0;
             if (formulaButton.Checked)
             {
@@ -119,7 +120,9 @@ namespace BasicBattleTracking
                 }
 
                 newFighter.HPDieType = HPDieType;
-
+                newFighter.HPMult = HPMult;
+                newFighter.HPAdd = HPAdd;
+                newFighter.HP = HP;
                 
             }
             else
@@ -170,6 +173,8 @@ namespace BasicBattleTracking
                 newFighter.fort = Int32.Parse(fortBox.Text);
                 newFighter.reflex = Int32.Parse(refBox.Text);
                 newFighter.will = Int32.Parse(willBox.Text);
+                newFighter.SpellResist = Int32.Parse(srBox.Text);
+                newFighter.DamageReduce = Int32.Parse(drBox.Text);
 
 
                 int str = 0;
@@ -304,10 +309,12 @@ namespace BasicBattleTracking
             if (!editMode)
             {
                 parent.AddFighter(newFighter);
+                parent.WriteToLog("Added " + newFighter.Name + ".");
             }
             else
             {
                 parent.UpdateFighter(newFighter);
+                parent.WriteToLog(newFighter.Name + " updated.");
             }
         }
 
@@ -665,6 +672,9 @@ namespace BasicBattleTracking
                 intBox.Text = newFighter.Int.ToString();
                 wisBox.Text = newFighter.Wis.ToString();
                 chaBox.Text = newFighter.Cha.ToString();
+                srBox.Text = newFighter.SpellResist.ToString();
+                drBox.Text = newFighter.DamageReduce.ToString();
+                bioBox.Text = newFighter.Notes;
                 userPopulated = true;
                 saved = true;
         }
@@ -696,6 +706,9 @@ namespace BasicBattleTracking
             intBox.Text = newFighter.Int.ToString();
             wisBox.Text = newFighter.Wis.ToString();
             chaBox.Text = newFighter.Cha.ToString();
+            drBox.Text = newFighter.DamageReduce.ToString();
+            srBox.Text = newFighter.SpellResist.ToString();
+            bioBox.Text = newFighter.Notes;
             userPopulated = true;
             editFighter = newFighter;
             if(File.Exists(newFighter.savePath))
@@ -709,6 +722,11 @@ namespace BasicBattleTracking
             InsertButton.Text = "Update";
             editMode = true;
             
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

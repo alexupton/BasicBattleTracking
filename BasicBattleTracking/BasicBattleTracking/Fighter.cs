@@ -15,6 +15,7 @@ namespace BasicBattleTracking
         public int InitBonus { get; set; }
         public bool isPC { get; set; }
         public bool HoldAction { get; set; }
+        public string Notes { get; set; }
 
         public List<Attack> attacks { get; set; }
         public List<Status> StatusEffects { get; set; }
@@ -40,6 +41,8 @@ namespace BasicBattleTracking
 
         public int SpellPoints { get; set; }
         public int SpellResist { get; set; }
+
+        public int DamageReduce { get; set; }
 
         public int Str { get; set; }
         public int Dex { get; set; }

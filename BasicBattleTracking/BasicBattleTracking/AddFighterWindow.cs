@@ -73,6 +73,13 @@ namespace BasicBattleTracking
             else
             {
                 Fighter combatant = new Fighter(name, init, isPlayer);
+                try
+                {
+                    combatant.Dex = Int32.Parse(dexBox.Text);
+                }
+                catch
+                { }
+
                 if (!isPlayer)
                 {
                     combatant.HP = hp;

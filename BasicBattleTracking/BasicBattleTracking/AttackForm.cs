@@ -14,6 +14,8 @@ namespace BasicBattleTracking
     {
         private MainWindow sendingForm;
         private List<Fighter> PCs;
+        private Fighter target;
+        private int DR;
         public string attackerName { get; set; }
         public bool isStatus { get; set; }
         public AttackForm(MainWindow sender, List<Fighter> combatants)
@@ -43,7 +45,7 @@ namespace BasicBattleTracking
 
         private void AttackForm_Load(object sender, EventArgs e)
         {
-
+            drCheckBox.Checked = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,7 +57,7 @@ namespace BasicBattleTracking
 
                 try
                 {
-                    damage = Int32.Parse(DamageBox.Text);
+                    damage = Int32.Parse(totalBox.Text);
                 }
                 catch
                 {
@@ -84,12 +86,60 @@ namespace BasicBattleTracking
 
         private void targetBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (targetBox.SelectedIndex >= 0 && targetBox.SelectedIndex <= targetBox.Items.Count)
+            {
+                target = PCs.ElementAt(targetBox.SelectedIndex);
+                drBox.Text = target.DamageReduce.ToString();
+                DR = target.DamageReduce;
+            }
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void DamageBox_TextChanged(object sender, EventArgs e)
+        {
+            ApplyDR();
+        }
+
+        private void drBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DR = Int32.Parse(drBox.Text);
+            }
+            catch { return; }
+
+            if (drCheckBox.Checked)
+            {
+                ApplyDR();
+            }
+        }
+
+        private void drCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            ApplyDR();
+        }
+
+        private void ApplyDR()
+        {
+            int rawDamage = 0;
+            try
+            {
+                rawDamage = Int32.Parse(DamageBox.Text);
+            }
+            catch { return; }
+
+            if (drCheckBox.Checked)
+            {
+                rawDamage -= DR;
+                if (rawDamage < 0)
+                    rawDamage = 0;
+            }
+            totalBox.Text = rawDamage.ToString();
         }
     }
 }
