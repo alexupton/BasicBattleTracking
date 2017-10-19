@@ -150,3 +150,7 @@ C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTrackin
 D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.csprojResolveAssemblyReference.cache
 D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.FeatsTab.resources
 C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.FeatsTab.resources
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.DPercentPanel.resources
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.DPercentDesigner.resources
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.DPercentLine.resources
+C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.TableErrorBox.resources

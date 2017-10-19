@@ -27,7 +27,7 @@
     <PublisherName>Alex Upton</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>16</ApplicationRevision>
+    <ApplicationRevision>17</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -102,6 +102,24 @@
     </Compile>
     <Compile Include="BattleIO.cs" />
     <Compile Include="DiceRoller.cs" />
+    <Compile Include="DPercentDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DPercentDesigner.Designer.cs">
+      <DependentUpon>DPercentDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DPercentLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DPercentLine.Designer.cs">
+      <DependentUpon>DPercentLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DPercentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DPercentPanel.Designer.cs">
+      <DependentUpon>DPercentPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="DPercentTable.cs" />
     <Compile Include="Feat.cs" />
     <Compile Include="FeatsTab.cs">
@@ -176,6 +194,12 @@
     <Compile Include="AttackTab.Designer.cs">
       <DependentUpon>AttackTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="TableErrorBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableErrorBox.Designer.cs">
+      <DependentUpon>TableErrorBox.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddFighterWindow.resx">
       <DependentUpon>AddFighterWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +208,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AttackForm.resx">
       <DependentUpon>AttackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DPercentDesigner.resx">
+      <DependentUpon>DPercentDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DPercentLine.resx">
+      <DependentUpon>DPercentLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DPercentPanel.resx">
+      <DependentUpon>DPercentPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FeatsTab.resx">
       <DependentUpon>FeatsTab.cs</DependentUpon>
@@ -227,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AttackTab.resx">
       <DependentUpon>AttackTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableErrorBox.resx">
+      <DependentUpon>TableErrorBox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BasicBattleTracking_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">

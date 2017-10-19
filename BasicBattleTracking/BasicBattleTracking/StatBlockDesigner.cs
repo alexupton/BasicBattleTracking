@@ -28,15 +28,18 @@ namespace BasicBattleTracking
         
         public StatBlockDesigner()
         {
+            attacks = new List<Attack>();
             skillList = new List<Skill>();
+            
             randy = new Random();
             InitializeComponent();
+            dBox.SelectedIndex = 0;
         }
 
         private void StatBlockDesigner_Load(object sender, EventArgs e)
         {
-            dBox.SelectedIndex = 0;
-            attacks = new List<Attack>();
+            
+            
             ad = new AttackDesigner(this);
             
         }

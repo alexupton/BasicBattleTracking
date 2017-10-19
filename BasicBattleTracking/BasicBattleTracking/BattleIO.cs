@@ -740,6 +740,42 @@ namespace BasicBattleTracking
                 return new List<Status>();
             }
         }
+
+        public void SaveObject(object save, string filePath)
+        {
+            bool append = false;
+            using (Stream stream = File.Open(filePath, append ? FileMode.Append : FileMode.Create))
+            {
+                var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                binaryFormatter.Serialize(stream, filePath);
+            }
+        }
+
+        public object LoadObject(string FilePath)
+        {
+            if (File.Exists(FilePath))
+            {
+                try
+                {
+                    using (Stream stream = File.Open(FilePath, FileMode.Open))
+                    {
+                        var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                        object output = binaryFormatter.Deserialize(stream);
+                        return output;
+                    }
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        
     }
 
     

@@ -150,6 +150,7 @@ namespace BasicBattleTracking
         {
             abilityMods = abltyMods;
             skillNameBox.Text = newSkill.name;
+            
             switch(newSkill.abilitySource)
             {
                 case "Str": abilitySourceBox.SelectedIndex = 0; break;
@@ -163,7 +164,9 @@ namespace BasicBattleTracking
             if (abilityBonusBox.Text == "")
                 abilityBonusBox.Text = "0";
             rankBox.Text = newSkill.ranks.ToString();
+            classSkillCheckBox.Checked = newSkill.isClassSkill;
             miscBox.Text = newSkill.miscMod.ToString();
+            
 
             
         }

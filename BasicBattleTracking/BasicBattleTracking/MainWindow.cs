@@ -480,6 +480,39 @@ namespace BasicBattleTracking
             BattleIO auto = new BattleIO();
             combatants = auto.AutoLoad(this);
 
+            //
+            //DPercent Load
+            //
+            string autoPath = Program.defaultPath + @"\Save\auto.txt";
+            if(Program.UserAutoSaveDirectory != "")
+            {
+                autoPath = Program.UserAutoSaveDirectory;
+                autoPath += @"\DPercent.bin";
+            }
+            List<DPercentTable> autoDPercent = new List<DPercentTable>();
+            try
+            {
+                autoDPercent = (List<DPercentTable>)auto.LoadObject(autoPath);
+            }
+            catch
+            {
+                Console.WriteLine("DPercent table load returned null.");
+            }
+            if (autoDPercent != null)
+            {
+                if (autoDPercent.Count > 0)
+                {
+                    foreach (DPercentTable table in autoDPercent)
+                    {
+                        dPercentTableControls.addDPercentTable(table);
+                    }
+                }
+            }
+            
+            //
+            //End DPercent Load
+            //
+
             if (combatants.Count > 0)
             {
                 UpdateFighterList();
@@ -1338,9 +1371,10 @@ namespace BasicBattleTracking
             {
                 int newVal = Int32.Parse(npcSPBox.Text);
                 selectedFighterObject.SpellPoints = newVal;
+                updateFighterInfo(selectedFighter);
             }
             catch { }
-            updateFighterInfo(selectedFighter);
+           
         }
 
         private void npcNegLevelsBox_TextChanged(object sender, EventArgs e)
@@ -1349,12 +1383,13 @@ namespace BasicBattleTracking
             {
                 int negativeLvls = Int32.Parse(npcNegLevelsBox.Text);
                 selectedFighterObject.ApplyNegativeLevels(negativeLvls);
+                updateFighterInfo(selectedFighter);
             }
             catch
             {
 
             }
-            updateFighterInfo(selectedFighter);
+            
         }
         private void bioBox_TextChanged(object sender, EventArgs e)
         {
@@ -1816,6 +1851,16 @@ namespace BasicBattleTracking
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dPercentTableControls_Load(object sender, EventArgs e)
+        {
+            
         }
 
 

@@ -14,6 +14,7 @@ namespace BasicBattleTracking
         public static string UserNotesDirectory;
         public static string defaultPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\BasicBattleTracking";
         public static List<Skill> defaultSkillLoadout;
+        public static List<string> tooltips;
 
         public static bool initEachRound;
         /// <summary>
