@@ -34,8 +34,17 @@ namespace BasicBattleTracking
 
         public void addDPercentTable(DPercentTable add)
         {
+            int dupCount = 0;
+            foreach(DPercentTable table in tables)
+            {
+                if (table.Name == add.Name)
+                    dupCount++;
+            }
+            if (dupCount > 0)
+                add.Name += " " + (dupCount + 1).ToString();
             tables.Add(add);
             UpdateTableList();
+            tableList.SelectedItem = add.Name;
         }
 
         private void DPercentPanel_Load(object sender, EventArgs e)
@@ -111,6 +120,76 @@ namespace BasicBattleTracking
             DPercentDesigner DPDesign = new DPercentDesigner();
             DPDesign.sendingForm = this;
             DPDesign.Show();
+        }
+
+        private void resultsView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(resultsView.SelectedIndices.Count > 0)
+            {
+                if(resultsView.SelectedIndices[0] < selectedTable.results.Count)
+                {
+                    resultBox.Text = selectedTable.results.ElementAt(resultsView.SelectedIndices[0]);
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(selectedTable != null)
+            {
+                DialogResult result = MessageBox.Show("Remove " + selectedTable.Name + "?","Delete Table", MessageBoxButtons.YesNo);
+                if(result == DialogResult.Yes)
+                {
+                    int nextIndex = tables.IndexOf(selectedTable) - 1;
+                    if (nextIndex < 0)
+                        nextIndex = 0;
+                    tables.Remove(selectedTable);
+                    selectedTable = new DPercentTable();
+                    UpdateTableList();
+                    UpdateResultsTable();
+                    if(nextIndex < tables.Count)
+                    {
+                        tableList.SelectedItem = tables.ElementAt(nextIndex).Name;
+                    }
+                    
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DPercentDesigner designer = new DPercentDesigner();
+            designer.sendingForm = this;
+            if (selectedTable != null)
+            {
+                designer.EditMode(selectedTable, tables.IndexOf(selectedTable));
+                designer.Show();
+            }
+        }
+
+        public void UpdateDPercentTable(DPercentTable updatedTable, int tableIndex)
+        {
+            int dupCount = 0;
+            foreach (DPercentTable table in tables)
+            {
+                if (table.Name == updatedTable.Name)
+                    dupCount++;
+            }
+            if (dupCount > 0)
+                updatedTable.Name += " " + (dupCount + 1).ToString();
+            tables.RemoveAt(tableIndex);
+            tables.Insert(tableIndex, updatedTable);
+            UpdateTableList();
+            tableList.SelectedItem = updatedTable.Name;
+        }
+
+        public void AutoSave()
+        {
+            BattleIO auto = new BattleIO();
+            if (tables != null)
+            {
+                auto.AutoSaveDPercentList(tables);
+            }
         }
     }
 }

@@ -154,3 +154,7 @@ C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTrackin
 C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.DPercentDesigner.resources
 C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.DPercentLine.resources
 C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.TableErrorBox.resources
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.DPercentDesigner.resources
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.DPercentLine.resources
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.DPercentPanel.resources
+D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.TableErrorBox.resources

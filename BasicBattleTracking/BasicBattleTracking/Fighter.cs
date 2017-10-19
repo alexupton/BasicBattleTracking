@@ -54,6 +54,8 @@ namespace BasicBattleTracking
         public int NegativeLevels { get; private set; }
         private int LastNegLvlValue { get; set; }
 
+        public int attackMod { get; set; }
+
         public string savePath { get; set; }
 
 
@@ -117,6 +119,42 @@ namespace BasicBattleTracking
                     }
                 }
                 NegativeLevels = count;
+        }
+
+        public void ApplyGlobalAttackMod(int count)
+        {
+            int difference = attackMod - count;
+            if (difference > 0)
+            {
+                for(int i = 0; i < difference; i ++)
+                {
+                    for(int j = 0; j < attacks.Count; j++)
+                    {
+                        for(int k = 0; k < attacks.ElementAt(j).atkBonuses.Count; k++)
+                        {
+                            int newValue = attacks.ElementAt(j).atkBonuses.ElementAt(k) - 1;
+                            attacks.ElementAt(j).atkBonuses.RemoveAt(k);
+                            attacks.ElementAt(j).atkBonuses.Insert(k, newValue);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < Math.Abs(difference); i++)
+                {
+                    for (int j = 0; j < attacks.Count; j++)
+                    {
+                        for (int k = 0; k < attacks.ElementAt(j).atkBonuses.Count; k++)
+                        {
+                            int newValue = attacks.ElementAt(j).atkBonuses.ElementAt(k) + 1;
+                            attacks.ElementAt(j).atkBonuses.RemoveAt(k);
+                            attacks.ElementAt(j).atkBonuses.Insert(k, newValue);
+                        }
+                    }
+                }
+            }
+            attackMod = count;
         }
 
     }

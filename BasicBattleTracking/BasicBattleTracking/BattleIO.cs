@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace BasicBattleTracking
 {
@@ -741,38 +742,71 @@ namespace BasicBattleTracking
             }
         }
 
-        public void SaveObject(object save, string filePath)
+        public void SaveObject<T>(object obj, string FilePath)
         {
-            bool append = false;
-            using (Stream stream = File.Open(filePath, append ? FileMode.Append : FileMode.Create))
+            if(File.Exists(FilePath))
             {
-                var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
-                binaryFormatter.Serialize(stream, filePath);
+                File.Delete(FilePath);
             }
+            var xs = new XmlSerializer(typeof(T));
+            using (TextWriter sw = new StreamWriter(FilePath))
+            {
+                xs.Serialize(sw, obj);
+            }
+           
         }
 
-        public object LoadObject(string FilePath)
+        public T LoadObject<T>(string FileName)
         {
-            if (File.Exists(FilePath))
+            Object rslt;
+
+            if (File.Exists(FileName))
             {
-                try
+                var xs = new XmlSerializer(typeof(T));
+
+                using (var sr = new StreamReader(FileName))
                 {
-                    using (Stream stream = File.Open(FilePath, FileMode.Open))
-                    {
-                        var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
-                        object output = binaryFormatter.Deserialize(stream);
-                        return output;
-                    }
+                    rslt = (T)xs.Deserialize(sr);
                 }
-                catch
-                {
-                    return null;
-                }
+                return (T)rslt;
             }
             else
             {
-                return null;
+                return default(T);
             }
+        }
+        
+
+        public void AutoSaveDPercentList(List<DPercentTable> Tables)
+        {
+            string autoPath = defaultPath + @"\Save\DPercent.xml";
+            if (Program.UserAutoSaveDirectory != "")
+            {
+                autoPath = Program.UserAutoSaveDirectory;
+                autoPath += @"\DPercent.xml";
+            }
+
+            SaveObject<List<DPercentTable>>(Tables, autoPath);
+        }
+
+        public List<DPercentTable> AutoLoadDPercent()
+        {
+            string autoPath = defaultPath + @"\Save\DPercent.xml";
+            List<DPercentTable> output;
+            if (Program.UserAutoSaveDirectory != "")
+            {
+                autoPath = Program.UserAutoSaveDirectory;
+                autoPath += @"\DPercent.xml";
+            }
+            try
+            {
+                output = LoadObject<List<DPercentTable>>(autoPath);
+            }
+            catch
+            {
+                output = new List<DPercentTable>();
+            }
+            return output;
         }
 
         

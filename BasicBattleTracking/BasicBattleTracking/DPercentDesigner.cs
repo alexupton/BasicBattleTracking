@@ -19,9 +19,12 @@ namespace BasicBattleTracking
         public DPercentPanel sendingForm { get; set; }
 
         private int currentMax { get; set; }
+        private bool editMode { get; set; }
+        private int tableIndex { get; set; }
         public DPercentDesigner()
         {
             lines = new List<DPercentLine>();
+            editMode = false;
             InitializeComponent();
             RedrawLines();
 
@@ -39,6 +42,7 @@ namespace BasicBattleTracking
                 AddLine();
             }
             optionsBox.SelectedIndex = 0;
+            nameBox.Select();
             
         }
 
@@ -175,6 +179,10 @@ namespace BasicBattleTracking
                 RedrawLines();
                 newLineButton.Select();
             }
+            if(lineID == 0 && lines.Count > 0)
+            {
+                lines.ElementAt(0).SetMin();
+            }
 
         }
 
@@ -207,12 +215,15 @@ namespace BasicBattleTracking
                 return;
             }
 
+            
+
             output.Name = name;
             List<int[]> gaps = new List<int[]>();
             for (int i = 0; i < lines.Count - 1; i++)
             {
                 int min = lines.ElementAt(i).GetMin();
-                if (min < 0)
+                int max = lines.ElementAt(i).GetMax();
+                if (min < 0 || max < 0)
                 {
                     MessageBox.Show("One or more lines have invalid values. Please enter values for all fields.", "Oops!");
                     return;
@@ -242,7 +253,14 @@ namespace BasicBattleTracking
             }
             else
             {
-                sendingForm.addDPercentTable(output);
+                if (editMode)
+                {
+                    sendingForm.UpdateDPercentTable(output, tableIndex);
+                }
+                else
+                {
+                    sendingForm.addDPercentTable(output);
+                }
                 this.Close();
             }
 
@@ -253,7 +271,6 @@ namespace BasicBattleTracking
         {
             optionsBox.SelectedIndex = 1;
             RecalculateValues();
-            BuildTable();
         }
 
         public void AddBlanksAndSave(List<int[]> gaps)
@@ -279,7 +296,45 @@ namespace BasicBattleTracking
         public void InsertLineAndSort(DPercentLine newLine)
         {
             lines.Add(newLine);
-            lines.OrderBy(c => c.GetMin());
+            lines = lines.OrderBy(p => p.GetMin()).ToList();
+            for(int i = 0; i < lines.Count; i++)
+            {
+                lines.ElementAt(i).LineID = i;
+                lines.ElementAt(i).sendingForm = this;
+            }
+            RedrawLines();
+        }
+
+        public void EditMode(DPercentTable editTable, int index)
+        {
+            editMode = true;
+            for(int i = 0; i < editTable.startValues.Count; i++)
+            {
+                DPercentLine newLine = new DPercentLine();
+                newLine.sendingForm = this;
+                if(i == 0)
+                {
+                    newLine.SetMin();
+                }
+                else
+                {
+                    newLine.SetMinToValue(editTable.startValues.ElementAt(i));
+                }
+                if (i < editTable.results.Count)
+                {
+                    newLine.addEffect(editTable.results.ElementAt(i));
+                }
+                newLine.SetMinToValue(editTable.startValues.ElementAt(i));
+                if (i < editTable.startValues.Count - 1)
+                {
+                    newLine.SetMaxToValue(editTable.startValues.ElementAt(i + 1) - 1);
+                }
+                else
+                    newLine.SetMaxToValue(editTable.MaxVal);
+                tableIndex = index;
+                lines.Add(newLine);
+                RedrawLines();
+            }
         }
     }
 }

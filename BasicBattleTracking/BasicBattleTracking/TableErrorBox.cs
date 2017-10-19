@@ -25,7 +25,8 @@ namespace BasicBattleTracking
         {
             recalcTip.SetToolTip(recalcButton, "Recalculate minimum and maximum values, with the existing maximum"
                 + "\nof the table being a base and the results given equal weight.");
-
+            addBlankTip.SetToolTip(addBlankButton, "Insert a \"No Effect\" line for each of the missing\n intervals, preserving " 
+                + "existing line values.");
 
             if (Gaps.Count > 0)
             {
@@ -46,6 +47,23 @@ namespace BasicBattleTracking
         private void recalcButton_Click(object sender, EventArgs e)
         {
             sendingForm.RecalculateAndSave();
+            this.Close();
+        }
+
+        private void addBlankButton_Click(object sender, EventArgs e)
+        {
+            foreach(int[] i in Gaps)
+            {
+                DPercentLine newLine = new DPercentLine();
+                if (i[0] == 1)
+                    newLine.SetMin();
+                else
+                    newLine.SetMinToValue(i[0]);
+
+                newLine.SetMaxToValue(i[1]);
+                newLine.addEffect("No Effect");
+                sendingForm.InsertLineAndSort(newLine);
+            }
             this.Close();
         }
     }

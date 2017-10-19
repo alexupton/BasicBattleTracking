@@ -65,7 +65,7 @@ namespace BasicBattleTracking
             AutoLoad();
             this.FormClosed += new FormClosedEventHandler(this.MainWindow_Close);
             //TestDPercentTable();
-            WriteToLog("Making your mildest dreams come true.");
+            WriteToLog("Roses are red. True love is rare. Booty booty booty booty rockin' everywhere.");
         }
 
 
@@ -448,6 +448,7 @@ namespace BasicBattleTracking
             //ACTUAL AUTOSAVE PART
             auto.AutoSave(combatants, checkboxSettings);
             auto.SaveRecentlyUsedStatuses(recentlyUsedStatuses);
+            dPercentTableControls.AutoSave();
             //Reset ability bonuses
             foreach (Fighter f in combatants)
             {
@@ -483,21 +484,7 @@ namespace BasicBattleTracking
             //
             //DPercent Load
             //
-            string autoPath = Program.defaultPath + @"\Save\auto.txt";
-            if(Program.UserAutoSaveDirectory != "")
-            {
-                autoPath = Program.UserAutoSaveDirectory;
-                autoPath += @"\DPercent.bin";
-            }
-            List<DPercentTable> autoDPercent = new List<DPercentTable>();
-            try
-            {
-                autoDPercent = (List<DPercentTable>)auto.LoadObject(autoPath);
-            }
-            catch
-            {
-                Console.WriteLine("DPercent table load returned null.");
-            }
+            List<DPercentTable> autoDPercent = auto.AutoLoadDPercent();
             if (autoDPercent != null)
             {
                 if (autoDPercent.Count > 0)
@@ -934,6 +921,7 @@ namespace BasicBattleTracking
                 npcSRBox.Text = update.SpellResist.ToString();
                 npcNegLevelsBox.Text = update.NegativeLevels.ToString();
                 drBox.Text = update.DamageReduce.ToString();
+                attackModBox.Text = update.attackMod.ToString();
 
                 strBox.Text = update.Str.ToString();
                 dexBox.Text = update.Dex.ToString();
@@ -1394,6 +1382,19 @@ namespace BasicBattleTracking
         private void bioBox_TextChanged(object sender, EventArgs e)
         {
             selectedFighterObject.Notes = bioBox.Text;
+        }
+        //Attack Mod Box
+        private void textBox1_TextChanged_2(object sender, EventArgs e)
+        {
+            int newMod = 0;
+            try
+            {
+                newMod = Int32.Parse(attackModBox.Text);
+                selectedFighterObject.ApplyGlobalAttackMod(newMod);
+                UpdateAtkValues(selectedFighter);
+            }
+            catch { }
+
         }
 
         private void WriteAbilityChangeToSkills(int newAbilityScore, string abilityName)
@@ -1863,36 +1864,10 @@ namespace BasicBattleTracking
             
         }
 
+        private void tabPage9_Click(object sender, EventArgs e)
+        {
 
-
-
-
-
-
-        
-
-        
-        //private void TestDPercentTable()
-        //{
-        //    DPercentTable test = new DPercentTable();
-        //    Random randy = new Random();
-        //    int testValue = randy.Next(100) + 1;
-        //    test.startValues.Add(50);
-        //    test.results.Add("Middle result");
-
-        //    test.startValues.Add(75);
-        //    test.results.Add("High result");
-
-        //    test.startValues.Add(25);
-        //    test.results.Add("Middle low result");
-
-
-
-        //    WriteToLog("Testing DPercentTable");
-        //    WriteToLog("Test roll: " + testValue);
-        //    string result = test.evaluateResult(testValue);
-        //    WriteToLog("Result: " + result);
-        //}
+        }
     }
 
 
