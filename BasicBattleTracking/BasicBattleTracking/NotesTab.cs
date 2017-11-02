@@ -48,41 +48,46 @@ namespace BasicBattleTracking
             }
             else
             {
-                filePath = Program.defaultPath + @"\Notes";
+                filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\BasicBattleTracking\Notes";
             }
 
-            
 
 
+            if (filePath != null)
+            {
                 if (!Directory.Exists(filePath))
                 {
                     Directory.CreateDirectory(filePath);
                 }
+                filePathBox.Text = filePath;
+                UpdatePathList(filePath);
+            }
 
-
-            filePathBox.Text = filePath;
-            UpdatePathList(filePath);
+            
         }
 
         private void LoadFiles(string path)
         {
             notes.Clear();
-            if(Directory.Exists(path))
+            if (path != null)
             {
-                fileList.Items.Clear();
-                filePathBox.Text = path;
-                string[] files = Directory.GetFiles(path);
-                foreach(string file in files)
+                if (Directory.Exists(path))
                 {
-                    if (file.Split('.').Length > 1)
+                    fileList.Items.Clear();
+                    filePathBox.Text = path;
+                    string[] files = Directory.GetFiles(path);
+                    foreach (string file in files)
                     {
-                        if (file.Split('.')[1] == "txt")
+                        if (file.Split('.').Length > 1)
                         {
-                            fileList.Items.Add(Path.GetFileName(file));
-                            string load = File.ReadAllText(file);
+                            if (file.Split('.')[1] == "txt")
+                            {
+                                fileList.Items.Add(Path.GetFileName(file));
+                                string load = File.ReadAllText(file);
 
-                            notes.Add(load);
+                                notes.Add(load);
 
+                            }
                         }
                     }
                 }

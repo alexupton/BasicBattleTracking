@@ -7,36 +7,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace BasicBattleTracking
 {
+    [Serializable()]
     public partial class MainWindow : Form
     {
-        private List<Fighter> combatants;
-        private List<string> fighterOrder;
-        private List<Status> statusEffects;
-        private int combatRound = 0;
-        private int activeIndex = 0;
-        private int selectedFighter = 0;
-        private int selectedStatus = 0;
-        private bool holdFlag = false;
-        private int savedIndex = 0;
-        private List<int> statuses;
-        private bool multiStatus = false;
-        private Fighter selectedFighterObject;
-        private Fighter editFighter;
-        private int selectedAttack = 0;
+        public List<Fighter> combatants{ get; private set; }
+        public List<string> fighterOrder{ get; private set; }
+        public List<Status> statusEffects{ get; private set; }
+        public int combatRound{ get; private set; }
+        public int activeIndex { get; private set; }
+        public int selectedFighter { get; private set; }
+        public int selectedStatus  { get; private set; }
+        public bool holdFlag { get; private set; }
+        public int savedIndex { get; private set; }
+        public List<int> statuses{ get; private set; }
+        public bool multiStatus { get; private set; }
+        public Fighter selectedFighterObject{ get; private set; }
+        public Fighter editFighter{ get; private set; }
+        public int selectedAttack { get; private set; }
+        public SessionController session{ get; private set; }
         
 
         public bool cancelInit { get; set; }
 
         public List<Status> recentlyUsedStatuses { get; set; }
+
+        public List<object> Fields { get; set; }
         public MainWindow()
         {
+            combatRound = 0;
+            activeIndex = 0;
+            selectedStatus = 0;
+            holdFlag = false;
+            savedIndex = 0;
+            multiStatus = false;
+            selectedAttack = 0;
             BattleIO settingsLoader = new BattleIO();
             settingsLoader.LoadSettings();
             InitializeComponent();
             skillsTab1.ParentWindow = this;
+            session = new SessionController(this);
+            this.FormClosing += new FormClosingEventHandler(this.Form1_Closing);
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,6 +80,7 @@ namespace BasicBattleTracking
             this.FormClosed += new FormClosedEventHandler(this.MainWindow_Close);
             //TestDPercentTable();
             WriteToLog("Roses are red. True love is rare. Booty booty booty booty rockin' everywhere.");
+            session.SetDirty(false);
         }
 
 
@@ -271,6 +286,7 @@ namespace BasicBattleTracking
         {
             LogBox.AppendText(text);
             LogBox.AppendText(Environment.NewLine);
+            session.SetDirty(true);
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -414,7 +430,8 @@ namespace BasicBattleTracking
 
         private void AutoSave()
         {
-            this.Text = "Basic Battle Tracker - Autosaving..."; 
+            this.Text = "Basic Battle Tracker - Autosaving...";
+            session.SetDirty(true);
             
             BattleIO auto = new BattleIO();
 
@@ -529,6 +546,7 @@ namespace BasicBattleTracking
                     }
                 }
             }
+            session.SetDirty(false);
         }
 
         public void SetCheckBoxes(bool[] checkFlags)
@@ -1843,6 +1861,13 @@ namespace BasicBattleTracking
                 UpdateFighterList();
             
         }
+        private void Form1_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (!session.Exit())
+            {
+                e.Cancel = true;
+            }
+        }
 
         private void fighterInfoBox_Enter(object sender, EventArgs e)
         {
@@ -1867,6 +1892,104 @@ namespace BasicBattleTracking
         private void tabPage9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void LoadSession(List<object> sendingForm)
+        {
+            ExtractFields(sendingForm);
+            UpdateFighter(selectedFighterObject);
+            updateFighterInfo(selectedFighter);
+            UpdateFighterList();
+        }
+
+        public string getLog()
+        {
+            return LogBox.Text;
+        }
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (session.Exit())
+            {
+                combatants.Clear();
+                combatRound = 0;
+                updateFighterInfo(0);
+                UpdateFighterList();
+                LogBox.Clear();
+                session.SetDirty(false);
+            }
+        }
+
+        private void openSessionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            session.LoadSession();
+        }
+
+        private void saveSessionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            session.SaveSession();
+        }
+
+        //ANY TIME A NEW FIELD IS ADDED, THIS FUNCTION MUST BE UPDATED
+        //VERY IMPORTANT
+        //SERIOUSLY
+        public List<object> CompileAndGetFields()
+        {
+            Fields = new List<object>();
+            Fields.Add((object)combatants );
+            Fields.Add((object) fighterOrder);
+            Fields.Add((object) statusEffects);
+            Fields.Add((object) combatRound);
+            Fields.Add((object) activeIndex);
+            Fields.Add((object) selectedFighter);
+            Fields.Add((object) selectedStatus);
+            Fields.Add((object) holdFlag);
+            Fields.Add((object)savedIndex );
+            Fields.Add((object)statuses );
+            Fields.Add((object)multiStatus );
+            Fields.Add((object) selectedFighterObject);
+            Fields.Add((object)editFighter );
+            Fields.Add((object) selectedAttack);
+            Fields.Add((object) session);
+            Fields.Add((object) cancelInit);
+            Fields.Add((object)recentlyUsedStatuses);
+            return Fields;
+        }
+        //SAME RULE APPLIES HERE
+        //SERIOUSLY
+        public void ExtractFields(List<object> sendingForm)
+        {
+                combatants = (List<Fighter>  ) sendingForm.ElementAt(0);
+         fighterOrder = ( List<string> ) sendingForm.ElementAt(1);
+            statusEffects = ( List<Status>   ) sendingForm.ElementAt(2);
+          combatRound = (int ) sendingForm.ElementAt(3);
+          activeIndex = (int ) sendingForm.ElementAt(4);
+          selectedFighter = (int ) sendingForm.ElementAt(5);
+          selectedStatus = ( int) sendingForm.ElementAt(6);
+         holdFlag = (bool ) sendingForm.ElementAt(7);
+         savedIndex = (int ) sendingForm.ElementAt(8);
+         statuses = ( List<int>  ) sendingForm.ElementAt(9);
+         multiStatus = ( bool) sendingForm.ElementAt(10);
+         selectedFighterObject = (Fighter ) sendingForm.ElementAt(11);
+         editFighter = (Fighter ) sendingForm.ElementAt(12);
+         selectedAttack = ( int) sendingForm.ElementAt(13);
+         session = (SessionController ) sendingForm.ElementAt(14);
+
+
+          cancelInit = ( bool) sendingForm.ElementAt(15);
+
+          recentlyUsedStatuses = (List<Status>)sendingForm.ElementAt(16);
+           
+               
+
+                     }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

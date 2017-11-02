@@ -140,6 +140,8 @@
     <Compile Include="OptionScreen.Designer.cs">
       <DependentUpon>OptionScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="SessionController.cs" />
+    <Compile Include="SessionDetail.cs" />
     <Compile Include="Skill.cs" />
     <Compile Include="SkillDesigner.cs">
       <SubType>Form</SubType>

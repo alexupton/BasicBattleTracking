@@ -45,11 +45,22 @@ namespace BasicBattleTracking
             tables.Add(add);
             UpdateTableList();
             tableList.SelectedItem = add.Name;
+            button1.Enabled = true;
+            button2.Enabled = true;
+            npcAttackButton.Enabled = true;
+
+            BattleIO auto = new BattleIO();
+            auto.AutoSaveDPercentList(tables);
         }
 
         private void DPercentPanel_Load(object sender, EventArgs e)
         {
-
+            if (tables.Count <= 0)
+            {
+                button1.Enabled = false;
+                button2.Enabled = false;
+                npcAttackButton.Enabled = false;
+            }
         }
 
         private void UpdateTableList()
@@ -151,8 +162,16 @@ namespace BasicBattleTracking
                     {
                         tableList.SelectedItem = tables.ElementAt(nextIndex).Name;
                     }
+                    BattleIO auto = new BattleIO();
+                    auto.AutoSaveDPercentList(tables);
                     
                 }
+            }
+            if (tables.Count <= 0)
+            {
+                button1.Enabled = false;
+                button2.Enabled = false;
+                npcAttackButton.Enabled = false;
             }
         }
 
