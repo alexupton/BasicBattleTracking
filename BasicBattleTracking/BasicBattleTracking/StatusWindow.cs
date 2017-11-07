@@ -121,7 +121,7 @@ namespace BasicBattleTracking
                                 {
                                     Status nStatus = new Status(name, duration);
                                     nStatus.Description = description;
-                                    nStatus.target = f;
+                                    nStatus.SetTarget(f);
                                     f.StatusEffects.Add(nStatus);
                                     sendingForm.WriteToLog(f.Name + " was afflicted with " + nStatus.Name + "! Duration: " + nStatus.Turns + " turns. Effect: " + nStatus.Description);
                                 }
@@ -136,7 +136,7 @@ namespace BasicBattleTracking
                                     {
                                         Status nStatus = new Status(name, duration);
                                         nStatus.Description = description;
-                                        nStatus.target = f;
+                                        nStatus.SetTarget(f);
                                         f.StatusEffects.Add(nStatus);
                                         sendingForm.WriteToLog(f.Name + " was afflicted with " + nStatus.Name + "! Duration: " + nStatus.Turns + " turns. Effect: " + nStatus.Description);
                                     }
@@ -153,7 +153,7 @@ namespace BasicBattleTracking
                                         {
                                             Status nStatus = new Status(name, duration);
                                             nStatus.Description = description;
-                                            nStatus.target = f;
+                                            nStatus.SetTarget(f);
                                             f.StatusEffects.Add(nStatus);
                                             sendingForm.WriteToLog(f.Name + " was afflicted with " + nStatus.Name + "! Duration: " + nStatus.Turns + " turns. Effect: " + nStatus.Description);
                                         }
@@ -170,7 +170,7 @@ namespace BasicBattleTracking
                     newStatus.Description = description;
 
 
-                    newStatus.target = victim;
+                    newStatus.SetTarget(victim);
                     victim.StatusEffects.Add(newStatus);
                     sendingForm.AddStatus(newStatus);
 

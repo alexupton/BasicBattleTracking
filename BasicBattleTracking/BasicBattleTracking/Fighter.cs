@@ -170,5 +170,13 @@ namespace BasicBattleTracking
             attackMod = count;
         }
 
+        public void UpdateStatusTargets()
+        {
+            foreach(Status effect in StatusEffects)
+            {
+                effect.SetTarget(this);
+            }
+        }
+
     }
 }

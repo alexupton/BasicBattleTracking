@@ -12,7 +12,7 @@ namespace BasicBattleTracking
         public string Name { get; set; }
         public int Turns { get; set; }
         public string Description { get; set; }
-        public Fighter target { get; set; }
+        private Fighter target { get; set; }
 
         public Status(string name, int turns)
         {
@@ -26,6 +26,16 @@ namespace BasicBattleTracking
             Name = "";
             Turns = 1;
             Description = "";
+        }
+
+        public void SetTarget(Fighter newTarget)
+        {
+            target = newTarget;
+        }
+
+        public Fighter GetTarget()
+        {
+            return target;
         }
 
     }

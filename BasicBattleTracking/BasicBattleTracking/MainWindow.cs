@@ -149,6 +149,7 @@ namespace BasicBattleTracking
             statusEffects.Clear();
             foreach (Fighter f in orderedFighterList)
             {
+                f.UpdateStatusTargets();
                 fighterOrder.Add(f.Name);
                 string held = "";
                 if (f.HoldAction)
@@ -645,7 +646,7 @@ namespace BasicBattleTracking
                 if (multiStatus == false)
                 {
                     Status removed = statusEffects.ElementAt(selectedStatus);
-                    Fighter victim = removed.target;
+                    Fighter victim = removed.GetTarget();
                     victim.StatusEffects.Remove(removed);
                     UpdateFighterList();
 
@@ -662,7 +663,7 @@ namespace BasicBattleTracking
                         if(statuses.Contains(i))
                         {
                         Status removed = statusEffects.ElementAt(i);
-                        Fighter victim = removed.target;
+                        Fighter victim = removed.GetTarget();
                         victim.StatusEffects.Remove(removed);
                         UpdateFighterList();
 

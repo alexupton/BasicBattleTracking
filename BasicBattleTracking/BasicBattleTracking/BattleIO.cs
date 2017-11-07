@@ -762,8 +762,8 @@ namespace BasicBattleTracking
             {
                 FilePath = Path.GetDirectoryName(FilePath);
                 FilePath += @"\errorLog.txt";
-                string Message = ex.Message + "\n";// + ex.InnerException.Message;
-                //Message += "\n" + ex.InnerException.InnerException.Message + "\n" + ex.InnerException.InnerException.InnerException.Message;
+                string Message = ex.Message + "\n" + ex.InnerException.Message;
+                //Message += "\n" + ex.InnerException.InnerException.Message;// +"\n" + ex.InnerException.InnerException.InnerException.Message;
                 SaveObject<string>(Message, FilePath);
                 return false;
             }
