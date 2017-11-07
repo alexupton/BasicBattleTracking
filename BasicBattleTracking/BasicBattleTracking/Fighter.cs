@@ -51,8 +51,8 @@ namespace BasicBattleTracking
         public int Wis { get; set; }
         public int Cha { get; set; }
 
-        public int NegativeLevels { get; private set; }
-        private int LastNegLvlValue { get; set; }
+        public int NegativeLevels { get; set; }
+        public int LastNegLvlValue { get; set; }
 
         public int attackMod { get; set; }
 
@@ -66,6 +66,19 @@ namespace BasicBattleTracking
             InitBonus = initBonus;
             HP = 0;
             isPC = PC;
+            HoldAction = false;
+            StatusEffects = new List<Status>();
+            attacks = new List<Attack>();
+            skills = new List<Skill>();
+            Feats = new List<Feat>();
+        }
+        public Fighter()
+        {
+            Name = "";
+            Initiative = 0;
+            InitBonus = 0;
+            HP = 0;
+            isPC = true;
             HoldAction = false;
             StatusEffects = new List<Status>();
             attacks = new List<Attack>();

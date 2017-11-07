@@ -21,6 +21,12 @@ namespace BasicBattleTracking
             Description = "";
         }
 
+        public Status()
+        {
+            Name = "";
+            Turns = 1;
+            Description = "";
+        }
 
     }
 }

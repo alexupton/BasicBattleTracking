@@ -20,7 +20,7 @@ namespace BasicBattleTracking
 
         public int totalModifier { get; set; }
 
-        public int LastD20 { get; private set; }
+        public int LastD20 { get; set; }
 
         public Skill(string Name)
         {
@@ -32,6 +32,16 @@ namespace BasicBattleTracking
             classModifierApplied = false;
         }
 
+        public Skill()
+        {
+            name = "NewSkill";
+            abilityMod = 0;
+            abilitySource = "Null";
+            ranks = 0;
+            miscMod = 0;
+            classModifierApplied = false;
+
+        }
         public int RollSkillCheck()
         {
             int result = 0;

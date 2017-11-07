@@ -8,8 +8,8 @@ namespace BasicBattleTracking
 {
     public class DPercentTable
     {
-        public List<int> startValues { get; private set; }
-        public List<string> results { get; private set; }
+        public List<int> startValues { get;  set; }
+        public List<string> results { get;  set; }
         public string Name { get; set; }
         public int MaxVal { get; set; }
 

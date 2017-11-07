@@ -2419,6 +2419,7 @@
             this.saveSessionAsToolStripMenuItem.Name = "saveSessionAsToolStripMenuItem";
             this.saveSessionAsToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
             this.saveSessionAsToolStripMenuItem.Text = "Save Session As...";
+            this.saveSessionAsToolStripMenuItem.Click += new System.EventHandler(this.saveSessionAsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 

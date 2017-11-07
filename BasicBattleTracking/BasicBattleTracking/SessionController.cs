@@ -8,14 +8,18 @@ using System.IO;
 
 namespace BasicBattleTracking
 {
+    [Serializable()]
     public class SessionController
     {
         private bool isDirty;
         private string FilePath;
-        private BattleIO saver;
-        private MainWindow sendingForm;
+       [NonSerialized] private BattleIO saver;
+       [NonSerialized] private MainWindow sendingForm;
         private string startFolder;
 
+        public SessionController()
+        {
+        }
         public SessionController(MainWindow sender)
         {
             isDirty = false;
@@ -80,14 +84,18 @@ namespace BasicBattleTracking
             load.Filter = "Session File (*.ssn)|*.ssn";
             DialogResult result = load.ShowDialog();
             FilePath = load.FileName;
+            SessionDetail.FilePath = load.FileName;
+            
             if (result == DialogResult.OK)
             {
                 if (File.Exists(FilePath))
                 {
-                    List<object> newParent = saver.LoadObject<List<object>>(FilePath);
-                    sendingForm.LoadSession(newParent);
+                    saver = new BattleIO();
+                    SessionDetail newParent = saver.LoadObject<SessionDetail>(FilePath);
+                    sendingForm.ExtractFields(newParent);
                     sendingForm.WriteToLog("===============  SESSION LOADED ON " + DateTime.Now.Date + " ===============");
                     startFolder = Path.GetDirectoryName(FilePath);
+                    isDirty = false;
                 }
             }
             
@@ -103,28 +111,52 @@ namespace BasicBattleTracking
             DialogResult result = saveBox.ShowDialog();
             if (result == DialogResult.OK)
             {
+                saver = new BattleIO();
                 FilePath = saveBox.FileName;
                 startFolder = Path.GetDirectoryName(FilePath);
-                List<object> sessionData = sendingForm.CompileAndGetFields();
-                saver.SaveObject<List<object>>(sessionData, FilePath);
-                return true;
+                SessionDetail sessionData = new SessionDetail();
+                sessionData.CopySessionFieldsFromWindow(sendingForm);
+                //List<SerializableObject> saveableData = SerializableObject.PackageObjectList(sessionData);
+                if (saver.SaveObject<SessionDetail>(sessionData, FilePath))
+                {
+                    sendingForm.WriteToLog("Session Saved as \"" + FilePath + "\"");
+                    isDirty = false;
+                    return true;
+                }
+                else
+                {
+                    sendingForm.WriteToLog("Save failed. Check the log for details.");
+                    return true;
+                }
             }
             else
                 return false;
             
         }
 
-        public void SaveSession()
+        public void SaveSession(bool SaveAs)
         {
-            if(File.Exists(FilePath))
+            if (FilePath == null)
+                FilePath = SessionDetail.FilePath;
+            if(File.Exists(FilePath) && !SaveAs)
             {
-                List<object> sessionData = sendingForm.CompileAndGetFields();
-                saver.SaveObject<List<object>>(sessionData, FilePath);
+                SessionDetail sessionData = new SessionDetail();
+                sessionData.CopySessionFieldsFromWindow(sendingForm);
+                saver = new BattleIO();
+                //List<SerializableObject> saveableData = SerializableObject.PackageObjectList(sessionData);
+                saver.SaveObject<SessionDetail>(sessionData, FilePath);
+                sendingForm.WriteToLog("Session Saved as \"" + FilePath + "\"");
+                isDirty = false;
             }
             else
             {
                 Save();
             }
+        }
+
+        public void ReinitializeSender(MainWindow sender)
+        {
+            sendingForm = sender;
         }
 
         

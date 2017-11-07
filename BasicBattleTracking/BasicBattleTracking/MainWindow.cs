@@ -1898,7 +1898,7 @@ namespace BasicBattleTracking
         {
 
         }
-        public void LoadSession(List<object> sendingForm)
+        public void LoadSession(SessionDetail sendingForm)
         {
             ExtractFields(sendingForm);
             UpdateFighter(selectedFighterObject);
@@ -1919,6 +1919,7 @@ namespace BasicBattleTracking
                 updateFighterInfo(0);
                 UpdateFighterList();
                 LogBox.Clear();
+                WriteToLog("New Session Initialized");
                 session.SetDirty(false);
             }
         }
@@ -1926,11 +1927,13 @@ namespace BasicBattleTracking
         private void openSessionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             session.LoadSession();
+            session.ReinitializeSender(this);
+            session.SetDirty(false);
         }
 
         private void saveSessionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            session.SaveSession();
+            session.SaveSession(false);
         }
 
         //ANY TIME A NEW FIELD IS ADDED, THIS FUNCTION MUST BE UPDATED
@@ -1960,28 +1963,31 @@ namespace BasicBattleTracking
         }
         //SAME RULE APPLIES HERE
         //SERIOUSLY
-        public void ExtractFields(List<object> sendingForm)
+        public void ExtractFields(SessionDetail sendingForm)
         {
-                combatants = (List<Fighter>  ) sendingForm.ElementAt(0);
-         fighterOrder = ( List<string> ) sendingForm.ElementAt(1);
-            statusEffects = ( List<Status>   ) sendingForm.ElementAt(2);
-          combatRound = (int ) sendingForm.ElementAt(3);
-          activeIndex = (int ) sendingForm.ElementAt(4);
-          selectedFighter = (int ) sendingForm.ElementAt(5);
-          selectedStatus = ( int) sendingForm.ElementAt(6);
-         holdFlag = (bool ) sendingForm.ElementAt(7);
-         savedIndex = (int ) sendingForm.ElementAt(8);
-         statuses = ( List<int>  ) sendingForm.ElementAt(9);
-         multiStatus = ( bool) sendingForm.ElementAt(10);
-         selectedFighterObject = (Fighter ) sendingForm.ElementAt(11);
-         editFighter = (Fighter ) sendingForm.ElementAt(12);
-         selectedAttack = ( int) sendingForm.ElementAt(13);
-         session = (SessionController ) sendingForm.ElementAt(14);
+                combatants = (List<Fighter>  ) sendingForm.combatants;
+                fighterOrder = (List<string>)sendingForm.fighterOrder;
+                statusEffects = (List<Status>)sendingForm.statusEffects;
+                combatRound = (int)sendingForm.combatRound;
+                activeIndex = (int)sendingForm.activeIndex;
+                selectedFighter = (int)sendingForm.selectedFighter;
+                selectedStatus = (int)sendingForm.selectedStatus;
+                holdFlag = (bool)sendingForm.holdFlag;
+                savedIndex = (int)sendingForm.savedIndex;
+                statuses = (List<int>)sendingForm.statuses;
+                multiStatus = (bool)sendingForm.multiStatus;
+                selectedFighterObject = (Fighter)sendingForm.selectedFighterObject;
+                editFighter = (Fighter)sendingForm.editFighter;
+                selectedAttack = (int)sendingForm.selectedAttack;
+                session = (SessionController)sendingForm.session;
 
 
-          cancelInit = ( bool) sendingForm.ElementAt(15);
+                cancelInit = (bool)sendingForm.cancelInit;
 
-          recentlyUsedStatuses = (List<Status>)sendingForm.ElementAt(16);
+          recentlyUsedStatuses = (List<Status>)sendingForm.recentlyUsedStatuses;
+          updateFighterInfo(activeIndex);
+          UpdateFighterList();
+          session.SetDirty(false);
            
                
 
@@ -1990,6 +1996,11 @@ namespace BasicBattleTracking
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void saveSessionAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            session.SaveSession(true);
         }
     }
 

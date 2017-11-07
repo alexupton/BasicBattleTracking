@@ -140,6 +140,7 @@
     <Compile Include="OptionScreen.Designer.cs">
       <DependentUpon>OptionScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="SerializableObject.cs" />
     <Compile Include="SessionController.cs" />
     <Compile Include="SessionDetail.cs" />
     <Compile Include="Skill.cs" />

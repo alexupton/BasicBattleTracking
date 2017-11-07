@@ -742,16 +742,30 @@ namespace BasicBattleTracking
             }
         }
 
-        public void SaveObject<T>(object obj, string FilePath)
+        public bool SaveObject<T>(object obj, string FilePath)
         {
             if(File.Exists(FilePath))
             {
                 File.Delete(FilePath);
             }
-            var xs = new XmlSerializer(typeof(T));
-            using (TextWriter sw = new StreamWriter(FilePath))
+            try
             {
-                xs.Serialize(sw, obj);
+            var xs = new XmlSerializer(typeof(T));
+            
+                using (TextWriter sw = new StreamWriter(FilePath))
+                {
+                    xs.Serialize(sw, obj);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                FilePath = Path.GetDirectoryName(FilePath);
+                FilePath += @"\errorLog.txt";
+                string Message = ex.Message + "\n";// + ex.InnerException.Message;
+                //Message += "\n" + ex.InnerException.InnerException.Message + "\n" + ex.InnerException.InnerException.InnerException.Message;
+                SaveObject<string>(Message, FilePath);
+                return false;
             }
            
         }

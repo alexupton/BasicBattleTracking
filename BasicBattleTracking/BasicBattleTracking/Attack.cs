@@ -21,7 +21,7 @@ namespace BasicBattleTracking
 
         public int AtkRollResult { get; set; }
         public List<int> damageRollResults { get; set; }
-        public int RawDamageTotal { get; private set; }
+        public int RawDamageTotal { get; set; }
 
         private int atkStrBonus { get; set; }
         private int atkDexBonus { get; set; }
@@ -30,6 +30,15 @@ namespace BasicBattleTracking
         public Attack(string Name)
         {
             name = Name;
+            CritMin = 20;
+            atkBonuses = new List<int>();
+            atkCount = 0;
+            damageRollResults = new List<int>();
+        }
+
+        public Attack()
+        {
+            name = "";
             CritMin = 20;
             atkBonuses = new List<int>();
             atkCount = 0;
