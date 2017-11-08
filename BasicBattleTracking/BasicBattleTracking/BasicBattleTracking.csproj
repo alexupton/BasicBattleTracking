@@ -121,6 +121,8 @@
       <DependentUpon>DPercentPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="DPercentTable.cs" />
+    <Compile Include="Events\AddFightersEvent.cs" />
+    <Compile Include="Events\EncounterEvent.cs" />
     <Compile Include="Feat.cs" />
     <Compile Include="FeatsTab.cs">
       <SubType>UserControl</SubType>
