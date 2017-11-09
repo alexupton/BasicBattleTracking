@@ -53,6 +53,10 @@
             this.label12 = new System.Windows.Forms.Label();
             this.multBox = new System.Windows.Forms.TextBox();
             this.AC = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.srBox = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.drBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.FFBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -90,10 +94,6 @@
             this.chaModBox = new System.Windows.Forms.TextBox();
             this.wisModBox = new System.Windows.Forms.TextBox();
             this.intModBox = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.drBox = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.srBox = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.bioBox = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
@@ -360,6 +360,45 @@
             this.AC.TabIndex = 19;
             this.AC.TabStop = false;
             this.AC.Text = "Defense";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(118, 37);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(62, 13);
+            this.label20.TabIndex = 29;
+            this.label20.Text = "Spell Resist";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // srBox
+            // 
+            this.srBox.Location = new System.Drawing.Point(183, 35);
+            this.srBox.Margin = new System.Windows.Forms.Padding(2);
+            this.srBox.Name = "srBox";
+            this.srBox.Size = new System.Drawing.Size(41, 20);
+            this.srBox.TabIndex = 28;
+            this.srBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(156, 16);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(23, 13);
+            this.label19.TabIndex = 27;
+            this.label19.Text = "DR";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // drBox
+            // 
+            this.drBox.Location = new System.Drawing.Point(183, 11);
+            this.drBox.Margin = new System.Windows.Forms.Padding(2);
+            this.drBox.Name = "drBox";
+            this.drBox.Size = new System.Drawing.Size(41, 20);
+            this.drBox.TabIndex = 26;
             // 
             // label15
             // 
@@ -746,45 +785,6 @@
             this.intModBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.intModBox.TextChanged += new System.EventHandler(this.intModBox_TextChanged);
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(156, 16);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(23, 13);
-            this.label19.TabIndex = 27;
-            this.label19.Text = "DR";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // drBox
-            // 
-            this.drBox.Location = new System.Drawing.Point(183, 11);
-            this.drBox.Margin = new System.Windows.Forms.Padding(2);
-            this.drBox.Name = "drBox";
-            this.drBox.Size = new System.Drawing.Size(41, 20);
-            this.drBox.TabIndex = 26;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(118, 37);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(62, 13);
-            this.label20.TabIndex = 29;
-            this.label20.Text = "Spell Resist";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // srBox
-            // 
-            this.srBox.Location = new System.Drawing.Point(183, 35);
-            this.srBox.Margin = new System.Windows.Forms.Padding(2);
-            this.srBox.Name = "srBox";
-            this.srBox.Size = new System.Drawing.Size(41, 20);
-            this.srBox.TabIndex = 28;
-            this.srBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.bioBox);
@@ -849,7 +849,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StatBlockDesigner";
-            this.Text = "StatBlockDesigner";
+            this.Text = "Stat Block Designer";
             this.Load += new System.EventHandler(this.StatBlockDesigner_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

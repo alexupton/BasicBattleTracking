@@ -17,6 +17,8 @@ namespace BasicBattleTracking
         {
             InitializeComponent();
             sendingForm = sender;
+            string ttCaption = "Enter the full Dexterity score, not the modifier. This will be used to resolve initiative ties.";
+            toolTip1.SetToolTip(label4, ttCaption);
         }
 
         private void OKButton_Click(object sender, EventArgs e)
@@ -89,6 +91,11 @@ namespace BasicBattleTracking
             }
 
 
+
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
 
         }
     }

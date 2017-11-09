@@ -1,0 +1,1647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 12.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="12.0">
+ <Targets>
+  <Target Name="D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe">
+   <Modules>
+    <Module Name="basicbattletracking.exe">
+     <Namespaces>
+      <Namespace Name="BasicBattleTracking">
+       <Types>
+        <Type Name="MainWindow" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#acLabel" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.acLabel' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.acLabel'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#activeLabel" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.activeLabel' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.activeLabel'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#activePlayerControlsToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.activePlayerControlsToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.activePlayerControlsToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#addFighterButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.addFighterButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.addFighterButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#addNPCToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.addNPCToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.addNPCToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#addPCToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.addPCToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.addPCToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#alexToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.alexToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.alexToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AtkDexBonusBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.AtkDexBonusBox' is a member of type 'MainWindow', which is serializable, but is of type 'CheckBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.AtkDexBonusBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#atkModBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.atkModBox' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.atkModBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AtkNameLabel" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.AtkNameLabel' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.AtkNameLabel'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AtkStrBonusBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.AtkStrBonusBox' is a member of type 'MainWindow', which is serializable, but is of type 'CheckBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.AtkStrBonusBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Attack" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.Attack' is a member of type 'MainWindow', which is serializable, but is of type 'ColumnHeader', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.Attack'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AttackButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.AttackButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.AttackButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#attackModBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.attackModBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.attackModBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#attackView" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.attackView' is a member of type 'MainWindow', which is serializable, but is of type 'ListView', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.attackView'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#bioBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.bioBox' is a member of type 'MainWindow', which is serializable, but is of type 'RichTextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.bioBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#button5" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.button5' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.button5'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#chaBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.chaBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.chaBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#chaModBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.chaModBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.chaModBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CMBButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.CMBButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.CMBButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#cmbLabel" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.cmbLabel' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.cmbLabel'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#cmdLabel" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.cmdLabel' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.cmdLabel'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#columnHeader1" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.columnHeader1' is a member of type 'MainWindow', which is serializable, but is of type 'ColumnHeader', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.columnHeader1'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#columnHeader2" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.columnHeader2' is a member of type 'MainWindow', which is serializable, but is of type 'ColumnHeader', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.columnHeader2'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#columnHeader3" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.columnHeader3' is a member of type 'MainWindow', which is serializable, but is of type 'ColumnHeader', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.columnHeader3'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#columnHeader4" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.columnHeader4' is a member of type 'MainWindow', which is serializable, but is of type 'ColumnHeader', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.columnHeader4'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#conBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.conBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.conBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#conModBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.conModBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.conModBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ControlsBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.ControlsBox' is a member of type 'MainWindow', which is serializable, but is of type 'GroupBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.ControlsBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Count" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.Count' is a member of type 'MainWindow', which is serializable, but is of type 'ColumnHeader', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.Count'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d100CountBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d100CountBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d100CountBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d100ModBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d100ModBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d100ModBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d100ResultBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d100ResultBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d100ResultBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d100RollButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d100RollButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d100RollButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d10CountBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d10CountBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d10CountBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d10ModBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d10ModBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d10ModBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d10ResultBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d10ResultBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d10ResultBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d10RollButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d10RollButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d10RollButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d12CountBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d12CountBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d12CountBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d12ModBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d12ModBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d12ModBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d12ResultBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d12ResultBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d12ResultBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d12RollButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d12RollButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d12RollButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d20CountBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d20CountBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d20CountBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d20Label" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d20Label' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d20Label'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d20ModBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d20ModBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d20ModBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d20ResultBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d20ResultBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d20ResultBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d20RollButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d20RollButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d20RollButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d4CountBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d4CountBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d4CountBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d4ModBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d4ModBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d4ModBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d4ResultBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d4ResultBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d4ResultBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d4RollButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d4RollButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d4RollButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d6CountBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d6CountBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d6CountBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d6ModBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d6ModBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d6ModBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d6ResultBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d6ResultBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d6ResultBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d6RollButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d6RollButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d6RollButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d8CountBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d8CountBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d8CountBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d8ModBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d8ModBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d8ModBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d8ResultBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d8ResultBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d8ResultBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#d8RollButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.d8RollButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.d8RollButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Damage" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.Damage' is a member of type 'MainWindow', which is serializable, but is of type 'ColumnHeader', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.Damage'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DamageLabel" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.DamageLabel' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.DamageLabel'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#damageResult" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.damageResult' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.damageResult'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#dexBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.dexBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.dexBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#dexModBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.dexModBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.dexModBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#dmgBonusBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.dmgBonusBox' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.dmgBonusBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#dmgBonusLabel" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.dmgBonusLabel' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.dmgBonusLabel'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DmgDexBonusBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.DmgDexBonusBox' is a member of type 'MainWindow', which is serializable, but is of type 'CheckBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.DmgDexBonusBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DmgStrBonusBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.DmgStrBonusBox' is a member of type 'MainWindow', which is serializable, but is of type 'CheckBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.DmgStrBonusBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#dPercentTableControls" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.dPercentTableControls' is a member of type 'MainWindow', which is serializable, but is of type 'DPercentPanel', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.dPercentTableControls'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#drBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.drBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.drBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#dxCountBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.dxCountBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.dxCountBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#dxModBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.dxModBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.dxModBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#dxResultBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.dxResultBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.dxResultBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#dxRollButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.dxRollButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.dxRollButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#dxTypeBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.dxTypeBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.dxTypeBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#editButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.editButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.editButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#editCharacterToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.editCharacterToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.editCharacterToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#encounterPage" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.encounterPage' is a member of type 'MainWindow', which is serializable, but is of type 'TabPage', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.encounterPage'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#exitToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.exitToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.exitToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fighterInfoBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.fighterInfoBox' is a member of type 'MainWindow', which is serializable, but is of type 'GroupBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.fighterInfoBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fileToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.fileToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.fileToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#flatFootedLabel" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.flatFootedLabel' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.flatFootedLabel'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fortBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.fortBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.fortBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FortButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.FortButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.FortButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#groupBox1" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.groupBox1' is a member of type 'MainWindow', which is serializable, but is of type 'GroupBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.groupBox1'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#groupBox10" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.groupBox10' is a member of type 'MainWindow', which is serializable, but is of type 'GroupBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.groupBox10'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#groupBox2" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.groupBox2' is a member of type 'MainWindow', which is serializable, but is of type 'GroupBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.groupBox2'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#groupBox3" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.groupBox3' is a member of type 'MainWindow', which is serializable, but is of type 'GroupBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.groupBox3'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#groupBox4" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.groupBox4' is a member of type 'MainWindow', which is serializable, but is of type 'GroupBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.groupBox4'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#groupBox6" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.groupBox6' is a member of type 'MainWindow', which is serializable, but is of type 'GroupBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.groupBox6'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#groupBox7" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.groupBox7' is a member of type 'MainWindow', which is serializable, but is of type 'GroupBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.groupBox7'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#groupBox8" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.groupBox8' is a member of type 'MainWindow', which is serializable, but is of type 'GroupBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.groupBox8'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#groupBox9" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.groupBox9' is a member of type 'MainWindow', which is serializable, but is of type 'GroupBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.groupBox9'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Held" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.Held' is a member of type 'MainWindow', which is serializable, but is of type 'ColumnHeader', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.Held'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#holdButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.holdButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.holdButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#HP" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.HP' is a member of type 'MainWindow', which is serializable, but is of type 'ColumnHeader', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.HP'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#hpLabel" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.hpLabel' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.hpLabel'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#initBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.initBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.initBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#initButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.initButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.initButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InitLabel" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.InitLabel' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.InitLabel'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InitOrderView" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.InitOrderView' is a member of type 'MainWindow', which is serializable, but is of type 'ListView', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.InitOrderView'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InitValueColumn" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.InitValueColumn' is a member of type 'MainWindow', which is serializable, but is of type 'ColumnHeader', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.InitValueColumn'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#intBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.intBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.intBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#intModBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.intModBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.intModBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label1" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label1' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label1'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label10" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label10' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label10'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label11" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label11' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label11'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label12" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label12' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label12'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label13" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label13' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label13'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label14" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label14' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label14'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label15" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label15' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label15'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label16" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label16' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label16'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label17" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label17' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label17'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label18" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label18' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label18'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label19" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label19' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label19'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label2" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label2' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label2'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label20" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label20' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label20'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label21" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label21' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label21'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label22" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label22' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label22'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label23" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label23' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label23'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label24" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label24' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label24'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label25" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label25' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label25'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label26" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label26' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label26'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label27" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label27' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label27'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label28" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label28' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label28'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label29" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label29' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label29'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label3" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label3' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label3'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label30" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label30' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label30'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label31" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label31' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label31'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label32" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label32' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label32'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label33" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label33' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label33'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label34" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label34' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label34'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label35" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label35' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label35'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label36" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label36' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label36'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label37" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label37' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label37'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label38" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label38' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label38'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label39" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label39' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label39'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label4" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label4' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label4'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label40" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label40' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label40'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label41" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label41' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label41'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label42" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label42' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label42'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label43" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label43' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label43'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label44" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label44' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label44'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label45" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label45' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label45'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label46" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label46' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label46'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label47" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label47' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label47'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label48" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label48' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label48'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label49" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label49' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label49'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label5" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label5' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label5'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label50" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label50' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label50'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label51" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label51' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label51'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label52" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label52' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label52'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label53" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label53' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label53'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label54" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label54' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label54'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label55" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label55' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label55'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label56" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label56' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label56'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label57" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label57' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label57'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label6" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label6' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label6'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label7" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label7' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label7'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label8" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label8' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label8'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label9" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.label9' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.label9'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LogBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.LogBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.LogBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#menuStrip1" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.menuStrip1' is a member of type 'MainWindow', which is serializable, but is of type 'MenuStrip', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.menuStrip1'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Modifier" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.Modifier' is a member of type 'MainWindow', which is serializable, but is of type 'ColumnHeader', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.Modifier'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#NameColumn" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.NameColumn' is a member of type 'MainWindow', which is serializable, but is of type 'ColumnHeader', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.NameColumn'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#newToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.newToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.newToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#nextButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.nextButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.nextButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#nextTurnToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.nextTurnToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.nextTurnToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#notesTab1" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.notesTab1' is a member of type 'MainWindow', which is serializable, but is of type 'NotesTab', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.notesTab1'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#npcAttackButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.npcAttackButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.npcAttackButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#npcNameBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.npcNameBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.npcNameBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#npcNegLevelsBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.npcNegLevelsBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.npcNegLevelsBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#npcSPBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.npcSPBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.npcSPBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#npcSRBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.npcSRBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.npcSRBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#openSessionToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.openSessionToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.openSessionToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#optionsToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.optionsToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.optionsToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OrderColumn" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.OrderColumn' is a member of type 'MainWindow', which is serializable, but is of type 'ColumnHeader', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.OrderColumn'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#pictureBox1" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.pictureBox1' is a member of type 'MainWindow', which is serializable, but is of type 'PictureBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.pictureBox1'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#pictureBox2" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.pictureBox2' is a member of type 'MainWindow', which is serializable, but is of type 'PictureBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.pictureBox2'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#pictureBox3" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.pictureBox3' is a member of type 'MainWindow', which is serializable, but is of type 'PictureBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.pictureBox3'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#pictureBox4" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.pictureBox4' is a member of type 'MainWindow', which is serializable, but is of type 'PictureBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.pictureBox4'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#pictureBox5" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.pictureBox5' is a member of type 'MainWindow', which is serializable, but is of type 'PictureBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.pictureBox5'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#pictureBox6" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.pictureBox6' is a member of type 'MainWindow', which is serializable, but is of type 'PictureBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.pictureBox6'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#pictureBox7" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.pictureBox7' is a member of type 'MainWindow', which is serializable, but is of type 'PictureBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.pictureBox7'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#prevButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.prevButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.prevButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#previousTurnToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.previousTurnToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.previousTurnToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#rawDamageBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.rawDamageBox' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.rawDamageBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#rawDamageLabel" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.rawDamageLabel' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.rawDamageLabel'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#refBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.refBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.refBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RefButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.RefButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.RefButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#removeCharacterToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.removeCharacterToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.removeCharacterToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#removeFighterButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.removeFighterButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.removeFighterButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RemoveStatusButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.RemoveStatusButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.RemoveStatusButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#rollBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.rollBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.rollBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#rollInitiativeToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.rollInitiativeToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.rollInitiativeToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#rollResultLabel" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.rollResultLabel' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.rollResultLabel'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#saveSessionAsToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.saveSessionAsToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.saveSessionAsToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#saveSessionToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.saveSessionToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.saveSessionToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#settingsToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.settingsToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.settingsToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#setToTurn1ToolStripMenuItem" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.setToTurn1ToolStripMenuItem' is a member of type 'MainWindow', which is serializable, but is of type 'ToolStripMenuItem', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.setToTurn1ToolStripMenuItem'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#skillsTab1" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.skillsTab1' is a member of type 'MainWindow', which is serializable, but is of type 'SkillsTab', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.skillsTab1'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#statusButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.statusButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.statusButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#statusTab" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.statusTab' is a member of type 'MainWindow', which is serializable, but is of type 'TabPage', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.statusTab'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#statusView" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.statusView' is a member of type 'MainWindow', which is serializable, but is of type 'ListView', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.statusView'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#strBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.strBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.strBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#strModBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.strModBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.strModBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tabControl1" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.tabControl1' is a member of type 'MainWindow', which is serializable, but is of type 'TabControl', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.tabControl1'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tabControl2" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.tabControl2' is a member of type 'MainWindow', which is serializable, but is of type 'TabControl', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.tabControl2'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tabControl3" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.tabControl3' is a member of type 'MainWindow', which is serializable, but is of type 'TabControl', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.tabControl3'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tabControl4" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.tabControl4' is a member of type 'MainWindow', which is serializable, but is of type 'TabControl', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.tabControl4'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tabPage1" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.tabPage1' is a member of type 'MainWindow', which is serializable, but is of type 'TabPage', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.tabPage1'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tabPage10" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.tabPage10' is a member of type 'MainWindow', which is serializable, but is of type 'TabPage', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.tabPage10'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tabPage2" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.tabPage2' is a member of type 'MainWindow', which is serializable, but is of type 'TabPage', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.tabPage2'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tabPage3" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.tabPage3' is a member of type 'MainWindow', which is serializable, but is of type 'TabPage', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.tabPage3'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tabPage4" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.tabPage4' is a member of type 'MainWindow', which is serializable, but is of type 'TabPage', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.tabPage4'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tabPage5" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.tabPage5' is a member of type 'MainWindow', which is serializable, but is of type 'TabPage', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.tabPage5'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tabPage6" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.tabPage6' is a member of type 'MainWindow', which is serializable, but is of type 'TabPage', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.tabPage6'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tabPage7" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.tabPage7' is a member of type 'MainWindow', which is serializable, but is of type 'TabPage', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.tabPage7'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tabPage8" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.tabPage8' is a member of type 'MainWindow', which is serializable, but is of type 'TabPage', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.tabPage8'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tabPage9" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.tabPage9' is a member of type 'MainWindow', which is serializable, but is of type 'TabPage', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.tabPage9'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#touchLabel" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.touchLabel' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.touchLabel'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#turnLabel" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.turnLabel' is a member of type 'MainWindow', which is serializable, but is of type 'Label', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.turnLabel'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#unholdButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.unholdButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.unholdButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#willBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.willBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.willBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#WillButton" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.WillButton' is a member of type 'MainWindow', which is serializable, but is of type 'Button', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.WillButton'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wisBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.wisBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.wisBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wisModBox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2017-11-09 07:43:39Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'MainWindow.wisModBox' is a member of type 'MainWindow', which is serializable, but is of type 'TextBox', which is not serializable. Add the NonSerializedAttribute to 'MainWindow.wisModBox'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235">
+   <Name>Mark all non-serializable fields</Name>
+   <Description>All fields that cannot be serialized directly should have the NonSerializedAttribute. Types that have the SerializableAttribute should not have fields of types that do not have the SerializableAttribute unless the fields are marked with the NonSerializedAttribute.</Description>
+   <Resolution Name="Default">Field {0} is a member of type {1}, which is serializable, but is of type {2}, which is not serializable. Add the NonSerializedAttribute to {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182349.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="12.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

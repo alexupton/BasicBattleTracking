@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddFighterWindow));
             this.nameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.cButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dexBox = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // nameBox
@@ -153,11 +155,16 @@
             this.dexBox.TabIndex = 9;
             this.dexBox.Text = "0";
             // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
             // AddFighterWindow
             // 
             this.AcceptButton = this.OKButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cButton;
             this.ClientSize = new System.Drawing.Size(312, 170);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dexBox);
@@ -173,7 +180,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddFighterWindow";
-            this.Text = "AddFighterWindow";
+            this.Text = "Add Player Character";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +199,6 @@
         private System.Windows.Forms.Button cButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox dexBox;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

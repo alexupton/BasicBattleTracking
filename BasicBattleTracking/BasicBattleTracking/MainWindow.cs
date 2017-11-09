@@ -82,7 +82,7 @@ namespace BasicBattleTracking
             this.removeCharacterToolStripMenuItem.DropDownItemClicked += new ToolStripItemClickedEventHandler(this.SubMenuClick);
             this.editCharacterToolStripMenuItem.DropDownItemClicked += new ToolStripItemClickedEventHandler(this.editMenuClick);
             //TestDPercentTable();
-            WriteToLog("Roses are red. True love is rare. Booty booty booty booty rockin' everywhere.");
+            WriteToLog("Now with more menu options than a freakin' Chili's.");
             session.SetDirty(false);
         }
 
@@ -134,6 +134,7 @@ namespace BasicBattleTracking
                     if (combatants.Count <= 0)
                     {
                         disableTurnButtons();
+                        disableGlobalButtons();
                         initButton.Enabled = false;
                         SetRollButtons(false);
                     }
@@ -475,6 +476,16 @@ namespace BasicBattleTracking
             rollInitiativeToolStripMenuItem.Enabled = false;
             editCharacterToolStripMenuItem.Enabled = false;
             removeCharacterToolStripMenuItem.Enabled = false;
+        }
+
+        public void disableGlobalButtons()
+        {
+            initButton.Enabled = false;
+            removeFighterButton.Enabled = false;
+            editButton.Enabled = false;
+            removeCharacterToolStripMenuItem.Enabled = false;
+            rollInitiativeToolStripMenuItem.Enabled = false;
+            editCharacterToolStripMenuItem.Enabled = false;
         }
 
         private void AutoSave()
@@ -1984,7 +1995,7 @@ namespace BasicBattleTracking
             WriteToLog("New Session Initialized");
             turnLabel.Text = combatRound.ToString();
             Program.activeSessionName = "New Session";
-            this.Text = "Basic Battle Tracker - New Session.ssn";
+            this.Text = Program.ProgramName + " - " + "New Session.ssn";
             activeLabel.Text = "None";
             ResetControls();
             session.New();
@@ -2072,9 +2083,9 @@ namespace BasicBattleTracking
                 cancelInit = (bool)sendingForm.cancelInit;
 
           recentlyUsedStatuses = (List<Status>)sendingForm.recentlyUsedStatuses;
-          this.Text = "Basic Battle Tracker - " + Program.activeSessionName;
+          this.Text = Program.ProgramName + " - " + Program.activeSessionName;
           turnLabel.Text = combatRound.ToString();
-          if (activeIndex < combatants.Count)
+          if (activeIndex < combatants.Count && activeIndex >= 0)
           {
               activeLabel.Text = combatants.ElementAt(activeIndex).Name;
               updateFighterInfo(activeIndex);

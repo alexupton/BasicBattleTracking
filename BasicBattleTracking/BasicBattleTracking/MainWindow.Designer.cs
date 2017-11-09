@@ -98,6 +98,7 @@
             this.rollResultLabel = new System.Windows.Forms.Label();
             this.damageResult = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.skillsTab1 = new BasicBattleTracking.SkillsTab();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label55 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
@@ -241,6 +242,7 @@
             this.rollInitiativeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nextTurnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.previousTurnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setToTurn1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -248,12 +250,11 @@
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.statusTab = new System.Windows.Forms.TabPage();
             this.encounterPage = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.setToTurn1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.skillsTab1 = new BasicBattleTracking.SkillsTab();
             this.dPercentTableControls = new BasicBattleTracking.DPercentPanel();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.notesTab1 = new BasicBattleTracking.NotesTab();
             this.ControlsBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -286,6 +287,7 @@
             this.tabPage1.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.statusTab.SuspendLayout();
+            this.encounterPage.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -561,9 +563,9 @@
             this.activeLabel.Location = new System.Drawing.Point(5, 70);
             this.activeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.activeLabel.Name = "activeLabel";
-            this.activeLabel.Size = new System.Drawing.Size(39, 20);
+            this.activeLabel.Size = new System.Drawing.Size(47, 20);
             this.activeLabel.TabIndex = 8;
-            this.activeLabel.Text = "Alex";
+            this.activeLabel.Text = "None";
             // 
             // statusView
             // 
@@ -1109,6 +1111,15 @@
             this.tabPage5.Size = new System.Drawing.Size(697, 340);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Skills";
+            // 
+            // skillsTab1
+            // 
+            this.skillsTab1.Location = new System.Drawing.Point(0, 0);
+            this.skillsTab1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.skillsTab1.Name = "skillsTab1";
+            this.skillsTab1.ParentWindow = null;
+            this.skillsTab1.Size = new System.Drawing.Size(697, 340);
+            this.skillsTab1.TabIndex = 0;
             // 
             // tabPage6
             // 
@@ -2524,6 +2535,15 @@
             this.previousTurnToolStripMenuItem.Text = "Previous Turn";
             this.previousTurnToolStripMenuItem.Click += new System.EventHandler(this.previousTurnToolStripMenuItem_Click);
             // 
+            // setToTurn1ToolStripMenuItem
+            // 
+            this.setToTurn1ToolStripMenuItem.Enabled = false;
+            this.setToTurn1ToolStripMenuItem.Name = "setToTurn1ToolStripMenuItem";
+            this.setToTurn1ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.T)));
+            this.setToTurn1ToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.setToTurn1ToolStripMenuItem.Text = "Revert to Turn 1";
+            this.setToTurn1ToolStripMenuItem.Click += new System.EventHandler(this.setToTurn1ToolStripMenuItem_Click);
+            // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -2597,6 +2617,7 @@
             // 
             // encounterPage
             // 
+            this.encounterPage.Controls.Add(this.label14);
             this.encounterPage.Location = new System.Drawing.Point(4, 22);
             this.encounterPage.Name = "encounterPage";
             this.encounterPage.Padding = new System.Windows.Forms.Padding(3);
@@ -2604,6 +2625,16 @@
             this.encounterPage.TabIndex = 1;
             this.encounterPage.Text = "Encounter Details";
             this.encounterPage.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(96, 126);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(131, 24);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Coming Soon!";
             // 
             // groupBox10
             // 
@@ -2631,6 +2662,17 @@
             this.tabPage2.Text = "Reference";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // dPercentTableControls
+            // 
+            this.dPercentTableControls.AutoSize = true;
+            this.dPercentTableControls.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.dPercentTableControls.Location = new System.Drawing.Point(2, 5);
+            this.dPercentTableControls.Margin = new System.Windows.Forms.Padding(1);
+            this.dPercentTableControls.Name = "dPercentTableControls";
+            this.dPercentTableControls.Size = new System.Drawing.Size(533, 425);
+            this.dPercentTableControls.TabIndex = 1;
+            this.dPercentTableControls.Load += new System.EventHandler(this.dPercentTableControls_Load);
+            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
@@ -2643,34 +2685,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Notes";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
-            // 
-            // setToTurn1ToolStripMenuItem
-            // 
-            this.setToTurn1ToolStripMenuItem.Name = "setToTurn1ToolStripMenuItem";
-            this.setToTurn1ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.T)));
-            this.setToTurn1ToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.setToTurn1ToolStripMenuItem.Text = "Revert to Turn 1";
-            this.setToTurn1ToolStripMenuItem.Click += new System.EventHandler(this.setToTurn1ToolStripMenuItem_Click);
-            // 
-            // skillsTab1
-            // 
-            this.skillsTab1.Location = new System.Drawing.Point(0, 0);
-            this.skillsTab1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.skillsTab1.Name = "skillsTab1";
-            this.skillsTab1.ParentWindow = null;
-            this.skillsTab1.Size = new System.Drawing.Size(697, 340);
-            this.skillsTab1.TabIndex = 0;
-            // 
-            // dPercentTableControls
-            // 
-            this.dPercentTableControls.AutoSize = true;
-            this.dPercentTableControls.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.dPercentTableControls.Location = new System.Drawing.Point(2, 5);
-            this.dPercentTableControls.Margin = new System.Windows.Forms.Padding(1);
-            this.dPercentTableControls.Name = "dPercentTableControls";
-            this.dPercentTableControls.Size = new System.Drawing.Size(533, 425);
-            this.dPercentTableControls.TabIndex = 1;
-            this.dPercentTableControls.Load += new System.EventHandler(this.dPercentTableControls_Load);
             // 
             // notesTab1
             // 
@@ -2737,6 +2751,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
             this.statusTab.ResumeLayout(false);
+            this.encounterPage.ResumeLayout(false);
+            this.encounterPage.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -2975,6 +2991,7 @@
         private System.Windows.Forms.ToolStripMenuItem previousTurnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alexToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setToTurn1ToolStripMenuItem;
+        private System.Windows.Forms.Label label14;
     }
 }
 

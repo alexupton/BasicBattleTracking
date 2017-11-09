@@ -271,6 +271,7 @@
       <DependentUpon>TableErrorBox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BasicBattleTracking_TemporaryKey.pfx" />
+    <None Include="Database\spell_full.csv" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
