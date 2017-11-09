@@ -13,15 +13,16 @@ namespace BasicBattleTracking
     {
 
         private string defaultPath = Program.defaultPath;
-        public void AutoSave(List<Fighter> combatants, bool[] checkBoxes)
+        private Settings saveSettings;
+        public void AutoSave(List<Fighter> combatants, bool[] checkBoxes, Settings settings)
         {
             StringBuilder rawText = new StringBuilder();
             int npcIndex = 0;
             string npcPath = defaultPath + @"\Save\NPCs\";
             string autoPath = defaultPath + @"\Save\auto.txt";
-            if(Program.UserAutoSaveDirectory != "")
+            if(settings.UserAutoSaveDirectory != "")
             {
-                autoPath = Program.UserAutoSaveDirectory;
+                autoPath = settings.UserAutoSaveDirectory;
                 npcPath = autoPath + @"\NPCs\";
                 autoPath += @"\auto.txt";
             }
@@ -86,9 +87,9 @@ namespace BasicBattleTracking
         {
             List<Fighter> fighters = new List<Fighter>();
             string path = defaultPath + @"\Save\auto.txt";
-            if(Program.UserAutoSaveDirectory != "")
+            if(sender.session.settings.UserAutoSaveDirectory != "")
             {
-                path = Program.UserAutoSaveDirectory + @"\auto.txt";
+                path = sender.session.settings.UserAutoSaveDirectory + @"\auto.txt";
             }
             if(File.Exists(path))
             {
@@ -140,9 +141,9 @@ namespace BasicBattleTracking
             }
 
             path = defaultPath + @"\Save\NPCS";
-            if (Program.UserAutoSaveDirectory != "")
+            if (sender.session.settings.UserAutoSaveDirectory != "")
             {
-                path = Program.UserAutoSaveDirectory + @"\NPCS";
+                path = sender.session.settings.UserAutoSaveDirectory + @"\NPCS";
             }
             if (!Directory.Exists(path))
             {
@@ -158,9 +159,9 @@ namespace BasicBattleTracking
             }
 
             path = defaultPath + @"\Save\DefaultSkillLoadout.txt";
-            if (Program.UserAutoSaveDirectory != "")
+            if (sender.session.settings.UserAutoSaveDirectory != "")
             {
-                path = Program.UserAutoSaveDirectory + @"\DefaultSkillLoadout.txt";
+                path = sender.session.settings.UserAutoSaveDirectory + @"\DefaultSkillLoadout.txt";
             }
 
             if(!File.Exists(path))
@@ -220,7 +221,7 @@ namespace BasicBattleTracking
             }
             if(defaultSkills.Count > 0)
             {
-                Program.defaultSkillLoadout = defaultSkills;
+                sender.session.settings.defaultSkillLoadout = defaultSkills;
             }
             else
             {
@@ -228,9 +229,9 @@ namespace BasicBattleTracking
             }
 
             path = defaultPath + @"\Save\Status.bin";
-            if(Program.UserAutoSaveDirectory != "")
+            if (sender.session.settings.UserAutoSaveDirectory != "")
             {
-                path = Program.UserAutoSaveDirectory + @"\Status.bin";
+                path = sender.session.settings.UserAutoSaveDirectory + @"\Status.bin";
             }
 
             List<Status> recent = LoadRecentlyUsedStatuses(path, sender);
@@ -238,22 +239,28 @@ namespace BasicBattleTracking
                 return fighters;
         }
 
-        public void ExportLog(string log)
+        public void ExportLog(string log, Settings settings)
         {
             string logPath = defaultPath + @"\Save\Log\";
-            if(Program.UserLogDirectory != "")
+            if (settings.UserLogDirectory != "")
             {
-                logPath = Program.UserLogDirectory;
+                logPath = settings.UserLogDirectory;
             }
 
             if (!Directory.Exists(logPath))
             {
                 Directory.CreateDirectory(logPath);
             }
-            string path = logPath + "\\" + DateTime.Now.ToLongDateString() + ".txt";
+            string path = logPath + "\\" + DateTime.Now.ToString("yyyy_MM_dd")+ ".txt";
 
-            if (File.Exists(path))
-                File.Delete(path);
+            int fileDupCount = 1;
+            string dupTestPath = path;
+            while(File.Exists(dupTestPath))
+            {
+                fileDupCount++;
+                dupTestPath = Path.GetDirectoryName(path) + @"\" + Path.GetFileNameWithoutExtension(path) + "_" + fileDupCount + ".txt";
+            }
+            path = dupTestPath;
 
             File.WriteAllText(path, log);
 
@@ -525,75 +532,9 @@ namespace BasicBattleTracking
             return output;
         }
 
-        public bool SaveSettings(OptionScreen sender)
-        {
-            bool success = true;
-
-            StringBuilder sb = new StringBuilder();
-
-            string path = Program.defaultPath + @"\Settings.txt";
-            if (File.Exists(path))
-            {
-                File.Delete(path);
-            }
-
-            if (!Directory.Exists(sender.StatBlockPath) || !Directory.Exists(sender.AutoSavePath) || !Directory.Exists(sender.LogPath) || !Directory.Exists(sender.NotesPath))
-            {
-                MessageBox.Show("Invalid file path for one or more default directories", "Error");
-                success = false;
-            }
-            else
-            {
-                sb.AppendLine("StatBlockPath|<" + sender.StatBlockPath + ">");
-                sb.AppendLine("AutoSavePath|<" + sender.AutoSavePath + ">");
-                sb.AppendLine("LogPath|<" + sender.LogPath + ">");
-                sb.AppendLine("NotesPath|<" + sender.NotesPath + ">");
-                sb.AppendLine("InitEachRound|" + Program.initEachRound.ToString());
-
-                File.WriteAllText(path, sb.ToString());
-            }
-            return success;
-        }
-
-        public void LoadSettings()
-        {
-            string path = Program.defaultPath + @"\Settings.txt";
-            if (File.Exists(path))
-            {
-                string[] lines = File.ReadAllLines(path);
-
-                for(int i = 0; i < lines.Length; i++)
-                {
-                    string[] line = lines[i].Split('|');
-
-                    switch(line[0])
-                    {
-                        case "StatBlockPath":
-                            {
-                                Program.UserStatBlockDirectory = GetSettingPath(line[1]); break;
-                            }
-                        case "AutoSavePath":
-                            {
-                                Program.UserAutoSaveDirectory = GetSettingPath(line[1]); break;
-                            }
-                        case "LogPath":
-                            {
-                                Program.UserLogDirectory = GetSettingPath(line[1]); break;
-                            }
-                        case "NotesPath":
-                            {
-                                Program.UserNotesDirectory = GetSettingPath(line[1]); break;
-                            }
-                        case "InitEachRound":
-                            {
-                                Program.initEachRound = Boolean.Parse(line[1]); break;
-                            }
-                        default: break;
-                    }
-
-                }
-            }
-        }
+ 
+ 
+        
 
         private string GetSettingPath(string candidateLine)
         {
@@ -703,12 +644,12 @@ namespace BasicBattleTracking
             }
         }
 
-        public void SaveRecentlyUsedStatuses(List<Status> statuses)
+        public void SaveRecentlyUsedStatuses(List<Status> statuses, Settings settings)
         {
             string statusPath = defaultPath + @"\Save\Status.bin";
-            if(Program.UserAutoSaveDirectory != "")
+            if (settings.UserAutoSaveDirectory != "")
             {
-                statusPath = Program.UserAutoSaveDirectory  + @"\Status.bin";
+                statusPath = settings.UserAutoSaveDirectory + @"\Status.bin";
             }
             if (File.Exists(statusPath))
             {
@@ -789,27 +730,57 @@ namespace BasicBattleTracking
                 return default(T);
             }
         }
+
+        public Settings LoadAutoSettings()
+        {
+            Settings output = new Settings();
+            string filename = Program.defaultPath + @"\Settings.xml";
+            output = LoadObject<Settings>(filename);
+            if (output == null)
+                output = new Settings();
+            Program.activeSettings = output;
+            return output;
+        }
+
+        public void SaveAutoSettings(Settings input)
+        {
+            string filename = Program.defaultPath + @"\Settings.xml";
+            SaveObject<Settings>(input, filename);
+        }
+
+        public bool ValidateFilePaths(List<string> paths)
+        {
+            bool ok = true;
+            foreach(string candidate in paths)
+            {
+                if(!Directory.Exists(candidate))
+                {
+                    ok = false;
+                }
+            }
+            return ok;
+        }
         
 
-        public void AutoSaveDPercentList(List<DPercentTable> Tables)
+        public void AutoSaveDPercentList(List<DPercentTable> Tables, Settings settings)
         {
             string autoPath = defaultPath + @"\Save\DPercent.xml";
-            if (Program.UserAutoSaveDirectory != "")
+            if (settings.UserAutoSaveDirectory != "")
             {
-                autoPath = Program.UserAutoSaveDirectory;
+                autoPath = settings.UserAutoSaveDirectory;
                 autoPath += @"\DPercent.xml";
             }
 
             SaveObject<List<DPercentTable>>(Tables, autoPath);
         }
 
-        public List<DPercentTable> AutoLoadDPercent()
+        public List<DPercentTable> AutoLoadDPercent(Settings settings)
         {
             string autoPath = defaultPath + @"\Save\DPercent.xml";
             List<DPercentTable> output;
-            if (Program.UserAutoSaveDirectory != "")
+            if (settings.UserAutoSaveDirectory != "")
             {
-                autoPath = Program.UserAutoSaveDirectory;
+                autoPath = settings.UserAutoSaveDirectory;
                 autoPath += @"\DPercent.xml";
             }
             try
@@ -821,6 +792,11 @@ namespace BasicBattleTracking
                 output = new List<DPercentTable>();
             }
             return output;
+        }
+
+        public void PassSettings(Settings passedSettings)
+        {
+            saveSettings = passedSettings;
         }
 
         

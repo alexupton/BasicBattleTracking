@@ -18,6 +18,8 @@ namespace BasicBattleTracking
         private List<string> notes;
         bool isDirty = false;
 
+        private Settings settings;
+
         public NotesTab()
         {
             InitializeComponent();
@@ -27,12 +29,13 @@ namespace BasicBattleTracking
             notes = new List<string>();
             fileList.Items.Clear();
             mainTextField.DetectUrls = true;
-
+            settings = new Settings();
 
             filePathBox.LostFocus += filePathBox_LostFocus;
             mainTextField.LinkClicked += mainTextField_LinkClicked;
 
         }
+
 
         void mainTextField_LinkClicked(object sender, LinkClickedEventArgs e)
         {
@@ -42,9 +45,9 @@ namespace BasicBattleTracking
         private void NotesTab_Load(object sender, EventArgs e)
         {
             
-            if(Program.UserNotesDirectory != "")
+            if(settings.UserNotesDirectory != "")
             {
-                filePath = Program.UserNotesDirectory;
+                filePath = settings.UserNotesDirectory;
             }
             else
             {
@@ -394,6 +397,11 @@ namespace BasicBattleTracking
         private void saveAsButton_Click(object sender, EventArgs e)
         {
             Save(true);
+        }
+
+        public void sendSettings(Settings sentSettings)
+        {
+            settings = sentSettings;
         }
 
 

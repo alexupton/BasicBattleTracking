@@ -31,14 +31,15 @@ namespace BasicBattleTracking
         public List<Status> recentlyUsedStatuses { get; set; }
 
         public static string FilePath { get; set; }
-
+        public Settings settings { get; set; }
+        public string SessionName { get; set; }
 
         public SessionDetail()
         {
 
         }
 
-        public void CopySessionFieldsFromWindow(MainWindow sendingForm)
+        public void CopySessionFieldsFromWindow(MainWindow sendingForm, string sessionName)
         {
             combatants = sendingForm.combatants;
             fighterOrder = sendingForm.fighterOrder;
@@ -60,6 +61,7 @@ namespace BasicBattleTracking
             cancelInit = sendingForm.cancelInit;
 
             recentlyUsedStatuses = sendingForm.recentlyUsedStatuses;
+            SessionName = sessionName;
         }
 
         

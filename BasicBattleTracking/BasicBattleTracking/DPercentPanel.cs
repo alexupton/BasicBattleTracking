@@ -50,7 +50,7 @@ namespace BasicBattleTracking
             npcAttackButton.Enabled = true;
 
             BattleIO auto = new BattleIO();
-            auto.AutoSaveDPercentList(tables);
+            auto.AutoSaveDPercentList(tables, Program.activeSettings);
         }
 
         private void DPercentPanel_Load(object sender, EventArgs e)
@@ -163,7 +163,7 @@ namespace BasicBattleTracking
                         tableList.SelectedItem = tables.ElementAt(nextIndex).Name;
                     }
                     BattleIO auto = new BattleIO();
-                    auto.AutoSaveDPercentList(tables);
+                    auto.AutoSaveDPercentList(tables, Program.activeSettings);
                     
                 }
             }
@@ -207,7 +207,7 @@ namespace BasicBattleTracking
             BattleIO auto = new BattleIO();
             if (tables != null)
             {
-                auto.AutoSaveDPercentList(tables);
+                auto.AutoSaveDPercentList(tables, Program.activeSettings);
             }
         }
     }

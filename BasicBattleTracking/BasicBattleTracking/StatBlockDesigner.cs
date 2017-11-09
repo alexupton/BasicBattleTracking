@@ -270,9 +270,9 @@ namespace BasicBattleTracking
             }
             else
             {
-                if (Program.UserStatBlockDirectory != "")
+                if (parent.session.settings.UserStatBlockDirectory != "")
                 {
-                    initialPath = Program.UserStatBlockDirectory;
+                    initialPath = parent.session.settings.UserStatBlockDirectory;
                 }
             }
 
@@ -342,9 +342,9 @@ namespace BasicBattleTracking
             }
             else
             {
-                if (Program.UserStatBlockDirectory != "")
+                if (parent.session.settings.UserStatBlockDirectory != "")
                 {
-                    initialPath = Program.UserStatBlockDirectory;
+                    initialPath = parent.session.settings.UserStatBlockDirectory;
                 }
             }
 
@@ -631,7 +631,7 @@ namespace BasicBattleTracking
             }
             else
             {
-                skillMaker.PopulateSkillLines(Program.defaultSkillLoadout);
+                skillMaker.PopulateSkillLines(parent.session.settings.defaultSkillLoadout);
             }
             skillMaker.Show();
         }

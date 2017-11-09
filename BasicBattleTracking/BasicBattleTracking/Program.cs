@@ -8,15 +8,11 @@ namespace BasicBattleTracking
 {
     static class Program
     {
-        public static string UserStatBlockDirectory;
-        public static string UserLogDirectory;
-        public static string UserAutoSaveDirectory;
-        public static string UserNotesDirectory;
         public static string defaultPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\BasicBattleTracking";
-        public static List<Skill> defaultSkillLoadout;
-        
+        public static Settings activeSettings;
+        public static string ProgramName = "Basic Battle Tracker";
+        public static string activeSessionName;
 
-        public static bool initEachRound;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -25,14 +21,8 @@ namespace BasicBattleTracking
         
         static void Main()
         {
-            UserAutoSaveDirectory = "";
-            UserStatBlockDirectory = "";
-            UserLogDirectory = "";
-            UserNotesDirectory = "";
-            defaultSkillLoadout = new List<Skill>();
-
-            initEachRound = true;
-
+            activeSettings = new Settings();
+            activeSessionName = "New Session";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainWindow());

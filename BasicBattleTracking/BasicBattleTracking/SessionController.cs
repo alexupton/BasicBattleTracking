@@ -15,7 +15,10 @@ namespace BasicBattleTracking
         private string FilePath;
        [NonSerialized] private BattleIO saver;
        [NonSerialized] private MainWindow sendingForm;
+
+       
         private string startFolder;
+        public Settings settings { get; set; }
 
         public SessionController()
         {
@@ -24,12 +27,21 @@ namespace BasicBattleTracking
         {
             isDirty = false;
             saver = new BattleIO();
+            settings = new Settings();
             sendingForm = sender;
             startFolder = "";
         }
 
         public void SetDirty(bool value)
         {
+            if(Program.activeSessionName != null && value == true && sendingForm != null)
+            {
+                sendingForm.Text = Program.ProgramName + " - " + Program.activeSessionName + "*";
+            }
+            else if(sendingForm != null)
+            {
+                sendingForm.Text = Program.ProgramName + " - " + Program.activeSessionName;
+            }
             isDirty = value;
         }
 
@@ -92,10 +104,32 @@ namespace BasicBattleTracking
                 {
                     saver = new BattleIO();
                     SessionDetail newParent = saver.LoadObject<SessionDetail>(FilePath);
-                    sendingForm.ExtractFields(newParent);
-                    sendingForm.WriteToLog("===============  SESSION LOADED ON " + DateTime.Now.Date + " ===============");
-                    startFolder = Path.GetDirectoryName(FilePath);
-                    isDirty = false;
+                    if (newParent == null)
+                    {
+                        sendingForm.WriteToLog("Load failed. Invalid file loaded.");
+                    }
+                    else
+                    {
+                        sendingForm.ExtractFields(newParent);
+                        sendingForm.WriteToLog("===============  SESSION LOADED ON " + DateTime.Now + " ===============");
+                        startFolder = Path.GetDirectoryName(FilePath);
+                        Program.activeSessionName = Path.GetFileName(FilePath);
+                        sendingForm.Text = Program.ProgramName + " - " + Path.GetFileName(FilePath);
+                        string settingsName = Path.GetDirectoryName(FilePath) + @"\" + Path.GetFileNameWithoutExtension(FilePath) + "_settings.xml";
+                        if(File.Exists(FilePath))
+                        {
+                            Settings newSettings = saver.LoadObject<Settings>(settingsName);
+                            if (newSettings == null)
+                            {
+                                sendingForm.WriteToLog("No settings found for this session. Using defaults");
+                            }
+                            else
+                            {
+                                settings = newSettings;
+                            }
+                        }
+                        isDirty = false;
+                    }
                 }
             }
             
@@ -114,13 +148,18 @@ namespace BasicBattleTracking
                 saver = new BattleIO();
                 FilePath = saveBox.FileName;
                 startFolder = Path.GetDirectoryName(FilePath);
+                Program.activeSessionName = Path.GetFileName(FilePath);
                 SessionDetail sessionData = new SessionDetail();
-                sessionData.CopySessionFieldsFromWindow(sendingForm);
+                sessionData.CopySessionFieldsFromWindow(sendingForm, Program.activeSessionName);
                 //List<SerializableObject> saveableData = SerializableObject.PackageObjectList(sessionData);
                 if (saver.SaveObject<SessionDetail>(sessionData, FilePath))
                 {
                     sendingForm.WriteToLog("Session Saved as \"" + FilePath + "\"");
+                    
+                    string settingsName = Path.GetDirectoryName(FilePath) + @"\" + Path.GetFileNameWithoutExtension(FilePath) + "_settings.xml";
+                    saver.SaveObject<Settings>(settings, settingsName);
                     isDirty = false;
+                    sendingForm.Text = Program.ProgramName + " - " + Path.GetFileName(FilePath);
                     return true;
                 }
                 else
@@ -141,11 +180,11 @@ namespace BasicBattleTracking
             if(File.Exists(FilePath) && !SaveAs)
             {
                 SessionDetail sessionData = new SessionDetail();
-                sessionData.CopySessionFieldsFromWindow(sendingForm);
+                sessionData.CopySessionFieldsFromWindow(sendingForm, Program.activeSessionName);
                 saver = new BattleIO();
-                //List<SerializableObject> saveableData = SerializableObject.PackageObjectList(sessionData);
                 saver.SaveObject<SessionDetail>(sessionData, FilePath);
                 sendingForm.WriteToLog("Session Saved as \"" + FilePath + "\"");
+                sendingForm.Text = Program.ProgramName + " - " + Program.activeSessionName;
                 isDirty = false;
             }
             else
@@ -157,6 +196,11 @@ namespace BasicBattleTracking
         public void ReinitializeSender(MainWindow sender)
         {
             sendingForm = sender;
+        }
+
+        public void New()
+        {
+            FilePath = null;
         }
 
         

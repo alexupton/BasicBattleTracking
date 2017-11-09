@@ -38,6 +38,9 @@ namespace BasicBattleTracking
         public List<object> Fields { get; set; }
         public MainWindow()
         {
+            session = new SessionController(this);
+            BattleIO settingsLoader = new BattleIO();
+            session.settings = settingsLoader.LoadAutoSettings();
             combatRound = 0;
             activeIndex = 0;
             selectedStatus = 0;
@@ -45,11 +48,9 @@ namespace BasicBattleTracking
             savedIndex = 0;
             multiStatus = false;
             selectedAttack = 0;
-            BattleIO settingsLoader = new BattleIO();
-            settingsLoader.LoadSettings();
             InitializeComponent();
             skillsTab1.ParentWindow = this;
-            session = new SessionController(this);
+            notesTab1.sendSettings(session.settings);
             this.FormClosing += new FormClosingEventHandler(this.Form1_Closing);
         }
 
@@ -98,13 +99,17 @@ namespace BasicBattleTracking
         {
             AddFighterWindow add = new AddFighterWindow(this);
             add.ShowDialog();
+            
             enableGlobalButtons();
             AutoSave();
         }
 
         private void removeFighterButton_Click(object sender, EventArgs e)
         {
-            RemoveSelectedFighter(combatants.ElementAt(selectedFighter));
+            if (selectedFighter != null)
+            {
+                RemoveSelectedFighter(combatants.ElementAt(selectedFighter));
+            }
         }
 
         private void RemoveSelectedFighter(Fighter selected)
@@ -335,7 +340,7 @@ namespace BasicBattleTracking
             if (activeIndex >= fighterOrder.Count)
             {
                 activeIndex = 0;
-                if (Program.initEachRound)
+                if (session.settings.initEachRound)
                 {
                     DialogResult confirmnInit = MessageBox.Show("End of initiative order. Roll next round?", "End of Round", MessageBoxButtons.YesNo);
                     if (confirmnInit == DialogResult.Yes)
@@ -347,6 +352,10 @@ namespace BasicBattleTracking
                 else
                 {
                     combatRound++;
+                    if(combatRound > 9999)
+                    {
+                        combatRound = 9999;
+                    }
                     activeIndex = 0;
 
                     turnLabel.Text = combatRound.ToString();
@@ -427,10 +436,16 @@ namespace BasicBattleTracking
 
         public void enableGlobalButtons()
         {
-            initButton.Enabled = true;
-            removeFighterButton.Enabled = true;
-            addFighterButton.Enabled = true;
-
+            if (combatants.Count > 0)
+            {
+                initButton.Enabled = true;
+                removeFighterButton.Enabled = true;
+                addFighterButton.Enabled = true;
+                editButton.Enabled = true;
+                removeCharacterToolStripMenuItem.Enabled = true;
+                rollInitiativeToolStripMenuItem.Enabled = true;
+                editCharacterToolStripMenuItem.Enabled = true;
+            }
         }
 
         public void enableTurnButtons()
@@ -441,6 +456,9 @@ namespace BasicBattleTracking
             prevButton.Enabled = true;
             statusButton.Enabled = true;
             unholdButton.Enabled = true;
+            nextTurnToolStripMenuItem.Enabled = true;
+            previousTurnToolStripMenuItem.Enabled = true;
+            
         }
 
         public void disableTurnButtons()
@@ -451,11 +469,15 @@ namespace BasicBattleTracking
             prevButton.Enabled = false;
             statusButton.Enabled = false;
             unholdButton.Enabled = false;
+            nextTurnToolStripMenuItem.Enabled = false;
+            previousTurnToolStripMenuItem.Enabled = false;
+            rollInitiativeToolStripMenuItem.Enabled = false;
+            editCharacterToolStripMenuItem.Enabled = false;
+            removeCharacterToolStripMenuItem.Enabled = false;
         }
 
         private void AutoSave()
         {
-            this.Text = "Basic Battle Tracker - Autosaving...";
                        
             BattleIO auto = new BattleIO();
 
@@ -487,8 +509,8 @@ namespace BasicBattleTracking
             }
 
             //ACTUAL AUTOSAVE PART
-            auto.AutoSave(combatants, checkboxSettings);
-            auto.SaveRecentlyUsedStatuses(recentlyUsedStatuses);
+            auto.AutoSave(combatants, checkboxSettings, session.settings);
+            auto.SaveRecentlyUsedStatuses(recentlyUsedStatuses, session.settings);
             dPercentTableControls.AutoSave();
             //Reset ability bonuses
             foreach (Fighter f in combatants)
@@ -513,7 +535,6 @@ namespace BasicBattleTracking
                     }
                 }
             }
-            this.Text = "Basic Battle Tracker";
             //WriteToLog("Autosaved.");
         }
 
@@ -522,10 +543,12 @@ namespace BasicBattleTracking
             BattleIO auto = new BattleIO();
             combatants = auto.AutoLoad(this);
 
+            
+
             //
             //DPercent Load
             //
-            List<DPercentTable> autoDPercent = auto.AutoLoadDPercent();
+            List<DPercentTable> autoDPercent = auto.AutoLoadDPercent(session.settings);
             if (autoDPercent != null)
             {
                 if (autoDPercent.Count > 0)
@@ -584,7 +607,7 @@ namespace BasicBattleTracking
         private void MainWindow_Close(object sender, EventArgs e)
         {
             BattleIO exitLog = new BattleIO();
-            exitLog.ExportLog(LogBox.Text);
+            exitLog.ExportLog(LogBox.Text, session.settings);
         }
 
         private void holdButton_Click(object sender, EventArgs e)
@@ -731,7 +754,7 @@ namespace BasicBattleTracking
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            
+            AddNPCFunction();
         }
         private void AddNPCFunction()
         {
@@ -1681,7 +1704,7 @@ namespace BasicBattleTracking
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OptionScreen options = new OptionScreen();
+            OptionScreen options = new OptionScreen(session.settings, this);
             options.Show();
         }
 
@@ -1947,14 +1970,21 @@ namespace BasicBattleTracking
         {
             if (session.Exit())
             {
-                combatants.Clear();
-                combatRound = 0;
-                updateFighterInfo(0);
-                UpdateFighterList();
-                LogBox.Clear();
-                WriteToLog("New Session Initialized");
-                session.SetDirty(false);
+                CreateNewSession();
             }
+        }
+        public void CreateNewSession()
+        {
+            combatants.Clear();
+            combatRound = 0;
+            updateFighterInfo(0);
+            UpdateFighterList();
+            LogBox.Clear();
+            WriteToLog("New Session Initialized");
+            turnLabel.Text = combatRound.ToString();
+            activeLabel.Text = "None";
+            session.New();
+            session.SetDirty(false);
         }
 
         private void openSessionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2013,11 +2043,14 @@ namespace BasicBattleTracking
                 editFighter = (Fighter)sendingForm.editFighter;
                 selectedAttack = (int)sendingForm.selectedAttack;
                 session = (SessionController)sendingForm.session;
-
+                
 
                 cancelInit = (bool)sendingForm.cancelInit;
 
           recentlyUsedStatuses = (List<Status>)sendingForm.recentlyUsedStatuses;
+          this.Text = Program.activeSessionName;
+          turnLabel.Text = combatRound.ToString();
+          activeLabel.Text = combatants.ElementAt(activeIndex).Name;
           updateFighterInfo(activeIndex);
           UpdateFighterList();
           session.SetDirty(false);
@@ -2099,6 +2132,12 @@ namespace BasicBattleTracking
             }
         }
 
+        private void SetToFirstTurn()
+        {
+            combatRound = 0;
+            AdvanceFighter();
+        }
+
         private void rollInitiativeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RollInit();
@@ -2115,6 +2154,11 @@ namespace BasicBattleTracking
         {
             PreviousFigher();
             AutoSave();
+        }
+
+        private void setToTurn1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetToFirstTurn();
         }
     }
 
