@@ -42,6 +42,7 @@ namespace BasicBattleTracking
             LogPath = logPathBox.Text; directories.Add(LogPath);
             NotesPath = notesPathBox.Text; directories.Add(NotesPath);
             settings.initEachRound = initOption;
+            settings.confirmCrits = critConfirmBox.Checked;
 
             BattleIO saver = new BattleIO();
             if(saver.ValidateFilePaths(directories))
@@ -107,6 +108,8 @@ namespace BasicBattleTracking
             {
                 initOptionBox.Checked = false;
             }
+
+            critConfirmBox.Checked = settings.confirmCrits;
 
             
         }

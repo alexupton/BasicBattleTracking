@@ -195,14 +195,18 @@ namespace BasicBattleTracking
 
         private void skillCheckButton_Click(object sender, EventArgs e)
         {
+
+        }
+        private void RollSkillCheck()
+        {
             string shortName = selectedSkill.name.ToUpper();
-            if(shortName.Length > 16)
+            if (shortName.Length > 16)
             {
-                shortName = shortName.Remove(15) +")";
+                shortName = shortName.Remove(15) + ")";
             }
             WriteToRollConsole("=====" + shortName + " CHECK=====");
             int result = selectedSkill.RollSkillCheck();
-            d20Label.Text = selectedSkill.LastD20.ToString(); 
+            d20Label.Text = selectedSkill.LastD20.ToString();
             WriteToRollConsole("Roll: " + selectedSkill.LastD20.ToString());
             WriteToRollConsole("Modifier: " + selectedSkill.totalModifier);
             atkModBox.Text = selectedSkill.totalModifier.ToString();
@@ -213,6 +217,14 @@ namespace BasicBattleTracking
             ParentWindow.WriteToLog(activeFighter.Name + " made a " + selectedSkill.name + " check of " + result.ToString() + "!");
         }
 
+        public void PrepareSkillCheck(int skillIndex)
+        {
+            if (skillIndex < activeFighter.skills.Count && skillIndex >= 0)
+            {
+                selectedSkill = activeFighter.skills.ElementAt(skillIndex);
+                RollSkillCheck();
+            }
+        }
         public void WriteToRollConsole(string input)
         {
             rollBox.AppendText(input);

@@ -47,6 +47,7 @@
             this.initOptionBox = new System.Windows.Forms.CheckBox();
             this.okButton = new System.Windows.Forms.Button();
             this.cancButton = new System.Windows.Forms.Button();
+            this.critConfirmBox = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -206,6 +207,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.critConfirmBox);
             this.tabPage2.Controls.Add(this.initOptionBox);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
@@ -249,6 +251,18 @@
             this.cancButton.Text = "Cancel";
             this.cancButton.UseVisualStyleBackColor = true;
             this.cancButton.Click += new System.EventHandler(this.cancButton_Click);
+            // 
+            // critConfirmBox
+            // 
+            this.critConfirmBox.AutoSize = true;
+            this.critConfirmBox.Checked = true;
+            this.critConfirmBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.critConfirmBox.Location = new System.Drawing.Point(23, 80);
+            this.critConfirmBox.Name = "critConfirmBox";
+            this.critConfirmBox.Size = new System.Drawing.Size(271, 24);
+            this.critConfirmBox.TabIndex = 1;
+            this.critConfirmBox.Text = "Automatically Confirm Critical Hits";
+            this.critConfirmBox.UseVisualStyleBackColor = true;
             // 
             // OptionScreen
             // 
@@ -294,5 +308,6 @@
         private System.Windows.Forms.TextBox notesPathBox;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.CheckBox initOptionBox;
+        private System.Windows.Forms.CheckBox critConfirmBox;
     }
 }

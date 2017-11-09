@@ -81,6 +81,8 @@ namespace BasicBattleTracking
             this.FormClosed += new FormClosedEventHandler(this.MainWindow_Close);
             this.removeCharacterToolStripMenuItem.DropDownItemClicked += new ToolStripItemClickedEventHandler(this.SubMenuClick);
             this.editCharacterToolStripMenuItem.DropDownItemClicked += new ToolStripItemClickedEventHandler(this.editMenuClick);
+            this.attackToolStripMenuItem.DropDownItemClicked += new ToolStripItemClickedEventHandler(this.attackMenuItemClicked);
+            this.skillsToolStripMenuItem.DropDownItemClicked += new ToolStripItemClickedEventHandler(this.skillMenuItemClicked);
             //TestDPercentTable();
             WriteToLog("Now with more menu options than a freakin' Chili's.");
             session.SetDirty(false);
@@ -238,8 +240,10 @@ namespace BasicBattleTracking
                 }
                 combatants.Add(enemy);
             }
-
-            initWindow.ShowDialog();
+            if (PCs.Count > 0)
+            {
+                initWindow.ShowDialog();
+            }
             UpdateFighterList();
 
             if (cancelInit)
@@ -257,7 +261,10 @@ namespace BasicBattleTracking
                 WriteToLog("ROLLED INITIATIVE");
                 foreach (Fighter f in combatants)
                 {
-                    WriteToLog(f.Name + " rolls " + f.Initiative.ToString() + ".");
+                    string sign = "+";
+                    if (f.InitBonus < 0)
+                        sign = "";
+                    WriteToLog(f.Name + " rolls " + f.Initiative.ToString() + " (" + (f.Initiative - f.InitBonus).ToString() + " " + sign + " " + f.InitBonus + ").");
                 }
 
                 WriteToLog("");
@@ -282,6 +289,7 @@ namespace BasicBattleTracking
             }
             selectedFighter = activeIndex;
             updateFighterInfo(activeIndex);
+            UpdateFighterList();
             
             
         }
@@ -298,7 +306,12 @@ namespace BasicBattleTracking
 
         private void AttackButton_Click(object sender, EventArgs e)
         {
+            PCAttack();
+            
+        }
 
+        private void PCAttack()
+        {
             AttackForm newAttack = new AttackForm(this, combatants);
             newAttack.ShowDialog();
 
@@ -624,6 +637,11 @@ namespace BasicBattleTracking
 
         private void holdButton_Click(object sender, EventArgs e)
         {
+            Hold();
+        }
+
+        private void Hold()
+        {
             WriteToLog(activeLabel.Text + " holds action!");
             combatants.ElementAt(activeIndex).HoldAction = true;
             AdvanceFighter();
@@ -787,6 +805,11 @@ namespace BasicBattleTracking
 
         private void CMBButton_Click(object sender, EventArgs e)
         {
+            CMBCheck();
+        }
+
+        private void CMBCheck()
+        {
             SetDamageInfoEnable(false);
             WriteToRollConsole("=====Combat Maneuver=====");
             Random randy = new Random();
@@ -801,9 +824,15 @@ namespace BasicBattleTracking
             WriteToRollConsole("");
             rollResultLabel.Text = result.ToString();
             WriteToLog(combatants.ElementAt(selectedFighter).Name + " made a combat maneuver check of " + result.ToString() + "!");
+
         }
 
         private void FortButton_Click(object sender, EventArgs e)
+        {
+            FortCheck();
+        }
+
+        private void FortCheck()
         {
             SetDamageInfoEnable(false);
             WriteToRollConsole("=====Fortitude Save=====");
@@ -819,9 +848,15 @@ namespace BasicBattleTracking
             WriteToRollConsole("");
             rollResultLabel.Text = result.ToString();
             WriteToLog(combatants.ElementAt(selectedFighter).Name + " made a Fortitude Save of " + result.ToString() + "!");
+
         }
 
         private void RefButton_Click(object sender, EventArgs e)
+        {
+            RefCheck();
+        }
+
+        private void RefCheck()
         {
             SetDamageInfoEnable(false);
             WriteToRollConsole("=====Reflex Save=====");
@@ -837,9 +872,15 @@ namespace BasicBattleTracking
             WriteToRollConsole("");
             rollResultLabel.Text = result.ToString();
             WriteToLog(combatants.ElementAt(selectedFighter).Name + " made a Reflex Save of " + result.ToString() + "!");
+
         }
 
         private void WillButton_Click(object sender, EventArgs e)
+        {
+            WillCheck();
+        }
+
+        private void WillCheck()
         {
             SetDamageInfoEnable(false);
             WriteToRollConsole("=====Will Save=====");
@@ -855,8 +896,8 @@ namespace BasicBattleTracking
             WriteToRollConsole("");
             rollResultLabel.Text = result.ToString();
             WriteToLog(combatants.ElementAt(selectedFighter).Name + " made a Will Save of " + result.ToString() + "!");
-        }
 
+        }
 
         private void RollAttack(Attack atk, bool crit)
         {
@@ -893,7 +934,11 @@ namespace BasicBattleTracking
                 WriteToRollConsole("Potential critical hit!");
                 WriteToRollConsole("Rolling 1d20 + " + atk.atkBonuses.ElementAt(atk.atkCount) + " to confirm.");
                 WriteToRollConsole("Reslut: " + confirm);
-                DialogResult critConfirm = MessageBox.Show("Confirm check is " + confirm + ". Confirm critical?", "Critical Hit!", MessageBoxButtons.YesNo);
+                DialogResult critConfirm = DialogResult.Yes;
+                if (!session.settings.confirmCrits)
+                {
+                    critConfirm = MessageBox.Show("Confirm check is " + confirm + ". Confirm critical?", "Critical Hit!", MessageBoxButtons.YesNo);
+                }
                 if (critConfirm == DialogResult.Yes)
                 {
                     WriteToRollConsole("Critical hit confirmed! Multiplier: " + atk.CritMult.ToString());
@@ -956,34 +1001,11 @@ namespace BasicBattleTracking
                 {
                     SetRollButtons(true);
                     UpdateAtkValues(fighterIndex);
-                    //if (combatants.ElementAt(fighterIndex).attacks.Count > 0)
-                    //{
-                    //    A1Button.Enabled = true;
-                    //    A1Button.Text = combatants.ElementAt(fighterIndex).attacks.ElementAt(0).name;
-                    //}
-                    //if (combatants.ElementAt(fighterIndex).attacks.Count > 1)
-                    //{
-                    //    A2Button.Enabled = true;
-                    //    A2Button.Text = combatants.ElementAt(fighterIndex).attacks.ElementAt(1).name;
-                    //}
-                    //if (combatants.ElementAt(fighterIndex).attacks.Count > 2)
-                    //{
-                    //    A3Button.Enabled = true;
-                    //    A3Button.Text = combatants.ElementAt(fighterIndex).attacks.ElementAt(2).name;
-                    //}
-
-
                 }
                 else
                 {
                     SetRollButtons(false);
                     AtkNameLabel.Text = "Attack";
-                    //A1Button.Enabled = false;
-                    //A2Button.Enabled = false;
-                    //A3Button.Enabled = false;
-                    //A1Button.Text = "None";
-                    //A2Button.Text = "None";
-                    //A3Button.Text = "None";
                 }
 
 
@@ -1019,6 +1041,39 @@ namespace BasicBattleTracking
                 displayMod(chaBox, chaModBox);
 
                 bioBox.Text = update.Notes;
+
+                attackToolStripMenuItem.DropDownItems.Clear();
+                if (update.isPC)
+                {
+                    attackToolStripMenuItem.DropDownItems.Add("PC Attack");
+                }
+                else
+                {
+                    foreach (Attack atk in update.attacks)
+                    {
+                        attackToolStripMenuItem.DropDownItems.Add(atk.name);
+                    }
+                }
+                skillsToolStripMenuItem.DropDownItems.Clear();
+                foreach (Skill s in update.skills)
+                {
+                    string sign = "+";
+                    s.RollSkillCheck();
+                    if (s.totalModifier < 0)
+                        sign = "";
+                    skillsToolStripMenuItem.DropDownItems.Add(s.name + "  (" + sign + s.totalModifier + ")");
+                }
+
+                if (update.HoldAction)
+                {
+                    unholdActionToolStripMenuItem.Enabled = true;
+                    unholdButton.Enabled = true;
+                }
+                else
+                {
+                    unholdActionToolStripMenuItem.Enabled = false;
+                    unholdButton.Enabled = false;
+                }
             }
         }
 
@@ -1931,6 +1986,7 @@ namespace BasicBattleTracking
         }
         private void Form1_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            session.ReinitializeSender(this);
             if (!session.Exit())
             {
                 e.Cancel = true;
@@ -2201,6 +2257,64 @@ namespace BasicBattleTracking
         {
             SetToFirstTurn();
         }
+
+        private void attackMenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+            if (selectedFighterObject.isPC)
+            {
+                PCAttack();
+            }
+            else
+            {
+                int attackIndex = attackToolStripMenuItem.DropDownItems.IndexOf(e.ClickedItem);
+                if (attackIndex >= 0 && attackIndex < selectedFighterObject.attacks.Count)
+                {
+                    PrepareAttack(attackIndex);
+                }
+            }
+        }
+
+        private void skillMenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            int skillIndex = skillsToolStripMenuItem.DropDownItems.IndexOf(e.ClickedItem);
+            if (skillIndex >= 0 && skillIndex < selectedFighterObject.skills.Count)
+            {
+                skillsTab1.PrepareSkillCheck(skillIndex);
+            }
+        }
+
+        private void combatManueverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CMBCheck();
+        }
+
+        private void fortitudeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FortCheck();
+        }
+
+        private void reflexToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RefCheck();
+        }
+
+        private void willToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WillCheck();
+        }
+
+        private void holdActionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hold();
+        }
+
+        private void attackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 
 

@@ -10,6 +10,7 @@ namespace BasicBattleTracking
     public class Settings
     {
         public bool initEachRound { get; set; }
+        public bool confirmCrits { get; set; }
         public string UserStatBlockDirectory { get; set; }
         public string UserLogDirectory { get; set; }
         public string UserAutoSaveDirectory { get; set; }
