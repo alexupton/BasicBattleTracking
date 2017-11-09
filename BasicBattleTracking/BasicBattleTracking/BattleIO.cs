@@ -14,229 +14,197 @@ namespace BasicBattleTracking
 
         private string defaultPath = Program.defaultPath;
         private Settings saveSettings;
-        public void AutoSave(List<Fighter> combatants, bool[] checkBoxes, Settings settings)
+        public void AutoSave(List<Fighter> combatants, bool[] checkBoxes, Settings settings, MainWindow sender)
         {
-            StringBuilder rawText = new StringBuilder();
-            int npcIndex = 0;
-            string npcPath = defaultPath + @"\Save\NPCs\";
-            string autoPath = defaultPath + @"\Save\auto.txt";
-            if(settings.UserAutoSaveDirectory != "")
-            {
-                autoPath = settings.UserAutoSaveDirectory;
-                npcPath = autoPath + @"\NPCs\";
-                autoPath += @"\auto.txt";
-            }
 
-            if(!Directory.Exists(npcPath))
+            string sessionPath = defaultPath + @"\Save\auto.ssn";
+            if (sender.session.settings.UserAutoSaveDirectory != "")
             {
-                Directory.CreateDirectory(npcPath);
+                sessionPath = sender.session.settings.UserAutoSaveDirectory + @"\auto.ssn";
             }
-            foreach(string file in Directory.GetFiles(npcPath))
-                    {
-                        File.Delete(file);
-                    }
-
-            int fighterCount = 0;
-            foreach(Fighter f in combatants)
-            {
-                if (f.isPC)
-                    fighterCount++;
-            }
-            rawText.AppendLine(fighterCount.ToString());
-            foreach (Fighter f in combatants)
-            {
-                if (f.isPC)
-                {
-                    rawText.AppendLine(f.Name + "," + f.Initiative.ToString() + "," + f.HP.ToString()
-                        + "," + f.InitBonus.ToString() + "," + f.isPC.ToString());
-                }
-                else
-                {
-                    string newNpcPath = npcPath + f.Name + npcIndex.ToString()  + ".txt";
-                    
-                    SaveStatBlock(newNpcPath, f);
-                    npcIndex++;
-
-                }
-            }
-
-            //checkBoxSettings
-            rawText.AppendLine(checkBoxes[0].ToString()); //AtkStr
-            rawText.AppendLine(checkBoxes[1].ToString()); //AtkDex
-            rawText.AppendLine(checkBoxes[2].ToString()); //DmgStr
-            rawText.AppendLine(checkBoxes[3].ToString()); //DmgDex
-            
-            
-            if(File.Exists(autoPath))
-            {
-                File.Delete(autoPath);
-            }
-            try
-            {
-                File.WriteAllText(autoPath, rawText.ToString());
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message + " Please change the autosave directory in the options menu and try again.", "Auto Save Failed");
-            }
-            
-
+            SessionDetail saveSession = new SessionDetail();
+            saveSession.CopySessionFieldsFromWindow(sender, Program.activeSessionName);
+            SaveObject<SessionDetail>(saveSession, sessionPath);
+            sender.session.SaveSettings(sessionPath);
+            sender.session.ReinitializeSender(sender);
         }
 
         public List<Fighter> AutoLoad(MainWindow sender)
         {
             List<Fighter> fighters = new List<Fighter>();
-            string path = defaultPath + @"\Save\auto.txt";
-            if(sender.session.settings.UserAutoSaveDirectory != "")
+            
+            string sessionPath = defaultPath + @"\Save\auto.ssn";
+            if (sender.session.settings.UserAutoSaveDirectory != "")
             {
-                path = sender.session.settings.UserAutoSaveDirectory + @"\auto.txt";
+                sessionPath = sender.session.settings.UserAutoSaveDirectory + @"\auto.ssn";
             }
-            if(File.Exists(path))
+            SessionDetail autoSesh = new SessionDetail();
+            if (File.Exists(sessionPath))
             {
-                string[] lines = File.ReadAllLines(path);
-                int fighterCount = lines.Length - 1;
-                int fighterStart = 1;
-                try
+                autoSesh = LoadObject<SessionDetail>(sessionPath);
+                Program.activeSessionName = autoSesh.SessionName;
+                sender.session.LoadSettings(sessionPath);
+                sender.ExtractFields(autoSesh);
+                return autoSesh.combatants;
+            }
+            //LEGACY LOADER
+            else
+            {
+                string path = defaultPath + @"\Save\auto.txt";
+                if (sender.session.settings.UserAutoSaveDirectory != "")
                 {
-                    fighterCount = Int32.Parse(lines[0]);
+                    path = sender.session.settings.UserAutoSaveDirectory + @"\auto.txt";
                 }
-                catch 
+                if (File.Exists(path))
                 {
-                    fighterStart = 0;
-                }
-                
-                for (int i = fighterStart; i < fighterCount + 1; i++)
-                {
-                    string[] fStats = lines[i].Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                    try{
-                    Fighter f = new Fighter(fStats[0], Int32.Parse(fStats[3]), Boolean.Parse(fStats[4]));
-                    f.Initiative = Int32.Parse(fStats[1]);
-                    f.HP = Int32.Parse(fStats[2]);
-                    fighters.Add(f);
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Unable to parse auto.txt. No AutoLoad available", "Error");
-                        return fighters;
-                    }
-                    
-                    
-                    
-                }
-
-                if(fighterCount + 1 < lines.Length)
-                {
-                    int checkIndex = fighterCount + 1;
+                    string[] lines = File.ReadAllLines(path);
+                    int fighterCount = lines.Length - 1;
+                    int fighterStart = 1;
                     try
                     {
-                        bool[] checkBoxes = new bool[] { Boolean.Parse(lines[checkIndex]), Boolean.Parse(lines[checkIndex + 1]), Boolean.Parse(lines[checkIndex + 2]), Boolean.Parse(lines[checkIndex + 3]) };
-                        sender.SetCheckBoxes(checkBoxes);
+                        fighterCount = Int32.Parse(lines[0]);
                     }
                     catch
                     {
-                        Console.WriteLine("Bonus checkbox load failed");
+                        fighterStart = 0;
                     }
 
-                }
-            }
+                    for (int i = fighterStart; i < fighterCount + 1; i++)
+                    {
+                        string[] fStats = lines[i].Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                        try
+                        {
+                            Fighter f = new Fighter(fStats[0], Int32.Parse(fStats[3]), Boolean.Parse(fStats[4]));
+                            f.Initiative = Int32.Parse(fStats[1]);
+                            f.HP = Int32.Parse(fStats[2]);
+                            fighters.Add(f);
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Unable to parse auto.txt. No AutoLoad available", "Error");
+                            return fighters;
+                        }
 
-            path = defaultPath + @"\Save\NPCS";
-            if (sender.session.settings.UserAutoSaveDirectory != "")
-            {
-                path = sender.session.settings.UserAutoSaveDirectory + @"\NPCS";
-            }
-            if (!Directory.Exists(path))
-            {
-                Directory.CreateDirectory(path);
-            }
-            else
-            {
-                int fighterCount = Directory.GetFiles(path).Length;
-                for (int i = 0; i < fighterCount; i++)
+
+
+                    }
+
+                    if (fighterCount + 1 < lines.Length)
+                    {
+                        int checkIndex = fighterCount + 1;
+                        try
+                        {
+                            bool[] checkBoxes = new bool[] { Boolean.Parse(lines[checkIndex]), Boolean.Parse(lines[checkIndex + 1]), Boolean.Parse(lines[checkIndex + 2]), Boolean.Parse(lines[checkIndex + 3]) };
+                            sender.SetCheckBoxes(checkBoxes);
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Bonus checkbox load failed");
+                        }
+
+                    }
+                }
+
+                path = defaultPath + @"\Save\NPCS";
+                if (sender.session.settings.UserAutoSaveDirectory != "")
                 {
-                    fighters.Add(LoadStatBlock(Directory.GetFiles(path)[i]));
+                    path = sender.session.settings.UserAutoSaveDirectory + @"\NPCS";
                 }
-            }
-
-            path = defaultPath + @"\Save\DefaultSkillLoadout.txt";
-            if (sender.session.settings.UserAutoSaveDirectory != "")
-            {
-                path = sender.session.settings.UserAutoSaveDirectory + @"\DefaultSkillLoadout.txt";
-            }
-
-            if(!File.Exists(path))
-            {
-                StringBuilder sb = new StringBuilder();
-                sb.AppendLine("Acrobatics,1");
-                sb.AppendLine("Appraise,3");
-                sb.AppendLine("Bluff,5");
-                sb.AppendLine("Climb,0");
-                sb.AppendLine("Craft,3");
-                sb.AppendLine("Craft,3");
-                sb.AppendLine("Craft,3");
-                sb.AppendLine("Diplomacy,5");
-                sb.AppendLine("Disable Device,1");
-                sb.AppendLine("Disguise,5");
-                sb.AppendLine("Escape Artist,1");
-                sb.AppendLine("Fly,1");
-                sb.AppendLine("Handle Animal,5");
-                sb.AppendLine("Heal,4");
-                sb.AppendLine("Intimidate,5");
-                sb.AppendLine("Knowledge (Arcana),3");
-                sb.AppendLine("Knowledge (Dungeoneering),3");
-                sb.AppendLine("Knowledge (Engineering),3");
-                sb.AppendLine("Knowledge (Geography),3");
-                sb.AppendLine("Knowledge (History),3");
-                sb.AppendLine("Knowledge (Local),3");
-                sb.AppendLine("Knowledge (Nature),3");
-                sb.AppendLine("Knowledge (Nobility),3");
-                sb.AppendLine("Knowledge (Planes),3");
-                sb.AppendLine("Knowledge (Religion),3");
-                sb.AppendLine("Linguistics,3");
-                sb.AppendLine("Perception,4");
-                sb.AppendLine("Perform,5");
-                sb.AppendLine("Perform,5");
-                sb.AppendLine("Profession,4");
-                sb.AppendLine("Profession,4");
-                sb.AppendLine("Ride,1");
-                sb.AppendLine("Sense Motive,4");
-                sb.AppendLine("Sleight of Hand,1");
-                sb.AppendLine("Spellcraft,3");
-                sb.AppendLine("Stealth,1");
-                sb.AppendLine("Survival,4");
-                sb.AppendLine("Swim,0");
-                sb.AppendLine("Use Magic Device,5");
-                File.WriteAllText(path, sb.ToString());
-            }
-
-            string[] skillLines = File.ReadAllLines(path);
-            List<Skill> defaultSkills = new List<Skill>();
-            for (int i = 0; i < skillLines.Length; i++ )
-            {
-                Skill loadSkill = LoadSkills(skillLines[i].Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
-                if (loadSkill != null)
+                if (!Directory.Exists(path))
                 {
-                    defaultSkills.Add(loadSkill);
+                    Directory.CreateDirectory(path);
                 }
-            }
-            if(defaultSkills.Count > 0)
-            {
-                sender.session.settings.defaultSkillLoadout = defaultSkills;
-            }
-            else
-            {
-                MessageBox.Show("Unable to load default skillset.", "Error!");
-            }
+                else
+                {
+                    int fighterCount = Directory.GetFiles(path).Length;
+                    for (int i = 0; i < fighterCount; i++)
+                    {
+                        fighters.Add(LoadStatBlock(Directory.GetFiles(path)[i]));
+                    }
+                }
 
-            path = defaultPath + @"\Save\Status.bin";
-            if (sender.session.settings.UserAutoSaveDirectory != "")
-            {
-                path = sender.session.settings.UserAutoSaveDirectory + @"\Status.bin";
-            }
+                path = defaultPath + @"\Save\DefaultSkillLoadout.txt";
+                if (sender.session.settings.UserAutoSaveDirectory != "")
+                {
+                    path = sender.session.settings.UserAutoSaveDirectory + @"\DefaultSkillLoadout.txt";
+                }
 
-            List<Status> recent = LoadRecentlyUsedStatuses(path, sender);
-            sender.recentlyUsedStatuses = recent;
+                if (!File.Exists(path))
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendLine("Acrobatics,1");
+                    sb.AppendLine("Appraise,3");
+                    sb.AppendLine("Bluff,5");
+                    sb.AppendLine("Climb,0");
+                    sb.AppendLine("Craft,3");
+                    sb.AppendLine("Craft,3");
+                    sb.AppendLine("Craft,3");
+                    sb.AppendLine("Diplomacy,5");
+                    sb.AppendLine("Disable Device,1");
+                    sb.AppendLine("Disguise,5");
+                    sb.AppendLine("Escape Artist,1");
+                    sb.AppendLine("Fly,1");
+                    sb.AppendLine("Handle Animal,5");
+                    sb.AppendLine("Heal,4");
+                    sb.AppendLine("Intimidate,5");
+                    sb.AppendLine("Knowledge (Arcana),3");
+                    sb.AppendLine("Knowledge (Dungeoneering),3");
+                    sb.AppendLine("Knowledge (Engineering),3");
+                    sb.AppendLine("Knowledge (Geography),3");
+                    sb.AppendLine("Knowledge (History),3");
+                    sb.AppendLine("Knowledge (Local),3");
+                    sb.AppendLine("Knowledge (Nature),3");
+                    sb.AppendLine("Knowledge (Nobility),3");
+                    sb.AppendLine("Knowledge (Planes),3");
+                    sb.AppendLine("Knowledge (Religion),3");
+                    sb.AppendLine("Linguistics,3");
+                    sb.AppendLine("Perception,4");
+                    sb.AppendLine("Perform,5");
+                    sb.AppendLine("Perform,5");
+                    sb.AppendLine("Profession,4");
+                    sb.AppendLine("Profession,4");
+                    sb.AppendLine("Ride,1");
+                    sb.AppendLine("Sense Motive,4");
+                    sb.AppendLine("Sleight of Hand,1");
+                    sb.AppendLine("Spellcraft,3");
+                    sb.AppendLine("Stealth,1");
+                    sb.AppendLine("Survival,4");
+                    sb.AppendLine("Swim,0");
+                    sb.AppendLine("Use Magic Device,5");
+                    File.WriteAllText(path, sb.ToString());
+                }
+
+                string[] skillLines = File.ReadAllLines(path);
+                List<Skill> defaultSkills = new List<Skill>();
+                for (int i = 0; i < skillLines.Length; i++)
+                {
+                    Skill loadSkill = LoadSkills(skillLines[i].Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                    if (loadSkill != null)
+                    {
+                        defaultSkills.Add(loadSkill);
+                    }
+                }
+                if (defaultSkills.Count > 0)
+                {
+                    sender.session.settings.defaultSkillLoadout = defaultSkills;
+                }
+                else
+                {
+                    MessageBox.Show("Unable to load default skillset.", "Error!");
+                }
+
+                path = defaultPath + @"\Save\Status.bin";
+                if (sender.session.settings.UserAutoSaveDirectory != "")
+                {
+                    path = sender.session.settings.UserAutoSaveDirectory + @"\Status.bin";
+                }
+
+                List<Status> recent = LoadRecentlyUsedStatuses(path, sender);
+                sender.recentlyUsedStatuses = recent;
                 return fighters;
+            }
+
+            
         }
 
         public void ExportLog(string log, Settings settings)

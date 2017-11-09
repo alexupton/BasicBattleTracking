@@ -251,10 +251,10 @@
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.setToTurn1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.skillsTab1 = new BasicBattleTracking.SkillsTab();
             this.dPercentTableControls = new BasicBattleTracking.DPercentPanel();
             this.notesTab1 = new BasicBattleTracking.NotesTab();
-            this.setToTurn1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ControlsBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -362,6 +362,7 @@
             // 
             // editButton
             // 
+            this.editButton.Enabled = false;
             this.editButton.Location = new System.Drawing.Point(110, 49);
             this.editButton.Margin = new System.Windows.Forms.Padding(2);
             this.editButton.Name = "editButton";
@@ -2643,6 +2644,14 @@
             this.tabPage3.Text = "Notes";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
+            // setToTurn1ToolStripMenuItem
+            // 
+            this.setToTurn1ToolStripMenuItem.Name = "setToTurn1ToolStripMenuItem";
+            this.setToTurn1ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.T)));
+            this.setToTurn1ToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.setToTurn1ToolStripMenuItem.Text = "Revert to Turn 1";
+            this.setToTurn1ToolStripMenuItem.Click += new System.EventHandler(this.setToTurn1ToolStripMenuItem_Click);
+            // 
             // skillsTab1
             // 
             this.skillsTab1.Location = new System.Drawing.Point(0, 0);
@@ -2670,13 +2679,6 @@
             this.notesTab1.Name = "notesTab1";
             this.notesTab1.Size = new System.Drawing.Size(2940, 885);
             this.notesTab1.TabIndex = 0;
-            // 
-            // setToTurn1ToolStripMenuItem
-            // 
-            this.setToTurn1ToolStripMenuItem.Name = "setToTurn1ToolStripMenuItem";
-            this.setToTurn1ToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.setToTurn1ToolStripMenuItem.Text = "Revert to Turn 1";
-            this.setToTurn1ToolStripMenuItem.Click += new System.EventHandler(this.setToTurn1ToolStripMenuItem_Click);
             // 
             // MainWindow
             // 

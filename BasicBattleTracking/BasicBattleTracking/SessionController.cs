@@ -92,7 +92,7 @@ namespace BasicBattleTracking
             OpenFileDialog load = new OpenFileDialog();
             if (startFolder != "")
                 load.InitialDirectory = startFolder;
-
+            
             load.Filter = "Session File (*.ssn)|*.ssn";
             DialogResult result = load.ShowDialog();
             FilePath = load.FileName;
@@ -111,23 +111,18 @@ namespace BasicBattleTracking
                     else
                     {
                         sendingForm.ExtractFields(newParent);
+                        if (newParent.combatants.Count > 0)
+                        {
+                            sendingForm.enableGlobalButtons(); sendingForm.enableTurnButtons();
+                        }
+                        else
+                            sendingForm.ResetControls();
+
                         sendingForm.WriteToLog("===============  SESSION LOADED ON " + DateTime.Now + " ===============");
                         startFolder = Path.GetDirectoryName(FilePath);
                         Program.activeSessionName = Path.GetFileName(FilePath);
                         sendingForm.Text = Program.ProgramName + " - " + Path.GetFileName(FilePath);
-                        string settingsName = Path.GetDirectoryName(FilePath) + @"\" + Path.GetFileNameWithoutExtension(FilePath) + "_settings.xml";
-                        if(File.Exists(FilePath))
-                        {
-                            Settings newSettings = saver.LoadObject<Settings>(settingsName);
-                            if (newSettings == null)
-                            {
-                                sendingForm.WriteToLog("No settings found for this session. Using defaults");
-                            }
-                            else
-                            {
-                                settings = newSettings;
-                            }
-                        }
+                        
                         isDirty = false;
                     }
                 }
@@ -136,12 +131,35 @@ namespace BasicBattleTracking
             
         }
 
+        public void LoadSettings(string path)
+        {
+            string settingsName = Path.GetDirectoryName(path) + @"\" + Path.GetFileNameWithoutExtension(path) + "_settings.xml";
+            if (File.Exists(settingsName))
+            {
+                Settings newSettings = saver.LoadObject<Settings>(settingsName);
+                if (newSettings == null)
+                {
+                    sendingForm.WriteToLog("No settings found for this session. Using defaults");
+                }
+                else
+                {
+                    settings = newSettings;
+                }
+            }
+        }
+        public void SaveSettings(string path)
+        {
+            saver = new BattleIO();
+            string settingsName = Path.GetDirectoryName(path) + @"\" + Path.GetFileNameWithoutExtension(FilePath) + "_settings.xml";
+            saver.SaveObject<Settings>(settings, settingsName);
+        }
         private bool Save()
         {
             SaveFileDialog saveBox = new SaveFileDialog();
             saveBox.Filter = "Session File (*.ssn)|*.ssn";
             if (startFolder != "")
                 saveBox.InitialDirectory = startFolder;
+            saveBox.FileName = Program.activeSessionName;
             DialogResult result = saveBox.ShowDialog();
             if (result == DialogResult.OK)
             {
@@ -155,9 +173,8 @@ namespace BasicBattleTracking
                 if (saver.SaveObject<SessionDetail>(sessionData, FilePath))
                 {
                     sendingForm.WriteToLog("Session Saved as \"" + FilePath + "\"");
-                    
-                    string settingsName = Path.GetDirectoryName(FilePath) + @"\" + Path.GetFileNameWithoutExtension(FilePath) + "_settings.xml";
-                    saver.SaveObject<Settings>(settings, settingsName);
+
+                    SaveSettings(FilePath);
                     isDirty = false;
                     sendingForm.Text = Program.ProgramName + " - " + Path.GetFileName(FilePath);
                     return true;
@@ -200,7 +217,7 @@ namespace BasicBattleTracking
 
         public void New()
         {
-            FilePath = null;
+            FilePath = "";
         }
 
         

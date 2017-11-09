@@ -458,6 +458,7 @@ namespace BasicBattleTracking
             unholdButton.Enabled = true;
             nextTurnToolStripMenuItem.Enabled = true;
             previousTurnToolStripMenuItem.Enabled = true;
+            setToTurn1ToolStripMenuItem.Enabled = true;
             
         }
 
@@ -509,7 +510,7 @@ namespace BasicBattleTracking
             }
 
             //ACTUAL AUTOSAVE PART
-            auto.AutoSave(combatants, checkboxSettings, session.settings);
+            auto.AutoSave(combatants, checkboxSettings, session.settings, this);
             auto.SaveRecentlyUsedStatuses(recentlyUsedStatuses, session.settings);
             dPercentTableControls.AutoSave();
             //Reset ability bonuses
@@ -1982,13 +1983,35 @@ namespace BasicBattleTracking
             LogBox.Clear();
             WriteToLog("New Session Initialized");
             turnLabel.Text = combatRound.ToString();
+            Program.activeSessionName = "New Session";
+            this.Text = "Basic Battle Tracker - New Session.ssn";
             activeLabel.Text = "None";
+            ResetControls();
             session.New();
             session.SetDirty(false);
+        }
+        public void ResetControls()
+        {
+            initButton.Enabled = false;
+            removeFighterButton.Enabled = false;
+            editButton.Enabled = false;
+            removeCharacterToolStripMenuItem.Enabled = false;
+            rollInitiativeToolStripMenuItem.Enabled = false;
+            editCharacterToolStripMenuItem.Enabled = false;
+            AttackButton.Enabled = false;
+            holdButton.Enabled = false;
+            nextButton.Enabled = false;
+            prevButton.Enabled = false;
+            statusButton.Enabled = false;
+            unholdButton.Enabled = false;
+            nextTurnToolStripMenuItem.Enabled = false;
+            previousTurnToolStripMenuItem.Enabled = false;
+            setToTurn1ToolStripMenuItem.Enabled = false;
         }
 
         private void openSessionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            session.ReinitializeSender(this);
             session.LoadSession();
             session.ReinitializeSender(this);
             session.SetDirty(false);
@@ -1996,6 +2019,7 @@ namespace BasicBattleTracking
 
         private void saveSessionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            session.ReinitializeSender(this);
             session.SaveSession(false);
         }
 
@@ -2048,11 +2072,17 @@ namespace BasicBattleTracking
                 cancelInit = (bool)sendingForm.cancelInit;
 
           recentlyUsedStatuses = (List<Status>)sendingForm.recentlyUsedStatuses;
-          this.Text = Program.activeSessionName;
+          this.Text = "Basic Battle Tracker - " + Program.activeSessionName;
           turnLabel.Text = combatRound.ToString();
-          activeLabel.Text = combatants.ElementAt(activeIndex).Name;
-          updateFighterInfo(activeIndex);
-          UpdateFighterList();
+          if (activeIndex < combatants.Count)
+          {
+              activeLabel.Text = combatants.ElementAt(activeIndex).Name;
+              updateFighterInfo(activeIndex);
+              unholdButton.Text = "Unhold " + selectedFighterObject.Name;
+          }
+              UpdateFighterList();
+              
+          
           session.SetDirty(false);
            
                
