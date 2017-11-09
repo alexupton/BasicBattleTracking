@@ -78,6 +78,8 @@ namespace BasicBattleTracking
             selectedFighterObject = new Fighter("Alex", 0, true);
             AutoLoad();
             this.FormClosed += new FormClosedEventHandler(this.MainWindow_Close);
+            this.removeCharacterToolStripMenuItem.DropDownItemClicked += new ToolStripItemClickedEventHandler(this.SubMenuClick);
+            this.editCharacterToolStripMenuItem.DropDownItemClicked += new ToolStripItemClickedEventHandler(this.editMenuClick);
             //TestDPercentTable();
             WriteToLog("Roses are red. True love is rare. Booty booty booty booty rockin' everywhere.");
             session.SetDirty(false);
@@ -89,6 +91,11 @@ namespace BasicBattleTracking
 
         private void addFighterButton_Click(object sender, EventArgs e)
         {
+            AddPCFunction();
+        }
+
+        private void AddPCFunction()
+        {
             AddFighterWindow add = new AddFighterWindow(this);
             add.ShowDialog();
             enableGlobalButtons();
@@ -97,14 +104,19 @@ namespace BasicBattleTracking
 
         private void removeFighterButton_Click(object sender, EventArgs e)
         {
+            RemoveSelectedFighter(combatants.ElementAt(selectedFighter));
+        }
+
+        private void RemoveSelectedFighter(Fighter selected)
+        {
             if (combatants.Count > 0)
             {
-                DialogResult confirm = MessageBox.Show("Are you sure?", "Remove " + combatants.ElementAt(selectedFighter).Name, MessageBoxButtons.OKCancel);
+                DialogResult confirm = MessageBox.Show("Are you sure?", "Remove " + selected.Name, MessageBoxButtons.OKCancel);
                 if (confirm == DialogResult.OK)
                 {
-                    WriteToLog("Removed " + selectedFighterObject.Name + ".");
-                    combatants.ElementAt(selectedFighter).StatusEffects.Clear();
-                    removeFighter(combatants.ElementAt(selectedFighter));
+                    WriteToLog("Removed " + selected.Name + ".");
+                    selected.StatusEffects.Clear();
+                    removeFighter(selected);
                     if (selectedFighter > 0)
                     {
                         selectedFighter--;
@@ -127,10 +139,6 @@ namespace BasicBattleTracking
                 }
                 AutoSave();
             }
-            
-
-
-
         }
 
         public void AddFighter(Fighter newFighter)
@@ -168,6 +176,15 @@ namespace BasicBattleTracking
                         statusEffects.Add(s);
                     }
                 }
+            }
+            //Add Items to removed and edit Fighter Menus
+            List<Fighter> alphabetizedFighterList = combatants.OrderBy(c => c.Name).ToList();
+            removeCharacterToolStripMenuItem.DropDownItems.Clear();
+            editCharacterToolStripMenuItem.DropDownItems.Clear();
+            foreach (Fighter f in alphabetizedFighterList)
+            {
+                removeCharacterToolStripMenuItem.DropDownItems.Add(f.Name);
+                editCharacterToolStripMenuItem.DropDownItems.Add(f.Name);
             }
             if (statusView.Items.Count <= 0)
             {
@@ -387,8 +404,16 @@ namespace BasicBattleTracking
 
         private void button5_Click(object sender, EventArgs e)
         {
+            PreviousFigher();
+            AutoSave();
+            
+        }
+
+        private void PreviousFigher()
+        {
             activeIndex--;
-            if (activeIndex < 0)           {
+            if (activeIndex < 0)
+            {
                 activeIndex = fighterOrder.Count - 1;
 
             }
@@ -398,7 +423,6 @@ namespace BasicBattleTracking
 
             updateFighterInfo(activeIndex);
             selectedFighter = activeIndex;
-            
         }
 
         public void enableGlobalButtons()
@@ -432,8 +456,7 @@ namespace BasicBattleTracking
         private void AutoSave()
         {
             this.Text = "Basic Battle Tracker - Autosaving...";
-            session.SetDirty(true);
-            
+                       
             BattleIO auto = new BattleIO();
 
 
@@ -707,6 +730,10 @@ namespace BasicBattleTracking
         }
 
         private void button5_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+        private void AddNPCFunction()
         {
             StatBlockDesigner sbd = new StatBlockDesigner();
             sbd.parent = this;
@@ -1824,19 +1851,24 @@ namespace BasicBattleTracking
 
         private void button1_Click_2(object sender, EventArgs e)
         {
+            EditSelectedFighter(selectedFighterObject);
+            
+        }
+
+        private void EditSelectedFighter(Fighter selected)
+        {
             StatBlockDesigner editWindow = new StatBlockDesigner();
             editWindow.parent = this;
-            if (selectedFighterObject != null)
+            if (selected != null)
             {
-                editFighter = selectedFighterObject;
-                editWindow.InitiateFighter(selectedFighterObject);
+                editFighter = selected;
+                editWindow.InitiateFighter(selected);
                 editWindow.Show();
             }
             else
             {
                 MessageBox.Show("No fighter selected", "Error");
             }
-            
         }
 
         //
@@ -2002,6 +2034,87 @@ namespace BasicBattleTracking
         private void saveSessionAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             session.SaveSession(true);
+        }
+
+        private void addPCToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddPCFunction();
+        }
+
+        private void alexToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        //Remove Fighter menu option
+        private void SubMenuClick(object sender, ToolStripItemClickedEventArgs e)
+        {
+            string clickedItem = e.ClickedItem.Text;
+            Fighter removeFighter = null;
+            foreach (Fighter f in combatants)
+            {
+                if (f.Name == clickedItem)
+                {
+                    removeFighter = f;
+                }
+            }
+            if (removeFighter == null)
+            {
+                MessageBox.Show("Could not find the Selected Fighter in active combatants. This is likely a programming issue. Please report it.", "Oops!");
+            }
+            else
+            {
+                RemoveSelectedFighter(removeFighter);
+            }
+
+        }
+
+        private void removeCharacterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void addNPCToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddNPCFunction();
+        }
+
+        private void editMenuClick(object sender, ToolStripItemClickedEventArgs e)
+        {
+            string clickedItem = e.ClickedItem.Text;
+            Fighter editFighter = null;
+            foreach (Fighter f in combatants)
+            {
+                if (f.Name == clickedItem)
+                {
+                    editFighter = f;
+                }
+            }
+            if (editFighter == null)
+            {
+                MessageBox.Show("Could not find the Selected Fighter in active combatants. This is likely a programming issue. Please report it.", "Oops!");
+            }
+            else
+            {
+                EditSelectedFighter(editFighter);
+            }
+        }
+
+        private void rollInitiativeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RollInit();
+            AutoSave();
+        }
+
+        private void nextTurnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdvanceFighter();
+            AutoSave();
+        }
+
+        private void previousTurnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PreviousFigher();
+            AutoSave();
         }
     }
 
