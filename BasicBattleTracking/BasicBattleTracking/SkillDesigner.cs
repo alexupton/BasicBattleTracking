@@ -36,6 +36,10 @@ namespace BasicBattleTracking
         public void PopulateSkillLines(List<Skill> skillInputList)
         {
             int count = 0;
+            if (skillInputList.Count <= 0)
+            {
+                skillInputList = ParentWindow.parent.session.settings.defaultSkillLoadout;
+            }
             foreach(Skill s in skillInputList)
             {
                 SkillLine newLine = new SkillLine(this);

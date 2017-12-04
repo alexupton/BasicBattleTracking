@@ -98,6 +98,7 @@
             this.rollResultLabel = new System.Windows.Forms.Label();
             this.damageResult = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.skillsTab1 = new BasicBattleTracking.SkillsTab();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label55 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
@@ -246,8 +247,12 @@
             this.attackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.combatManueverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.savesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fortitudeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reflexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.willToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.skillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.holdActionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unholdActionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -258,13 +263,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.fortitudeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reflexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.willToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unholdActionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.skillsTab1 = new BasicBattleTracking.SkillsTab();
             this.dPercentTableControls = new BasicBattleTracking.DPercentPanel();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.notesTab1 = new BasicBattleTracking.NotesTab();
             this.ControlsBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -305,6 +305,7 @@
             // 
             // InitOrderView
             // 
+            this.InitOrderView.BackColor = System.Drawing.SystemColors.Window;
             this.InitOrderView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.OrderColumn,
             this.NameColumn,
@@ -312,6 +313,7 @@
             this.HP,
             this.Held});
             this.InitOrderView.FullRowSelect = true;
+            this.InitOrderView.HideSelection = false;
             this.InitOrderView.Location = new System.Drawing.Point(5, 34);
             this.InitOrderView.Margin = new System.Windows.Forms.Padding(2);
             this.InitOrderView.MultiSelect = false;
@@ -514,7 +516,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(1374, 173);
+            this.groupBox2.Size = new System.Drawing.Size(1374, 121);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Log";
@@ -530,7 +532,7 @@
             this.LogBox.Name = "LogBox";
             this.LogBox.ReadOnly = true;
             this.LogBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogBox.Size = new System.Drawing.Size(1370, 150);
+            this.LogBox.Size = new System.Drawing.Size(1370, 98);
             this.LogBox.TabIndex = 0;
             this.LogBox.TextChanged += new System.EventHandler(this.LogBox_TextChanged);
             // 
@@ -832,6 +834,7 @@
             this.Damage,
             this.Count});
             this.attackView.FullRowSelect = true;
+            this.attackView.HideSelection = false;
             this.attackView.Location = new System.Drawing.Point(29, 76);
             this.attackView.Margin = new System.Windows.Forms.Padding(2);
             this.attackView.MultiSelect = false;
@@ -1121,6 +1124,15 @@
             this.tabPage5.Size = new System.Drawing.Size(697, 333);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Skills";
+            // 
+            // skillsTab1
+            // 
+            this.skillsTab1.Location = new System.Drawing.Point(0, 0);
+            this.skillsTab1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.skillsTab1.Name = "skillsTab1";
+            this.skillsTab1.ParentWindow = null;
+            this.skillsTab1.Size = new System.Drawing.Size(697, 340);
+            this.skillsTab1.TabIndex = 0;
             // 
             // tabPage6
             // 
@@ -1943,6 +1955,7 @@
             this.drBox.Name = "drBox";
             this.drBox.Size = new System.Drawing.Size(25, 26);
             this.drBox.TabIndex = 11;
+            this.drBox.TextChanged += new System.EventHandler(this.drBox_TextChanged);
             // 
             // label57
             // 
@@ -2399,7 +2412,7 @@
             this.optionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1828, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1436, 33);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -2583,6 +2596,27 @@
             this.savesToolStripMenuItem.Size = new System.Drawing.Size(231, 30);
             this.savesToolStripMenuItem.Text = "Saves";
             // 
+            // fortitudeToolStripMenuItem
+            // 
+            this.fortitudeToolStripMenuItem.Name = "fortitudeToolStripMenuItem";
+            this.fortitudeToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
+            this.fortitudeToolStripMenuItem.Text = "Fortitude";
+            this.fortitudeToolStripMenuItem.Click += new System.EventHandler(this.fortitudeToolStripMenuItem_Click);
+            // 
+            // reflexToolStripMenuItem
+            // 
+            this.reflexToolStripMenuItem.Name = "reflexToolStripMenuItem";
+            this.reflexToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
+            this.reflexToolStripMenuItem.Text = "Reflex";
+            this.reflexToolStripMenuItem.Click += new System.EventHandler(this.reflexToolStripMenuItem_Click);
+            // 
+            // willToolStripMenuItem
+            // 
+            this.willToolStripMenuItem.Name = "willToolStripMenuItem";
+            this.willToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
+            this.willToolStripMenuItem.Text = "Will";
+            this.willToolStripMenuItem.Click += new System.EventHandler(this.willToolStripMenuItem_Click);
+            // 
             // skillsToolStripMenuItem
             // 
             this.skillsToolStripMenuItem.Name = "skillsToolStripMenuItem";
@@ -2595,6 +2629,12 @@
             this.holdActionToolStripMenuItem.Size = new System.Drawing.Size(231, 30);
             this.holdActionToolStripMenuItem.Text = "Hold Action";
             this.holdActionToolStripMenuItem.Click += new System.EventHandler(this.holdActionToolStripMenuItem_Click);
+            // 
+            // unholdActionToolStripMenuItem
+            // 
+            this.unholdActionToolStripMenuItem.Name = "unholdActionToolStripMenuItem";
+            this.unholdActionToolStripMenuItem.Size = new System.Drawing.Size(231, 30);
+            this.unholdActionToolStripMenuItem.Text = "Unhold Action";
             // 
             // optionsToolStripMenuItem
             // 
@@ -2621,7 +2661,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1424, 918);
+            this.tabControl1.Size = new System.Drawing.Size(1424, 866);
             this.tabControl1.TabIndex = 14;
             // 
             // tabPage1
@@ -2639,7 +2679,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1416, 885);
+            this.tabPage1.Size = new System.Drawing.Size(1416, 833);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Battle Tracking";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -2709,59 +2749,10 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1416, 885);
+            this.tabPage2.Size = new System.Drawing.Size(1416, 859);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Reference";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage3.Controls.Add(this.notesTab1);
-            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1416, 885);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Notes";
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
-            // 
-            // fortitudeToolStripMenuItem
-            // 
-            this.fortitudeToolStripMenuItem.Name = "fortitudeToolStripMenuItem";
-            this.fortitudeToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
-            this.fortitudeToolStripMenuItem.Text = "Fortitude";
-            this.fortitudeToolStripMenuItem.Click += new System.EventHandler(this.fortitudeToolStripMenuItem_Click);
-            // 
-            // reflexToolStripMenuItem
-            // 
-            this.reflexToolStripMenuItem.Name = "reflexToolStripMenuItem";
-            this.reflexToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
-            this.reflexToolStripMenuItem.Text = "Reflex";
-            this.reflexToolStripMenuItem.Click += new System.EventHandler(this.reflexToolStripMenuItem_Click);
-            // 
-            // willToolStripMenuItem
-            // 
-            this.willToolStripMenuItem.Name = "willToolStripMenuItem";
-            this.willToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
-            this.willToolStripMenuItem.Text = "Will";
-            this.willToolStripMenuItem.Click += new System.EventHandler(this.willToolStripMenuItem_Click);
-            // 
-            // unholdActionToolStripMenuItem
-            // 
-            this.unholdActionToolStripMenuItem.Name = "unholdActionToolStripMenuItem";
-            this.unholdActionToolStripMenuItem.Size = new System.Drawing.Size(231, 30);
-            this.unholdActionToolStripMenuItem.Text = "Unhold Action";
-            // 
-            // skillsTab1
-            // 
-            this.skillsTab1.Location = new System.Drawing.Point(0, 0);
-            this.skillsTab1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.skillsTab1.Name = "skillsTab1";
-            this.skillsTab1.ParentWindow = null;
-            this.skillsTab1.Size = new System.Drawing.Size(697, 340);
-            this.skillsTab1.TabIndex = 0;
             // 
             // dPercentTableControls
             // 
@@ -2774,12 +2765,25 @@
             this.dPercentTableControls.TabIndex = 1;
             this.dPercentTableControls.Load += new System.EventHandler(this.dPercentTableControls_Load);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(this.notesTab1);
+            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1416, 859);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Notes";
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
             // notesTab1
             // 
             this.notesTab1.Location = new System.Drawing.Point(4, 4);
             this.notesTab1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.notesTab1.Name = "notesTab1";
-            this.notesTab1.Size = new System.Drawing.Size(4033, 885);
+            this.notesTab1.Size = new System.Drawing.Size(24184, 885);
             this.notesTab1.TabIndex = 0;
             // 
             // MainWindow
@@ -2787,7 +2791,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1828, 975);
+            this.ClientSize = new System.Drawing.Size(1432, 1001);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

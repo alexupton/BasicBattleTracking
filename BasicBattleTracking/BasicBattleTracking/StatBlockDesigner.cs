@@ -38,9 +38,9 @@ namespace BasicBattleTracking
 
         private void StatBlockDesigner_Load(object sender, EventArgs e)
         {
-            
-            
+            dBox.SelectedIndex = 0;
             ad = new AttackDesigner(this);
+            nameBox.Select();
             
         }
 
@@ -232,28 +232,35 @@ namespace BasicBattleTracking
         private void SaveInsertButton_Click(object sender, EventArgs e)
         {
             Fighter newFighter = BuildFighter();
-            Save(newFighter);
-
-            int insertCount = 1;
-            try
+            if (newFighter == null)
             {
-                insertCount = Int32.Parse(iCountBox.Text);
+                return;
             }
-            catch
+            else
             {
-                insertCount = 1;
-            }
+                Save(newFighter);
 
-            for (int i = 0; i < insertCount; i++)
-            {
-                newFighter = BuildFighter();
-                if (newFighter != null)
+                int insertCount = 1;
+                try
                 {
-                    newFighter.Name += " " + (i + 1).ToString();
-                    Insert(newFighter);
+                    insertCount = Int32.Parse(iCountBox.Text);
                 }
+                catch
+                {
+                    insertCount = 1;
+                }
+
+                for (int i = 0; i < insertCount; i++)
+                {
+                    newFighter = BuildFighter();
+                    if (newFighter != null)
+                    {
+                        newFighter.Name += " " + (i + 1).ToString();
+                        Insert(newFighter);
+                    }
+                }
+                this.Close();
             }
-            this.Close();
 
 
         }
@@ -379,7 +386,7 @@ namespace BasicBattleTracking
             {
                 insertCount = 1;
             }
-
+            bool close = true;
             for (int i = 0; i < insertCount; i++)
             {
                 Fighter newFighter = BuildFighter();
@@ -392,9 +399,15 @@ namespace BasicBattleTracking
                         newFighter.Name += " " + (i + 1).ToString();
                     }
                 }
+                else
+                {
+                    close = false;
+                }
 
             }
+            if(close)
             this.Close();
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

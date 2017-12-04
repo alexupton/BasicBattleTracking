@@ -45,6 +45,7 @@ namespace BasicBattleTracking
                 Program.activeSessionName = autoSesh.SessionName;
                 sender.session.LoadSettings(sessionPath);
                 sender.ExtractFields(autoSesh);
+                LoadDefaultSkills(sender);
                 return autoSesh.combatants;
             }
             //LEGACY LOADER
@@ -122,76 +123,8 @@ namespace BasicBattleTracking
                         fighters.Add(LoadStatBlock(Directory.GetFiles(path)[i]));
                     }
                 }
-
-                path = defaultPath + @"\Save\DefaultSkillLoadout.txt";
-                if (sender.session.settings.UserAutoSaveDirectory != "")
-                {
-                    path = sender.session.settings.UserAutoSaveDirectory + @"\DefaultSkillLoadout.txt";
-                }
-
-                if (!File.Exists(path))
-                {
-                    StringBuilder sb = new StringBuilder();
-                    sb.AppendLine("Acrobatics,1");
-                    sb.AppendLine("Appraise,3");
-                    sb.AppendLine("Bluff,5");
-                    sb.AppendLine("Climb,0");
-                    sb.AppendLine("Craft,3");
-                    sb.AppendLine("Craft,3");
-                    sb.AppendLine("Craft,3");
-                    sb.AppendLine("Diplomacy,5");
-                    sb.AppendLine("Disable Device,1");
-                    sb.AppendLine("Disguise,5");
-                    sb.AppendLine("Escape Artist,1");
-                    sb.AppendLine("Fly,1");
-                    sb.AppendLine("Handle Animal,5");
-                    sb.AppendLine("Heal,4");
-                    sb.AppendLine("Intimidate,5");
-                    sb.AppendLine("Knowledge (Arcana),3");
-                    sb.AppendLine("Knowledge (Dungeoneering),3");
-                    sb.AppendLine("Knowledge (Engineering),3");
-                    sb.AppendLine("Knowledge (Geography),3");
-                    sb.AppendLine("Knowledge (History),3");
-                    sb.AppendLine("Knowledge (Local),3");
-                    sb.AppendLine("Knowledge (Nature),3");
-                    sb.AppendLine("Knowledge (Nobility),3");
-                    sb.AppendLine("Knowledge (Planes),3");
-                    sb.AppendLine("Knowledge (Religion),3");
-                    sb.AppendLine("Linguistics,3");
-                    sb.AppendLine("Perception,4");
-                    sb.AppendLine("Perform,5");
-                    sb.AppendLine("Perform,5");
-                    sb.AppendLine("Profession,4");
-                    sb.AppendLine("Profession,4");
-                    sb.AppendLine("Ride,1");
-                    sb.AppendLine("Sense Motive,4");
-                    sb.AppendLine("Sleight of Hand,1");
-                    sb.AppendLine("Spellcraft,3");
-                    sb.AppendLine("Stealth,1");
-                    sb.AppendLine("Survival,4");
-                    sb.AppendLine("Swim,0");
-                    sb.AppendLine("Use Magic Device,5");
-                    File.WriteAllText(path, sb.ToString());
-                }
-
-                string[] skillLines = File.ReadAllLines(path);
-                List<Skill> defaultSkills = new List<Skill>();
-                for (int i = 0; i < skillLines.Length; i++)
-                {
-                    Skill loadSkill = LoadSkills(skillLines[i].Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
-                    if (loadSkill != null)
-                    {
-                        defaultSkills.Add(loadSkill);
-                    }
-                }
-                if (defaultSkills.Count > 0)
-                {
-                    sender.session.settings.defaultSkillLoadout = defaultSkills;
-                }
-                else
-                {
-                    MessageBox.Show("Unable to load default skillset.", "Error!");
-                }
+                LoadDefaultSkills(sender);
+                
 
                 path = defaultPath + @"\Save\Status.bin";
                 if (sender.session.settings.UserAutoSaveDirectory != "")
@@ -232,6 +165,84 @@ namespace BasicBattleTracking
 
             File.WriteAllText(path, log);
 
+        }
+
+        private void CreateDefaultSkillsFile(string path)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Acrobatics,1");
+            sb.AppendLine("Appraise,3");
+            sb.AppendLine("Bluff,5");
+            sb.AppendLine("Climb,0");
+            sb.AppendLine("Craft,3");
+            sb.AppendLine("Craft,3");
+            sb.AppendLine("Craft,3");
+            sb.AppendLine("Diplomacy,5");
+            sb.AppendLine("Disable Device,1");
+            sb.AppendLine("Disguise,5");
+            sb.AppendLine("Escape Artist,1");
+            sb.AppendLine("Fly,1");
+            sb.AppendLine("Handle Animal,5");
+            sb.AppendLine("Heal,4");
+            sb.AppendLine("Intimidate,5");
+            sb.AppendLine("Knowledge (Arcana),3");
+            sb.AppendLine("Knowledge (Dungeoneering),3");
+            sb.AppendLine("Knowledge (Engineering),3");
+            sb.AppendLine("Knowledge (Geography),3");
+            sb.AppendLine("Knowledge (History),3");
+            sb.AppendLine("Knowledge (Local),3");
+            sb.AppendLine("Knowledge (Nature),3");
+            sb.AppendLine("Knowledge (Nobility),3");
+            sb.AppendLine("Knowledge (Planes),3");
+            sb.AppendLine("Knowledge (Religion),3");
+            sb.AppendLine("Linguistics,3");
+            sb.AppendLine("Perception,4");
+            sb.AppendLine("Perform,5");
+            sb.AppendLine("Perform,5");
+            sb.AppendLine("Profession,4");
+            sb.AppendLine("Profession,4");
+            sb.AppendLine("Ride,1");
+            sb.AppendLine("Sense Motive,4");
+            sb.AppendLine("Sleight of Hand,1");
+            sb.AppendLine("Spellcraft,3");
+            sb.AppendLine("Stealth,1");
+            sb.AppendLine("Survival,4");
+            sb.AppendLine("Swim,0");
+            sb.AppendLine("Use Magic Device,5");
+            File.WriteAllText(path, sb.ToString());
+        }
+
+        public void LoadDefaultSkills(MainWindow sender)
+        {
+            string path = defaultPath + @"\Save\DefaultSkillLoadout.txt";
+            if (sender.session.settings.UserAutoSaveDirectory != "")
+            {
+                path = sender.session.settings.UserAutoSaveDirectory + @"\DefaultSkillLoadout.txt";
+            }
+
+            if (!File.Exists(path))
+            {
+                CreateDefaultSkillsFile(path);
+            }
+
+            string[] skillLines = File.ReadAllLines(path);
+            List<Skill> defaultSkills = new List<Skill>();
+            for (int i = 0; i < skillLines.Length; i++)
+            {
+                Skill loadSkill = LoadSkills(skillLines[i].Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                if (loadSkill != null)
+                {
+                    defaultSkills.Add(loadSkill);
+                }
+            }
+            if (defaultSkills.Count > 0)
+            {
+                sender.session.settings.defaultSkillLoadout = defaultSkills;
+            }
+            else
+            {
+                MessageBox.Show("Unable to load default skillset.", "Error!");
+            }
         }
         public void SaveStatBlock(string path, Fighter f)
         {

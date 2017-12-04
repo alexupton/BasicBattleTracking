@@ -16,6 +16,7 @@ namespace BasicBattleTracking
         public string AutoSavePath { get; private set; }
         public string LogPath { get; private set; }
         public string NotesPath { get; private set; }
+        public string SessionPath { get; set; }
 
         public bool initOption { get; private set; }
 
@@ -51,6 +52,7 @@ namespace BasicBattleTracking
                 settings.UserAutoSaveDirectory = AutoSavePath;
                 settings.UserLogDirectory = LogPath;
                 settings.UserNotesDirectory = NotesPath;
+                settings.UserSessionDirectory = SessionPath;
                 saver.SaveAutoSettings(settings);
                 sendingForm.session.settings = this.settings;
                 this.Close();
@@ -100,16 +102,26 @@ namespace BasicBattleTracking
                 notesPathBox.Text = Program.defaultPath + @"\Notes";
             }
 
-            if (settings.initEachRound)
+            if (settings.UserAutoSaveDirectory != "")
             {
-                initOptionBox.Checked = true;
+                autoPathBox.Text = settings.UserAutoSaveDirectory;
             }
             else
             {
-                initOptionBox.Checked = false;
+                autoPathBox.Text = Program.defaultPath + @"\Save";
+            }
+
+            if (settings.UserSessionDirectory != null)
+            {
+                sessionBox.Text = settings.UserSessionDirectory;
+            }
+            else
+            {
+                sessionBox.Text = Program.defaultPath + @"\Save\Sessions";
             }
 
             critConfirmBox.Checked = settings.confirmCrits;
+            initOptionBox.Checked = settings.initEachRound;
 
             
         }
@@ -124,6 +136,7 @@ namespace BasicBattleTracking
                 case 1: startDirectory = autoPathBox.Text; break;
                 case 2: startDirectory = logPathBox.Text; break;
                 case 3: startDirectory = notesPathBox.Text; break;
+                case 4: startDirectory = sessionBox.Text; break;
                 default: startDirectory = statPathBox.Text; break;
             }
             try
@@ -183,6 +196,11 @@ namespace BasicBattleTracking
             {
                 initOption = false;
             }
+        }
+
+        private void sessionBrowseBox_Click(object sender, EventArgs e)
+        {
+            UpdatePathBox(sessionBox, 4);
         }
     }
 }

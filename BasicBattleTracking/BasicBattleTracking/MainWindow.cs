@@ -36,6 +36,7 @@ namespace BasicBattleTracking
         public List<Status> recentlyUsedStatuses { get; set; }
 
         public List<object> Fields { get; set; }
+        private bool SkipCheckboxUpdate { get; set; }
         public MainWindow()
         {
             session = new SessionController(this);
@@ -84,7 +85,7 @@ namespace BasicBattleTracking
             this.attackToolStripMenuItem.DropDownItemClicked += new ToolStripItemClickedEventHandler(this.attackMenuItemClicked);
             this.skillsToolStripMenuItem.DropDownItemClicked += new ToolStripItemClickedEventHandler(this.skillMenuItemClicked);
             //TestDPercentTable();
-            WriteToLog("Now with more menu options than a freakin' Chili's.");
+            WriteToLog("Now with a hotfix directly off the skillet");
             session.SetDirty(false);
         }
 
@@ -108,7 +109,7 @@ namespace BasicBattleTracking
 
         private void removeFighterButton_Click(object sender, EventArgs e)
         {
-            if (selectedFighter != null)
+            if (selectedFighterObject != null)
             {
                 RemoveSelectedFighter(combatants.ElementAt(selectedFighter));
             }
@@ -152,6 +153,8 @@ namespace BasicBattleTracking
         public void AddFighter(Fighter newFighter)
         {
             combatants.Add(newFighter);
+            enableGlobalButtons();
+            enableTurnButtons();
             UpdateFighterList();
         }
 
@@ -200,6 +203,7 @@ namespace BasicBattleTracking
                 RemoveStatusButton.Text = "Remove Status";
             }
             combatants = orderedFighterList;
+            SelectActiveFighterInWindow();
             
         }
 
@@ -208,6 +212,18 @@ namespace BasicBattleTracking
             RollInit();
             AutoSave();
 
+        }
+
+        private void SelectActiveFighterInWindow()
+        {
+            //if (selectedFighter < InitOrderView.Items.Count)
+            //{
+            //    if (InitOrderView.Items[activeIndex] != null)
+            //    {
+            //        ListViewItem swapCandidate = InitOrderView.Items[activeIndex];
+            //        //swapCandidate.Selected = true;
+            //    }
+            //}
         }
 
         private void RollInit()
@@ -340,6 +356,7 @@ namespace BasicBattleTracking
 
         private void AdvanceFighter()
         {
+           
             if (holdFlag)
             {
                 activeIndex = savedIndex;
@@ -618,6 +635,19 @@ namespace BasicBattleTracking
                     }
                 }
             }
+
+            ////debug stuff
+            //string spellPath = @"C:\Users\Alex\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\Database\spell_full.csv";
+            //SpellDB.dbPath = spellPath;
+            //string[] spellLines = SpellDB.GetDBLines();
+            //WriteToLog("Spell DB lines count: " + spellLines.Length);
+            //WriteToLog("Lines:");
+            //for (int i = 0; i < spellLines.Length; i++)
+            //{
+            //    WriteToLog(spellLines[i]);
+            //    WriteToLog("");
+            //    WriteToLog("");
+            //}
             session.SetDirty(false);
         }
 
@@ -995,7 +1025,7 @@ namespace BasicBattleTracking
                 Fighter update = combatants.ElementAt(fighterIndex);
                 selectedFighterObject = update;
                 fighterInfoBox.Text = selectedFighterObject.Name + " Stats";
-                attackView.Items.Clear();
+                
                 UpdateSkills();
                 if (!update.isPC)
                 {
@@ -1043,15 +1073,34 @@ namespace BasicBattleTracking
                 bioBox.Text = update.Notes;
 
                 attackToolStripMenuItem.DropDownItems.Clear();
-                if (update.isPC)
+                if (update.isPC && !SkipCheckboxUpdate)
                 {
                     attackToolStripMenuItem.DropDownItems.Add("PC Attack");
+                    AtkStrBonusBox.Checked = false;
+                    AtkDexBonusBox.Checked = false;
+                    DmgDexBonusBox.Checked = false;
+                    DmgStrBonusBox.Checked = false;
                 }
-                else
+                else if(!SkipCheckboxUpdate)
                 {
                     foreach (Attack atk in update.attacks)
                     {
                         attackToolStripMenuItem.DropDownItems.Add(atk.name);
+                    }
+                    if (update.attacks.Count > 0 && !SkipCheckboxUpdate)
+                    {
+                        Attack first = update.attacks.First();
+                        AtkStrBonusBox.Checked = first.strBonusAppliedToAtk;
+                        AtkDexBonusBox.Checked = first.dexBonusAppliedToAtk;
+                        DmgDexBonusBox.Checked = first.dexBonusAppliedToDmg;
+                        DmgStrBonusBox.Checked = first.strBonusAppliedToDmg;
+                    }
+                    else
+                    {
+                        AtkStrBonusBox.Checked = false;
+                        AtkDexBonusBox.Checked = false;
+                        DmgDexBonusBox.Checked = false;
+                        DmgStrBonusBox.Checked = false;
                     }
                 }
                 skillsToolStripMenuItem.DropDownItems.Clear();
@@ -1106,6 +1155,11 @@ namespace BasicBattleTracking
                 {
                     selectedAttack = attackView.SelectedIndices[0];
                     AtkNameLabel.Text = combatants.ElementAt(selectedFighter).attacks.ElementAt(selectedAttack).name;
+                    Attack selectedAtkObject = selectedFighterObject.attacks.ElementAt(selectedAttack);
+                    AtkDexBonusBox.Checked = selectedAtkObject.dexBonusAppliedToAtk;
+                    AtkStrBonusBox.Checked = selectedAtkObject.strBonusAppliedToAtk;
+                    DmgStrBonusBox.Checked = selectedAtkObject.strBonusAppliedToDmg;
+                    DmgDexBonusBox.Checked = selectedAtkObject.dexBonusAppliedToDmg;
                 }
             }
         }
@@ -1519,6 +1573,15 @@ namespace BasicBattleTracking
         {
             selectedFighterObject.Notes = bioBox.Text;
         }
+
+        private void drBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                selectedFighterObject.DamageReduce = Int32.Parse(drBox.Text);
+            }
+            catch { }
+        }
         //Attack Mod Box
         private void textBox1_TextChanged_2(object sender, EventArgs e)
         {
@@ -1785,127 +1848,76 @@ namespace BasicBattleTracking
         //
         private void AtkStrBonusBox_CheckedChanged(object sender, EventArgs e)
         {
-                if(AtkStrBonusBox.Checked)
-                {
-                    foreach(Fighter f in combatants)
-                    {
-                        if(f.attacks.Count > 0)
-                        {
-                            foreach(Attack atk in f.attacks)
-                            {
-                                atk.UpdateStrBonusToAttack(Program.getAbilityMod(f.Str));
-                            }
-                        }
-                    }
-                }
+            
+            if (selectedFighterObject.attacks.Count > 0)
+            {
+                Attack changeAtk = selectedFighterObject.attacks.ElementAt(selectedAttack);
+                if (AtkStrBonusBox.Checked)
+                    changeAtk.UpdateStrBonusToAttack(Program.getAbilityMod(selectedFighterObject.Str));
                 else
-                {
-                    foreach(Fighter f in combatants)
-                    {
-                        if(f.attacks.Count > 0)
-                        {
-                            foreach(Attack atk in f.attacks)
-                            {
-                                atk.ResetAtkStrBonus();
-                            }
-                        }
-                    }
-                }
+                    changeAtk.ResetAtkStrBonus();
+                SkipCheckboxUpdate = true;
                 updateFighterInfo(selectedFighter);
+                SkipCheckboxUpdate = false;
+            }
         }
 
         private void AtkDexBonusBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (AtkDexBonusBox.Checked)
+            if (selectedFighterObject.attacks.Count > 0)
             {
-                foreach (Fighter f in combatants)
+                Attack changeAtk = selectedFighterObject.attacks.ElementAt(selectedAttack);
+                if (AtkDexBonusBox.Checked)
                 {
-                    if (f.attacks.Count > 0)
-                    {
-                        foreach (Attack atk in f.attacks)
-                        {
-                            atk.UpdateDexBonusToAttack(Program.getAbilityMod(f.Dex));
-                        }
-                    }
+                    changeAtk.UpdateDexBonusToAttack(Program.getAbilityMod(selectedFighterObject.Dex));
                 }
-            }
-            else
-            {
-                foreach (Fighter f in combatants)
+                else
                 {
-                    if (f.attacks.Count > 0)
-                    {
-                        foreach (Attack atk in f.attacks)
-                        {
-                            atk.ResetAtkDexBonus();
-                        }
-                    }
+                    changeAtk.ResetAtkDexBonus();
                 }
+                SkipCheckboxUpdate = true;
+                updateFighterInfo(selectedFighter);
+                SkipCheckboxUpdate = false;
             }
-            updateFighterInfo(selectedFighter);
         }
 
         private void DmgStrBonusBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (DmgStrBonusBox.Checked)
+            if (selectedFighterObject.attacks.Count > 0)
             {
-                foreach (Fighter f in combatants)
+                Attack changeAtk = selectedFighterObject.attacks.ElementAt(selectedAttack);
+                if (DmgStrBonusBox.Checked)
                 {
-                    if (f.attacks.Count > 0)
-                    {
-                        foreach (Attack atk in f.attacks)
-                        {
-                            atk.UpdateStrBonusToDamage(Program.getAbilityMod(f.Str));
-                        }
-                    }
+                    changeAtk.UpdateStrBonusToDamage(Program.getAbilityMod(selectedFighterObject.Str));
                 }
-            }
-            else
-            {
-                foreach (Fighter f in combatants)
+                else
                 {
-                    if (f.attacks.Count > 0)
-                    {
-                        foreach (Attack atk in f.attacks)
-                        {
-                            atk.ResetDmgStrBonus();
-                        }
-                    }
+                    changeAtk.ResetDmgStrBonus();
                 }
+                SkipCheckboxUpdate = true;
+                updateFighterInfo(selectedFighter);
+                SkipCheckboxUpdate = false;
             }
-            updateFighterInfo(selectedFighter);
         }
 
         private void DmgDexBonusBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (DmgDexBonusBox.Checked)
+            if (selectedFighterObject.attacks.Count > 0)
             {
-                foreach (Fighter f in combatants)
+                Attack changeAtk = selectedFighterObject.attacks.ElementAt(selectedAttack);
+                if (DmgDexBonusBox.Checked)
                 {
-                    if (f.attacks.Count > 0)
-                    {
-                        foreach (Attack atk in f.attacks)
-                        {
-                            atk.UpdateDexBonusToDamage(Program.getAbilityMod(f.Dex));
-                        }
-                    }
+                    changeAtk.UpdateDexBonusToDamage(Program.getAbilityMod(selectedFighterObject.Dex));
                 }
-            }
-            else
-            {
-                foreach (Fighter f in combatants)
+                else
                 {
-                    if (f.attacks.Count > 0)
-                    {
-                        foreach (Attack atk in f.attacks)
-                        {
-                            atk.ResetDmgDexBonus();
-                        }
-                    }
+                    changeAtk.ResetDmgDexBonus();
                 }
-            }
 
-            updateFighterInfo(selectedFighter);
+                SkipCheckboxUpdate = true;
+                updateFighterInfo(selectedFighter);
+                SkipCheckboxUpdate = false;
+            }
         }
 
         //
@@ -2055,6 +2067,8 @@ namespace BasicBattleTracking
             activeLabel.Text = "None";
             ResetControls();
             session.New();
+            attackView.Items.Clear();
+            skillsTab1.ClearSkillList();
             session.SetDirty(false);
         }
         public void ResetControls()
@@ -2313,6 +2327,8 @@ namespace BasicBattleTracking
         {
 
         }
+
+
 
        
     }

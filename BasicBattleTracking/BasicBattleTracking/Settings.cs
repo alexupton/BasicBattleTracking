@@ -15,6 +15,8 @@ namespace BasicBattleTracking
         public string UserLogDirectory { get; set; }
         public string UserAutoSaveDirectory { get; set; }
         public string UserNotesDirectory { get; set; }
+        public string UserSessionDirectory { get; set; }
+        public string UserSpellFilePath { get; set; }
         public List<Skill> defaultSkillLoadout;
 
         public Settings()

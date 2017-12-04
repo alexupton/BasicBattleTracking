@@ -195,7 +195,7 @@ namespace BasicBattleTracking
 
         private void skillCheckButton_Click(object sender, EventArgs e)
         {
-
+            RollSkillCheck();
         }
         private void RollSkillCheck()
         {
@@ -244,6 +244,15 @@ namespace BasicBattleTracking
                 classCheckBox.Checked = selectedSkill.isClassSkill;
             }
             skillCheckButton.Enabled = true;
+        }
+        public void ClearSkillList()
+        {
+            skillList.Items.Clear();
+            selectedSkill = null;
+            rankBonusBox.Text = "";
+            abilityBonusBox.Text = "";
+            abilitySourceBox.SelectedIndex = 0;
+            miscBonusBox.Text = "";
         }
     }
 }

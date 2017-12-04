@@ -220,6 +220,18 @@ namespace BasicBattleTracking
             FilePath = "";
         }
 
+        public bool HasValidFilePath()
+        {
+            if (FilePath == null || !Directory.Exists(FilePath))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         
     }
 }

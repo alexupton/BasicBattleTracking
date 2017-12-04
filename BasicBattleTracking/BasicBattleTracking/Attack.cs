@@ -27,6 +27,11 @@ namespace BasicBattleTracking
         private int atkDexBonus { get; set; }
         private int dmgStrBonus { get; set; }
         private int dmgDexBonus { get; set; }
+
+        public bool strBonusAppliedToAtk { get; set; }
+        public bool strBonusAppliedToDmg { get; set; }
+        public bool dexBonusAppliedToAtk { get; set; }
+        public bool dexBonusAppliedToDmg { get; set; }
         public Attack(string Name)
         {
             name = Name;
@@ -91,6 +96,7 @@ namespace BasicBattleTracking
             {
                 atkBonuses[i] += diff;
             }
+            strBonusAppliedToAtk = true;
         }
 
         public void UpdateStrBonusToDamage(int newBonus)
@@ -98,6 +104,7 @@ namespace BasicBattleTracking
             int diff = newBonus -dmgStrBonus;
             dmgStrBonus = newBonus;
             dmgBonus += diff;
+            strBonusAppliedToDmg = true;
         }
         
         public void UpdateDexBonusToAttack(int newBonus)
@@ -108,6 +115,7 @@ namespace BasicBattleTracking
             {
                 atkBonuses[i] += diff;
             }
+            dexBonusAppliedToAtk = true;
         }
 
         public void UpdateDexBonusToDamage(int newBonus)
@@ -115,6 +123,7 @@ namespace BasicBattleTracking
             int diff = newBonus -dmgDexBonus;
             dmgDexBonus = newBonus;
             dmgBonus += diff;
+            dexBonusAppliedToDmg = true;
         }
 
         public void ResetAtkStrBonus()
@@ -124,6 +133,7 @@ namespace BasicBattleTracking
                 atkBonuses[i] -= atkStrBonus;
             }
             atkStrBonus = 0;
+            strBonusAppliedToAtk = false;
         }
 
         public void ResetAtkDexBonus()
@@ -133,18 +143,21 @@ namespace BasicBattleTracking
                 atkBonuses[i] -= atkDexBonus;
             }
             atkDexBonus = 0;
+            dexBonusAppliedToAtk = false;
         }
 
         public void ResetDmgStrBonus()
         {
             dmgBonus -= dmgStrBonus;
             dmgStrBonus = 0;
+            strBonusAppliedToDmg = false;
         }
 
         public void ResetDmgDexBonus()
         {
             dmgBonus -= dmgDexBonus;
             dmgDexBonus = 0;
+            dexBonusAppliedToDmg = false;
         }
     }
 }

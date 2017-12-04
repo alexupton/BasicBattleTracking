@@ -10,7 +10,7 @@ namespace BasicBattleTracking
     {
         public static string defaultPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\BasicBattleTracking";
         public static Settings activeSettings;
-        public static string ProgramName = "Basic Battle Tracking";
+        public static string ProgramName = "Pathfinder Omnitool";
         public static string activeSessionName;
 
         /// <summary>

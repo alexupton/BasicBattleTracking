@@ -16,7 +16,7 @@ namespace BasicBattleTracking
         private List<string> recentPaths;
         bool pathUpdatePending;
         private List<string> notes;
-        bool isDirty = false;
+        bool isDirty = false; 
 
         private Settings settings;
 

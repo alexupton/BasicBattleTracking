@@ -44,10 +44,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.statPathBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.critConfirmBox = new System.Windows.Forms.CheckBox();
             this.initOptionBox = new System.Windows.Forms.CheckBox();
             this.okButton = new System.Windows.Forms.Button();
             this.cancButton = new System.Windows.Forms.Button();
-            this.critConfirmBox = new System.Windows.Forms.CheckBox();
+            this.sessionBrowseBox = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.sessionBox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -67,6 +70,9 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.sessionBrowseBox);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.sessionBox);
             this.tabPage1.Controls.Add(this.browseButton4);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.notesPathBox);
@@ -216,6 +222,18 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Options";
             // 
+            // critConfirmBox
+            // 
+            this.critConfirmBox.AutoSize = true;
+            this.critConfirmBox.Checked = true;
+            this.critConfirmBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.critConfirmBox.Location = new System.Drawing.Point(23, 80);
+            this.critConfirmBox.Name = "critConfirmBox";
+            this.critConfirmBox.Size = new System.Drawing.Size(271, 24);
+            this.critConfirmBox.TabIndex = 1;
+            this.critConfirmBox.Text = "Automatically Confirm Critical Hits";
+            this.critConfirmBox.UseVisualStyleBackColor = true;
+            // 
             // initOptionBox
             // 
             this.initOptionBox.AutoSize = true;
@@ -252,17 +270,34 @@
             this.cancButton.UseVisualStyleBackColor = true;
             this.cancButton.Click += new System.EventHandler(this.cancButton_Click);
             // 
-            // critConfirmBox
+            // sessionBrowseBox
             // 
-            this.critConfirmBox.AutoSize = true;
-            this.critConfirmBox.Checked = true;
-            this.critConfirmBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.critConfirmBox.Location = new System.Drawing.Point(23, 80);
-            this.critConfirmBox.Name = "critConfirmBox";
-            this.critConfirmBox.Size = new System.Drawing.Size(271, 24);
-            this.critConfirmBox.TabIndex = 1;
-            this.critConfirmBox.Text = "Automatically Confirm Critical Hits";
-            this.critConfirmBox.UseVisualStyleBackColor = true;
+            this.sessionBrowseBox.Location = new System.Drawing.Point(420, 342);
+            this.sessionBrowseBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sessionBrowseBox.Name = "sessionBrowseBox";
+            this.sessionBrowseBox.Size = new System.Drawing.Size(88, 35);
+            this.sessionBrowseBox.TabIndex = 14;
+            this.sessionBrowseBox.Text = "Browse...";
+            this.sessionBrowseBox.UseVisualStyleBackColor = true;
+            this.sessionBrowseBox.Click += new System.EventHandler(this.sessionBrowseBox_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(42, 349);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 20);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Sessions";
+            // 
+            // sessionBox
+            // 
+            this.sessionBox.Location = new System.Drawing.Point(134, 345);
+            this.sessionBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sessionBox.Name = "sessionBox";
+            this.sessionBox.Size = new System.Drawing.Size(276, 26);
+            this.sessionBox.TabIndex = 12;
             // 
             // OptionScreen
             // 
@@ -309,5 +344,8 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.CheckBox initOptionBox;
         private System.Windows.Forms.CheckBox critConfirmBox;
+        private System.Windows.Forms.Button sessionBrowseBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox sessionBox;
     }
 }
