@@ -159,3 +159,38 @@ D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTrac
 D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.TableErrorBox.resources
 D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe.CodeAnalysisLog.xml
 D:\Users\TheBoss\Desktop\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe.lastcodeanalysissucceeded
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe.config
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.exe
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.pdb
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe.manifest
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.application
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.pdb
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AddFighterWindow.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AttackDesigner.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AttackForm.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.DPercentDesigner.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.DPercentLine.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.DPercentPanel.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.FeatsTab.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.MainWindow.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.NotesTab.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.OptionScreen.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.PC_Initiative.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.Properties.Resources.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.SkillDesigner.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.SkillLine.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.SkillsTab.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.SplashScreen.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.StatBlockDesigner.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.StatusWindow.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.AttackTab.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.TableErrorBox.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.csproj.GenerateResource.Cache
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.exe.manifest
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.application
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.CharacterSheet.resources
+D:\Users\TheBoss\Desktop\Basic Battle Tracking\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.Forms.UserControls.DiceTab.resources
+D:\Git2\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\bin\Debug\BasicBattleTracking.exe.config
+D:\Git2\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.exe
+D:\Git2\BasicBattleTracking\BasicBattleTracking\BasicBattleTracking\obj\Debug\BasicBattleTracking.pdb

@@ -66,7 +66,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>d20.ico</ApplicationIcon>
+    <ApplicationIcon>Images\d20.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -81,164 +81,189 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddFighterWindow.cs">
+    <Compile Include="FighterDetail\Save.cs" />
+    <Compile Include="Forms\AddFighterWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddFighterWindow.Designer.cs">
+    <Compile Include="Forms\AddFighterWindow.Designer.cs">
       <DependentUpon>AddFighterWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Attack.cs" />
-    <Compile Include="AttackDesigner.cs">
+    <Compile Include="FighterDetail\Attack.cs" />
+    <Compile Include="Forms\AttackDesigner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AttackDesigner.Designer.cs">
+    <Compile Include="Forms\AttackDesigner.Designer.cs">
       <DependentUpon>AttackDesigner.cs</DependentUpon>
     </Compile>
-    <Compile Include="AttackForm.cs">
+    <Compile Include="Forms\AttackForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AttackForm.Designer.cs">
+    <Compile Include="Forms\AttackForm.Designer.cs">
       <DependentUpon>AttackForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BattleIO.cs" />
-    <Compile Include="DiceRoller.cs" />
-    <Compile Include="DPercentDesigner.cs">
+    <Compile Include="Forms\CharacterSheet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DPercentDesigner.Designer.cs">
+    <Compile Include="Forms\CharacterSheet.Designer.cs">
+      <DependentUpon>CharacterSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiceRoller.cs" />
+    <Compile Include="Forms\DPercentDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DPercentDesigner.Designer.cs">
       <DependentUpon>DPercentDesigner.cs</DependentUpon>
     </Compile>
-    <Compile Include="DPercentLine.cs">
+    <Compile Include="Forms\UserControls\DiceTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DPercentLine.Designer.cs">
+    <Compile Include="Forms\UserControls\DiceTab.Designer.cs">
+      <DependentUpon>DiceTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\DPercentLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\DPercentLine.Designer.cs">
       <DependentUpon>DPercentLine.cs</DependentUpon>
     </Compile>
-    <Compile Include="DPercentPanel.cs">
+    <Compile Include="Forms\UserControls\DPercentPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DPercentPanel.Designer.cs">
+    <Compile Include="Forms\UserControls\DPercentPanel.Designer.cs">
       <DependentUpon>DPercentPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="DPercentTable.cs" />
     <Compile Include="Encounter.cs" />
     <Compile Include="Event\EncounterEvent.cs" />
-    <Compile Include="Feat.cs" />
-    <Compile Include="FeatsTab.cs">
+    <Compile Include="FighterDetail\Feat.cs" />
+    <Compile Include="Forms\UserControls\FeatsTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FeatsTab.Designer.cs">
+    <Compile Include="Forms\UserControls\FeatsTab.Designer.cs">
       <DependentUpon>FeatsTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="NotesTab.cs">
+    <Compile Include="Forms\UserControls\NotesTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NotesTab.Designer.cs">
+    <Compile Include="Forms\UserControls\NotesTab.Designer.cs">
       <DependentUpon>NotesTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="OptionScreen.cs">
+    <Compile Include="Forms\OptionScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OptionScreen.Designer.cs">
+    <Compile Include="Forms\OptionScreen.Designer.cs">
       <DependentUpon>OptionScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="SerializableObject.cs" />
     <Compile Include="SessionController.cs" />
     <Compile Include="SessionDetail.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="Skill.cs" />
-    <Compile Include="SkillDesigner.cs">
+    <Compile Include="FighterDetail\Skill.cs" />
+    <Compile Include="Forms\SkillDesigner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SkillDesigner.Designer.cs">
+    <Compile Include="Forms\SkillDesigner.Designer.cs">
       <DependentUpon>SkillDesigner.cs</DependentUpon>
     </Compile>
-    <Compile Include="SkillLine.cs">
+    <Compile Include="Forms\UserControls\SkillLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SkillLine.Designer.cs">
+    <Compile Include="Forms\UserControls\SkillLine.Designer.cs">
       <DependentUpon>SkillLine.cs</DependentUpon>
     </Compile>
-    <Compile Include="SkillsTab.cs">
+    <Compile Include="Forms\UserControls\SkillsTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SkillsTab.Designer.cs">
+    <Compile Include="Forms\UserControls\SkillsTab.Designer.cs">
       <DependentUpon>SkillsTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="Spell.cs" />
-    <Compile Include="Fighter.cs" />
-    <Compile Include="MainWindow.cs">
+    <Compile Include="FighterDetail\Spell.cs" />
+    <Compile Include="FighterDetail\Fighter.cs" />
+    <Compile Include="Forms\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainWindow.Designer.cs">
+    <Compile Include="Forms\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="PC Initiative.cs">
+    <Compile Include="Forms\PC Initiative.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PC Initiative.Designer.cs">
+    <Compile Include="Forms\PC Initiative.Designer.cs">
       <DependentUpon>PC Initiative.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpellDB.cs" />
     <Compile Include="SpellSet.cs" />
-    <Compile Include="StatBlockDesigner.cs">
+    <Compile Include="Forms\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StatBlockDesigner.Designer.cs">
+    <Compile Include="Forms\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StatBlockDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StatBlockDesigner.Designer.cs">
       <DependentUpon>StatBlockDesigner.cs</DependentUpon>
     </Compile>
-    <Compile Include="Status.cs" />
-    <Compile Include="StatusWindow.cs">
+    <Compile Include="FighterDetail\Status.cs" />
+    <Compile Include="Forms\StatusWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StatusWindow.Designer.cs">
+    <Compile Include="Forms\StatusWindow.Designer.cs">
       <DependentUpon>StatusWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="AttackTab.cs">
+    <Compile Include="Forms\UserControls\AttackTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AttackTab.Designer.cs">
+    <Compile Include="Forms\UserControls\AttackTab.Designer.cs">
       <DependentUpon>AttackTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="TableErrorBox.cs">
+    <Compile Include="Forms\TableErrorBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TableErrorBox.Designer.cs">
+    <Compile Include="Forms\TableErrorBox.Designer.cs">
       <DependentUpon>TableErrorBox.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddFighterWindow.resx">
+    <EmbeddedResource Include="Forms\AddFighterWindow.resx">
       <DependentUpon>AddFighterWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AttackDesigner.resx">
+    <EmbeddedResource Include="Forms\AttackDesigner.resx">
       <DependentUpon>AttackDesigner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AttackForm.resx">
+    <EmbeddedResource Include="Forms\AttackForm.resx">
       <DependentUpon>AttackForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DPercentDesigner.resx">
+    <EmbeddedResource Include="Forms\CharacterSheet.resx">
+      <DependentUpon>CharacterSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DPercentDesigner.resx">
       <DependentUpon>DPercentDesigner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DPercentLine.resx">
+    <EmbeddedResource Include="Forms\UserControls\DiceTab.resx">
+      <DependentUpon>DiceTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\DPercentLine.resx">
       <DependentUpon>DPercentLine.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DPercentPanel.resx">
+    <EmbeddedResource Include="Forms\UserControls\DPercentPanel.resx">
       <DependentUpon>DPercentPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FeatsTab.resx">
+    <EmbeddedResource Include="Forms\UserControls\FeatsTab.resx">
       <DependentUpon>FeatsTab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainWindow.resx">
+    <EmbeddedResource Include="Forms\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NotesTab.resx">
+    <EmbeddedResource Include="Forms\UserControls\NotesTab.resx">
       <DependentUpon>NotesTab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionScreen.resx">
+    <EmbeddedResource Include="Forms\OptionScreen.resx">
       <DependentUpon>OptionScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PC Initiative.resx">
+    <EmbeddedResource Include="Forms\PC Initiative.resx">
       <DependentUpon>PC Initiative.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -251,29 +276,31 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SkillDesigner.resx">
+    <EmbeddedResource Include="Forms\SkillDesigner.resx">
       <DependentUpon>SkillDesigner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SkillLine.resx">
+    <EmbeddedResource Include="Forms\UserControls\SkillLine.resx">
       <DependentUpon>SkillLine.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SkillsTab.resx">
+    <EmbeddedResource Include="Forms\UserControls\SkillsTab.resx">
       <DependentUpon>SkillsTab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StatBlockDesigner.resx">
+    <EmbeddedResource Include="Forms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatBlockDesigner.resx">
       <DependentUpon>StatBlockDesigner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StatusWindow.resx">
+    <EmbeddedResource Include="Forms\StatusWindow.resx">
       <DependentUpon>StatusWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AttackTab.resx">
+    <EmbeddedResource Include="Forms\UserControls\AttackTab.resx">
       <DependentUpon>AttackTab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TableErrorBox.resx">
+    <EmbeddedResource Include="Forms\TableErrorBox.resx">
       <DependentUpon>TableErrorBox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BasicBattleTracking_TemporaryKey.pfx" />
-    <None Include="Database\spell_full.csv" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -332,7 +359,23 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="d20.ico" />
+    <Content Include="Images\d20.ico" />
+    <Content Include="Resources\d10.png" />
+    <Content Include="Resources\d100.png" />
+    <Content Include="Resources\d12.png" />
+    <Content Include="Resources\d20.ico" />
+    <Content Include="Resources\d20.png" />
+    <Content Include="Resources\d20Clear.png" />
+    <Content Include="Resources\d20Small.png" />
+    <Content Include="Resources\d4.png" />
+    <Content Include="Resources\d6.png" />
+    <Content Include="Resources\d8.png" />
+    <Content Include="Resources\dx.png" />
+    <None Include="Resources\SpellDBFile.bmp" />
+    <None Include="Images\CharSheet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

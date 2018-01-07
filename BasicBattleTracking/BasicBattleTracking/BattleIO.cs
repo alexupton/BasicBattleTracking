@@ -42,11 +42,19 @@ namespace BasicBattleTracking
             if (File.Exists(sessionPath))
             {
                 autoSesh = LoadObject<SessionDetail>(sessionPath);
-                Program.activeSessionName = autoSesh.SessionName;
-                sender.session.LoadSettings(sessionPath);
-                sender.ExtractFields(autoSesh);
+                if (autoSesh != null)
+                {
+                    Program.activeSessionName = autoSesh.SessionName;
+                    sender.session.LoadSettings(sessionPath);
+                    sender.ExtractFields(autoSesh);
+                }
                 LoadDefaultSkills(sender);
-                return autoSesh.combatants;
+                if (autoSesh != null)
+                {
+                    return autoSesh.combatants;
+                }
+                else
+                    return new List<Fighter>();
             }
             //LEGACY LOADER
             else
@@ -700,7 +708,14 @@ namespace BasicBattleTracking
 
                 using (var sr = new StreamReader(FileName))
                 {
-                    rslt = (T)xs.Deserialize(sr);
+                    try
+                    {
+                        rslt = (T)xs.Deserialize(sr);
+                    }
+                    catch
+                    {
+                        rslt = null;
+                    }
                 }
                 return (T)rslt;
             }

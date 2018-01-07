@@ -14,14 +14,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="BasicBattleTracking.exe.manifest" size="3998">
+    <dependentAssembly dependencyType="install" codebase="BasicBattleTracking.exe.manifest" size="8377">
       <assemblyIdentity name="BasicBattleTracking.exe" version="1.0.0.18" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NHYqC7pZOC4tfeYMOoaqYOV7fwA3Pup/N2oYXC7/YTQ=</dsig:DigestValue>
+        <dsig:DigestValue>BHYQC2zwqrx1YJzZ4eG9KIxiR2gVjVPmilpjv8OEmYk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
