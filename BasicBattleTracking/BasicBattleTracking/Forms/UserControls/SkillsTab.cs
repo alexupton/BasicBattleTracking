@@ -15,6 +15,7 @@ namespace BasicBattleTracking
         private Fighter activeFighter;
         private Skill selectedSkill;
         public MainWindow ParentWindow { get; set; }
+        public CharacterSheet sendingSheet { get; set; }
 
         private bool skillIndexChanging = false;
         public SkillsTab()
@@ -218,6 +219,10 @@ namespace BasicBattleTracking
             if (ParentWindow != null)
             {
                 ParentWindow.WriteToLog(log);
+            }
+            if (sendingSheet != null)
+            {
+                sendingSheet.WriteToLog(log);
             }
             return log;
 

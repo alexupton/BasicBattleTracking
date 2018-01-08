@@ -13,6 +13,7 @@ namespace BasicBattleTracking
     public partial class AttackForm : Form
     {
         private MainWindow sendingForm;
+        private CharacterSheet sendingSheet;
         private List<Fighter> PCs;
         private Fighter target;
         private int DR;
@@ -43,9 +44,21 @@ namespace BasicBattleTracking
             targetBox.SelectedIndex = 0;
         }
 
+        public AttackForm(CharacterSheet sheet, Fighter PC)
+        {
+            sendingSheet = sheet;
+            InitializeComponent();
+            targetBox.Items.Add(PC.Name);
+            targetBox.Enabled = false;
+            PCs = new List<Fighter>() { PC };
+
+            targetBox.SelectedIndex = 0;
+        }
+
         private void AttackForm_Load(object sender, EventArgs e)
         {
             drCheckBox.Checked = true;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,12 +77,19 @@ namespace BasicBattleTracking
                     MessageBox.Show("Invalid damage amount.", "Error", MessageBoxButtons.OK);
                 }
 
-                if (!victim.isPC)
+                if (!victim.isPC || sendingSheet != null)
                     victim.HP -= damage;
+              
 
-
-                sendingForm.LogAttack(victim.Name, damage);
-                if (victim.HP <= 0 && !victim.isPC)
+                if (sendingForm != null)
+                {
+                    sendingForm.LogAttack(victim.Name, damage);
+                }
+                if (sendingSheet != null)
+                {
+                    sendingSheet.LogAttack(damage);
+                }
+                if (victim.HP <= 0 && !victim.isPC && sendingForm != null)
                 {
                     sendingForm.removeFighter(victim);
                     sendingForm.WriteToLog(victim.Name + " has died!");

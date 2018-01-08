@@ -97,6 +97,8 @@ namespace BasicBattleTracking
             this.Visible = true;
             Program.EndSplashScreen();
 
+            //Debug
+
 
         }
 
@@ -876,7 +878,7 @@ namespace BasicBattleTracking
         private void fortCheck()
         {
             SetDamageInfoEnable(false);
-            WriteToRollConsole("=====fort.totalitude Save=====");
+            WriteToRollConsole("=====Fortitude Save=====");
             Random randy = new Random();
             int result = randy.Next(20) + 1;
             d20Label.Text = result.ToString();
@@ -900,7 +902,7 @@ namespace BasicBattleTracking
         private void RefCheck()
         {
             SetDamageInfoEnable(false);
-            WriteToRollConsole("=====reflex.total Save=====");
+            WriteToRollConsole("=====Reflex Save=====");
             Random randy = new Random();
             int result = randy.Next(20) + 1;
             d20Label.Text = result.ToString();
@@ -924,7 +926,7 @@ namespace BasicBattleTracking
         private void willCheck()
         {
             SetDamageInfoEnable(false);
-            WriteToRollConsole("=====will.total Save=====");
+            WriteToRollConsole("=====Will Save=====");
             Random randy = new Random();
             int result = randy.Next(20) + 1;
             d20Label.Text = result.ToString();
@@ -2009,6 +2011,7 @@ namespace BasicBattleTracking
         }
         private void Form1_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            AutoSave();
             session.ReinitializeSender(this);
             if (!session.Exit())
             {

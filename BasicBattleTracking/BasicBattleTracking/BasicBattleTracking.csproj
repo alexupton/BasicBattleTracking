@@ -115,6 +115,12 @@
     <Compile Include="Forms\DPercentDesigner.Designer.cs">
       <DependentUpon>DPercentDesigner.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserControls\AttackControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\AttackControl.Designer.cs">
+      <DependentUpon>AttackControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserControls\DiceTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -241,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DPercentDesigner.resx">
       <DependentUpon>DPercentDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\AttackControl.resx">
+      <DependentUpon>AttackControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserControls\DiceTab.resx">
       <DependentUpon>DiceTab.cs</DependentUpon>

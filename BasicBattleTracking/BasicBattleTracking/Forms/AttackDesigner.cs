@@ -14,9 +14,22 @@ namespace BasicBattleTracking
     {
         private List<AttackTab> tabs;
         private StatBlockDesigner parentWindow;
+        private Forms.UserControls.AttackControl sendingSheet;
         public AttackDesigner(StatBlockDesigner sendingForm)
         {
             parentWindow = sendingForm;
+            InitializeComponent();
+            tabs = new List<AttackTab>();
+            tabControl1.SelectedIndexChanged += new EventHandler(SelectedIndexChanged);
+            tabControl1.TabPages.Clear();
+            tabs = new List<AttackTab>();
+
+            addNewAttack();
+        }
+
+        public AttackDesigner(Forms.UserControls.AttackControl sheet)
+        {
+            sendingSheet = sheet;
             InitializeComponent();
             tabs = new List<AttackTab>();
             tabControl1.SelectedIndexChanged += new EventHandler(SelectedIndexChanged);
@@ -38,7 +51,14 @@ namespace BasicBattleTracking
                 }
             }
 
-            parentWindow.SetAttacks(attacks);
+            if (parentWindow != null)
+            {
+                parentWindow.SetAttacks(attacks);
+            }
+            if (sendingSheet != null)
+            {
+                sendingSheet.SetAttacks(attacks);
+            }
             if (attacks.Count > 0)
             {
                 this.Close();

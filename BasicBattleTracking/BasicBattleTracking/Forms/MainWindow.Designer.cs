@@ -98,7 +98,6 @@
             this.rollResultLabel = new System.Windows.Forms.Label();
             this.damageResult = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.skillsTab1 = new BasicBattleTracking.SkillsTab();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label55 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
@@ -264,8 +263,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dPercentTableControls = new BasicBattleTracking.DPercentPanel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.skillsTab1 = new BasicBattleTracking.SkillsTab();
+            this.dPercentTableControls = new BasicBattleTracking.DPercentPanel();
             this.notesTab1 = new BasicBattleTracking.NotesTab();
             this.ControlsBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -1125,15 +1125,6 @@
             this.tabPage5.Size = new System.Drawing.Size(697, 340);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Skills";
-            // 
-            // skillsTab1
-            // 
-            this.skillsTab1.Location = new System.Drawing.Point(0, 0);
-            this.skillsTab1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.skillsTab1.Name = "skillsTab1";
-            this.skillsTab1.ParentWindow = null;
-            this.skillsTab1.Size = new System.Drawing.Size(697, 340);
-            this.skillsTab1.TabIndex = 0;
             // 
             // tabPage6
             // 
@@ -2762,17 +2753,6 @@
             this.tabPage2.Text = "Reference";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // dPercentTableControls
-            // 
-            this.dPercentTableControls.AutoSize = true;
-            this.dPercentTableControls.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.dPercentTableControls.Location = new System.Drawing.Point(2, 5);
-            this.dPercentTableControls.Margin = new System.Windows.Forms.Padding(1);
-            this.dPercentTableControls.Name = "dPercentTableControls";
-            this.dPercentTableControls.Size = new System.Drawing.Size(533, 425);
-            this.dPercentTableControls.TabIndex = 1;
-            this.dPercentTableControls.Load += new System.EventHandler(this.dPercentTableControls_Load);
-            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
@@ -2785,6 +2765,27 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Notes";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // skillsTab1
+            // 
+            this.skillsTab1.Location = new System.Drawing.Point(0, 0);
+            this.skillsTab1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.skillsTab1.Name = "skillsTab1";
+            this.skillsTab1.ParentWindow = null;
+            this.skillsTab1.sendingSheet = null;
+            this.skillsTab1.Size = new System.Drawing.Size(697, 340);
+            this.skillsTab1.TabIndex = 0;
+            // 
+            // dPercentTableControls
+            // 
+            this.dPercentTableControls.AutoSize = true;
+            this.dPercentTableControls.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.dPercentTableControls.Location = new System.Drawing.Point(2, 5);
+            this.dPercentTableControls.Margin = new System.Windows.Forms.Padding(1);
+            this.dPercentTableControls.Name = "dPercentTableControls";
+            this.dPercentTableControls.Size = new System.Drawing.Size(533, 425);
+            this.dPercentTableControls.TabIndex = 1;
+            this.dPercentTableControls.Load += new System.EventHandler(this.dPercentTableControls_Load);
             // 
             // notesTab1
             // 

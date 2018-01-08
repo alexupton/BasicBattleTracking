@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
+using BasicBattleTracking.Forms.UserControls;
 
 namespace BasicBattleTracking
 {
@@ -27,6 +28,9 @@ namespace BasicBattleTracking
         private void CharacterSheet_Load(object sender, EventArgs e)
         {
             toolTip1.SetToolTip(MaxHP, "Restore current HP to total HP");
+            if (DMForm != null)
+                attackControl2.parentForm = DMForm;
+            attackControl2.sheetForm = this;
         }
 
         public void SendFighter(Fighter input)
@@ -46,6 +50,10 @@ namespace BasicBattleTracking
         {
             NameBox.Text = Character.Name;
             PropertyInfo[] charProps = Character.GetType().GetProperties();
+            attackControl2.InitializeAttacks(Character);
+            skillsTab1.SetActiveFighter(Character);
+            skillsTab1.UpdateSkillsList();
+            skillsTab1.sendingSheet = this;
             foreach(Control c in GetAll(this, typeof(TextBox)))
             {
                     TextBox next = c as TextBox;
@@ -174,7 +182,7 @@ namespace BasicBattleTracking
             }
         }
 
-        public void WriteToLog(string text)
+        public new void WriteToLog(string text)
         {
             logBox.AppendText(text);
             logBox.AppendText("\n");
@@ -185,6 +193,17 @@ namespace BasicBattleTracking
         private void diceTab1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        public void LogAttack(int damage)
+        {
+            WriteToLog(Character.Name + " was attacked for " + damage + " damage!");
+            DisplayCharacterInfo();
         }
     }
 }
