@@ -81,6 +81,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Event\Event.cs" />
+    <Compile Include="Event\StatusEvent.cs" />
     <Compile Include="FighterDetail\Save.cs" />
     <Compile Include="Forms\AddFighterWindow.cs">
       <SubType>Form</SubType>
@@ -141,7 +143,6 @@
     </Compile>
     <Compile Include="DPercentTable.cs" />
     <Compile Include="Encounter.cs" />
-    <Compile Include="Event\EncounterEvent.cs" />
     <Compile Include="FighterDetail\Feat.cs" />
     <Compile Include="Forms\UserControls\FeatsTab.cs">
       <SubType>UserControl</SubType>

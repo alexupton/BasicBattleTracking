@@ -44,6 +44,7 @@ namespace BasicBattleTracking
             NotesPath = notesPathBox.Text; directories.Add(NotesPath);
             settings.initEachRound = initOption;
             settings.confirmCrits = critConfirmBox.Checked;
+            settings.brianMode = brianBox.Checked;
 
             BattleIO saver = new BattleIO();
             if(saver.ValidateFilePaths(directories))
@@ -55,6 +56,7 @@ namespace BasicBattleTracking
                 settings.UserSessionDirectory = SessionPath;
                 saver.SaveAutoSettings(settings);
                 sendingForm.session.settings = this.settings;
+                sendingForm.SetBrianMode();
                 this.Close();
             }
             else
@@ -122,6 +124,9 @@ namespace BasicBattleTracking
 
             critConfirmBox.Checked = settings.confirmCrits;
             initOptionBox.Checked = settings.initEachRound;
+            brianBox.Checked = settings.brianMode;
+
+            toolTip1.SetToolTip(brianBox, "Moves the log box to the a tab, shrinking the vertical area of the screen.");
 
             
         }
@@ -201,6 +206,11 @@ namespace BasicBattleTracking
         private void sessionBrowseBox_Click(object sender, EventArgs e)
         {
             UpdatePathBox(sessionBox, 4);
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }

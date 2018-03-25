@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionScreen));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.sessionBrowseBox = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.sessionBox = new System.Windows.Forms.TextBox();
             this.browseButton4 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.notesPathBox = new System.Windows.Forms.TextBox();
@@ -48,9 +52,8 @@
             this.initOptionBox = new System.Windows.Forms.CheckBox();
             this.okButton = new System.Windows.Forms.Button();
             this.cancButton = new System.Windows.Forms.Button();
-            this.sessionBrowseBox = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.sessionBox = new System.Windows.Forms.TextBox();
+            this.brianBox = new System.Windows.Forms.CheckBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -92,6 +95,35 @@
             this.tabPage1.Size = new System.Drawing.Size(540, 485);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Directories";
+            // 
+            // sessionBrowseBox
+            // 
+            this.sessionBrowseBox.Location = new System.Drawing.Point(420, 342);
+            this.sessionBrowseBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sessionBrowseBox.Name = "sessionBrowseBox";
+            this.sessionBrowseBox.Size = new System.Drawing.Size(88, 35);
+            this.sessionBrowseBox.TabIndex = 14;
+            this.sessionBrowseBox.Text = "Browse...";
+            this.sessionBrowseBox.UseVisualStyleBackColor = true;
+            this.sessionBrowseBox.Click += new System.EventHandler(this.sessionBrowseBox_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(42, 349);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 20);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Sessions";
+            // 
+            // sessionBox
+            // 
+            this.sessionBox.Location = new System.Drawing.Point(134, 345);
+            this.sessionBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sessionBox.Name = "sessionBox";
+            this.sessionBox.Size = new System.Drawing.Size(276, 26);
+            this.sessionBox.TabIndex = 12;
             // 
             // browseButton4
             // 
@@ -213,6 +245,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.brianBox);
             this.tabPage2.Controls.Add(this.critConfirmBox);
             this.tabPage2.Controls.Add(this.initOptionBox);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
@@ -270,34 +303,21 @@
             this.cancButton.UseVisualStyleBackColor = true;
             this.cancButton.Click += new System.EventHandler(this.cancButton_Click);
             // 
-            // sessionBrowseBox
+            // brianBox
             // 
-            this.sessionBrowseBox.Location = new System.Drawing.Point(420, 342);
-            this.sessionBrowseBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sessionBrowseBox.Name = "sessionBrowseBox";
-            this.sessionBrowseBox.Size = new System.Drawing.Size(88, 35);
-            this.sessionBrowseBox.TabIndex = 14;
-            this.sessionBrowseBox.Text = "Browse...";
-            this.sessionBrowseBox.UseVisualStyleBackColor = true;
-            this.sessionBrowseBox.Click += new System.EventHandler(this.sessionBrowseBox_Click);
+            this.brianBox.AutoSize = true;
+            this.brianBox.Checked = true;
+            this.brianBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.brianBox.Location = new System.Drawing.Point(23, 157);
+            this.brianBox.Name = "brianBox";
+            this.brianBox.Size = new System.Drawing.Size(116, 24);
+            this.brianBox.TabIndex = 2;
+            this.brianBox.Text = "Brian Mode";
+            this.brianBox.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // toolTip1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(42, 349);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 20);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Sessions";
-            // 
-            // sessionBox
-            // 
-            this.sessionBox.Location = new System.Drawing.Point(134, 345);
-            this.sessionBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sessionBox.Name = "sessionBox";
-            this.sessionBox.Size = new System.Drawing.Size(276, 26);
-            this.sessionBox.TabIndex = 12;
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // OptionScreen
             // 
@@ -347,5 +367,7 @@
         private System.Windows.Forms.Button sessionBrowseBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox sessionBox;
+        private System.Windows.Forms.CheckBox brianBox;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -8,8 +8,8 @@ namespace BasicBattleTracking
 {
     public class Encounter
     {
-        public List<Event.EncounterEvent> eventsList { get; set; }
-        public int Turn { get; set; }
+        //public List<Event.EncounterEvent> eventsList { get; set; }
+        //public int Turn { get; set; }
 
 
     }

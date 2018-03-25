@@ -34,6 +34,14 @@ namespace BasicBattleTracking.FighterDetail
             total = baseVal + abilityMod + magicMod + tempMod;
         }
 
+        public int RollSave()
+        {
+            Random randy = new Random();
+            int result = randy.Next(20) + 1;
+            result += total;
+            return result;
+        }
+
 
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BasicBattleTracking.Event;
 
 namespace BasicBattleTracking
 {
@@ -45,6 +46,8 @@ namespace BasicBattleTracking
             }
             targetBox.SelectedIndex = 0;
         }
+
+    
 
         public void AddRecentlyUsed(List<Status> recentlyUsedStatuses)
         {

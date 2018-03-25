@@ -65,6 +65,25 @@ namespace BasicBattleTracking
                         }
                     }
             }
+            Character.Fort.abilityMod = Program.getAbilityMod(Character.Con);
+            Character.Reflex.abilityMod = Program.getAbilityMod(Character.Dex);
+            Character.Will.abilityMod = Program.getAbilityMod(Character.Wis);
+            fortAbil.Text = Character.Fort.abilityMod.ToString();
+            fortRanks.Text = Character.Fort.baseVal.ToString();
+            refAbil.Text = Character.Reflex.abilityMod.ToString();
+            RefRanks.Text = Character.Reflex.baseVal.ToString();
+            willAbil.Text = Character.Will.abilityMod.ToString();
+            willRanks.Text = Character.Will.baseVal.ToString();
+
+            
+
+
+            Fort.Text = Character.Fort.total.ToString();
+            Reflex.Text = Character.Reflex.total.ToString();
+            Will.Text = Character.Will.total.ToString();
+
+            
+            
         }
 
         public IEnumerable<Control> GetAll(Control control, Type type)
@@ -204,6 +223,59 @@ namespace BasicBattleTracking
         {
             WriteToLog(Character.Name + " was attacked for " + damage + " damage!");
             DisplayCharacterInfo();
+        }
+
+        private void fortRanks_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Character.Fort.baseVal = Int32.Parse(fortRanks.Text);
+                DisplayCharacterInfo();
+            }
+            catch{}
+        }
+
+        private void willRanks_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Character.Will.baseVal = Int32.Parse(willRanks.Text);
+                DisplayCharacterInfo();
+            }
+            catch { }
+        }
+
+        private void RefRanks_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Character.Reflex.baseVal = Int32.Parse(RefRanks.Text);
+                DisplayCharacterInfo();
+            }
+            catch { }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RollCheck("Fortitude", Character.Fort, FortResultBox);
+        }
+
+        private void RollCheck(string name, FighterDetail.Save save, TextBox output)
+        {
+            int result = save.RollSave();
+            output.Text = result.ToString();
+            WriteToLog(Character.Name + " made a " + name + " save of " + result.ToString() + "!");
+            
+        }
+
+        private void rollRefButton_Click(object sender, EventArgs e)
+        {
+            RollCheck("Reflex", Character.Reflex, RefResultBox);
+        }
+
+        private void rollWillButton_Click(object sender, EventArgs e)
+        {
+            RollCheck("Will", Character.Will, WillResultBox);
         }
     }
 }

@@ -57,8 +57,8 @@ namespace BasicBattleTracking
             this.FormClosing += new FormClosingEventHandler(this.Form1_Closing);
 
             //DB Load
-            string[] spellLines = SpellDB.GetDBLines();
-            WriteToLog("Spell database size: " + spellLines.Length);
+        //    string[] spellLines = SpellDB.GetDBLines();
+      //      WriteToLog("Spell database size: " + spellLines.Length);
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,14 +92,40 @@ namespace BasicBattleTracking
             this.attackToolStripMenuItem.DropDownItemClicked += new ToolStripItemClickedEventHandler(this.attackMenuItemClicked);
             this.skillsToolStripMenuItem.DropDownItemClicked += new ToolStripItemClickedEventHandler(this.skillMenuItemClicked);
             //TestDPercentTable();
-            WriteToLog("Now with a hotfix directly off the skillet");
+            WriteToLog("Options > Settings > Options > Brian Mode. You're welcome.");
+            SetBrianMode();
             session.SetDirty(false);
             this.Visible = true;
             Program.EndSplashScreen();
 
             //Debug
 
-
+            
+        }
+        public void SetBrianMode()
+        {
+            if (!session.settings.brianMode)
+            {
+                string transfer = "";
+                if (logBox2.Text != "")
+                {
+                    transfer = logBox2.Text;
+                }
+                groupBox2.Visible = true;
+                tabControl2.Controls.Remove(tabPage11);
+                LogBox.AppendText(transfer);
+            }
+            else
+            {
+                string transfer = "";
+                if (LogBox.Text != "")
+                {
+                    transfer = LogBox.Text;
+                }
+                tabControl2.Controls.Add(tabPage11);
+                groupBox2.Visible = false;
+                logBox2.AppendText(transfer);
+            }
         }
 
 
@@ -153,6 +179,8 @@ namespace BasicBattleTracking
                         disableGlobalButtons();
                         initButton.Enabled = false;
                         SetRollButtons(false);
+                        attackView.Items.Clear();
+                        skillsTab1.ClearSkillList();
                     }
                     else
                     {
@@ -297,7 +325,7 @@ namespace BasicBattleTracking
                 }
 
                 WriteToLog("");
-                WriteToLog(fighterOrder.ElementAt(0) + " will.total go first");
+                WriteToLog(fighterOrder.ElementAt(0) + " will go first");
 
                 activeLabel.Text = fighterOrder.ElementAt(0);
 
@@ -350,8 +378,16 @@ namespace BasicBattleTracking
 
         public void WriteToLog(string text)
         {
-            LogBox.AppendText(text);
-            LogBox.AppendText(Environment.NewLine);
+            if (session.settings.brianMode)
+            {
+                logBox2.AppendText(text);
+                logBox2.AppendText(Environment.NewLine);
+            }
+            else
+            {
+                LogBox.AppendText(text);
+                LogBox.AppendText(Environment.NewLine);
+            }
             session.SetDirty(true);
         }
 
@@ -472,7 +508,7 @@ namespace BasicBattleTracking
             }
             activeLabel.Text = fighterOrder.ElementAt(activeIndex);
 
-            WriteToLog(fighterOrder.ElementAt(activeIndex) + " will.total go next.");
+            WriteToLog(fighterOrder.ElementAt(activeIndex) + " will go next.");
 
             updateFighterInfo(activeIndex);
             selectedFighter = activeIndex;
@@ -675,7 +711,14 @@ namespace BasicBattleTracking
         private void MainWindow_Close(object sender, EventArgs e)
         {
             BattleIO exitLog = new BattleIO();
-            exitLog.ExportLog(LogBox.Text, session.settings);
+            if (session.settings.brianMode)
+            {
+                exitLog.ExportLog(logBox2.Text, session.settings);
+            }
+            else
+            {
+                exitLog.ExportLog(LogBox.Text, session.settings);
+            }
         }
 
         private void holdButton_Click(object sender, EventArgs e)
@@ -938,7 +981,7 @@ namespace BasicBattleTracking
             WriteToRollConsole("Total: " + result.ToString());
             WriteToRollConsole("");
             rollResultLabel.Text = result.ToString();
-            WriteToLog(combatants.ElementAt(selectedFighter).Name + " made a will.total Save of " + result.ToString() + "!");
+            WriteToLog(combatants.ElementAt(selectedFighter).Name + " made a Will Save of " + result.ToString() + "!");
 
         }
 
@@ -2058,7 +2101,14 @@ namespace BasicBattleTracking
 
         public string getLog()
         {
-            return LogBox.Text;
+            if (session.settings.brianMode)
+            {
+                return logBox2.Text;
+            }
+            else
+            {
+                return LogBox.Text;
+            }
         }
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -2073,7 +2123,14 @@ namespace BasicBattleTracking
             combatRound = 0;
             updateFighterInfo(0);
             UpdateFighterList();
-            LogBox.Clear();
+            if (session.settings.brianMode)
+            {
+                logBox2.Clear();
+            }
+            else
+            {
+                LogBox.Clear();
+            }
             WriteToLog("New Session Initialized");
             turnLabel.Text = combatRound.ToString();
             Program.activeSessionName = "New Session";
